@@ -1,0 +1,2182 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{30F88E0C-F532-4BFF-92D9-25DFD8502E46}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>DCP</RootNamespace>
+    <AssemblyName>Daily Challange Randomizer</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <PublishUrl>C:\Users\Kent\Desktop\App Installer\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>9</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>YEAH.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>3F014FE07C630257F90BE16AA4781B51D01A5235</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>Daily Challange Randomizer_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Azure.Core, Version=1.44.1.0, Culture=neutral, PublicKeyToken=92742159e12e44c8, processorArchitecture=MSIL">
+      <HintPath>..\packages\Azure.Core.1.44.1\lib\net472\Azure.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=6.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.6.0.0\lib\net461\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CognitiveServices.Speech.csharp, Version=1.43.0.28, Culture=neutral, PublicKeyToken=d2e6dcccb609e663, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CognitiveServices.Speech.1.43.0\lib\net462\Microsoft.CognitiveServices.Speech.csharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Microsoft.VisualBasic.Compatibility" />
+    <Reference Include="Microsoft.VisualBasic.Compatibility.Data" />
+    <Reference Include="Microsoft.VisualC" />
+    <Reference Include="Microsoft.VisualC.STLCLR" />
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ClientModel, Version=1.1.0.0, Culture=neutral, PublicKeyToken=92742159e12e44c8, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ClientModel.1.1.0\lib\netstandard2.0\System.ClientModel.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.ComponentModel.Composition.Registration" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Diagnostics.DiagnosticSource, Version=6.0.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Diagnostics.DiagnosticSource.6.0.1\lib\net461\System.Diagnostics.DiagnosticSource.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Memory, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.4\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Memory.Data, Version=6.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.Data.6.0.0\lib\net461\System.Memory.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.6.0.0\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Speech" />
+    <Reference Include="System.Text.Encodings.Web, Version=6.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.Encodings.Web.6.0.0\lib\net461\System.Text.Encodings.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Json, Version=6.0.0.10, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.Json.6.0.10\lib\net461\System.Text.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BearCrawlEasy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BearCrawlEasy.Designer.cs">
+      <DependentUpon>BearCrawlEasy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BearCrawlHard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BearCrawlHard.Designer.cs">
+      <DependentUpon>BearCrawlHard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BearCrawlMedium.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BearCrawlMedium.Designer.cs">
+      <DependentUpon>BearCrawlMedium.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BicycleCrunchesEasy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BicycleCrunchesEasy.Designer.cs">
+      <DependentUpon>BicycleCrunchesEasy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BicycleCrunchesHard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BicycleCrunchesHard.Designer.cs">
+      <DependentUpon>BicycleCrunchesHard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BicycleCrunchesMedium.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BicycleCrunchesMedium.Designer.cs">
+      <DependentUpon>BicycleCrunchesMedium.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BookSummaryEasy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BookSummaryEasy.Designer.cs">
+      <DependentUpon>BookSummaryEasy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BookSummaryHard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BookSummaryHard.Designer.cs">
+      <DependentUpon>BookSummaryHard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BookSummaryMedium.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BookSummaryMedium.Designer.cs">
+      <DependentUpon>BookSummaryMedium.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BudjetProblemHard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BudjetProblemHard.Designer.cs">
+      <DependentUpon>BudjetProblemHard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BudjetProblemMedium.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BudjetProblemMedium.Designer.cs">
+      <DependentUpon>BudjetProblemMedium.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BudjetProblemEasy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BudjetProblemEasy.Designer.cs">
+      <DependentUpon>BudjetProblemEasy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChangePassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChangePassword.Designer.cs">
+      <DependentUpon>ChangePassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FeedBack.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FeedBack.Designer.cs">
+      <DependentUpon>FeedBack.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Fitness.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fitness.Designer.cs">
+      <DependentUpon>Fitness.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FitnessDescriptions.cs" />
+    <Compile Include="FitnessGuide.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FitnessGuide.Designer.cs">
+      <DependentUpon>FitnessGuide.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FitnessVC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FitnessVC.Designer.cs">
+      <DependentUpon>FitnessVC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GrammarTry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GrammarTry.Designer.cs">
+      <DependentUpon>GrammarTry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GratitudeEasy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GratitudeEasy.Designer.cs">
+      <DependentUpon>GratitudeEasy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GratitudeHard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GratitudeHard.Designer.cs">
+      <DependentUpon>GratitudeHard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GratitudeMedium.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GratitudeMedium.Designer.cs">
+      <DependentUpon>GratitudeMedium.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Guide.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Guide.Designer.cs">
+      <DependentUpon>Guide.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Health.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Health.Designer.cs">
+      <DependentUpon>Health.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HealthDescriptions.cs" />
+    <Compile Include="HealthGuide.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HealthGuide.Designer.cs">
+      <DependentUpon>HealthGuide.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HealthVC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HealthVC.Designer.cs">
+      <DependentUpon>HealthVC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HoldBreathEasy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HoldBreathEasy.Designer.cs">
+      <DependentUpon>HoldBreathEasy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HoldBreathHard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HoldBreathHard.Designer.cs">
+      <DependentUpon>HoldBreathHard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HoldBreathMedium.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HoldBreathMedium.Designer.cs">
+      <DependentUpon>HoldBreathMedium.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HoldYourBreathTry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HoldYourBreathTry.Designer.cs">
+      <DependentUpon>HoldYourBreathTry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HomepageDescriptions.cs" />
+    <Compile Include="HydrationEasy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HydrationEasy.Designer.cs">
+      <DependentUpon>HydrationEasy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HydrationHard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HydrationHard.Designer.cs">
+      <DependentUpon>HydrationHard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HydrationMedium.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HydrationMedium.Designer.cs">
+      <DependentUpon>HydrationMedium.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InstructionsBSE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InstructionsBSE.Designer.cs">
+      <DependentUpon>InstructionsBSE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InstructionsSRE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InstructionsSRE.Designer.cs">
+      <DependentUpon>InstructionsSRE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Introduction.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Introduction.Designer.cs">
+      <DependentUpon>Introduction.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Homepage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Homepage.Designer.cs">
+      <DependentUpon>Homepage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="JsonHelper.cs" />
+    <Compile Include="Learning.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Learning.Designer.cs">
+      <DependentUpon>Learning.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LearningDescriptions.cs" />
+    <Compile Include="LearningGuide.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LearningGuide.Designer.cs">
+      <DependentUpon>LearningGuide.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LearningVC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LearningVC.Designer.cs">
+      <DependentUpon>LearningVC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Loading Screen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Loading Screen.Designer.cs">
+      <DependentUpon>Loading Screen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MathEquation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MathEquation.Designer.cs">
+      <DependentUpon>MathEquation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MathPuzzleEasy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MathPuzzleEasy.Designer.cs">
+      <DependentUpon>MathPuzzleEasy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MathPuzzleHard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MathPuzzleHard.Designer.cs">
+      <DependentUpon>MathPuzzleHard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MathPuzzleMedium.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MathPuzzleMedium.Designer.cs">
+      <DependentUpon>MathPuzzleMedium.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MountainClimbersEasy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MountainClimbersEasy.Designer.cs">
+      <DependentUpon>MountainClimbersEasy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MountainClimbersHard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MountainClimbersHard.Designer.cs">
+      <DependentUpon>MountainClimbersHard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MountainClimbersMedium.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MountainClimbersMedium.Designer.cs">
+      <DependentUpon>MountainClimbersMedium.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PatternRecognitionEasy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PatternRecognitionEasy.Designer.cs">
+      <DependentUpon>PatternRecognitionEasy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PatternRecognitionHard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PatternRecognitionHard.Designer.cs">
+      <DependentUpon>PatternRecognitionHard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PatternRecognitionMedium.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PatternRecognitionMedium.Designer.cs">
+      <DependentUpon>PatternRecognitionMedium.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PlankingEasy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PlankingEasy.Designer.cs">
+      <DependentUpon>PlankingEasy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PlankingHard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PlankingHard.Designer.cs">
+      <DependentUpon>PlankingHard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PlankingMedium.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PlankingMedium.Designer.cs">
+      <DependentUpon>PlankingMedium.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PushUpTry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PushUpTry.Designer.cs">
+      <DependentUpon>PushUpTry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PushUpsEasy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PushUpsEasy.Designer.cs">
+      <DependentUpon>PushUpsEasy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PushUpsHard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PushUpsHard.Designer.cs">
+      <DependentUpon>PushUpsHard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PushUpsMedium.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PushUpsMedium.Designer.cs">
+      <DependentUpon>PushUpsMedium.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReadingTimeEasy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReadingTimeEasy.Designer.cs">
+      <DependentUpon>ReadingTimeEasy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReadingTimeHard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReadingTimeHard.Designer.cs">
+      <DependentUpon>ReadingTimeHard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReadingTimeMedium.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReadingTimeMedium.Designer.cs">
+      <DependentUpon>ReadingTimeMedium.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RealLifeApplicationEasy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RealLifeApplicationEasy.Designer.cs">
+      <DependentUpon>RealLifeApplicationEasy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RealLifeApplicationHard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RealLifeApplicationHard.Designer.cs">
+      <DependentUpon>RealLifeApplicationHard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RealLifeApplicationMedium.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RealLifeApplicationMedium.Designer.cs">
+      <DependentUpon>RealLifeApplicationMedium.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Register.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Register.Designer.cs">
+      <DependentUpon>Register.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Calf RaisesHard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Resources\Calf RaisesHard.Designer.cs">
+      <DependentUpon>Calf RaisesHard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\CalfRaisesEasy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Resources\CalfRaisesEasy.Designer.cs">
+      <DependentUpon>CalfRaisesEasy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\CalfRaisesMedium.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Resources\CalfRaisesMedium.Designer.cs">
+      <DependentUpon>CalfRaisesMedium.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\CharacterAnalysisEasy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Resources\CharacterAnalysisEasy.Designer.cs">
+      <DependentUpon>CharacterAnalysisEasy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\CharacterAnalysisFilEasy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Resources\CharacterAnalysisFilEasy.Designer.cs">
+      <DependentUpon>CharacterAnalysisFilEasy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\CharacterAnalysisFilMedium.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Resources\CharacterAnalysisFilMedium.Designer.cs">
+      <DependentUpon>CharacterAnalysisFilMedium.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\CharacterAnalysisFilHard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Resources\CharacterAnalysisFilHard.Designer.cs">
+      <DependentUpon>CharacterAnalysisFilHard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\CharacterAnalysisHard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Resources\CharacterAnalysisHard.Designer.cs">
+      <DependentUpon>CharacterAnalysisHard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\CharacterAnalysisMedium.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Resources\CharacterAnalysisMedium.Designer.cs">
+      <DependentUpon>CharacterAnalysisMedium.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\DialogAnalysisEasy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Resources\DialogAnalysisEasy.Designer.cs">
+      <DependentUpon>DialogAnalysisEasy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\DialogAnalysisHard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Resources\DialogAnalysisHard.Designer.cs">
+      <DependentUpon>DialogAnalysisHard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\DialogAnalysisMedium.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Resources\DialogAnalysisMedium.Designer.cs">
+      <DependentUpon>DialogAnalysisMedium.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\DiamondPushUpsEasy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Resources\DiamondPushUpsEasy.Designer.cs">
+      <DependentUpon>DiamondPushUpsEasy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\DiamondPushUpsHard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Resources\DiamondPushUpsHard.Designer.cs">
+      <DependentUpon>DiamondPushUpsHard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\DiamondPushUpsMedium.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Resources\DiamondPushUpsMedium.Designer.cs">
+      <DependentUpon>DiamondPushUpsMedium.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\FilipinoQuizEasy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Resources\FilipinoQuizEasy.Designer.cs">
+      <DependentUpon>FilipinoQuizEasy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\FilipinoQuizHard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Resources\FilipinoQuizHard.Designer.cs">
+      <DependentUpon>FilipinoQuizHard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\FilipinoQuizMedium.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Resources\FilipinoQuizMedium.Designer.cs">
+      <DependentUpon>FilipinoQuizMedium.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\GlutesBridgesEasy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Resources\GlutesBridgesEasy.Designer.cs">
+      <DependentUpon>GlutesBridgesEasy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\GlutesBridgesHard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Resources\GlutesBridgesHard.Designer.cs">
+      <DependentUpon>GlutesBridgesHard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\GlutesBridgesMedium.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Resources\GlutesBridgesMedium.Designer.cs">
+      <DependentUpon>GlutesBridgesMedium.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\GrammarEasy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Resources\GrammarEasy.Designer.cs">
+      <DependentUpon>GrammarEasy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\GrammarHard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Resources\GrammarHard.Designer.cs">
+      <DependentUpon>GrammarHard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\GrammarMedium.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Resources\GrammarMedium.Designer.cs">
+      <DependentUpon>GrammarMedium.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\HighKneesHard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Resources\HighKneesHard.Designer.cs">
+      <DependentUpon>HighKneesHard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\HighKneesMedium.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Resources\HighKneesMedium.Designer.cs">
+      <DependentUpon>HighKneesMedium.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\HighKnessEasy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Resources\HighKnessEasy.Designer.cs">
+      <DependentUpon>HighKnessEasy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\InstructionsPYWMM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Resources\InstructionsPYWMM.Designer.cs">
+      <DependentUpon>InstructionsPYWMM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\InstructionsPYWE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Resources\InstructionsPYWE.Designer.cs">
+      <DependentUpon>InstructionsPYWE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\InstructionsPYWH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Resources\InstructionsPYWH.Designer.cs">
+      <DependentUpon>InstructionsPYWH.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\InstructionsPYWM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Resources\InstructionsPYWM.Designer.cs">
+      <DependentUpon>InstructionsPYWM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\InstructionsPYWME.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Resources\InstructionsPYWME.Designer.cs">
+      <DependentUpon>InstructionsPYWME.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\InstructionsPYWMH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Resources\InstructionsPYWMH.Designer.cs">
+      <DependentUpon>InstructionsPYWMH.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\JoggingEasy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Resources\JoggingEasy.Designer.cs">
+      <DependentUpon>JoggingEasy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\JoggingHard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Resources\JoggingHard.Designer.cs">
+      <DependentUpon>JoggingHard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\JoggingMedium.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Resources\JoggingMedium.Designer.cs">
+      <DependentUpon>JoggingMedium.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\JumpingJacksEasy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Resources\JumpingJacksEasy.Designer.cs">
+      <DependentUpon>JumpingJacksEasy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\JumpingJacksHard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Resources\JumpingJacksHard.Designer.cs">
+      <DependentUpon>JumpingJacksHard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\JumpingJacksMedium.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Resources\JumpingJacksMedium.Designer.cs">
+      <DependentUpon>JumpingJacksMedium.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\JumpingSquatEasy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Resources\JumpingSquatEasy.Designer.cs">
+      <DependentUpon>JumpingSquatEasy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\JumpingSquatHard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Resources\JumpingSquatHard.Designer.cs">
+      <DependentUpon>JumpingSquatHard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\JumpingSquatMedium.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Resources\JumpingSquatMedium.Designer.cs">
+      <DependentUpon>JumpingSquatMedium.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\LegRaisesEasy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Resources\LegRaisesEasy.Designer.cs">
+      <DependentUpon>LegRaisesEasy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\LegRaisesHard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Resources\LegRaisesHard.Designer.cs">
+      <DependentUpon>LegRaisesHard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\LegRaisesMedium.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Resources\LegRaisesMedium.Designer.cs">
+      <DependentUpon>LegRaisesMedium.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\MindfulBreathingEasy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Resources\MindfulBreathingEasy.Designer.cs">
+      <DependentUpon>MindfulBreathingEasy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\MindfulBreathingHard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Resources\MindfulBreathingHard.Designer.cs">
+      <DependentUpon>MindfulBreathingHard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\MindfulBreathingMedium.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Resources\MindfulBreathingMedium.Designer.cs">
+      <DependentUpon>MindfulBreathingMedium.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\MindFulEatingEasy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Resources\MindFulEatingEasy.Designer.cs">
+      <DependentUpon>MindFulEatingEasy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\MindFulEatingHard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Resources\MindFulEatingHard.Designer.cs">
+      <DependentUpon>MindFulEatingHard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\MindfulEatingMedium.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Resources\MindfulEatingMedium.Designer.cs">
+      <DependentUpon>MindfulEatingMedium.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\NoBlinkingMedium.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Resources\NoBlinkingMedium.Designer.cs">
+      <DependentUpon>NoBlinkingMedium.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\NoBlinkingHard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Resources\NoBlinkingHard.Designer.cs">
+      <DependentUpon>NoBlinkingHard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\NoBlinkingEasy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Resources\NoBlinkingEasy.Designer.cs">
+      <DependentUpon>NoBlinkingEasy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\PlanYourWeekendEasy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Resources\PlanYourWeekendEasy.Designer.cs">
+      <DependentUpon>PlanYourWeekendEasy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\PlanYourWeekendHard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Resources\PlanYourWeekendHard.Designer.cs">
+      <DependentUpon>PlanYourWeekendHard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\PlanYourWeekendMedium.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Resources\PlanYourWeekendMedium.Designer.cs">
+      <DependentUpon>PlanYourWeekendMedium.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\PlanYourWeekendMenEasy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Resources\PlanYourWeekendMenEasy.Designer.cs">
+      <DependentUpon>PlanYourWeekendMenEasy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\PlanYourWeekendMenHard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Resources\PlanYourWeekendMenHard.Designer.cs">
+      <DependentUpon>PlanYourWeekendMenHard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\PlanYourWeekendMenMedium.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Resources\PlanYourWeekendMenMedium.Designer.cs">
+      <DependentUpon>PlanYourWeekendMenMedium.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\PoetryEasy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Resources\PoetryEasy.Designer.cs">
+      <DependentUpon>PoetryEasy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\PoetryHard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Resources\PoetryHard.Designer.cs">
+      <DependentUpon>PoetryHard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\PoetryMedium.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Resources\PoetryMedium.Designer.cs">
+      <DependentUpon>PoetryMedium.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\QuickStretchingEasy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Resources\QuickStretchingEasy.Designer.cs">
+      <DependentUpon>QuickStretchingEasy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\QuickStretchingHard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Resources\QuickStretchingHard.Designer.cs">
+      <DependentUpon>QuickStretchingHard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\QuickStretchingMedium.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Resources\QuickStretchingMedium.Designer.cs">
+      <DependentUpon>QuickStretchingMedium.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\QuizMentalEasy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Resources\QuizMentalEasy.Designer.cs">
+      <DependentUpon>QuizMentalEasy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\QuizMentalHard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Resources\QuizMentalHard.Designer.cs">
+      <DependentUpon>QuizMentalHard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\QuizMentalMedium.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Resources\QuizMentalMedium.Designer.cs">
+      <DependentUpon>QuizMentalMedium.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\StandingSideLegRaisesHard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Resources\StandingSideLegRaisesHard.Designer.cs">
+      <DependentUpon>StandingSideLegRaisesHard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\StandingSideLegRaisesEasy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Resources\StandingSideLegRaisesEasy.Designer.cs">
+      <DependentUpon>StandingSideLegRaisesEasy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\StandingSideLegRaisesMedium.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Resources\StandingSideLegRaisesMedium.Designer.cs">
+      <DependentUpon>StandingSideLegRaisesMedium.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\StepUpEasy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Resources\StepUpEasy.Designer.cs">
+      <DependentUpon>StepUpEasy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\StepUpHard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Resources\StepUpHard.Designer.cs">
+      <DependentUpon>StepUpHard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\StepUpMedium.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Resources\StepUpMedium.Designer.cs">
+      <DependentUpon>StepUpMedium.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\VocabularyEasy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Resources\VocabularyEasy.Designer.cs">
+      <DependentUpon>VocabularyEasy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\VocabularyHard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Resources\VocabularyHard.Designer.cs">
+      <DependentUpon>VocabularyHard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\VocabularyMedium.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Resources\VocabularyMedium.Designer.cs">
+      <DependentUpon>VocabularyMedium.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\WalkingHard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Resources\WalkingHard.Designer.cs">
+      <DependentUpon>WalkingHard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\WordCountEasy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Resources\WordCountEasy.Designer.cs">
+      <DependentUpon>WordCountEasy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\WordCountHard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Resources\WordCountHard.Designer.cs">
+      <DependentUpon>WordCountHard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\WordCountMedium.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Resources\WordCountMedium.Designer.cs">
+      <DependentUpon>WordCountMedium.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReverseLungesEasy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReverseLungesEasy.Designer.cs">
+      <DependentUpon>ReverseLungesEasy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReverseLungesHard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReverseLungesHard.Designer.cs">
+      <DependentUpon>ReverseLungesHard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReverseLungesMedium.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReverseLungesMedium.Designer.cs">
+      <DependentUpon>ReverseLungesMedium.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RussianTwistEasy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RussianTwistEasy.Designer.cs">
+      <DependentUpon>RussianTwistEasy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RussianTwistHard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RussianTwistHard.Designer.cs">
+      <DependentUpon>RussianTwistHard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RussianTwistMedium.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RussianTwistMedium.Designer.cs">
+      <DependentUpon>RussianTwistMedium.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SelectionFitness.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SelectionFitness.Designer.cs">
+      <DependentUpon>SelectionFitness.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SelectionHealth.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SelectionHealth.Designer.cs">
+      <DependentUpon>SelectionHealth.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SelectionLearning.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SelectionLearning.Designer.cs">
+      <DependentUpon>SelectionLearning.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SideLungesEasy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SideLungesEasy.Designer.cs">
+      <DependentUpon>SideLungesEasy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SideLungesHard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SideLungesHard.Designer.cs">
+      <DependentUpon>SideLungesHard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SideLungesMedium.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SideLungesMedium.Designer.cs">
+      <DependentUpon>SideLungesMedium.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SidePlankEasy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SidePlankEasy.Designer.cs">
+      <DependentUpon>SidePlankEasy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SidePlankHard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SidePlankHard.Designer.cs">
+      <DependentUpon>SidePlankHard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SidePlankMedium.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SidePlankMedium.Designer.cs">
+      <DependentUpon>SidePlankMedium.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SquatsEasy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SquatsEasy.Designer.cs">
+      <DependentUpon>SquatsEasy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SquatsMedium.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SquatsMedium.Designer.cs">
+      <DependentUpon>SquatsMedium.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SquatsHard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SquatsHard.Designer.cs">
+      <DependentUpon>SquatsHard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StoryRetellingEasy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StoryRetellingEasy.Designer.cs">
+      <DependentUpon>StoryRetellingEasy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StoryRetellingHard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StoryRetellingHard.Designer.cs">
+      <DependentUpon>StoryRetellingHard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StoryRetellingMedium.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StoryRetellingMedium.Designer.cs">
+      <DependentUpon>StoryRetellingMedium.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TableOfRecords.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TableOfRecords.Designer.cs">
+      <DependentUpon>TableOfRecords.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TakeAColdShowerMedium.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TakeAColdShowerMedium.Designer.cs">
+      <DependentUpon>TakeAColdShowerMedium.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TakeAColdShowerEasy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TakeAColdShowerEasy.Designer.cs">
+      <DependentUpon>TakeAColdShowerEasy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TakeAColdShowerHard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TakeAColdShowerHard.Designer.cs">
+      <DependentUpon>TakeAColdShowerHard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TimeChallengeEasy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TimeChallengeEasy.Designer.cs">
+      <DependentUpon>TimeChallengeEasy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TimeChallengeHard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TimeChallengeHard.Designer.cs">
+      <DependentUpon>TimeChallengeHard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TimeChallengeMedium.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TimeChallengeMedium.Designer.cs">
+      <DependentUpon>TimeChallengeMedium.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ToeTopEasy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ToeTopEasy.Designer.cs">
+      <DependentUpon>ToeTopEasy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ToeTopHard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ToeTopHard.Designer.cs">
+      <DependentUpon>ToeTopHard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ToeTopMedium.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ToeTopMedium.Designer.cs">
+      <DependentUpon>ToeTopMedium.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TryHCS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TryHCS.Designer.cs">
+      <DependentUpon>TryHCS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TryHCSDescriptions.cs" />
+    <Compile Include="UserAgreement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserAgreement.Designer.cs">
+      <DependentUpon>UserAgreement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VoiceCommands.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VoiceCommands.Designer.cs">
+      <DependentUpon>VoiceCommands.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WalkingEasy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WalkingEasy.Designer.cs">
+      <DependentUpon>WalkingEasy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WalkingMedium.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WalkingMedium.Designer.cs">
+      <DependentUpon>WalkingMedium.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WallSitEasy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WallSitEasy.Designer.cs">
+      <DependentUpon>WallSitEasy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WallSitHard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WallSitHard.Designer.cs">
+      <DependentUpon>WallSitHard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WallSitMedium.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WallSitMedium.Designer.cs">
+      <DependentUpon>WallSitMedium.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="BearCrawlEasy.resx">
+      <DependentUpon>BearCrawlEasy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BearCrawlHard.resx">
+      <DependentUpon>BearCrawlHard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BearCrawlMedium.resx">
+      <DependentUpon>BearCrawlMedium.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BicycleCrunchesEasy.resx">
+      <DependentUpon>BicycleCrunchesEasy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BicycleCrunchesHard.resx">
+      <DependentUpon>BicycleCrunchesHard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BicycleCrunchesMedium.resx">
+      <DependentUpon>BicycleCrunchesMedium.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BookSummaryEasy.resx">
+      <DependentUpon>BookSummaryEasy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BookSummaryHard.resx">
+      <DependentUpon>BookSummaryHard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BookSummaryMedium.resx">
+      <DependentUpon>BookSummaryMedium.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BudjetProblemHard.resx">
+      <DependentUpon>BudjetProblemHard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BudjetProblemMedium.resx">
+      <DependentUpon>BudjetProblemMedium.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BudjetProblemEasy.resx">
+      <DependentUpon>BudjetProblemEasy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChangePassword.resx">
+      <DependentUpon>ChangePassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FeedBack.resx">
+      <DependentUpon>FeedBack.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fitness.resx">
+      <DependentUpon>Fitness.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FitnessGuide.resx">
+      <DependentUpon>FitnessGuide.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FitnessVC.resx">
+      <DependentUpon>FitnessVC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GrammarTry.resx">
+      <DependentUpon>GrammarTry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GratitudeEasy.resx">
+      <DependentUpon>GratitudeEasy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GratitudeHard.resx">
+      <DependentUpon>GratitudeHard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GratitudeMedium.resx">
+      <DependentUpon>GratitudeMedium.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Guide.resx">
+      <DependentUpon>Guide.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Health.resx">
+      <DependentUpon>Health.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HealthGuide.resx">
+      <DependentUpon>HealthGuide.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HealthVC.resx">
+      <DependentUpon>HealthVC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HoldBreathEasy.resx">
+      <DependentUpon>HoldBreathEasy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HoldBreathHard.resx">
+      <DependentUpon>HoldBreathHard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HoldBreathMedium.resx">
+      <DependentUpon>HoldBreathMedium.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HoldYourBreathTry.resx">
+      <DependentUpon>HoldYourBreathTry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HydrationEasy.resx">
+      <DependentUpon>HydrationEasy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HydrationHard.resx">
+      <DependentUpon>HydrationHard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HydrationMedium.resx">
+      <DependentUpon>HydrationMedium.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InstructionsBSE.resx">
+      <DependentUpon>InstructionsBSE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InstructionsSRE.resx">
+      <DependentUpon>InstructionsSRE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Introduction.resx">
+      <DependentUpon>Introduction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Homepage.resx">
+      <DependentUpon>Homepage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Learning.resx">
+      <DependentUpon>Learning.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LearningGuide.resx">
+      <DependentUpon>LearningGuide.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LearningVC.resx">
+      <DependentUpon>LearningVC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Loading Screen.resx">
+      <DependentUpon>Loading Screen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MathPuzzleEasy.resx">
+      <DependentUpon>MathPuzzleEasy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MathPuzzleHard.resx">
+      <DependentUpon>MathPuzzleHard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MathPuzzleMedium.resx">
+      <DependentUpon>MathPuzzleMedium.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MountainClimbersEasy.resx">
+      <DependentUpon>MountainClimbersEasy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MountainClimbersHard.resx">
+      <DependentUpon>MountainClimbersHard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MountainClimbersMedium.resx">
+      <DependentUpon>MountainClimbersMedium.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PatternRecognitionEasy.resx">
+      <DependentUpon>PatternRecognitionEasy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PatternRecognitionHard.resx">
+      <DependentUpon>PatternRecognitionHard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PatternRecognitionMedium.resx">
+      <DependentUpon>PatternRecognitionMedium.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PlankingEasy.resx">
+      <DependentUpon>PlankingEasy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PlankingHard.resx">
+      <DependentUpon>PlankingHard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PlankingMedium.resx">
+      <DependentUpon>PlankingMedium.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="PushUpTry.resx">
+      <DependentUpon>PushUpTry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PushUpsEasy.resx">
+      <DependentUpon>PushUpsEasy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PushUpsHard.resx">
+      <DependentUpon>PushUpsHard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PushUpsMedium.resx">
+      <DependentUpon>PushUpsMedium.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReadingTimeEasy.resx">
+      <DependentUpon>ReadingTimeEasy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReadingTimeHard.resx">
+      <DependentUpon>ReadingTimeHard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReadingTimeMedium.resx">
+      <DependentUpon>ReadingTimeMedium.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RealLifeApplicationEasy.resx">
+      <DependentUpon>RealLifeApplicationEasy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RealLifeApplicationHard.resx">
+      <DependentUpon>RealLifeApplicationHard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RealLifeApplicationMedium.resx">
+      <DependentUpon>RealLifeApplicationMedium.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Register.resx">
+      <DependentUpon>Register.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Calf RaisesHard.resx">
+      <DependentUpon>Calf RaisesHard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\CalfRaisesEasy.resx">
+      <DependentUpon>CalfRaisesEasy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\CalfRaisesMedium.resx">
+      <DependentUpon>CalfRaisesMedium.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\CharacterAnalysisEasy.resx">
+      <DependentUpon>CharacterAnalysisEasy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\CharacterAnalysisFilEasy.resx">
+      <DependentUpon>CharacterAnalysisFilEasy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\CharacterAnalysisFilMedium.resx">
+      <DependentUpon>CharacterAnalysisFilMedium.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\CharacterAnalysisFilHard.resx">
+      <DependentUpon>CharacterAnalysisFilHard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\CharacterAnalysisHard.resx">
+      <DependentUpon>CharacterAnalysisHard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\CharacterAnalysisMedium.resx">
+      <DependentUpon>CharacterAnalysisMedium.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\DialogAnalysisEasy.resx">
+      <DependentUpon>DialogAnalysisEasy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\DialogAnalysisHard.resx">
+      <DependentUpon>DialogAnalysisHard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\DialogAnalysisMedium.resx">
+      <DependentUpon>DialogAnalysisMedium.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\DiamondPushUpsEasy.resx">
+      <DependentUpon>DiamondPushUpsEasy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\DiamondPushUpsHard.resx">
+      <DependentUpon>DiamondPushUpsHard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\DiamondPushUpsMedium.resx">
+      <DependentUpon>DiamondPushUpsMedium.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\FilipinoQuizEasy.resx">
+      <DependentUpon>FilipinoQuizEasy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\FilipinoQuizHard.resx">
+      <DependentUpon>FilipinoQuizHard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\FilipinoQuizMedium.resx">
+      <DependentUpon>FilipinoQuizMedium.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\GlutesBridgesEasy.resx">
+      <DependentUpon>GlutesBridgesEasy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\GlutesBridgesHard.resx">
+      <DependentUpon>GlutesBridgesHard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\GlutesBridgesMedium.resx">
+      <DependentUpon>GlutesBridgesMedium.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\GrammarEasy.resx">
+      <DependentUpon>GrammarEasy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\GrammarHard.resx">
+      <DependentUpon>GrammarHard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\GrammarMedium.resx">
+      <DependentUpon>GrammarMedium.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\HighKneesHard.resx">
+      <DependentUpon>HighKneesHard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\HighKneesMedium.resx">
+      <DependentUpon>HighKneesMedium.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\HighKnessEasy.resx">
+      <DependentUpon>HighKnessEasy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\InstructionsPYWMM.resx">
+      <DependentUpon>InstructionsPYWMM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\InstructionsPYWE.resx">
+      <DependentUpon>InstructionsPYWE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\InstructionsPYWH.resx">
+      <DependentUpon>InstructionsPYWH.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\InstructionsPYWM.resx">
+      <DependentUpon>InstructionsPYWM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\InstructionsPYWME.resx">
+      <DependentUpon>InstructionsPYWME.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\InstructionsPYWMH.resx">
+      <DependentUpon>InstructionsPYWMH.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\JoggingEasy.resx">
+      <DependentUpon>JoggingEasy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\JoggingHard.resx">
+      <DependentUpon>JoggingHard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\JoggingMedium.resx">
+      <DependentUpon>JoggingMedium.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\JumpingJacksEasy.resx">
+      <DependentUpon>JumpingJacksEasy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\JumpingJacksHard.resx">
+      <DependentUpon>JumpingJacksHard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\JumpingJacksMedium.resx">
+      <DependentUpon>JumpingJacksMedium.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\JumpingSquatEasy.resx">
+      <DependentUpon>JumpingSquatEasy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\JumpingSquatHard.resx">
+      <DependentUpon>JumpingSquatHard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\JumpingSquatMedium.resx">
+      <DependentUpon>JumpingSquatMedium.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\LegRaisesEasy.resx">
+      <DependentUpon>LegRaisesEasy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\LegRaisesHard.resx">
+      <DependentUpon>LegRaisesHard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\LegRaisesMedium.resx">
+      <DependentUpon>LegRaisesMedium.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\MindfulBreathingEasy.resx">
+      <DependentUpon>MindfulBreathingEasy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\MindfulBreathingHard.resx">
+      <DependentUpon>MindfulBreathingHard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\MindfulBreathingMedium.resx">
+      <DependentUpon>MindfulBreathingMedium.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\MindFulEatingEasy.resx">
+      <DependentUpon>MindFulEatingEasy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\MindFulEatingHard.resx">
+      <DependentUpon>MindFulEatingHard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\MindfulEatingMedium.resx">
+      <DependentUpon>MindfulEatingMedium.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\NoBlinkingMedium.resx">
+      <DependentUpon>NoBlinkingMedium.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\NoBlinkingHard.resx">
+      <DependentUpon>NoBlinkingHard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\NoBlinkingEasy.resx">
+      <DependentUpon>NoBlinkingEasy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\PlanYourWeekendEasy.resx">
+      <DependentUpon>PlanYourWeekendEasy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\PlanYourWeekendHard.resx">
+      <DependentUpon>PlanYourWeekendHard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\PlanYourWeekendMedium.resx">
+      <DependentUpon>PlanYourWeekendMedium.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\PlanYourWeekendMenEasy.resx">
+      <DependentUpon>PlanYourWeekendMenEasy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\PlanYourWeekendMenHard.resx">
+      <DependentUpon>PlanYourWeekendMenHard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\PlanYourWeekendMenMedium.resx">
+      <DependentUpon>PlanYourWeekendMenMedium.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\PoetryEasy.resx">
+      <DependentUpon>PoetryEasy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\PoetryHard.resx">
+      <DependentUpon>PoetryHard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\PoetryMedium.resx">
+      <DependentUpon>PoetryMedium.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\QuickStretchingEasy.resx">
+      <DependentUpon>QuickStretchingEasy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\QuickStretchingHard.resx">
+      <DependentUpon>QuickStretchingHard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\QuickStretchingMedium.resx">
+      <DependentUpon>QuickStretchingMedium.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\QuizMentalEasy.resx">
+      <DependentUpon>QuizMentalEasy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\QuizMentalHard.resx">
+      <DependentUpon>QuizMentalHard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\QuizMentalMedium.resx">
+      <DependentUpon>QuizMentalMedium.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\StandingSideLegRaisesHard.resx">
+      <DependentUpon>StandingSideLegRaisesHard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\StandingSideLegRaisesEasy.resx">
+      <DependentUpon>StandingSideLegRaisesEasy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\StandingSideLegRaisesMedium.resx">
+      <DependentUpon>StandingSideLegRaisesMedium.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\StepUpEasy.resx">
+      <DependentUpon>StepUpEasy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\StepUpHard.resx">
+      <DependentUpon>StepUpHard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\StepUpMedium.resx">
+      <DependentUpon>StepUpMedium.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\VocabularyEasy.resx">
+      <DependentUpon>VocabularyEasy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\VocabularyHard.resx">
+      <DependentUpon>VocabularyHard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\VocabularyMedium.resx">
+      <DependentUpon>VocabularyMedium.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\WalkingHard.resx">
+      <DependentUpon>WalkingHard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\WordCountEasy.resx">
+      <DependentUpon>WordCountEasy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\WordCountHard.resx">
+      <DependentUpon>WordCountHard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\WordCountMedium.resx">
+      <DependentUpon>WordCountMedium.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReverseLungesEasy.resx">
+      <DependentUpon>ReverseLungesEasy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReverseLungesHard.resx">
+      <DependentUpon>ReverseLungesHard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReverseLungesMedium.resx">
+      <DependentUpon>ReverseLungesMedium.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RussianTwistEasy.resx">
+      <DependentUpon>RussianTwistEasy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RussianTwistHard.resx">
+      <DependentUpon>RussianTwistHard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RussianTwistMedium.resx">
+      <DependentUpon>RussianTwistMedium.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SelectionFitness.resx">
+      <DependentUpon>SelectionFitness.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SelectionHealth.resx">
+      <DependentUpon>SelectionHealth.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SelectionLearning.resx">
+      <DependentUpon>SelectionLearning.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SideLungesEasy.resx">
+      <DependentUpon>SideLungesEasy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SideLungesHard.resx">
+      <DependentUpon>SideLungesHard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SideLungesMedium.resx">
+      <DependentUpon>SideLungesMedium.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SidePlankEasy.resx">
+      <DependentUpon>SidePlankEasy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SidePlankHard.resx">
+      <DependentUpon>SidePlankHard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SidePlankMedium.resx">
+      <DependentUpon>SidePlankMedium.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SquatsEasy.resx">
+      <DependentUpon>SquatsEasy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SquatsHard.resx">
+      <DependentUpon>SquatsHard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SquatsMedium.resx">
+      <DependentUpon>SquatsMedium.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StoryRetellingEasy.resx">
+      <DependentUpon>StoryRetellingEasy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StoryRetellingHard.resx">
+      <DependentUpon>StoryRetellingHard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StoryRetellingMedium.resx">
+      <DependentUpon>StoryRetellingMedium.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TableOfRecords.resx">
+      <DependentUpon>TableOfRecords.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TakeAColdShowerMedium.resx">
+      <DependentUpon>TakeAColdShowerMedium.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TakeAColdShowerEasy.resx">
+      <DependentUpon>TakeAColdShowerEasy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TakeAColdShowerHard.resx">
+      <DependentUpon>TakeAColdShowerHard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TimeChallengeEasy.resx">
+      <DependentUpon>TimeChallengeEasy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TimeChallengeHard.resx">
+      <DependentUpon>TimeChallengeHard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TimeChallengeMedium.resx">
+      <DependentUpon>TimeChallengeMedium.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ToeTopEasy.resx">
+      <DependentUpon>ToeTopEasy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ToeTopHard.resx">
+      <DependentUpon>ToeTopHard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ToeTopMedium.resx">
+      <DependentUpon>ToeTopMedium.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TryHCS.resx">
+      <DependentUpon>TryHCS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserAgreement.resx">
+      <DependentUpon>UserAgreement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VoiceCommands.resx">
+      <DependentUpon>VoiceCommands.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WalkingEasy.resx">
+      <DependentUpon>WalkingEasy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WalkingMedium.resx">
+      <DependentUpon>WalkingMedium.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WallSitEasy.resx">
+      <DependentUpon>WallSitEasy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WallSitHard.resx">
+      <DependentUpon>WallSitHard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WallSitMedium.resx">
+      <DependentUpon>WallSitMedium.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Daily Challange Randomizer_TemporaryKey.pfx" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="LOGO-removebg-preview.ico" />
+    <None Include="Resources\button4.BackgroundImage.jpg" />
+    <None Include="Resources\PushUp.bmp" />
+    <None Include="Resources\bb1.png" />
+    <None Include="Resources\aa1 %281%29.png" />
+    <None Include="Resources\potanginamo.png" />
+    <None Include="Resources\cc1.png" />
+    <None Include="Resources\Breath.png" />
+    <None Include="Resources\Push.png" />
+    <None Include="Resources\d3c28be1-4d05-46df-a937-1dec3e00683f.wav" />
+    <None Include="Resources\mouse-click-sound-233951.wav" />
+    <None Include="Resources\Click.wav" />
+    <None Include="Resources\Black.png" />
+    <None Include="Resources\dd1.png" />
+    <None Include="Resources\ff1.png" />
+    <None Include="Resources\ee1.png" />
+    <None Include="Resources\Questionmark.png" />
+    <None Include="Resources\bearcrawl.png" />
+    <None Include="Resources\bicyclecrunches.png" />
+    <None Include="Resources\Calfraises.png" />
+    <None Include="Resources\Diamondpushup.png" />
+    <None Include="Resources\Glutebridges.png" />
+    <None Include="Resources\Highknees.png" />
+    <None Include="Resources\Jumpingjacks.png" />
+    <None Include="Resources\Jumpsquat.png" />
+    <None Include="Resources\Legraise.png" />
+    <None Include="Resources\Mountainclimbers.png" />
+    <None Include="Resources\Planking.png" />
+    <None Include="Resources\reverselunges.png" />
+    <None Include="Resources\russiantwist.png" />
+    <None Include="Resources\sidelunges.png" />
+    <None Include="Resources\sideplank.png" />
+    <None Include="Resources\Squat.png" />
+    <None Include="Resources\standingsidelegraise.png" />
+    <None Include="Resources\stepup.png" />
+    <None Include="Resources\toetop.png" />
+    <None Include="Resources\Wallsit.png" />
+    <None Include="Resources\Book_summary.png" />
+    <None Include="Resources\Character_analysisE.png" />
+    <None Include="Resources\Grammar_question.png" />
+    <None Include="Resources\Vocabulary_challenge.png" />
+    <None Include="Resources\Wordcount_challenge.png" />
+    <None Include="Resources\Character_analysisF.png" />
+    <None Include="Resources\Dialog_analysis.png" />
+    <None Include="Resources\Filipino_quiz.png" />
+    <None Include="Resources\Poetry_challenge.png" />
+    <None Include="Resources\Story_retelling.png" />
+    <None Include="Resources\Budget_puzzle.png" />
+    <None Include="Resources\Math_puzzle.png" />
+    <None Include="Resources\Pattern_recognition.png" />
+    <None Include="Resources\Reallife_application.png" />
+    <None Include="Resources\Time_challenge.png" />
+    <None Include="Resources\Detox.png" />
+    <None Include="Resources\Grattitude.png" />
+    <None Include="Resources\Journal.png" />
+    <None Include="Resources\Meditate.png" />
+    <None Include="Resources\Nature.png" />
+    <None Include="Resources\Check.png" />
+    <None Include="Resources\Ex.png" />
+    <None Include="Resources\Push Ups %28Easy%29.png" />
+    <None Include="Resources\Push_Ups__Easy_-removebg-preview.png" />
+    <None Include="Resources\output-onlinetools.png" />
+    <None Include="Resources\Wall_Sit__Medium_F.png" />
+    <None Include="Resources\Wall_Sit__Hard_F.png" />
+    <None Include="Resources\Wall_Sit__Easy_F.png" />
+    <None Include="Resources\Toe_Top__Medium_F.png" />
+    <None Include="Resources\Toe_Top__Hard_F.png" />
+    <None Include="Resources\Toe_Top__Easy_F.png" />
+    <None Include="Resources\Step_Up__Medium_F.png" />
+    <None Include="Resources\Step_Up__Hard_F.png" />
+    <None Include="Resources\Step_Up__Easy_F.png" />
+    <None Include="Resources\Standing_Side_Leg_Raises__Medium__F.png" />
+    <None Include="Resources\Standing_Side_Leg_Raises__Easy_F.png" />
+    <None Include="Resources\Squat__Medium_F.png" />
+    <None Include="Resources\Squat__Hard_F.png" />
+    <None Include="Resources\Squat__Easy_F.png" />
+    <None Include="Resources\Side_Plank__Easy_F.png" />
+    <None Include="Resources\Side_Plank__Hard_F.png" />
+    <None Include="Resources\Side_Plank__Medium_F.png" />
+    <None Include="Resources\Side_Lunges__Medium_F.png" />
+    <None Include="Resources\Side_Lunges__Hard_F.png" />
+    <None Include="Resources\Side_Lunges__Easy_F.png" />
+    <None Include="Resources\Russian_Twist__Medium_F.png" />
+    <None Include="Resources\Russian_Twist__Hard_F.png" />
+    <None Include="Resources\Russian_Twist__Easy_F.png" />
+    <None Include="Resources\Reverse_Lunges__Medium_F.png" />
+    <None Include="Resources\Reverse_Lunges__Hard_F.png" />
+    <None Include="Resources\Reverse_Lunges__Easy_F.png" />
+    <None Include="Resources\Planking__Medium_F.png" />
+    <None Include="Resources\Planking__Hard_F.png" />
+    <None Include="Resources\Planking__Easy_F.png" />
+    <None Include="Resources\Plan_your_week__Hard_H.png" />
+    <None Include="Resources\Plan_your_week__Easy_H.png" />
+    <None Include="Resources\Mountain_Climbers__Medium_F.png" />
+    <None Include="Resources\Mountain_Climbers__Hard_F.png" />
+    <None Include="Resources\Leg_Raise__Medium_F.png" />
+    <None Include="Resources\Leg_Raise__Hard_F.png" />
+    <None Include="Resources\Leg_Raise__Easy_F.png" />
+    <None Include="Resources\Jumping_Squat__Medium_F.png" />
+    <None Include="Resources\Jumping_Squat__Hard_F.png" />
+    <None Include="Resources\Jumping_Squat__Easy_F.png" />
+    <None Include="Resources\Jumping_Jacks__Medium_F.png" />
+    <None Include="Resources\Jumping_Jacks__Hard_F.png" />
+    <None Include="Resources\Jumping_Jacks__Easy_F.png" />
+    <None Include="Resources\Jogging__Easy_F.png" />
+    <None Include="Resources\Jogging__Medium_F.png" />
+    <None Include="Resources\Jogging__Hard_F.png" />
+    <None Include="Resources\Hold_Your_Breath__Medium_H.png" />
+    <None Include="Resources\Hold_Your_Breath__Hard_H.png" />
+    <None Include="Resources\Hold_Your_Breath__Easy_H.png" />
+    <None Include="Resources\High_Knees__Medium_F.png" />
+    <None Include="Resources\High_Knees__Hard_F.png" />
+    <None Include="Resources\High_Knees__Easy_F.png" />
+    <None Include="Resources\Glute_Bridges__Medium_F.png" />
+    <None Include="Resources\Glute_Bridges__Hard_F.png" />
+    <None Include="Resources\Diamond_Push_Ups__Easy_F.png" />
+    <None Include="Resources\Calf_Raises__Medium_F.png" />
+    <None Include="Resources\Calf_Raises__Hard_F.png" />
+    <None Include="Resources\Calf_Raises__Easy_F.png" />
+    <None Include="Resources\Bicycle_Crunches__Medium_F.png" />
+    <None Include="Resources\Bicycle_Crunches__Hard_F.png" />
+    <None Include="Resources\Bicycle_Crunches__Easy_F.png" />
+    <None Include="Resources\Bear_Crawl__Medium_F.png" />
+    <None Include="Resources\Bear_Crawl__Hard_F.png" />
+    <None Include="Resources\Bear_Crawl__Easy_F.png" />
+    <None Include="Resources\Word_Count_Challenge_Medium_E.png" />
+    <None Include="Resources\Word_Count_Challenge_Hard_E.png" />
+    <None Include="Resources\Word_Count_Challenge_Easy_E.png" />
+    <None Include="Resources\Walking_Medium_H.png" />
+    <None Include="Resources\Walking_Hard_H.png" />
+    <None Include="Resources\Vocabulary_Challenge__Medium_E.png" />
+    <None Include="Resources\Vocabulary_Challenge__Easy_E.png" />
+    <None Include="Resources\Take_a_Cold_Shower__Medium_H.png" />
+    <None Include="Resources\Take_a_Cold_Shower__Hard_H.png" />
+    <None Include="Resources\Take_a_Cold_Shower__Easy_H.png" />
+    <None Include="Resources\Story_Retelling__Hard_F.png" />
+    <None Include="Resources\Story_Retelling__Medium_F.png" />
+    <None Include="Resources\Story_Retelling__Easy_F.png" />
+    <None Include="Resources\Real_Life_Application__Medium_M.png" />
+    <None Include="Resources\Real_Life_Application__Hard_M.png" />
+    <None Include="Resources\Real_Life_Application__Easy_M.png" />
+    <None Include="Resources\Reading_Time__Medium_H.png" />
+    <None Include="Resources\Reading_Time__Hard_H.png" />
+    <None Include="Resources\Reading_Time__Easy_H.png" />
+    <None Include="Resources\Quiz_Mental__Meduim_H.png" />
+    <None Include="Resources\Quiz_Mental__Hard_H.png" />
+    <None Include="Resources\Quiz_Mental__Easy_H.png" />
+    <None Include="Resources\Quick_Stretching__Medium_H.png" />
+    <None Include="Resources\Quick_Stretching__Hard_H.png" />
+    <None Include="Resources\Poetry_Challenge__Medium_F.png" />
+    <None Include="Resources\Poetry_Challenge__Hard_F.png" />
+    <None Include="Resources\Poetry_Challenge__Easy_F.png" />
+    <None Include="Resources\Plan_Your_Week_Mental__Hard_H.png" />
+    <None Include="Resources\Plan_Your_Week_Mental__Easy_H.png" />
+    <None Include="Resources\Pattern_Recognition__Medium_M.png" />
+    <None Include="Resources\Pattern_Recognition__Hard_M.png" />
+    <None Include="Resources\Mindful_Eating__Medium_H.png" />
+    <None Include="Resources\Mindful_Eating__Hard_H.png" />
+    <None Include="Resources\Mindful_Eating__Easy_H.png" />
+    <None Include="Resources\Mindful_Breathing__Medium_H.png" />
+    <None Include="Resources\Mindful_Breathing__Hard_H.png" />
+    <None Include="Resources\Mindful_Breathing__Easy_H.png" />
+    <None Include="Resources\Math_Puzzle__Medium_M.png" />
+    <None Include="Resources\Math_Puzzle__Hard_M.png" />
+    <None Include="Resources\Math_Puzzle__Easy_M.png" />
+    <None Include="Resources\Hydration__Medium_H.png" />
+    <None Include="Resources\Hydration__Easy_H.png" />
+    <None Include="Resources\Hydration__Hard_H.png" />
+    <None Include="Resources\Grammar__Medium_E.png" />
+    <None Include="Resources\Grammar__Hard_E.png" />
+    <None Include="Resources\Grammar__Easy_E.png" />
+    <None Include="Resources\Filipino_Quiz__Medium_F.png" />
+    <None Include="Resources\Filipino_Quiz__Hard_F.png" />
+    <None Include="Resources\Filipino_Quiz__Easy_F.png" />
+    <None Include="Resources\Dialog_Analysis__Medium_F.png" />
+    <None Include="Resources\Dialog_Analysis__Hard_F.png" />
+    <None Include="Resources\Dialog_Analysis__Easy_F.png" />
+    <None Include="Resources\Characteristic_Analysis_Filipino__Easy_F.png" />
+    <None Include="Resources\Characteristic_Analysis_Filipino___Medium_F.png" />
+    <None Include="Resources\Characteristic_Analysis_Filipino___Hard_F.png" />
+    <None Include="Resources\Character_Analysis_English_Medium_E.png" />
+    <None Include="Resources\Character_Analysis_English__Hard_E.png" />
+    <None Include="Resources\Character_Analysis_English__Easy_E.png" />
+    <None Include="Resources\No_Blinking__Hard_H.png" />
+    <None Include="Resources\No_Blinking__Medium_H.png" />
+    <None Include="Resources\No_Blinking__Easy_H.png" />
+    <None Include="Resources\Budget_Planning__Hard_M.png" />
+    <None Include="Resources\Budget_Planning__Medium_M.png" />
+    <None Include="Resources\Budget_Planning__Easy_M.png" />
+    <None Include="Resources\Book_Summary__Hard_E.png" />
+    <None Include="Resources\Book_Summary__Medium_E.png" />
+    <None Include="Resources\Book_Summary__Easy_E.png" />
+    <None Include="Resources\Time_Challenge__Hard_M.png" />
+    <None Include="Resources\Time_Challenge__Medium_M.png" />
+    <None Include="Resources\Time_Challenge__Easy_M.png" />
+    <None Include="Resources\Push_Ups__Hard_F.png" />
+    <None Include="Resources\Push_Ups__Medium_F.png" />
+    <None Include="Resources\Diamond_Push_Ups__Hard_F.png" />
+    <None Include="Resources\Diamond_Push_Ups__Medium_F.png" />
+    <None Include="Resources\Glute_Bridges__Easy_F.png" />
+    <None Include="Resources\Mountain_Climbers__Easy_F.png" />
+    <None Include="Resources\Pattern_Recognition__Easy_M.png" />
+    <None Include="Resources\Plan_Your_Week_Mental__Medium_H.png" />
+    <None Include="Resources\Plan_your_week__Medium_H.png" />
+    <None Include="Resources\Vocabulary_Challenge__Hard_E.png" />
+    <None Include="Resources\Standing_Side_Leg_Raises__Hard_F.png" />
+    <None Include="Resources\Quick_Stretching__Easy_H.png" />
+    <None Include="Resources\Walking_Easy_H.png" />
+    <None Include="Resources\LOGOUT.png" />
+    <None Include="Resources\Countown.wav" />
+    <None Include="Resources\Fail.wav" />
+    <None Include="Resources\Success.wav" />
+    <None Include="Resources\Start.wav" />
+    <None Include="Resources\Counting.wav" />
+    <None Include="Resources\ToeUpC.png" />
+    <None Include="Resources\JoggingT.png" />
+    <None Include="Resources\BearcrawlT.png" />
+    <None Include="Resources\BicycleCrunchesT.png" />
+    <None Include="Resources\CalfRaisesT.png" />
+    <None Include="Resources\DiamondPushUpT.png" />
+    <None Include="Resources\GluteBridgesT.png" />
+    <None Include="Resources\HighKneesT.png" />
+    <None Include="Resources\JumpingJacksT.png" />
+    <None Include="Resources\JumpSquatT.png" />
+    <None Include="Resources\LegRaisesT.png" />
+    <None Include="Resources\MountainClimbersT.png" />
+    <None Include="Resources\PlankingT.png" />
+    <None Include="Resources\ReversesLungesT.png" />
+    <None Include="Resources\RusssianTwistT.png" />
+    <None Include="Resources\SidelungesT.png" />
+    <None Include="Resources\SideplankT.png" />
+    <None Include="Resources\SquatT.png" />
+    <None Include="Resources\StandingSideLegRaisesT.png" />
+    <None Include="Resources\StepUpT.png" />
+    <None Include="Resources\ToeTopT.png" />
+    <None Include="Resources\WallSitT.png" />
+    <None Include="Resources\BearcrawlC.png" />
+    <None Include="Resources\BicycleCrunchesC.png" />
+    <None Include="Resources\CalfRaisesC.png" />
+    <None Include="Resources\DiamondPushupC.png" />
+    <None Include="Resources\GluteBridgesC.png" />
+    <None Include="Resources\HighKneesC.png" />
+    <None Include="Resources\JumpingJacksC.png" />
+    <None Include="Resources\JumpSquatC.png" />
+    <None Include="Resources\LegRaiseS.png" />
+    <None Include="Resources\MountainClimbersC.png" />
+    <None Include="Resources\PlankingC.png" />
+    <None Include="Resources\ReversesLungesC.png" />
+    <None Include="Resources\RusssianTwistC.png" />
+    <None Include="Resources\SideLungesC.png" />
+    <None Include="Resources\SidePlankC.png" />
+    <None Include="Resources\SquatC.png" />
+    <None Include="Resources\StandingSidelegraisesC.png" />
+    <None Include="Resources\StepUpC.png" />
+    <None Include="Resources\ToeTopC.png" />
+    <None Include="Resources\WallSitC.png" />
+    <None Include="Resources\JoggingC.jpg" />
+    <None Include="Resources\LegRaiseC.png" />
+    <None Include="Resources\Randomizer.wav" />
+    <None Include="Resources\Randomizer5s.wav" />
+    <None Include="Resources\Randomizer6s.wav" />
+    <None Include="Resources\Gratitude %28Medium%29.png" />
+    <None Include="Resources\Gratitude %28Easy%29.png" />
+    <None Include="Resources\Gratitude %28Hard%29.png" />
+    <None Include="Resources\ArrowLeft.png" />
+    <None Include="Resources\ArrowRight.png" />
+    <None Include="Resources\Records.png" />
+    <None Include="Resources\AG.png" />
+    <None Include="Resources\AR.png" />
+    <None Include="Resources\BG.png" />
+    <None Include="Resources\BR.png" />
+    <None Include="Resources\CG.png" />
+    <None Include="Resources\CR.png" />
+    <None Include="Resources\DG.png" />
+    <None Include="Resources\DR.png" />
+    <None Include="Resources\QuickStretchingC.png" />
+    <None Include="Resources\MindfulBreathingC.png" />
+    <None Include="Resources\MindFulBreathingT.jpg" />
+    <None Include="Resources\QuickStetchingT.jpg" />
+    <None Include="Resources\PoetryT.png" />
+    <None Include="Resources\PoetryC.jpg" />
+    <None Include="Resources\FitnessLettering.png" />
+    <None Include="Resources\HealthLettering.png" />
+    <None Include="Resources\LearningLettering.png" />
+    <None Include="Resources\RandomizerLettering.png" />
+    <None Include="Resources\SelectionLettering.png" />
+    <None Include="Resources\EasyHealth.gif" />
+    <None Include="Resources\HardHealth.gif" />
+    <None Include="Resources\MediumHealth.gif" />
+    <None Include="Resources\EasyFitness.gif" />
+    <None Include="Resources\HardFitness.gif" />
+    <None Include="Resources\MediumFitness.gif" />
+    <None Include="Resources\EasyLearning.gif" />
+    <None Include="Resources\HardLearning.gif" />
+    <None Include="Resources\MediumLearning.gif" />
+    <None Include="Resources\LearningLogo.gif" />
+    <None Include="Resources\FitnessLogo.gif" />
+    <None Include="Resources\HealthLogo.gif" />
+    <None Include="Resources\OpenMic.wav" />
+    <None Include="Resources\OffMic.wav" />
+    <None Include="Resources\Feedbacks.png" />
+    <None Include="Resources\Darkmode-removebg-preview %282%29.png" />
+    <None Include="Resources\Mic.png" />
+    <None Include="Resources\Mic Off.png" />
+    <None Include="Resources\Mic On Fitness.gif" />
+    <None Include="Resources\Mic On HomePage.gif" />
+    <None Include="Resources\Mic On Learning.gif" />
+    <None Include="Resources\Learning Logo.gif" />
+    <None Include="Resources\Fitness Logo.gif" />
+    <None Include="Resources\HCS Logo LightCoral.gif" />
+    <None Include="Resources\HCS Logo Crimson.gif" />
+    <None Include="Resources\Challenge Lettering.png" />
+    <None Include="Resources\Learning Lettering.png" />
+    <None Include="Resources\Fitness Lettering.png" />
+    <None Include="Resources\Health Lettering.png" />
+    <None Include="Resources\System Lettering.png" />
+    <Content Include="YEAH.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\Microsoft.CognitiveServices.Speech.1.43.0\build\net462\Microsoft.CognitiveServices.Speech.targets" Condition="Exists('..\packages\Microsoft.CognitiveServices.Speech.1.43.0\build\net462\Microsoft.CognitiveServices.Speech.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CognitiveServices.Speech.1.43.0\build\net462\Microsoft.CognitiveServices.Speech.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CognitiveServices.Speech.1.43.0\build\net462\Microsoft.CognitiveServices.Speech.targets'))" />
+  </Target>
+</Project>

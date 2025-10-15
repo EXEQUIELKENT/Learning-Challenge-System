@@ -1,0 +1,752 @@
+﻿using Design;
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+using System.Media;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using System.IO;
+using Newtonsoft.Json;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ToolBar;
+
+namespace DCP.Resources
+{
+    public partial class PlanYourWeekendHard : Form
+    {
+        private Timer timer;
+        private int progressDuration = 900; // total time for progress bar in seconds
+        private int timeRemaining;
+        private SoundPlayer soundPlayer;
+        private SoundPlayer click;
+        private SoundPlayer fail;
+        private SoundPlayer success;
+        private SoundPlayer count;
+        private bool isEnterKeyDisabled = false;
+        public PlanYourWeekendHard()
+        {
+            InitializeComponent();
+
+            success = new SoundPlayer(DCP.Properties.Resources.Success);
+            success.Load();
+
+            count = new SoundPlayer(DCP.Properties.Resources.Countdown);
+            count.Load();
+
+            fail = new SoundPlayer(DCP.Properties.Resources.Fail);
+            fail.Load();
+
+            click = new SoundPlayer(DCP.Properties.Resources.Click2);
+            click.Load();
+
+            soundPlayer = new SoundPlayer(DCP.Properties.Resources.Counting);
+            soundPlayer.Load();
+
+            click.Play();
+            soundPlayer.Play();
+            fail.Play();
+            count.Play();
+            success.Play();
+
+            System.Threading.Thread.Sleep(10);
+            soundPlayer.Stop();
+            click.Stop();
+            fail.Stop();
+            count.Stop();
+            success.Stop();
+
+            timer = new Timer();
+            timer.Interval = 1000; // 1 second intervals
+            timer.Tick += Timer_Tick;
+
+            // Initialize TextBox for time to "00:00:00"
+            textBox2.Text = "00:00:00";
+
+            button1.Enabled = true;  // "START" button is enabled initially
+
+            MondayrichTextBox.Enabled = false;
+            TuesdayrichTextBox.Enabled = false;
+            WednesdayrichTextBox.Enabled = false;
+            ThursdayrichTextBox.Enabled = false;
+            FridayrichTextBox.Enabled = false;
+            SaturdayrichTextBox.Enabled = false;
+            SundayrichTextBox.Enabled = false;
+        }
+        //Function Codes
+
+        private void Timer_Tick(object sender, EventArgs e)
+        {
+            // Update the progress bar and time display
+            if (timeRemaining > 0)
+            {
+                if (progressBar1.Value < progressBar1.Maximum)
+                {
+                    progressBar1.Value = progressDuration - timeRemaining;
+                }
+                textBox2.Text = TimeSpan.FromSeconds(progressDuration - timeRemaining).ToString("hh\\:mm\\:ss");
+
+                count.Play();
+
+                timeRemaining--;
+            }
+            else
+            {
+                // Challenge completed successfully when the time is up
+                success.Play();
+                timer.Stop();
+                progressBar1.Value = progressBar1.Maximum; // Set progress bar to max on completion
+                textBox2.Text = TimeSpan.FromSeconds(progressDuration).ToString("hh\\:mm\\:ss"); // Set the final time
+
+                // Save challenge data to JSON file
+                SaveChallengeDataFailed(Login.CurrentUsername, textBox2.Text, "Plan Your Weekend (Hard)");
+
+                MessageBox.Show("Challenge not completed. Returning to the homepage.", "Challenge Unsuccessful", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                TransitionToHomePage();
+            }
+        }
+        public void SaveChallengeDataSuccess(string username, string status, string time, string formTitle)
+        {
+            // File path for the challenge data
+            string date = DateTime.Now.ToString("MM-dd-yy");
+            string challengeFilePath = $"{username}_challenge.json";
+            var challengeList = new List<dynamic>(); // Use dynamic for flexibility with old/new records
+
+            // Load existing challenge data
+            if (File.Exists(challengeFilePath))
+            {
+                var existingData = File.ReadAllText(challengeFilePath);
+                challengeList = JsonConvert.DeserializeObject<List<dynamic>>(existingData);
+            }
+            
+            // Add the new challenge data
+            var newChallengeData = new
+            {
+                Date = date,
+                FormTitle = formTitle,
+                Challenge = status, // New property for jogging
+                Time = time
+            };
+
+            challengeList.Add(newChallengeData);
+
+            // Save back to the JSON file
+            var updatedChallengeData = JsonConvert.SerializeObject(challengeList, Formatting.Indented);
+            File.WriteAllText(challengeFilePath, updatedChallengeData);
+        }
+        public void SaveChallengeDataFailed(string username, string time, string formTitle)
+        {
+            // File path for the challenge data
+            string date = DateTime.Now.ToString("MM-dd-yy");
+            string challengeFilePath = $"{username}_challenge.json";
+            var challengeList = new List<dynamic>(); // Use dynamic for flexibility with old/new records
+
+            // Load existing challenge data
+            if (File.Exists(challengeFilePath))
+            {
+                var existingData = File.ReadAllText(challengeFilePath);
+                challengeList = JsonConvert.DeserializeObject<List<dynamic>>(existingData);
+            }
+
+            // Add the new challenge data
+            var newChallengeData = new
+            {
+                Date = date,
+                FormTitle = formTitle,
+                Challenge = "Failed", // New property for jogging
+                Time = time
+            };
+
+            challengeList.Add(newChallengeData);
+
+            // Save back to the JSON file
+            var updatedChallengeData = JsonConvert.SerializeObject(challengeList, Formatting.Indented);
+            File.WriteAllText(challengeFilePath, updatedChallengeData);
+        }
+        private void SaveEssayContent()
+        {
+            DialogResult result = MessageBox.Show("Do you want to save your week plan?", "Save File", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (result == DialogResult.Yes)
+            {
+                // Initialize SaveFileDialog
+                SaveFileDialog saveFileDialog = new SaveFileDialog
+                {
+                    Filter = "Text Files (*.txt)|*.txt", // Set file type filter
+                };
+
+                // Show the SaveFileDialog
+                if (saveFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    string filePath = saveFileDialog.FileName;
+
+                    // Prepare content for the file
+                    StringBuilder weekPlanContent = new StringBuilder();
+                    weekPlanContent.AppendLine("Monday")
+                        .AppendLine()
+                        .AppendLine(MondayrichTextBox.Text)
+                        .AppendLine()
+                        .AppendLine("Tuesday")
+                        .AppendLine()
+                        .AppendLine(TuesdayrichTextBox.Text)
+                        .AppendLine()
+                        .AppendLine("Wednesday")
+                        .AppendLine()
+                        .AppendLine(WednesdayrichTextBox.Text)
+                        .AppendLine()
+                        .AppendLine("Thursday")
+                        .AppendLine()
+                        .AppendLine(ThursdayrichTextBox.Text)
+                        .AppendLine()
+                        .AppendLine("Friday")
+                        .AppendLine()
+                        .AppendLine(FridayrichTextBox.Text)
+                        .AppendLine()
+                        .AppendLine("Saturday")
+                        .AppendLine()
+                        .AppendLine(SaturdayrichTextBox.Text)
+                        .AppendLine()
+                        .AppendLine("Sunday")
+                        .AppendLine()
+                        .AppendLine(SundayrichTextBox.Text);
+
+                    // Save the content to the file
+                    File.WriteAllText(filePath, weekPlanContent.ToString());
+                    MessageBox.Show($"Your week plan has been saved as a text file:\n{filePath}", "File Saved", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+        }
+
+        private void ResetChallenge()
+        {
+            timer.Stop();
+            progressBar1.Value = 0;
+            textBox2.Text = "00:00:00";
+        }
+
+        private void TransitionToHomePage()
+        {
+            Timer fadeOutTimer = new Timer();
+            fadeOutTimer.Interval = 10;
+            fadeOutTimer.Tick += (s, ev) =>
+            {
+                if (this.Opacity > 0)
+                {
+                    this.Opacity -= 0.05;
+                }
+                else
+                {
+                    fadeOutTimer.Stop();
+                    this.Close();
+
+                    // Open HOMEPAGE with fade-in effect
+                    HOMEPAGE hOMEPAGE = new HOMEPAGE();
+                    hOMEPAGE.StartPosition = FormStartPosition.CenterScreen;
+                    hOMEPAGE.Opacity = 0;
+                    hOMEPAGE.Show();
+
+                    Timer fadeInTimer = new Timer();
+                    fadeInTimer.Interval = 20;
+                    fadeInTimer.Tick += (s2, ev2) =>
+                    {
+                        if (hOMEPAGE.Opacity < 1)
+                        {
+                            hOMEPAGE.Opacity += 0.05;
+                        }
+                        else
+                        {
+                            fadeInTimer.Stop();
+                        }
+                    };
+                    fadeInTimer.Start();
+                }
+            };
+            fadeOutTimer.Start();
+        }
+        private void StartChallenge()
+        {
+            // Enable DONE button
+            MondayrichTextBox.Enabled = true;
+            TuesdayrichTextBox.Enabled = true;
+            WednesdayrichTextBox.Enabled = true;
+            ThursdayrichTextBox.Enabled = true;
+            FridayrichTextBox.Enabled = true;
+            SaturdayrichTextBox.Enabled = true;
+            SundayrichTextBox.Enabled = true;
+            button1.Enabled = true;
+            textBox2.Enabled = true;
+            pictureBox11.Enabled = true;
+            button4.Enabled = true;
+            isEnterKeyDisabled = false;
+
+            // Initialize progress bar and timer
+            progressBar1.Value = 0;
+            progressBar1.Maximum = progressDuration - 1; // Adjusted to fill fully at end
+            timeRemaining = progressDuration;
+
+            // Start timer and update time textbox
+            timer.Start();
+        }
+        protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
+        {
+            if (keyData == Keys.Back)
+            {
+                if (!(ActiveControl is RichTextBox))
+                {
+                    click.Play();
+
+                    DialogResult result = MessageBox.Show("Are you sure you want to go back?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                    if (result == DialogResult.Yes)
+                    {
+                        // Check if the timer is still running
+                        if (timer != null && timer.Enabled) // Assuming 'challengeTimer' is your timer
+                        {
+                            DialogResult result2 = MessageBox.Show("Are you sure you want to go back? This will fail the challenge.", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                            if (result2 == DialogResult.Yes)
+                            {
+                                // Save challenge data to JSON file
+                                SaveChallengeDataFailed(Login.CurrentUsername, textBox2.Text, "Plan Your Weekend (Hard)");
+
+                                timer.Stop();
+                                fail.Play();
+                                progressBar1.Value = progressBar1.Maximum; // Set progress bar to max
+
+                                MessageBox.Show("Challenge failed as you exited before completing it.", "Challenge Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
+                        }
+
+                        // Fade-out effect before closing
+                        Timer fadeOutTimer = new Timer();
+                        fadeOutTimer.Interval = 10;
+                        fadeOutTimer.Tick += (s, ev) =>
+                        {
+                            if (this.Opacity > 0)
+                            {
+                                this.Opacity -= 0.05;
+                            }
+                            else
+                            {
+                                fadeOutTimer.Stop();
+                                this.Close();
+
+                                // Open HOMEPAGE with fade-in effect
+                                HOMEPAGE hOMEPAGE = new HOMEPAGE();
+                                hOMEPAGE.StartPosition = FormStartPosition.CenterScreen;
+                                hOMEPAGE.Opacity = 0;
+                                hOMEPAGE.Show();
+
+                                Timer fadeInTimer = new Timer();
+                                fadeInTimer.Interval = 20;
+                                fadeInTimer.Tick += (s2, ev2) =>
+                                {
+                                    if (hOMEPAGE.Opacity < 1)
+                                    {
+                                        hOMEPAGE.Opacity += 0.05;
+                                    }
+                                    else
+                                    {
+                                        fadeInTimer.Stop();
+                                    }
+                                };
+                                fadeInTimer.Start();
+                            }
+                        };
+                        fadeOutTimer.Start();
+                    }
+                    return true;
+                }
+            }
+            return base.ProcessCmdKey(ref msg, keyData);
+        }
+        protected override void OnFormClosing(FormClosingEventArgs e)
+        {
+            // Stop the timer and sound when the form is closing
+            if (timer != null && timer.Enabled)
+            {
+                timer.Stop();
+            }
+
+            if (count != null)
+            {
+                count.Stop();
+            }
+
+            base.OnFormClosing(e);
+        }
+        //Button Codes
+
+        private void pictureBox11_Click(object sender, EventArgs e)
+        {
+            click.Play();
+
+            DialogResult result = MessageBox.Show("Are you sure you want to go back?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                // Check if the timer is still running
+                if (timer != null && timer.Enabled) // Assuming 'challengeTimer' is your timer
+                {
+                    DialogResult result2 = MessageBox.Show("Are you sure you want to go back? This will fail the challenge.", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                    if (result2 == DialogResult.Yes)
+                    {
+                        // Save challenge data to JSON file
+                        SaveChallengeDataFailed(Login.CurrentUsername, textBox2.Text, "Plan Your Weekend (Hard)");
+
+                        timer.Stop();
+                        fail.Play();
+                        progressBar1.Value = progressBar1.Maximum; // Set progress bar to max
+
+                        MessageBox.Show("Challenge failed as you exited before completing it.", "Challenge Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+
+                }
+
+                // Fade-out effect before closing
+                Timer fadeOutTimer = new Timer();
+                fadeOutTimer.Interval = 10;
+                fadeOutTimer.Tick += (s, ev) =>
+                {
+                    if (this.Opacity > 0)
+                    {
+                        this.Opacity -= 0.05;
+                    }
+                    else
+                    {
+                        fadeOutTimer.Stop();
+                        this.Close();
+
+                        // Open HOMEPAGE with fade-in effect
+                        HOMEPAGE hOMEPAGE = new HOMEPAGE();
+                        hOMEPAGE.StartPosition = FormStartPosition.CenterScreen;
+                        hOMEPAGE.Opacity = 0;
+                        hOMEPAGE.Show();
+
+                        Timer fadeInTimer = new Timer();
+                        fadeInTimer.Interval = 20;
+                        fadeInTimer.Tick += (s2, ev2) =>
+                        {
+                            if (hOMEPAGE.Opacity < 1)
+                            {
+                                hOMEPAGE.Opacity += 0.05;
+                            }
+                            else
+                            {
+                                fadeInTimer.Stop();
+                            }
+                        };
+                        fadeInTimer.Start();
+                    }
+                };
+                fadeOutTimer.Start();
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            click.Play();
+
+            if (button1.Text == "START")
+            {
+                // Start the challenge
+                button1.Text = "DONE";
+                button1.Enabled = false;
+                MondayrichTextBox.Enabled = false;
+                TuesdayrichTextBox.Enabled = false;
+                WednesdayrichTextBox.Enabled = false;
+                ThursdayrichTextBox.Enabled = false;
+                FridayrichTextBox.Enabled = false;
+                SaturdayrichTextBox.Enabled = false;
+                SundayrichTextBox.Enabled = false;
+                textBox2.Enabled = false;
+                button4.Enabled = false;
+                pictureBox11.Enabled = false;
+                isEnterKeyDisabled = true;
+
+                soundPlayer.Play();
+
+                // Delay the start of the timer and progress bar
+                Timer audioTimer = new Timer();
+                audioTimer.Interval = 4000; // Adjusted delay for audio
+                audioTimer.Tick += (s, args) =>
+                {
+                    audioTimer.Stop();
+                    audioTimer.Dispose();
+                    StartChallenge();
+                };
+                audioTimer.Start();
+            }
+            else if (button1.Text == "DONE")
+            {
+                // Validate content length for each of the day-specific RichTextBoxes
+                if (MondayrichTextBox.Text.Length <= 150 ||
+                    TuesdayrichTextBox.Text.Length <= 150 ||
+                    WednesdayrichTextBox.Text.Length <= 150 ||
+                    ThursdayrichTextBox.Text.Length <= 150 ||
+                    FridayrichTextBox.Text.Length <= 150 ||
+                    SaturdayrichTextBox.Text.Length <= 150 ||
+                    SundayrichTextBox.Text.Length <= 150)
+                {
+                    MessageBox.Show("Each day's plan must be at least 150 characters long to complete the challenge.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                // Challenge completed successfully
+                timer.Stop();
+                success.Play();
+                progressBar1.Value = progressBar1.Maximum; // Set progress bar to max
+                textBox2.Text = TimeSpan.FromSeconds(progressDuration - timeRemaining).ToString("hh\\:mm\\:ss"); // Update final time
+
+                // Save the essay content
+                SaveEssayContent();
+
+                SaveChallengeDataSuccess(Login.CurrentUsername, "Completed", textBox2.Text, "Plan Your Weekend (Hard)");
+
+                MessageBox.Show("Challenge Success. Returning to the homepage.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                TransitionToHomePage();
+            }
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void progressBar1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            click.Play();
+
+            DialogResult result = MessageBox.Show("Are you sure you want to close?.", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                // Check if the timer is still running
+                if (timer != null && timer.Enabled) // Assuming 'challengeTimer' is your timer
+                {
+                    DialogResult result2 = MessageBox.Show("Are you sure you want to close? This will fail the challenge.", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                    if (result2 == DialogResult.Yes)
+                    {
+                        // Save challenge data to JSON file
+                        SaveChallengeDataFailed(Login.CurrentUsername, textBox2.Text, "Plan Your Weekend (Hard)");
+
+                        timer.Stop();
+                        fail.Play();
+                        progressBar1.Value = progressBar1.Maximum; // Set progress bar to max
+
+                        MessageBox.Show("Challenge failed as you closed the challenge before completing it.", "Challenge Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+
+                }
+
+                // Fade-out effect before closing
+                Timer fadeOutTimer = new Timer();
+                fadeOutTimer.Interval = 10;
+                fadeOutTimer.Tick += (s, ev) =>
+                {
+                    if (this.Opacity > 0)
+                    {
+                        this.Opacity -= 0.05;
+                    }
+                    else
+                    {
+                        fadeOutTimer.Stop();
+                        this.Close();
+
+                        // Open HOMEPAGE with fade-in effect
+                        HOMEPAGE hOMEPAGE = new HOMEPAGE();
+                        hOMEPAGE.StartPosition = FormStartPosition.CenterScreen;
+                        hOMEPAGE.Opacity = 0;
+                        hOMEPAGE.Show();
+
+                        Timer fadeInTimer = new Timer();
+                        fadeInTimer.Interval = 20;
+                        fadeInTimer.Tick += (s2, ev2) =>
+                        {
+                            if (hOMEPAGE.Opacity < 1)
+                            {
+                                hOMEPAGE.Opacity += 0.05;
+                            }
+                            else
+                            {
+                                fadeInTimer.Stop();
+                            }
+                        };
+                        fadeInTimer.Start();
+                    }
+                };
+                fadeOutTimer.Start();
+            }
+        }
+
+        private InstructionsPYWH InstructionsPYWH = null; // Class-level variable to track the Guide form
+
+        private void Instructions_Click(object sender, EventArgs e)
+        {
+            click.Play();
+
+            // Check if the Guide form is already open
+            if (InstructionsPYWH != null && !InstructionsPYWH.IsDisposed)
+            {
+                InstructionsPYWH.BringToFront();
+                return;
+            }
+
+            // Create the Guide form
+            InstructionsPYWH = new InstructionsPYWH();
+            InstructionsPYWH.FormBorderStyle = FormBorderStyle.FixedToolWindow; // Set to FixedToolWindow
+            InstructionsPYWH.StartPosition = FormStartPosition.CenterScreen;
+            InstructionsPYWH.Opacity = 0; // Start at 0 for fade-in effect
+
+            // Add functionality to fade out and close the Guide form when the X button is clicked
+            InstructionsPYWH.FormClosing += (s, ev) =>
+            {
+                ev.Cancel = true; // Prevent immediate closure
+                Timer fadeOutTimer = new Timer();
+                fadeOutTimer.Interval = 10; // Adjust for speed of fade (lower = faster)
+                fadeOutTimer.Tick += (s2, ev2) =>
+                {
+                    if (InstructionsPYWH.Opacity > 0)
+                    {
+                        InstructionsPYWH.Opacity -= 0.05; // Decrease opacity for fade-out
+                    }
+                    else
+                    {
+                        fadeOutTimer.Stop();
+                        fadeOutTimer.Dispose();
+                        InstructionsPYWH.FormClosing -= null; // Remove event handler to avoid recursion
+                        InstructionsPYWH.Dispose(); // Dispose of the Guide form
+                        InstructionsPYWH = null; // Reset the reference
+                    }
+                };
+                fadeOutTimer.Start();
+            };
+
+            // Show the Guide form
+            InstructionsPYWH.Show();
+
+            // Fade-in effect for the Guide form
+            Timer fadeInTimer = new Timer();
+            fadeInTimer.Interval = 20;
+            fadeInTimer.Tick += (s, ev) =>
+            {
+                if (InstructionsPYWH.Opacity < 1)
+                {
+                    InstructionsPYWH.Opacity += 0.05; // Increase opacity for fade-in
+                }
+                else
+                {
+                    fadeInTimer.Stop();
+                    fadeInTimer.Dispose();
+                }
+            };
+            fadeInTimer.Start();
+        }
+
+        private void InstructionspictureBox_Click(object sender, EventArgs e)
+        {
+            click.Play();
+
+            // Check if the Guide form is already open
+            if (InstructionsPYWH != null && !InstructionsPYWH.IsDisposed)
+            {
+                InstructionsPYWH.BringToFront();
+                return;
+            }
+
+            // Create the Guide form
+            InstructionsPYWH = new InstructionsPYWH();
+            InstructionsPYWH.FormBorderStyle = FormBorderStyle.FixedToolWindow; // Set to FixedToolWindow
+            InstructionsPYWH.StartPosition = FormStartPosition.CenterScreen;
+            InstructionsPYWH.Opacity = 0; // Start at 0 for fade-in effect
+
+            // Add functionality to fade out and close the Guide form when the X button is clicked
+            InstructionsPYWH.FormClosing += (s, ev) =>
+            {
+                ev.Cancel = true; // Prevent immediate closure
+                Timer fadeOutTimer = new Timer();
+                fadeOutTimer.Interval = 10; // Adjust for speed of fade (lower = faster)
+                fadeOutTimer.Tick += (s2, ev2) =>
+                {
+                    if (InstructionsPYWH.Opacity > 0)
+                    {
+                        InstructionsPYWH.Opacity -= 0.05; // Decrease opacity for fade-out
+                    }
+                    else
+                    {
+                        fadeOutTimer.Stop();
+                        fadeOutTimer.Dispose();
+                        InstructionsPYWH.FormClosing -= null; // Remove event handler to avoid recursion
+                        InstructionsPYWH.Dispose(); // Dispose of the Guide form
+                        InstructionsPYWH = null; // Reset the reference
+                    }
+                };
+                fadeOutTimer.Start();
+            };
+
+            // Show the Guide form
+            InstructionsPYWH.Show();
+
+            // Fade-in effect for the Guide form
+            Timer fadeInTimer = new Timer();
+            fadeInTimer.Interval = 20;
+            fadeInTimer.Tick += (s, ev) =>
+            {
+                if (InstructionsPYWH.Opacity < 1)
+                {
+                    InstructionsPYWH.Opacity += 0.05; // Increase opacity for fade-in
+                }
+                else
+                {
+                    fadeInTimer.Stop();
+                    fadeInTimer.Dispose();
+                }
+            };
+            fadeInTimer.Start();
+        }
+
+        private void MondayrichTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TuesdayrichTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void WednesdayrichTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ThursdayrichTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FridayrichTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void SaturdayrichTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void SundayrichTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void PlanYourWeekendHard_Load(object sender, EventArgs e)
+        {
+
+        }
+    }
+}
