@@ -390,7 +390,7 @@ namespace DCP
                             worksheet.Columns().AdjustToContents();
                             foreach (var column in worksheet.Columns())
                             {
-                                column.Width += 5; // add extra width for better spacing
+                                column.Width += 20; // add extra width for better spacing
                             }
 
                             // 🔹 Freeze header row
