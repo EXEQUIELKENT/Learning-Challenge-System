@@ -263,7 +263,7 @@
             // pictureBox5
             // 
             this.pictureBox5.BackColor = System.Drawing.Color.LimeGreen;
-            this.pictureBox5.Image = global::DCP.Properties.Resources.Learning_Logo;
+            this.pictureBox5.Image = global::DCP.Properties.Resources.LCS_Logo;
             this.pictureBox5.Location = new System.Drawing.Point(47, 10);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(120, 118);

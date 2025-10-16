@@ -77,36 +77,6 @@ namespace DCP
             formMap = new Dictionary<string, Form> {
 
               //Learning
-              { "Book_Summary__Easy_E", null },
-              { "Book_Summary__Medium_E", null },
-              { "Book_Summary__Hard_E", null },
-              { "Character_Analysis_English__Easy_E", null },
-              { "Character_Analysis_English__Medium_E", null },
-              { "Character_Analysis_English__Hard_E", null },
-              { "Characteristic_Analysis_Filipino__Easy_F", null },
-              { "Characteristic_Analysis_Filipino__Medium_F", null },
-              { "Characteristic_Analysis_Filipino__Hard_F", null },
-              { "Grammar__Easy_E", null },
-              { "Grammar__Medium_E", null },
-              { "Grammar__Hard_E", null },
-              { "Vocabulary_Challenge__Easy_E", null },
-              { "Vocabulary_Challenge__Medium_E", null },
-              { "Vocabulary_Challenge__Hard_E", null },
-              { "Word_Count_Challenge_Easy_E", null },
-              { "Word_Count_Challenge_Medium_E", null },
-              { "Word_Count_Challenge_Hard_E", null },
-              { "Dialog_Analysis__Easy_F", null },
-              { "Dialog_Analysis__Medium_F", null },
-              { "Dialog_Analysis__Hard_F", null },
-              { "Filipino_Quiz__Easy_F", null },
-              { "Filipino_Quiz__Medium_F", null },
-              { "Filipino_Quiz__Hard_F", null },
-              { "Poetry_Challenge__Easy_F", null },
-              { "Poetry_Challenge__Medium_F", null },
-              { "Poetry_Challenge__Hard_F", null },
-              { "Story_Retelling__Easy_F", null },
-              { "Story_Retelling__Medium_F", null },
-              { "Story_Retelling__Hard_F", null },
               { "Budget_Problem__Easy_M", null },
               { "Budget_Problem__Medium_M", null },
               { "Budget_Problem__Hard_M", null },
@@ -330,7 +300,7 @@ namespace DCP
         {
             Timer fadeOutTimer = new Timer();
             fadeOutTimer.Interval = 10;
-            fadeOutTimer.Tick += (s, e) =>
+            fadeOutTimer.Tick += (s, ev) =>
             {
                 if (form.Opacity > 0)
                 {
@@ -339,8 +309,9 @@ namespace DCP
                 else
                 {
                     fadeOutTimer.Stop();
-                    fadeOutTimer.Dispose();
                     form.Close();
+                    isTransitioning = false; // Reset the flag
+                    TogglePictureBoxState(true); // Re-enable picture boxes
                 }
             };
             fadeOutTimer.Start();
@@ -435,34 +406,6 @@ namespace DCP
                 // Determine the current pool based on the selected category and difficulty
                 Dictionary<Image, string> currentPool = new Dictionary<Image, string>();
 
-                if (!string.IsNullOrEmpty(selectedCategory))
-                {
-                    currentPool = learningDescriptions.ImageIdentifiers
-                    .Where(pair =>
-                        (selectedCategory == "English" && (pair.Value.Contains("Book_Summary") ||
-                                                   pair.Value.Contains("Character_Analysis_English") ||
-                                                   pair.Value.Contains("Grammar") ||
-                                                   pair.Value.Contains("Vocabulary_Challenge") ||
-                                                   pair.Value.Contains("Word_Count_Challenge"))) ||
-                        (selectedCategory == "Math" && (pair.Value.Contains("Budget_Problem") ||
-                                                        pair.Value.Contains("Pattern_Recognition") ||
-                                                        pair.Value.Contains("Real_Life_Application") ||
-                                                        pair.Value.Contains("Math_Puzzle") ||
-                                                        pair.Value.Contains("Time_Challenge"))) ||
-                        (selectedCategory == "Filipino" && (pair.Value.Contains("Characteristic_Analysis_Filipino") ||
-                                                            pair.Value.Contains("Dialog_Analysis") ||
-                                                            pair.Value.Contains("Filipino_Quiz") ||
-                                                            pair.Value.Contains("Poetry_Challenge") ||
-                                                            pair.Value.Contains("Story_Retelling")))
-                    )
-                    .ToDictionary(pair => pair.Key, pair => pair.Value);
-                }
-                else
-                {
-                    // If no category is selected, include all categories
-                    currentPool = new Dictionary<Image, string>(learningDescriptions.ImageIdentifiers);
-                }
-
                 if (isEasyMode)
                 {
                     currentPool = currentPool
@@ -480,19 +423,6 @@ namespace DCP
                     currentPool = currentPool
                         .Where(pair => pair.Value.Contains("Hard"))
                         .ToDictionary(pair => pair.Key, pair => pair.Value);
-                }
-
-
-
-                // Check if the pool has items
-                if (currentPool.Count == 0)
-                {
-                    timer.Stop();
-                    MessageBox.Show("No challenges available for the selected mode.",
-                                    "Error",
-                                    MessageBoxButtons.OK,
-                                    MessageBoxIcon.Error);
-                    return;
                 }
 
                 // Randomly select an item from the current pool
@@ -995,73 +925,6 @@ namespace DCP
             }
         }
 
-        private LearningGuide guide = null; // Class-level variable to track the Guide form
-        private LearningVC voiceCommandsForm = null;
-        private void pictureBox19_Click(object sender, EventArgs e)
-        {
-            if (sender != null)
-            {
-                player.Play(); // Play sound only if triggered by a click, not by voice command
-            }
-
-            // Check if the Guide form is already open
-            if (guide != null && !guide.IsDisposed)
-            {
-                guide.BringToFront();
-                return;
-            }
-
-            // Create the Guide form
-            guide = new LearningGuide();
-            guide.FormBorderStyle = FormBorderStyle.FixedToolWindow; // Set to FixedToolWindow
-            guide.StartPosition = FormStartPosition.CenterScreen;
-            guide.Opacity = 0; // Start at 0 for fade-in effect
-
-            // Add functionality to fade out and close the Guide form when the X button is clicked
-            guide.FormClosing += (s, ev) =>
-            {
-                ev.Cancel = true; // Prevent immediate closure
-                Timer fadeOutTimer = new Timer();
-                fadeOutTimer.Interval = 10; // Adjust for speed of fade (lower = faster)
-                fadeOutTimer.Tick += (s2, ev2) =>
-                {
-                    if (guide.Opacity > 0)
-                    {
-                        guide.Opacity -= 0.05; // Decrease opacity for fade-out
-                    }
-                    else
-                    {
-                        fadeOutTimer.Stop();
-                        fadeOutTimer.Dispose();
-                        guide.FormClosing -= null; // Remove event handler to avoid recursion
-                        guide.Dispose(); // Dispose of the Guide form
-                        guide = null; // Reset the reference
-                    }
-                };
-                fadeOutTimer.Start();
-            };
-
-            // Show the Guide form
-            guide.Show();
-
-            // Fade-in effect for the Guide form
-            Timer fadeInTimer = new Timer();
-            fadeInTimer.Interval = 20;
-            fadeInTimer.Tick += (s, ev) =>
-            {
-                if (guide.Opacity < 1)
-                {
-                    guide.Opacity += 0.05; // Increase opacity for fade-in
-                }
-                else
-                {
-                    fadeInTimer.Stop();
-                    fadeInTimer.Dispose();
-                }
-            };
-            fadeInTimer.Start();
-        }
-
         private void pictureBox6_Click(object sender, EventArgs e)
         {
             player.Play();
@@ -1366,65 +1229,7 @@ namespace DCP
         }
         private void UpdateFilteredChallenges()
         {
-            // Initialize a filtered list based on selected category and difficulty
-            Dictionary<Image, string> filteredChallenges = new Dictionary<Image, string>();
-
-            if (!string.IsNullOrEmpty(selectedCategory))
-            {
-                filteredChallenges = learningDescriptions.ImageIdentifiers
-                    .Where(pair =>
-                        (selectedCategory == "English" && (pair.Value.Contains("Book_Summary") ||
-                                                   pair.Value.Contains("Character_Analysis_English") ||
-                                                   pair.Value.Contains("Grammar") ||
-                                                   pair.Value.Contains("Vocabulary_Challenge") ||
-                                                   pair.Value.Contains("Word_Count_Challenge"))) ||
-                        (selectedCategory == "Math" && (pair.Value.Contains("Budget_Problem") ||
-                                                        pair.Value.Contains("Pattern_Recognition") ||
-                                                        pair.Value.Contains("Real_Life_Application") ||
-                                                        pair.Value.Contains("Math_Puzzle") ||
-                                                        pair.Value.Contains("Time_Challenge"))) ||
-                        (selectedCategory == "Filipino" && (pair.Value.Contains("Characteristic_Analysis_Filipino") ||
-                                                            pair.Value.Contains("Dialog_Analysis") ||
-                                                            pair.Value.Contains("Filipino_Quiz") ||
-                                                            pair.Value.Contains("Poetry_Challenge") ||
-                                                            pair.Value.Contains("Story_Retelling")))
-                    )
-                    .ToDictionary(pair => pair.Key, pair => pair.Value);
-            }
-            else
-            {
-                filteredChallenges = new Dictionary<Image, string>(learningDescriptions.ImageIdentifiers);
-            }
-
-            // Apply Difficulty Sorting
-            if (isEasyMode)
-            {
-                filteredChallenges = filteredChallenges
-                    .Where(pair => pair.Value.Contains("Easy"))
-                    .ToDictionary(pair => pair.Key, pair => pair.Value);
-            }
-            else if (isMediumMode)
-            {
-                filteredChallenges = filteredChallenges
-                    .Where(pair => pair.Value.Contains("Medium"))
-                    .ToDictionary(pair => pair.Key, pair => pair.Value);
-            }
-            else if (isHardMode)
-            {
-                filteredChallenges = filteredChallenges
-                    .Where(pair => pair.Value.Contains("Hard"))
-                    .ToDictionary(pair => pair.Key, pair => pair.Value);
-            }
-
-            // If no valid challenges exist, reset and show an error
-            if (filteredChallenges.Count == 0)
-            {
-                MessageBox.Show("No challenges available for the selected category and difficulty.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-
-            // Assign to global variable
-            currentItems = filteredChallenges;
+            
         }
 
         private void MicPictureBox_Click(object sender, EventArgs e)
@@ -1437,6 +1242,139 @@ namespace DCP
             {
                 StartVoiceRecognition();
             }
+        }
+
+        private LearningGuide guide = null; // Class-level variable to track the Guide form
+        private LearningVC voiceCommandsForm = null;
+        private FeedBack feedback = null;
+        private bool isTransitioning = false; // Flag to prevent multiple transitions
+        private void pictureBox19_Click(object sender, EventArgs e)
+        {
+            if (isTransitioning) return;
+            isTransitioning = true;
+            TogglePictureBoxState(false);
+
+            if (sender != null) player.Play();
+
+            // Close other forms before opening Guide
+            CloseAllFormsExcept("LearningGuide");
+
+            // Open Guide with fade-in effect
+            if (guide == null || guide.IsDisposed)
+            {
+                guide = new LearningGuide();
+                guide.FormBorderStyle = FormBorderStyle.FixedToolWindow;
+                guide.StartPosition = FormStartPosition.CenterScreen;
+                guide.Opacity = 0;
+
+                guide.FormClosing += (s, ev) => { FadeOutAndClose(guide); };
+
+                guide.Show();
+                FadeInForm(guide);
+            }
+            else
+            {
+                guide.BringToFront();
+            }
+        }
+
+        // Utility method to toggle PictureBox state
+        private void TogglePictureBoxState(bool enabled)
+        {
+            pictureBox19.Enabled = enabled;
+            pictureBox20.Enabled = enabled;
+        }
+        private void CloseAllFormsExcept(string formName)
+        {
+            // Close Guide if it's open and not the one being opened
+            if (guide != null && !guide.IsDisposed && guide.Visible && formName != "LearningGuide")
+            {
+                FadeOutAndClose(guide);
+            }
+
+            // Close Feedback if it's open and not the one being opened
+            if (feedback != null && !feedback.IsDisposed && feedback.Visible && formName != "FeedBack")
+            {
+                FadeOutAndClose(feedback);
+            }
+        }
+        private void pictureBox20_Click(object sender, EventArgs e)
+        {
+            if (isTransitioning) return;
+            isTransitioning = true;
+            TogglePictureBoxState(false);
+
+            if (sender != null) player.Play();
+
+            // Close other forms before opening Feedback
+            CloseAllFormsExcept("FeedBack");
+
+            // Open Feedback with fade-in effect
+            if (feedback == null || feedback.IsDisposed)
+            {
+                feedback = new FeedBack();
+                feedback.FormBorderStyle = FormBorderStyle.FixedToolWindow;
+                feedback.StartPosition = FormStartPosition.CenterScreen;
+                feedback.Opacity = 0;
+
+                feedback.FormClosing += (s, ev) => { FadeOutAndClose(feedback); };
+
+                feedback.Show();
+                FadeInForm(feedback);
+            }
+            else
+            {
+                feedback.BringToFront();
+            }
+        }
+
+        private void pictureBox7_Click_1(object sender, EventArgs e)
+        {
+            if (sender != null)
+            {
+                player.Play(); // Play sound only if triggered by a click, not by voice command
+            }
+
+            Timer fadeOutTimer = new Timer();
+            fadeOutTimer.Interval = 10; // Adjust for speed of fade (lower = faster)
+            fadeOutTimer.Tick += (s, ev) =>
+            {
+                if (this.Opacity > 0)
+                {
+                    this.Opacity -= 0.05; // Decrease opacity for fade-out
+                }
+                else
+                {
+
+                    fadeOutTimer.Stop();
+                    this.Hide();
+
+                    // Start the new form with fade-in
+                    TableOfRecords tableOfRecords = new TableOfRecords();
+                    tableOfRecords.StartPosition = FormStartPosition.CenterScreen;
+                    tableOfRecords.Opacity = 0; // Start at 0 for fade-in effect
+                    tableOfRecords.Show();
+
+                    // Fade in the new form
+                    Timer fadeInTimer = new Timer();
+                    fadeInTimer.Interval = 20;
+                    fadeInTimer.Tick += (s2, ev2) =>
+                    {
+                        if (tableOfRecords.Opacity < 1)
+                        {
+                            tableOfRecords.Opacity += 0.05; // Increase opacity for fade-in
+                        }
+                        else
+                        {
+                            fadeInTimer.Stop();
+                        }
+                    };
+                    fadeInTimer.Start();
+                }
+            };
+            fadeOutTimer.Start();
+
+
         }
     }
 }

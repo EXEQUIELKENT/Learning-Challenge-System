@@ -69,7 +69,7 @@ namespace DCP.Resources
                 new Question { QuestionText = "Your monthly income is ₱40,000. You spend ₱15,000 on rent, ₱6,000 on bills, and ₱5,000 on groceries. How much can you save this month?", A = "₱14,000", B = "₱10,000", C = "₱15,000", D = "₱12,000", CorrectAnswer = "A" },
                 new Question { QuestionText = "You receive a paycheck of ₱32,000. You spend ₱7,000 on rent, ₱5,000 on groceries, ₱3,000 on insurance, and ₱4,000 on entertainment. What is your remaining budget?", A = "₱13,000", B = "₱11,000", C = "₱10,000", D = "₱9,000", CorrectAnswer = "A" },
                 new Question { QuestionText = "If your monthly budget is ₱50,000 and you spend ₱25,000 on rent, ₱8,000 on food, ₱3,000 on transportation, and ₱4,000 on utilities, how much do you have left for savings?", A = "₱10,000", B = "₱15,000", C = "₱20,000", D = "₱12,000", CorrectAnswer = "B" },
-                
+
                 new Question { QuestionText = "A student has ₱3,000 allowance for the week. They spend ₱1,000 on food and ₱500 on transportation. How much do they have left?", A = "₱1,000", B = "₱1,500", C = "₱1,200", D = "₱1,800", CorrectAnswer = "B" },
                 new Question { QuestionText = "You have ₱20,000 and you need to pay ₱8,500 for rent and ₱2,500 for food. How much will be left?", A = "₱8,000", B = "₱9,000", C = "₱10,000", D = "₱11,000", CorrectAnswer = "C" },
                 new Question { QuestionText = "A worker earns ₱28,000. They spend ₱10,000 on rent, ₱6,000 on bills, and ₱5,000 on groceries. How much is left?", A = "₱7,000", B = "₱6,000", C = "₱5,000", D = "₱8,000", CorrectAnswer = "B" },
@@ -87,25 +87,25 @@ namespace DCP.Resources
                 new Question { QuestionText = "A worker receives a ₱32,000 salary. Their expenses include ₱15,000 for rent, ₱5,000 for groceries, and ₱6,000 for bills. How much remains?", A = "₱5,000", B = "₱6,000", C = "₱7,000", D = "₱8,000", CorrectAnswer = "B" },
                 new Question { QuestionText = "You have ₱20,000 and spend ₱8,500 on rent, ₱2,500 on groceries, and ₱3,000 on utilities. How much do you have left?", A = "₱6,000", B = "₱7,000", C = "₱5,000", D = "₱6,500", CorrectAnswer = "A" },
                 new Question { QuestionText = "A college student has ₱7,000. They spend ₱2,500 on tuition and ₱1,500 on books. How much is left?", A = "₱2,500", B = "₱3,000", C = "₱3,500", D = "₱4,000", CorrectAnswer = "B" },
-                
+
                 new Question { QuestionText = "You save ₱500 every week. How much will you save in 6 months?", A = "₱10,000", B = "₱12,000", C = "₱13,000", D = "₱14,000", CorrectAnswer = "B" },
                 new Question { QuestionText = "A person spends ₱9,000 on rent and ₱4,000 on utilities. Their income is ₱18,000. How much is left?", A = "₱5,000", B = "₱6,000", C = "₱4,000", D = "₱3,000", CorrectAnswer = "A" },
                 new Question { QuestionText = "You have ₱15,000 for the month. You spend ₱6,500 on rent, ₱3,000 on food, and ₱2,000 on transport. How much remains?", A = "₱2,000", B = "₱3,500", C = "₱4,000", D = "₱3,000", CorrectAnswer = "D" },
                 new Question { QuestionText = "A family has a ₱50,000 budget. They spend ₱22,000 on rent, ₱10,000 on food, and ₱5,000 on bills. How much is left?", A = "₱12,000", B = "₱13,000", C = "₱15,000", D = "₱10,000", CorrectAnswer = "C" },
                 new Question { QuestionText = "You earn ₱60,000 per month. Your expenses are ₱25,000 for rent, ₱12,000 for food, and ₱8,000 for bills. How much do you save?", A = "₱12,000", B = "₱15,000", C = "₱18,000", D = "₱20,000", CorrectAnswer = "C" },
-                
+
                 new Question { QuestionText = "A student gets ₱2,000 per week. They spend ₱700 on transport and ₱500 on food. How much is left?", A = "₱800", B = "₱900", C = "₱1,000", D = "₱700", CorrectAnswer = "B" },
                 new Question { QuestionText = "Your electricity bill is ₱3,200, and your water bill is ₱1,500. If you budget ₱6,000 for utilities, how much remains?", A = "₱1,000", B = "₱1,200", C = "₱1,300", D = "₱1,500", CorrectAnswer = "D" },
                 new Question { QuestionText = "A business earns ₱150,000 monthly. Their expenses are ₱50,000 for rent, ₱30,000 for salaries, and ₱20,000 for utilities. How much is left?", A = "₱50,000", B = "₱60,000", C = "₱70,000", D = "₱80,000", CorrectAnswer = "B" },
                 new Question { QuestionText = "You plan to buy a laptop for ₱40,000. You have saved ₱28,000. How much more do you need?", A = "₱10,000", B = "₱11,000", C = "₱12,000", D = "₱15,000", CorrectAnswer = "C" },
                 new Question { QuestionText = "A farmer earns ₱20,000 per harvest. If they harvest three times a year, what is their total income?", A = "₱50,000", B = "₱55,000", C = "₱60,000", D = "₱65,000", CorrectAnswer = "C" },
-                
+
                 new Question { QuestionText = "You budget ₱12,000 for a vacation. Your hotel costs ₱5,000, and your food costs ₱3,000. How much is left?", A = "₱3,000", B = "₱4,000", C = "₱5,000", D = "₱6,000", CorrectAnswer = "B" },
                 new Question { QuestionText = "A phone costs ₱15,000. You pay ₱5,000 upfront. How much do you still need?", A = "₱8,000", B = "₱9,000", C = "₱10,000", D = "₱12,000", CorrectAnswer = "C" },
                 new Question { QuestionText = "You spend ₱4,000 on bills and ₱2,500 on food. Your salary is ₱20,000. How much is left?", A = "₱12,000", B = "₱13,500", C = "₱14,000", D = "₱15,500", CorrectAnswer = "B" },
                 new Question { QuestionText = "You have ₱5,000 for a party. You spend ₱3,200 on food. How much remains?", A = "₱1,500", B = "₱1,800", C = "₱1,700", D = "₱1,600", CorrectAnswer = "D" },
                 new Question { QuestionText = "Your friend owes you ₱2,500. They paid ₱1,000 already. How much do they still owe?", A = "₱1,200", B = "₱1,300", C = "₱1,500", D = "₱1,600", CorrectAnswer = "C" },
-                
+
                 new Question { QuestionText = "A tour package costs ₱35,000. You pay ₱10,000 as a deposit. How much is left to pay?", A = "₱20,000", B = "₱22,000", C = "₱25,000", D = "₱27,000", CorrectAnswer = "C" }
                 // Add more questions here...
             };

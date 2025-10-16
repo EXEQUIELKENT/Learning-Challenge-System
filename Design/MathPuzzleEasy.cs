@@ -57,44 +57,44 @@ namespace DCP.Resources
                 new Question { QuestionText = "9 x ___ = 27", A = "1", B = "2", C = "3", D = "4", CorrectAnswer = "C" },
                 new Question { QuestionText = "___ ÷ 4 = 6", A = "20", B = "24", C = "26", D = "28", CorrectAnswer = "B" },
                 new Question { QuestionText = "15 - ___ = 7", A = "5", B = "6", C = "8", D = "9", CorrectAnswer = "C" },
-                
+
                 new Question { QuestionText = "___ + 3 = 10", A = "6", B = "7", C = "8", D = "9", CorrectAnswer = "B" },
                 new Question { QuestionText = "18 ÷ ___ = 6", A = "2", B = "3", C = "4", D = "5", CorrectAnswer = "B" },
                 new Question { QuestionText = "___ x 2 = 16", A = "6", B = "7", C = "8", D = "9", CorrectAnswer = "C" },
                 new Question { QuestionText = "10 + ___ = 18", A = "6", B = "7", C = "8", D = "9", CorrectAnswer = "C" },
                 new Question { QuestionText = "___ - 9 = 11", A = "18", B = "19", C = "20", D = "21", CorrectAnswer = "C" },
-                
+
                 new Question { QuestionText = "5 x ___ = 25", A = "3", B = "4", C = "5", D = "6", CorrectAnswer = "C" },
                 new Question { QuestionText = "___ ÷ 5 = 5", A = "15", B = "20", C = "25", D = "30", CorrectAnswer = "C" },
                 new Question { QuestionText = "21 - ___ = 14", A = "5", B = "6", C = "7", D = "8", CorrectAnswer = "C" },
                 new Question { QuestionText = "___ + 8 = 20", A = "10", B = "11", C = "12", D = "13", CorrectAnswer = "C" },
                 new Question { QuestionText = "30 ÷ ___ = 10", A = "2", B = "3", C = "5", D = "6", CorrectAnswer = "C" },
-                
+
                 new Question { QuestionText = "___ x 4 = 20", A = "3", B = "4", C = "5", D = "6", CorrectAnswer = "C" },
                 new Question { QuestionText = "14 + ___ = 22", A = "5", B = "6", C = "7", D = "8", CorrectAnswer = "C" },
                 new Question { QuestionText = "___ - 12 = 5", A = "15", B = "16", C = "17", D = "18", CorrectAnswer = "C" },
                 new Question { QuestionText = "9 x ___ = 36", A = "3", B = "4", C = "5", D = "6", CorrectAnswer = "B" },
                 new Question { QuestionText = "___ ÷ 6 = 4", A = "18", B = "20", C = "22", D = "24", CorrectAnswer = "D" },
-                
+
                 new Question { QuestionText = "17 - ___ = 11", A = "5", B = "6", C = "7", D = "8", CorrectAnswer = "B" },
                 new Question { QuestionText = "___ + 9 = 19", A = "6", B = "7", C = "8", D = "10", CorrectAnswer = "C" },
                 new Question { QuestionText = "42 ÷ ___ = 7", A = "4", B = "5", C = "6", D = "7", CorrectAnswer = "C" },
                 new Question { QuestionText = "___ x 3 = 18", A = "4", B = "5", C = "6", D = "7", CorrectAnswer = "C" },
                 new Question { QuestionText = "11 + ___ = 25", A = "12", B = "13", C = "14", D = "15", CorrectAnswer = "C" },
-                
+
                 new Question { QuestionText = "___ - 14 = 10", A = "20", B = "22", C = "24", D = "26", CorrectAnswer = "C" },
                 new Question { QuestionText = "8 x ___ = 64", A = "6", B = "7", C = "8", D = "9", CorrectAnswer = "C" },
                 new Question { QuestionText = "___ ÷ 3 = 9", A = "24", B = "25", C = "26", D = "27", CorrectAnswer = "D" },
                 new Question { QuestionText = "20 - ___ = 13", A = "5", B = "6", C = "7", D = "8", CorrectAnswer = "C" },
                 new Question { QuestionText = "___ + 5 = 15", A = "6", B = "8", C = "10", D = "12", CorrectAnswer = "C" },
                 new Question { QuestionText = "36 ÷ ___ = 9", A = "2", B = "3", C = "4", D = "5", CorrectAnswer = "C" },
-                
+
                 new Question { QuestionText = "___ x 2 = 18", A = "7", B = "8", C = "9", D = "10", CorrectAnswer = "C" },
                 new Question { QuestionText = "23 + ___ = 30", A = "5", B = "6", C = "7", D = "8", CorrectAnswer = "C" },
                 new Question { QuestionText = "___ - 11 = 16", A = "22", B = "25", C = "27", D = "29", CorrectAnswer = "C" },
                 new Question { QuestionText = "9 x ___ = 54", A = "5", B = "6", C = "7", D = "8", CorrectAnswer = "B" },
                 new Question { QuestionText = "___ ÷ 7 = 5", A = "28", B = "30", C = "32", D = "35", CorrectAnswer = "D" },
-                
+
                 new Question { QuestionText = "26 - ___ = 19", A = "5", B = "6", C = "7", D = "8", CorrectAnswer = "C" },
                 new Question { QuestionText = "___ + 4 = 14", A = "6", B = "7", C = "8", D = "10", CorrectAnswer = "C" },
                 new Question { QuestionText = "49 ÷ ___ = 7", A = "6", B = "7", C = "8", D = "9", CorrectAnswer = "B" },

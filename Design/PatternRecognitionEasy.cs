@@ -51,38 +51,38 @@ namespace DCP.Resources
                 new Question { QuestionText = "What comes next in the sequence: 1, 2, 4, 8, ?", A = "12", B = "14", C = "16", D = "18", CorrectAnswer = "C" },
                 new Question { QuestionText = "What comes next in the sequence: 100, 90, 80, 70, ?", A = "60", B = "50", C = "40", D = "30", CorrectAnswer = "A" },
                 new Question { QuestionText = "What comes next in the sequence: 1, 3, 6, 10, ?", A = "12", B = "14", C = "15", D = "16", CorrectAnswer = "C" },
-                
+
                 new Question { QuestionText = "What comes next in the sequence: 4, 8, 12, 16, ?", A = "18", B = "20", C = "22", D = "24", CorrectAnswer = "B" },
                 new Question { QuestionText = "What comes next in the sequence: 50, 45, 40, 35, ?", A = "25", B = "30", C = "20", D = "15", CorrectAnswer = "B" },
                 new Question { QuestionText = "What comes next in the sequence: 9, 18, 27, 36, ?", A = "45", B = "48", C = "50", D = "55", CorrectAnswer = "A" },
                 new Question { QuestionText = "What comes next in the sequence: 81, 64, 49, 36, ?", A = "20", B = "25", C = "16", D = "30", CorrectAnswer = "B" },
                 new Question { QuestionText = "What comes next in the sequence: 11, 22, 33, 44, ?", A = "50", B = "55", C = "66", D = "77", CorrectAnswer = "B" },
-                
+
                 new Question { QuestionText = "What comes next in the sequence: 5, 15, 25, 35, ?", A = "40", B = "45", C = "50", D = "55", CorrectAnswer = "B" },
                 new Question { QuestionText = "What comes next in the sequence: 3, 9, 27, 81, ?", A = "162", B = "243", C = "125", D = "200", CorrectAnswer = "B" },
                 new Question { QuestionText = "What comes next in the sequence: 7, 14, 21, 28, ?", A = "32", B = "35", C = "42", D = "50", CorrectAnswer = "B" },
                 new Question { QuestionText = "What comes next in the sequence: 2, 4, 8, 16, ?", A = "20", B = "24", C = "32", D = "40", CorrectAnswer = "C" },
                 new Question { QuestionText = "What comes next in the sequence: 20, 18, 16, 14, ?", A = "10", B = "12", C = "8", D = "6", CorrectAnswer = "B" },
-                
+
                 new Question { QuestionText = "What comes next in the sequence: 1, 1, 2, 3, 5, 8, ?", A = "10", B = "11", C = "13", D = "15", CorrectAnswer = "C" },
                 new Question { QuestionText = "What comes next in the sequence: 100, 200, 300, 400, ?", A = "450", B = "500", C = "550", D = "600", CorrectAnswer = "B" },
                 new Question { QuestionText = "What comes next in the sequence: 2, 3, 5, 7, 11, ?", A = "12", B = "13", C = "15", D = "17", CorrectAnswer = "B" },
                 new Question { QuestionText = "What comes next in the sequence: 25, 20, 15, 10, ?", A = "0", B = "5", C = "2", D = "-5", CorrectAnswer = "B" },
                 new Question { QuestionText = "What comes next in the sequence: 32, 16, 8, 4, ?", A = "3", B = "2", C = "1", D = "0", CorrectAnswer = "B" },
-                
+
                 new Question { QuestionText = "What comes next in the sequence: 1, 4, 7, 10, ?", A = "11", B = "12", C = "13", D = "14", CorrectAnswer = "C" },
                 new Question { QuestionText = "What comes next in the sequence: 6, 12, 18, 24, ?", A = "28", B = "30", C = "32", D = "36", CorrectAnswer = "B" },
                 new Question { QuestionText = "What comes next in the sequence: 8, 16, 24, 32, ?", A = "36", B = "40", C = "44", D = "48", CorrectAnswer = "B" },
                 new Question { QuestionText = "What comes next in the sequence: 50, 45, 40, 35, ?", A = "30", B = "25", C = "20", D = "15", CorrectAnswer = "A" },
                 new Question { QuestionText = "What comes next in the sequence: 12, 24, 36, 48, ?", A = "54", B = "60", C = "72", D = "84", CorrectAnswer = "B" },
-                
+
                 new Question { QuestionText = "What comes next in the sequence: 2, 6, 18, 54, ?", A = "72", B = "108", C = "162", D = "216", CorrectAnswer = "C" },
                 new Question { QuestionText = "What comes next in the sequence: 100, 90, 80, 70, ?", A = "60", B = "50", C = "40", D = "30", CorrectAnswer = "A" },
                 new Question { QuestionText = "What comes next in the sequence: 9, 18, 27, 36, ?", A = "40", B = "42", C = "45", D = "50", CorrectAnswer = "C" },
                 new Question { QuestionText = "What comes next in the sequence: 4, 16, 36, 64, ?", A = "81", B = "100", C = "121", D = "144", CorrectAnswer = "B" },
                 new Question { QuestionText = "What comes next in the sequence: 3, 6, 9, 12, ?", A = "15", B = "16", C = "18", D = "20", CorrectAnswer = "A" },
                 new Question { QuestionText = "What comes next in the sequence: 1000, 900, 800, 700, ?", A = "500", B = "600", C = "550", D = "650", CorrectAnswer = "B" },
-                
+
                 new Question { QuestionText = "What comes next in the sequence: 50, 100, 150, 200, ?", A = "225", B = "250", C = "275", D = "300", CorrectAnswer = "B" },
                 new Question { QuestionText = "What comes next in the sequence: 1, 2, 6, 24, ?", A = "60", B = "100", C = "120", D = "144", CorrectAnswer = "C" },
 

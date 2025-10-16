@@ -51,43 +51,43 @@ namespace DCP.Resources
                 new Question { QuestionText = "9 x ___ = 81", A = "7", B = "8", C = "9", D = "10", CorrectAnswer = "C" },
                 new Question { QuestionText = "___ ÷ 6 = 9", A = "42", B = "48", C = "54", D = "60", CorrectAnswer = "C" },
                 new Question { QuestionText = "50 - ___ = 32", A = "15", B = "16", C = "17", D = "18", CorrectAnswer = "D" },
-                
+
                 new Question { QuestionText = "___ + 17 = 45", A = "25", B = "26", C = "27", D = "28", CorrectAnswer = "C" },
                 new Question { QuestionText = "96 ÷ ___ = 12", A = "6", B = "7", C = "8", D = "9", CorrectAnswer = "C" },
                 new Question { QuestionText = "___ x 4 = 88", A = "20", B = "21", C = "22", D = "23", CorrectAnswer = "C" },
                 new Question { QuestionText = "36 + ___ = 80", A = "42", B = "43", C = "44", D = "45", CorrectAnswer = "C" },
                 new Question { QuestionText = "___ - 33 = 52", A = "81", B = "82", C = "83", D = "84", CorrectAnswer = "C" },
-                
+
                 new Question { QuestionText = "7 x ___ = 84", A = "10", B = "11", C = "12", D = "13", CorrectAnswer = "C" },
                 new Question { QuestionText = "___ ÷ 9 = 11", A = "90", B = "91", C = "99", D = "100", CorrectAnswer = "C" },
                 new Question { QuestionText = "64 - ___ = 39", A = "24", B = "25", C = "26", D = "27", CorrectAnswer = "C" },
                 new Question { QuestionText = "___ + 36 = 79", A = "41", B = "42", C = "43", D = "44", CorrectAnswer = "C" },
                 new Question { QuestionText = "144 ÷ ___ = 12", A = "10", B = "11", C = "12", D = "13", CorrectAnswer = "C" },
-                
+
                 new Question { QuestionText = "___ x 6 = 108", A = "16", B = "17", C = "18", D = "19", CorrectAnswer = "C" },
                 new Question { QuestionText = "49 + ___ = 92", A = "42", B = "43", C = "44", D = "45", CorrectAnswer = "C" },
                 new Question { QuestionText = "___ - 45 = 63", A = "102", B = "103", C = "108", D = "109", CorrectAnswer = "C" },
                 new Question { QuestionText = "8 x ___ = 96", A = "10", B = "11", C = "12", D = "13", CorrectAnswer = "C" },
                 new Question { QuestionText = "___ ÷ 7 = 13", A = "84", B = "85", C = "86", D = "91", CorrectAnswer = "D" },
-                
+
                 new Question { QuestionText = "72 - ___ = 49", A = "21", B = "22", C = "23", D = "24", CorrectAnswer = "C" },
                 new Question { QuestionText = "___ + 51 = 109", A = "55", B = "56", C = "57", D = "58", CorrectAnswer = "C" },
                 new Question { QuestionText = "168 ÷ ___ = 14", A = "10", B = "11", C = "12", D = "13", CorrectAnswer = "C" },
                 new Question { QuestionText = "___ x 9 = 153", A = "16", B = "17", C = "18", D = "19", CorrectAnswer = "C" },
                 new Question { QuestionText = "88 + ___ = 146", A = "54", B = "55", C = "56", D = "57", CorrectAnswer = "C" },
-                
+
                 new Question { QuestionText = "___ - 54 = 87", A = "138", B = "139", C = "140", D = "141", CorrectAnswer = "C" },
                 new Question { QuestionText = "9 x ___ = 135", A = "12", B = "13", C = "14", D = "15", CorrectAnswer = "D" },
                 new Question { QuestionText = "___ ÷ 6 = 19", A = "112", B = "113", C = "114", D = "115", CorrectAnswer = "C" },
                 new Question { QuestionText = "96 - ___ = 58", A = "37", B = "38", C = "39", D = "40", CorrectAnswer = "C" },
                 new Question { QuestionText = "___ + 66 = 132", A = "63", B = "64", C = "65", D = "66", CorrectAnswer = "C" },
-                
+
                 new Question { QuestionText = "180 ÷ ___ = 15", A = "10", B = "11", C = "12", D = "13", CorrectAnswer = "C" },
                 new Question { QuestionText = "___ x 11 = 187", A = "15", B = "16", C = "17", D = "18", CorrectAnswer = "C" },
                 new Question { QuestionText = "102 + ___ = 167", A = "62", B = "63", C = "64", D = "65", CorrectAnswer = "C" },
                 new Question { QuestionText = "___ - 69 = 102", A = "168", B = "169", C = "170", D = "171", CorrectAnswer = "C" },
                 new Question { QuestionText = "10 x ___ = 140", A = "12", B = "13", C = "14", D = "15", CorrectAnswer = "C" },
-                
+
                 new Question { QuestionText = "___ ÷ 8 = 21", A = "162", B = "164", C = "166", D = "168", CorrectAnswer = "D" },
                 new Question { QuestionText = "112 - ___ = 76", A = "35", B = "36", C = "37", D = "38", CorrectAnswer = "C" },
                 new Question { QuestionText = "___ + 80 = 160", A = "74", B = "75", C = "76", D = "77", CorrectAnswer = "C" },

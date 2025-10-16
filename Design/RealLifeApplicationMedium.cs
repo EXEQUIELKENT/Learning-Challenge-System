@@ -51,43 +51,43 @@ namespace DCP.Resources
                 new Question { QuestionText = "A recipe calls for 3/4 cup of sugar. If you want to make half of the recipe, how much sugar do you need?", A = "1/4 cup", B = "1/2 cup", C = "3/8 cup", D = "1/3 cup", CorrectAnswer = "C" },
                 new Question { QuestionText = "A worker earns $15 per hour. How much will the worker earn after working 40 hours?", A = "$600", B = "$500", C = "$400", D = "$700", CorrectAnswer = "A" },
                 new Question { QuestionText = "A school has 600 students. If 40% of the students are girls, how many girls are there?", A = "240", B = "200", C = "220", D = "250", CorrectAnswer = "A" },
-                
+
                 new Question { QuestionText = "If a car is purchased for $25,000 and depreciates by 10% each year, how much will the car be worth after 1 year?", A = "$22,500", B = "$20,000", C = "$23,000", D = "$21,500", CorrectAnswer = "A" },
                 new Question { QuestionText = "A recipe requires 2 1/2 cups of flour. If you only have a 1/2 cup measure, how many times do you need to fill it?", A = "5", B = "4", C = "6", D = "7", CorrectAnswer = "A" },
                 new Question { QuestionText = "A builder is constructing a wall that is 10 feet tall and 20 feet long. What is the area of the wall?", A = "200 square feet", B = "150 square feet", C = "250 square feet", D = "300 square feet", CorrectAnswer = "A" },
                 new Question { QuestionText = "If a jacket is on sale for 30% off and the original price is $60, what is the sale price?", A = "$48", B = "$45", C = "$50", D = "$55", CorrectAnswer = "A" },
                 new Question { QuestionText = "A person has $300 to spend and wants to buy shoes that cost $50 each. How many pairs of shoes can the person buy?", A = "6", B = "5", C = "4", D = "3", CorrectAnswer = "B" },
-                
+
                 new Question { QuestionText = "A train travels 240 miles in 4 hours. What is its average speed?", A = "50 mph", B = "55 mph", C = "60 mph", D = "65 mph", CorrectAnswer = "C" },
                 new Question { QuestionText = "A laptop originally costs $1,200. If it is on sale for 15% off, what is the new price?", A = "$960", B = "$1,000", C = "$1,020", D = "$1,080", CorrectAnswer = "D" },
                 new Question { QuestionText = "If a water tank can hold 500 liters and is currently 40% full, how many liters of water are in the tank?", A = "150", B = "200", C = "250", D = "300", CorrectAnswer = "C" },
                 new Question { QuestionText = "A farmer has 15 cows. Each cow produces 8 liters of milk per day. How much milk is produced in one week?", A = "560 liters", B = "720 liters", C = "840 liters", D = "900 liters", CorrectAnswer = "B" },
                 new Question { QuestionText = "A person is jogging at 6 km/h. How far will they travel in 90 minutes?", A = "7 km", B = "8 km", C = "9 km", D = "10 km", CorrectAnswer = "C" },
-                
+
                 new Question { QuestionText = "A school buys 12 whiteboards for $45 each. How much do they spend in total?", A = "$480", B = "$500", C = "$540", D = "$600", CorrectAnswer = "C" },
                 new Question { QuestionText = "A store sells 5 kg bags of rice for $20 each. How much would 3 bags cost?", A = "$50", B = "$55", C = "$60", D = "$65", CorrectAnswer = "C" },
                 new Question { QuestionText = "A smartphone is priced at $800. After adding a 12% tax, what is the total cost?", A = "$880", B = "$896", C = "$900", D = "$920", CorrectAnswer = "B" },
                 new Question { QuestionText = "A plane ticket costs $450. If the airline offers a 20% discount, what is the new price?", A = "$340", B = "$350", C = "$360", D = "$370", CorrectAnswer = "C" },
                 new Question { QuestionText = "A TV show starts at 7:45 PM and lasts for 1 hour and 35 minutes. What time does it end?", A = "9:10 PM", B = "9:15 PM", C = "9:20 PM", D = "9:30 PM", CorrectAnswer = "C" },
-                
+
                 new Question { QuestionText = "If a car consumes 7 liters of fuel per 100 km, how much fuel is needed for a 350 km trip?", A = "21 liters", B = "24.5 liters", C = "26 liters", D = "28 liters", CorrectAnswer = "B" },
                 new Question { QuestionText = "A cellphone battery loses 4% charge per hour. If the battery starts at 90%, what is the battery level after 5 hours?", A = "70%", B = "72%", C = "75%", D = "80%", CorrectAnswer = "B" },
                 new Question { QuestionText = "A company has 1,200 employees. If 25% of them work remotely, how many work from home?", A = "250", B = "275", C = "300", D = "325", CorrectAnswer = "C" },
                 new Question { QuestionText = "A person runs 2 km every morning for 2 weeks. How many kilometers will they run in total?", A = "24 km", B = "26 km", C = "28 km", D = "30 km", CorrectAnswer = "C" },
                 new Question { QuestionText = "A bakery makes 300 cupcakes in 5 hours. What is the average number of cupcakes made per hour?", A = "50", B = "55", C = "60", D = "65", CorrectAnswer = "A" },
-                
+
                 new Question { QuestionText = "A store is offering a buy 2, get 1 free promotion. If each item costs $30, how much does a customer pay for 3 items?", A = "$60", B = "$70", C = "$80", D = "$90", CorrectAnswer = "D" },
                 new Question { QuestionText = "A hotel charges $120 per night. If you stay for 5 nights, what is the total cost?", A = "$500", B = "$550", C = "$600", D = "$650", CorrectAnswer = "C" },
                 new Question { QuestionText = "A family’s grocery bill is $250 per week. How much do they spend in 4 weeks?", A = "$900", B = "$1,000", C = "$1,100", D = "$1,200", CorrectAnswer = "D" },
                 new Question { QuestionText = "A taxi fare is $3 per mile. If a trip is 12 miles long, how much is the fare?", A = "$30", B = "$34", C = "$36", D = "$40", CorrectAnswer = "C" },
                 new Question { QuestionText = "A garden has an area of 40 square meters. If a fence is needed around it, what is the perimeter if it's a square?", A = "20 meters", B = "25 meters", C = "30 meters", D = "40 meters", CorrectAnswer = "C" },
-                
+
                 new Question { QuestionText = "A train ticket costs $50. If a passenger gets a 15% discount, what is the new price?", A = "$40", B = "$42.50", C = "$43", D = "$45", CorrectAnswer = "B" },
                 new Question { QuestionText = "A box of cereal contains 750 grams. If a person eats 50 grams per day, how long will the box last?", A = "12 days", B = "14 days", C = "15 days", D = "18 days", CorrectAnswer = "C" },
                 new Question { QuestionText = "A construction worker earns $80 per day. If they work for 5 days, how much will they earn?", A = "$350", B = "$375", C = "$400", D = "$425", CorrectAnswer = "C" },
                 new Question { QuestionText = "A class has 35 students. If 60% are boys, how many boys are in the class?", A = "18", B = "20", C = "21", D = "22", CorrectAnswer = "C" },
                 new Question { QuestionText = "A juice carton holds 1.5 liters. How many milliliters is that?", A = "1,500 mL", B = "1,550 mL", C = "1,600 mL", D = "1,700 mL", CorrectAnswer = "A" },
-                
+
                 new Question { QuestionText = "A cyclist travels 240 km in 6 hours. What is their average speed?", A = "35 km/h", B = "40 km/h", C = "45 km/h", D = "50 km/h", CorrectAnswer = "B" },
                 new Question { QuestionText = "A shop sells T-shirts for $18 each. How much do 4 T-shirts cost?", A = "$64", B = "$68", C = "$72", D = "$76", CorrectAnswer = "C" },
                 new Question { QuestionText = "A person saves $200 per month. How much will they have in one year?", A = "$2,200", B = "$2,300", C = "$2,400", D = "$2,500", CorrectAnswer = "C" },

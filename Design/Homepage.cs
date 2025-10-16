@@ -34,12 +34,17 @@ namespace Design
         private SpeechRecognitionEngine recognizer;
         private bool isRecognizing = false; // Flag to track the recognition state
         private int currentImageIndex = 0; // Track the current image index
+        private bool isEasyMode = false;
+        private bool isMediumMode = false;
+        private bool isHardMode = false;
+        private Dictionary<Image, string> filteredItems;
 
         public HOMEPAGE()
         {
             InitializeComponent();
 
             InitializeSpeechRecognition();
+
 
             Openmic = new SoundPlayer(DCP.Properties.Resources.OpenMic);
             Openmic.Load();
@@ -68,148 +73,11 @@ namespace Design
             challengeDescriptions = new ChallengeDescriptions();
             // Initialize ChallengeDescriptions instance
 
+            filteredItems = new Dictionary<Image, string>(challengeDescriptions.ImageIdentifiers);
+
             formMap = new Dictionary<string, Form> {
 
-              //Fitness
-              { "Push_Ups__Easy__F", null },
-              { "Push_Ups__Medium_F", null },
-              { "Push_Ups__Hard_F", null },
-              { "Bear_Crawl__Easy_F", null },
-              { "Bear_Crawl__Medium_F", null },
-              { "Bear_Crawl__Hard_F", null },
-              { "Bicycle_Crunches__Easy_F", null },
-              { "Bicycle_Crunches__Medium_F", null },
-              { "Bicycle_Crunches__Hard_F", null },
-              { "Calf_Raises__Easy_F", null },
-              { "Calf_Raises__Medium_F", null },
-              { "Calf_Raises__Hard_F", null },
-              { "Diamond_Push_Ups__Easy_F", null },
-              { "Diamond_Push_Ups__Medium_F", null },
-              { "Diamond_Push_Ups__Hard_F", null },
-              { "Glute_Bridges__Easy_F", null },
-              { "Glute_Bridges__Medium_F", null },
-              { "Glute_Bridges__Hard_F", null },
-              { "High_Knees__Easy_F", null },
-              { "High_Knees__Medium_F", null },
-              { "High_Knees__Hard_F", null },
-              { "Jogging__Easy_F", null },
-              { "Jogging__Medium_F", null },
-              { "Jogging__Hard_F", null },
-              { "Jumping_Jacks__Easy_F", null },
-              { "Jumping_Jacks__Medium_F", null },
-              { "Jumping_Jacks__Hard_F", null },
-              { "Jumping_Squat__Easy_F", null },
-              { "Jumping_Squat__Medium_F", null },
-              { "Jumping_Squat__Hard_F", null },
-              { "Leg_Raise__Easy_F", null },
-              { "Leg_Raise__Medium_F", null },
-              { "Leg_Raise__Hard_F", null },
-              { "Mountain_Climbers__Easy_F", null },
-              { "Mountain_Climbers__Medium_F", null },
-              { "Mountain_Climbers__Hard_F", null },
-              { "Planking__Easy_F", null },
-              { "Planking__Medium_F", null },
-              { "Planking__Hard_F", null },
-              { "Reverse_Lunges__Easy_F", null },
-              { "Reverse_Lunges__Medium_F", null },
-              { "Reverse_Lunges__Hard_F", null },
-              { "Russian_Twist__Easy_F", null },
-              { "Russian_Twist__Medium_F", null },
-              { "Russian_Twist__Hard_F", null },
-              { "Side_Lunges__Easy_F", null },
-              { "Side_Lunges__Medium_F", null },
-              { "Side_Lunges__Hard_F", null },
-              { "Side_Plank__Easy_F", null },
-              { "Side_Plank__Medium_F", null },
-              { "Side_Plank__Hard_F", null },
-              { "Squat__Easy_F", null },
-              { "Squat__Medium_F", null },
-              { "Squat__Hard_F", null },
-              { "Standing_Side_Leg_Raises__Easy_F", null },
-              { "Standing_Side_Leg_Raises__Medium__F", null },
-              { "Standing_Side_Leg_Raises__Hard_F", null },
-              { "Step_Up__Easy_F", null },
-              { "Step_Up__Medium_F", null },
-              { "Step_Up__Hard_F", null },
-              { "Toe_Top__Easy_F", null },
-              { "Toe_Top__Medium_F", null },
-              { "Toe_Top__Hard_F", null },
-              { "Wall_Sit__Easy_F", null },
-              { "Wall_Sit__Medium_F", null },
-              { "Wall_Sit__Hard_F", null },
-
-              //Health
-              { "Gratitude__Easy_H", null },
-              { "Gratitude__Medium_H", null },
-              { "Gratitude__Hard_H", null },
-              { "Hold_Your_Breath__Easy_H", null },
-              { "Hold_Your_Breath__Medium_H", null },
-              { "Hold_Your_Breath__Hard_H", null },
-              { "Hydration__Easy_H", null },
-              { "Hydration__Medium_H", null },
-              { "Hydration__Hard_H", null },
-              { "Mindful_Breathing__Easy_H", null },
-              { "Mindful_Breathing__Medium_H", null },
-              { "Mindful_Breathing__Hard_H", null },
-              { "Mindful_Eating__Easy_H", null },
-              { "Mindful_Eating__Medium_H", null },
-              { "Mindful_Eating__Hard_H", null },
-              { "No_Blinking__Easy_H", null },
-              { "No_Blinking__Medium_H", null },
-              { "No_Blinking__Hard_H", null },
-              { "Quick_Stretching__Easy_H", null },
-              { "Quick_Stretching__Medium_H", null },
-              { "Quick_Stretching__Hard_H", null },
-              { "Plan_your_week__Easy_H", null },
-              { "Plan_your_week__Medium_H", null },
-              { "Plan_your_week__Hard_H", null },
-              { "Plan_Your_Week_Mental__Easy_H", null },
-              { "Plan_Your_Week_Mental__Medium_H", null },
-              { "Plan_Your_Week_Mental__Hard_H", null },
-              { "Quiz_Mental__Easy_H", null },
-              { "Quiz_Mental__Medium_H", null },
-              { "Quiz_Mental__Hard_H", null },
-              { "Reading_Time__Medium_H", null },
-              { "Reading_Time__Hard_H", null },
-              { "Reading_Time__Easy_H", null },
-              { "Take_a_Cold_Shower__Easy_H", null },
-              { "Take_a_Cold_Shower__Medium_H", null },
-              { "Take_a_Cold_Shower__Hard_H", null },
-              { "Walking_Easy_H", null },
-              { "Walking_Medium_H", null },
-              { "Walking_Hard_H", null },
-
-              //Learning
-              { "Book_Summary__Easy_E", null },
-              { "Book_Summary__Medium_E", null },
-              { "Book_Summary__Hard_E", null },
-              { "Character_Analysis_English__Easy_E", null },
-              { "Character_Analysis_English__Medium_E", null },
-              { "Character_Analysis_English__Hard_E", null },
-              { "Characteristic_Analysis_Filipino__Easy_F", null },
-              { "Characteristic_Analysis_Filipino__Medium_F", null },
-              { "Characteristic_Analysis_Filipino__Hard_F", null },
-              { "Grammar__Easy_E", null },
-              { "Grammar__Medium_E", null },
-              { "Grammar__Hard_E", null },
-              { "Vocabulary_Challenge__Easy_E", null },
-              { "Vocabulary_Challenge__Medium_E", null },
-              { "Vocabulary_Challenge__Hard_E", null },
-              { "Word_Count_Challenge_Easy_E", null },
-              { "Word_Count_Challenge_Medium_E", null },
-              { "Word_Count_Challenge_Hard_E", null },
-              { "Dialog_Analysis__Easy_F", null },
-              { "Dialog_Analysis__Medium_F", null },
-              { "Dialog_Analysis__Hard_F", null },
-              { "Filipino_Quiz__Easy_F", null },
-              { "Filipino_Quiz__Medium_F", null },
-              { "Filipino_Quiz__Hard_F", null },
-              { "Poetry_Challenge__Easy_F", null },
-              { "Poetry_Challenge__Medium_F", null },
-              { "Poetry_Challenge__Hard_F", null },
-              { "Story_Retelling__Easy_F", null },
-              { "Story_Retelling__Medium_F", null },
-              { "Story_Retelling__Hard_F", null },
+              //Math Challenges
               { "Budget_Problem__Easy_M", null },
               { "Budget_Problem__Medium_M", null },
               { "Budget_Problem__Hard_M", null },
@@ -249,7 +117,7 @@ namespace Design
 
             // Add commands that you want to recognize
             Choices commands = new Choices();
-            commands.Add(new string[] { "Start", "Play", "Stop", "Help", "Back", "Close", "Feedback", "Fitness", "Wellness", "Study", "Learning", "Record", "Records", "Left", "Right", });
+            commands.Add(new string[] { "Start", "Play", "Stop", "Help", "Back", "Close", "Feedback", "Easy", "Medium", "Hard", "Learning", "Record", "Records", "Left", "Right", });
 
             Grammar grammar = new Grammar(new GrammarBuilder(commands));
             recognizer.LoadGrammar(grammar); // Load the grammar for speech recognition
@@ -264,7 +132,7 @@ namespace Design
             try
             {
                 MicPictureBox.Enabled = false;
-                MicPictureBox.Image = DCP.Properties.Resources.Mic_On_HomePage;
+                MicPictureBox.Image = DCP.Properties.Resources.Mic_On_Learning;
 
                 // Ask the user if they want to see the voice command list
                 DialogResult result = MessageBox.Show("Do you want to see the Voice Command List?", "Voice Commands", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
@@ -273,7 +141,7 @@ namespace Design
                 {
                     if (voiceCommandsForm == null || voiceCommandsForm.IsDisposed)
                     {
-                        voiceCommandsForm = new VoiceCommands();
+                        voiceCommandsForm = new LearningVC();
                         voiceCommandsForm.FormBorderStyle = FormBorderStyle.FixedToolWindow;
                         voiceCommandsForm.StartPosition = FormStartPosition.CenterScreen;
                         voiceCommandsForm.Opacity = 0;
@@ -313,6 +181,63 @@ namespace Design
                 MessageBox.Show($"Error: {ex.Message}", "Voice Command Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 MicPictureBox.Enabled = true;
             }
+        }
+        private void SetDifficultyMode(string difficulty)
+        {
+            // If the same difficulty is already active, reset to normal mode
+            if ((difficulty == "Easy" && isEasyMode) ||
+                (difficulty == "Medium" && isMediumMode) ||
+                (difficulty == "Hard" && isHardMode))
+            {
+                // Reset all flags
+                isEasyMode = false;
+                isMediumMode = false;
+                isHardMode = false;
+
+                // Reset to include all challenges
+                filteredItems = new Dictionary<Image, string>(challengeDescriptions.ImageIdentifiers);
+
+                // Update ComboBox with all challenges again
+                comboBoxChallenge.Items.Clear();
+                foreach (var item in filteredItems.Values)
+                {
+                    comboBoxChallenge.Items.Add(GetChallengeWithDifficulty(item));
+                }
+
+                MessageBox.Show("Randomization will now include all challenges.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+
+            // Otherwise, set the new difficulty mode
+            isEasyMode = isMediumMode = isHardMode = false;
+
+            switch (difficulty)
+            {
+                case "Easy": isEasyMode = true; break;
+                case "Medium": isMediumMode = true; break;
+                case "Hard": isHardMode = true; break;
+            }
+
+            // Filter challenges by selected difficulty
+            filteredItems = challengeDescriptions.ImageIdentifiers
+                .Where(pair => pair.Value.Contains($"__{difficulty}_"))
+                .ToDictionary(pair => pair.Key, pair => pair.Value);
+
+            if (filteredItems.Count == 0)
+            {
+                MessageBox.Show($"No '{difficulty}' challenges found.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                filteredItems = new Dictionary<Image, string>(challengeDescriptions.ImageIdentifiers);
+                return;
+            }
+
+            // Update ComboBox with filtered items
+            comboBoxChallenge.Items.Clear();
+            foreach (var item in filteredItems.Values)
+            {
+                comboBoxChallenge.Items.Add(GetChallengeWithDifficulty(item));
+            }
+
+            MessageBox.Show($"{difficulty} challenges will now be randomized.", "Difficulty Selected", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
         private void StopVoiceRecognition()
         {
@@ -382,14 +307,13 @@ namespace Design
                 case "feedback":
                     pictureBox20_Click(null, null);
                     break;
-                case "fitness":
+                case "easy":
                     pictureBox8_Click(null, null);
                     break;
-                case "wellness":
+                case "medium":
                     pictureBox9_Click(null, null);
                     break;
-                case "study":
-                case "learning":
+                case "hard":
                     pictureBox10_Click(null, null);
                     break;
                 case "records":
@@ -459,7 +383,7 @@ namespace Design
                     fadeOutTimer.Stop();
                     this.Close();
 
-                    // Open Introduction form with fade-in effect
+                    // Open Introduction form with Out-in effect
                     Introduction introduction = new Introduction();
                     introduction.StartPosition = FormStartPosition.CenterScreen;
                     introduction.Opacity = 0;
@@ -509,13 +433,13 @@ namespace Design
             if (timeElapsed < 5000) // 5 seconds duration
             {
                 // Randomly select an image and update index
-                int newIndex = random.Next(challengeDescriptions.Images.Count);
-                currentImage = challengeDescriptions.Images[newIndex];
-                currentImageIndex = newIndex; // Save the randomized index
+                var filteredImages = filteredItems.Keys.ToList();
+                int newIndex = random.Next(filteredImages.Count);
+                currentImage = filteredImages[newIndex];
 
                 pictureBox6.Image = currentImage;
 
-                if (challengeDescriptions.ImageIdentifiers.TryGetValue(currentImage, out string identifier))
+                if (filteredItems.TryGetValue(currentImage, out string identifier))
                 {
                     label8.Text = FormatIdentifier(identifier);
                     if (challengeDescriptions.ImageDescriptions.TryGetValue(identifier, out string description))
@@ -540,6 +464,9 @@ namespace Design
             else
             {
                 timer.Stop();
+                pictureBox9.Enabled = true;
+                pictureBox10.Enabled = true;
+                pictureBox8.Enabled = true;
                 pictureBox7.Enabled = true;
                 pictureBox2.Enabled = true;
                 pictureBox14.Enabled = true;
@@ -1159,51 +1086,8 @@ namespace Design
 
         private void pictureBox8_Click(object sender, EventArgs e)
         {
-            if (isFadingIn) return; // Prevent clicks if fade-in is ongoing
-
-            if (sender != null)
-            {
-                player.Play(); // Play sound only if triggered by a click, not by voice command
-            }
-
-            isFadingIn = true; // Prevent further clicks during transition
-
-            Timer fadeOutTimer = new Timer();
-            fadeOutTimer.Interval = 10;
-            fadeOutTimer.Tick += (s, ev) =>
-            {
-                if (this.Opacity > 0)
-                {
-                    this.Opacity -= 0.05;
-                }
-                else
-                {
-                    fadeOutTimer.Stop();
-                    this.Hide();
-
-                    SelectionFitness selectionFitness = new SelectionFitness();
-                    selectionFitness.StartPosition = FormStartPosition.CenterScreen;
-                    selectionFitness.Opacity = 0;
-                    selectionFitness.Show();
-
-                    Timer fadeInTimer = new Timer();
-                    fadeInTimer.Interval = 20;
-                    fadeInTimer.Tick += (s2, ev2) =>
-                    {
-                        if (selectionFitness.Opacity < 1)
-                        {
-                            selectionFitness.Opacity += 0.05;
-                        }
-                        else
-                        {
-                            fadeInTimer.Stop();
-                            isFadingIn = false; // Allow clicks again after fade-in
-                        }
-                    };
-                    fadeInTimer.Start();
-                }
-            };
-            fadeOutTimer.Start();
+            player.Play();
+            SetDifficultyMode("Easy");
         }
 
         private void pictureBox6_Click(object sender, EventArgs e)
@@ -1214,6 +1098,9 @@ namespace Design
         {
             player.Play();
             // Disable check and x picture boxes
+            pictureBox10.Enabled = false;
+            pictureBox9.Enabled = false;
+            pictureBox8.Enabled = false;
             pictureBox7.Enabled = false;
             pictureBox2.Enabled = false;
             pictureBox14.Enabled = false; // check picture box
@@ -1309,106 +1196,14 @@ namespace Design
         }
         private void pictureBox9_Click(object sender, EventArgs e)
         {
-            if (isFadingIn) return; // Prevent clicks if fade-in is ongoing
-
-            if (sender != null)
-            {
-                player.Play(); // Play sound only if triggered by a click, not by voice command
-            }
-
-            isFadingIn = true; // Prevent further clicks during transition
-
-            // Existing functionality
-            // Code for navigating to Fitness form
-            Timer fadeOutTimer = new Timer();
-            fadeOutTimer.Interval = 10; // Adjust for speed of fade (lower = faster)
-            fadeOutTimer.Tick += (s, ev) =>
-            {
-                if (this.Opacity > 0)
-                {
-                    this.Opacity -= 0.05; // Decrease opacity for fade-out
-                }
-                else
-                {
-
-                    fadeOutTimer.Stop();
-                    this.Hide();
-
-                    // Start the new form with fade-in
-                    SelectionHealth selectionHealth = new SelectionHealth();
-                    selectionHealth.StartPosition = FormStartPosition.CenterScreen;
-                    selectionHealth.Opacity = 0; // Start at 0 for fade-in effect
-                    selectionHealth.Show();
-
-                    // Fade in the new form
-                    Timer fadeInTimer = new Timer();
-                    fadeInTimer.Interval = 20;
-                    fadeInTimer.Tick += (s2, ev2) =>
-                    {
-                        if (selectionHealth.Opacity < 1)
-                        {
-                            selectionHealth.Opacity += 0.05; // Increase opacity for fade-in
-                        }
-                        else
-                        {
-                            fadeInTimer.Stop();
-                        }
-                    };
-                    fadeInTimer.Start();
-                }
-            };
-            fadeOutTimer.Start();
+            player.Play();
+            SetDifficultyMode("Medium");
         }
 
         private void pictureBox10_Click(object sender, EventArgs e)
         {
-            if (isFadingIn) return; // Prevent clicks if fade-in is ongoing
-
-            if (sender != null)
-            {
-                player.Play(); // Play sound only if triggered by a click, not by voice command
-            }
-
-            isFadingIn = true; // Prevent further clicks during transition
-
-            Timer fadeOutTimer = new Timer();
-            fadeOutTimer.Interval = 10; // Adjust for speed of fade (lower = faster)
-            fadeOutTimer.Tick += (s, ev) =>
-            {
-                if (this.Opacity > 0)
-                {
-                    this.Opacity -= 0.05; // Decrease opacity for fade-out
-                }
-                else
-                {
-
-                    fadeOutTimer.Stop();
-                    this.Hide();
-
-                    // Start the new form with fade-in
-                    SelectionLearning selectionLearning = new SelectionLearning();
-                    selectionLearning.StartPosition = FormStartPosition.CenterScreen;
-                    selectionLearning.Opacity = 0; // Start at 0 for fade-in effect
-                    selectionLearning.Show();
-
-                    // Fade in the new form
-                    Timer fadeInTimer = new Timer();
-                    fadeInTimer.Interval = 20;
-                    fadeInTimer.Tick += (s2, ev2) =>
-                    {
-                        if (selectionLearning.Opacity < 1)
-                        {
-                            selectionLearning.Opacity += 0.05; // Increase opacity for fade-in
-                        }
-                        else
-                        {
-                            fadeInTimer.Stop();
-                        }
-                    };
-                    fadeInTimer.Start();
-                }
-            };
-            fadeOutTimer.Start();
+            player.Play();
+            SetDifficultyMode("Hard");
         }
 
         private void pictureBox11_Click(object sender, EventArgs e)
@@ -1620,9 +1415,9 @@ namespace Design
 
         }
 
-        private Guide guide = null;
+        private LearningGuide guide = null;
         private FeedBack feedback = null;
-        private VoiceCommands voiceCommandsForm = null;
+        private LearningVC voiceCommandsForm = null;
         private bool isTransitioning = false; // Flag to prevent multiple transitions
 
         private void CloseAllFormsExcept(string formName)
@@ -1675,7 +1470,7 @@ namespace Design
             // Open Guide with fade-in effect
             if (guide == null || guide.IsDisposed)
             {
-                guide = new Guide();
+                guide = new LearningGuide();
                 guide.FormBorderStyle = FormBorderStyle.FixedToolWindow;
                 guide.StartPosition = FormStartPosition.CenterScreen;
                 guide.Opacity = 0;
@@ -1779,14 +1574,16 @@ namespace Design
                 player.Play(); // Play sound only if triggered by a click, not by voice command
             }
 
-            if (challengeDescriptions.Images.Count == 0) return; // Check if there are images
+            var filteredImages = filteredItems.Keys.ToList();
 
-            currentImageIndex = (currentImageIndex - 1 + challengeDescriptions.Images.Count) % challengeDescriptions.Images.Count; // Move to the previous image
+            if (filteredImages.Count == 0) return; // Check if there are images
 
-            if (challengeDescriptions.Images.Count == 0) return; // Check if there are images
+            currentImageIndex = (currentImageIndex - 1 + filteredImages.Count) % filteredImages.Count; // Move to the previous image
+
+            if (filteredImages.Count == 0) return; // Check if there are images
 
             // Get the current image
-            currentImage = challengeDescriptions.Images[currentImageIndex];
+            currentImage = filteredImages[currentImageIndex];
             pictureBox6.Image = currentImage; // Update PictureBox6
 
             // Update label8 text based on the selected image
@@ -1809,14 +1606,16 @@ namespace Design
                 player.Play(); // Play sound only if triggered by a click, not by voice command
             }
 
-            if (challengeDescriptions.Images.Count == 0) return; // Check if there are images
+            var filteredImages = filteredItems.Keys.ToList();
 
-            currentImageIndex = (currentImageIndex + 1) % challengeDescriptions.Images.Count; // Move to the next image
+            if (filteredImages.Count == 0) return; // Check if there are images
 
-            if (challengeDescriptions.Images.Count == 0) return; // Check if there are images
+            currentImageIndex = (currentImageIndex + 1) % filteredImages.Count; // Move to the next image
+
+            if (filteredImages.Count == 0) return; // Check if there are images
 
             // Get the current image
-            currentImage = challengeDescriptions.Images[currentImageIndex];
+            currentImage = filteredImages[currentImageIndex];
             pictureBox6.Image = currentImage; // Update PictureBox6
 
             // Update label8 text based on the selected image
@@ -1841,7 +1640,7 @@ namespace Design
             string selectedChallenge = comboBoxChallenge.SelectedItem.ToString();
 
             // Find the corresponding identifier
-            var challengeEntry = challengeDescriptions.ImageIdentifiers
+            var challengeEntry = filteredItems
                 .FirstOrDefault(x => GetChallengeWithDifficulty(x.Value) == selectedChallenge);
 
             if (challengeEntry.Key != null) // If a match is found

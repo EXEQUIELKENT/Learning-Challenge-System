@@ -569,6 +569,16 @@ namespace DCP.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Download_Icon {
+            get {
+                object obj = ResourceManager.GetObject("Download_Icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap DR {
             get {
                 object obj = ResourceManager.GetObject("DR", resourceCulture);
@@ -1151,6 +1161,26 @@ namespace DCP.Properties {
         internal static System.Drawing.Bitmap JumpSquatT {
             get {
                 object obj = ResourceManager.GetObject("JumpSquatT", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap LCS_Logo {
+            get {
+                object obj = ResourceManager.GetObject("LCS_Logo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap LCS_Logo_B {
+            get {
+                object obj = ResourceManager.GetObject("LCS_Logo_B", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

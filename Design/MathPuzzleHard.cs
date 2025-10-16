@@ -51,79 +51,79 @@ namespace DCP.Resources
                 new Question { QuestionText = "(25 + 15) ÷ ___ = 10", A = "3", B = "4", C = "5", D = "6", CorrectAnswer = "C" },
                 new Question { QuestionText = "84 - (12 × 6) = ___", A = "8", B = "12", C = "14", D = "16", CorrectAnswer = "A" },
                 new Question { QuestionText = "___ ÷ (6 + 2) = 10", A = "60", B = "70", C = "80", D = "90", CorrectAnswer = "C" },
-                
+
                 new Question { QuestionText = "(144 ÷ 12) × 3 = ___", A = "30", B = "32", C = "36", D = "40", CorrectAnswer = "C" },
                 new Question { QuestionText = "(18 + 42) ÷ (5 × 2) = ___", A = "4", B = "5", C = "6", D = "7", CorrectAnswer = "B" },
                 new Question { QuestionText = "96 ÷ (12 - 4) + ___ = 16", A = "3", B = "4", C = "5", D = "6", CorrectAnswer = "C" },
                 new Question { QuestionText = "(5 × 7) - (6 × 4) = ___", A = "10", B = "11", C = "12", D = "13", CorrectAnswer = "C" },
                 new Question { QuestionText = "[(72 ÷ 8) + 9] × 2 = ___", A = "30", B = "32", C = "34", D = "36", CorrectAnswer = "B" },
-                
+
                 new Question { QuestionText = "(9 × 9) - (6 × 7) = ___", A = "21", B = "23", C = "25", D = "27", CorrectAnswer = "A" },
                 new Question { QuestionText = "(36 ÷ 6) × (8 ÷ 2) = ___", A = "20", B = "24", C = "28", D = "32", CorrectAnswer = "B" },
                 new Question { QuestionText = "[(8 + 4) × 5] ÷ 2 = ___", A = "24", B = "26", C = "28", D = "30", CorrectAnswer = "A" },
                 new Question { QuestionText = "(54 ÷ 6) + (45 ÷ 9) = ___", A = "11", B = "12", C = "13", D = "14", CorrectAnswer = "B" },
                 new Question { QuestionText = "(7 × 6) - (5 × 4) + ___ = 34", A = "2", B = "3", C = "4", D = "5", CorrectAnswer = "D" },
-                
+
                 new Question { QuestionText = "[(9 × 5) + (4 × 3)] ÷ 3 = ___", A = "14", B = "15", C = "16", D = "17", CorrectAnswer = "A" },
                 new Question { QuestionText = "[(100 ÷ 5) × (4 + 1)] ÷ 10 = ___", A = "8", B = "9", C = "10", D = "11", CorrectAnswer = "C" },
                 new Question { QuestionText = "[(7 + 3) × 4] - (6 × 5) = ___", A = "10", B = "12", C = "14", D = "16", CorrectAnswer = "C" },
                 new Question { QuestionText = "(81 ÷ 9) + (56 ÷ 7) = ___", A = "15", B = "16", C = "17", D = "18", CorrectAnswer = "A" },
                 new Question { QuestionText = "[(120 ÷ 10) × (3 + 2)] ÷ 5 = ___", A = "6", B = "7", C = "8", D = "9", CorrectAnswer = "B" },
-                
+
                 new Question { QuestionText = "(12 × 5) ÷ (3 × 2) = ___", A = "8", B = "9", C = "10", D = "11", CorrectAnswer = "A" },
                 new Question { QuestionText = "[(9 × 8) + (4 × 6)] ÷ 6 = ___", A = "14", B = "15", C = "16", D = "17", CorrectAnswer = "B" },
                 new Question { QuestionText = "(100 ÷ 4) - (36 ÷ 6) = ___", A = "19", B = "20", C = "21", D = "22", CorrectAnswer = "C" },
                 new Question { QuestionText = "(18 × 3) - (45 ÷ 5) = ___", A = "42", B = "43", C = "44", D = "45", CorrectAnswer = "A" },
                 new Question { QuestionText = "[(16 × 5) + (6 × 8)] ÷ 4 = ___", A = "21", B = "22", C = "23", D = "24", CorrectAnswer = "B" },
-                
+
                 new Question { QuestionText = "(60 ÷ 5) × (3 + 2) = ___", A = "55", B = "56", C = "57", D = "58", CorrectAnswer = "C" },
                 new Question { QuestionText = "(14 × 7) ÷ (10 - 4) = ___", A = "14", B = "15", C = "16", D = "17", CorrectAnswer = "A" },
                 new Question { QuestionText = "(80 ÷ 4) + (9 × 2) = ___", A = "38", B = "39", C = "40", D = "41", CorrectAnswer = "C" },
                 new Question { QuestionText = "(48 ÷ 6) × (9 - 6) = ___", A = "22", B = "23", C = "24", D = "25", CorrectAnswer = "C" },
                 new Question { QuestionText = "[(132 ÷ 11) × 4] ÷ 2 = ___", A = "22", B = "23", C = "24", D = "25", CorrectAnswer = "C" },
-                
+
                 new Question { QuestionText = "(90 ÷ 9) + (64 ÷ 8) = ___", A = "16", B = "17", C = "18", D = "19", CorrectAnswer = "A" },
                 new Question { QuestionText = "[(72 ÷ 9) × 5] ÷ 3 = ___", A = "12", B = "13", C = "14", D = "15", CorrectAnswer = "B" },
                 new Question { QuestionText = "(84 ÷ 12) + (30 ÷ 5) = ___", A = "12", B = "13", C = "14", D = "15", CorrectAnswer = "C" },
                 new Question { QuestionText = "[(15 × 4) - 10] ÷ 5 = ___", A = "9", B = "10", C = "11", D = "12", CorrectAnswer = "A" },
                 new Question { QuestionText = "(100 ÷ 5) + (8 × 3) = ___", A = "34", B = "35", C = "36", D = "37", CorrectAnswer = "B" },
-                
+
                 new Question { QuestionText = "(144 ÷ 12) × (18 ÷ 3) = ___", A = "68", B = "70", C = "72", D = "74", CorrectAnswer = "C" },
                 new Question { QuestionText = "[(18 × 5) + (60 ÷ 4)] ÷ 6 = ___", A = "14", B = "15", C = "16", D = "17", CorrectAnswer = "A" },
                 new Question { QuestionText = "(225 ÷ 15) × (36 ÷ 6) = ___", A = "86", B = "88", C = "90", D = "92", CorrectAnswer = "C" },
                 new Question { QuestionText = "(14 × 7) - (10 × 5) = ___", A = "48", B = "50", C = "52", D = "54", CorrectAnswer = "A" },
                 new Question { QuestionText = "[(96 ÷ 12) × 5] - (9 × 3) = ___", A = "30", B = "32", C = "34", D = "36", CorrectAnswer = "B" },
-                
+
                 new Question { QuestionText = "(144 ÷ 8) + (54 ÷ 9) = ___", A = "24", B = "25", C = "26", D = "27", CorrectAnswer = "A" },
                 new Question { QuestionText = "(120 ÷ 10) × (6 + 3) = ___", A = "102", B = "104", C = "108", D = "110", CorrectAnswer = "C" },
                 new Question { QuestionText = "(88 ÷ 8) + (64 ÷ 8) = ___", A = "18", B = "19", C = "20", D = "21", CorrectAnswer = "A" },
                 new Question { QuestionText = "[(132 ÷ 11) × (4 + 2)] ÷ 3 = ___", A = "22", B = "23", C = "24", D = "25", CorrectAnswer = "C" },
                 new Question { QuestionText = "(225 ÷ 15) - (96 ÷ 12) = ___", A = "11", B = "12", C = "13", D = "14", CorrectAnswer = "A" },
-                
+
                 new Question { QuestionText = "[(90 ÷ 9) + (72 ÷ 9)] × 2 = ___", A = "34", B = "35", C = "36", D = "37", CorrectAnswer = "C" },
                 new Question { QuestionText = "(84 ÷ 12) × (48 ÷ 8) = ___", A = "28", B = "29", C = "30", D = "31", CorrectAnswer = "A" },
                 new Question { QuestionText = "(196 ÷ 14) + (80 ÷ 10) = ___", A = "20", B = "21", C = "22", D = "23", CorrectAnswer = "B" },
                 new Question { QuestionText = "[(144 ÷ 12) × (4 + 2)] ÷ 3 = ___", A = "22", B = "23", C = "24", D = "25", CorrectAnswer = "C" },
                 new Question { QuestionText = "(60 ÷ 6) + (100 ÷ 10) = ___", A = "15", B = "16", C = "17", D = "18", CorrectAnswer = "A" },
-                
+
                 new Question { QuestionText = "[(132 ÷ 11) × (5 + 3)] ÷ 4 = ___", A = "24", B = "25", C = "26", D = "27", CorrectAnswer = "B" },
                 new Question { QuestionText = "(180 ÷ 12) × (24 ÷ 6) = ___", A = "28", B = "29", C = "30", D = "31", CorrectAnswer = "C" },
                 new Question { QuestionText = "(81 ÷ 9) + (72 ÷ 8) = ___", A = "17", B = "18", C = "19", D = "20", CorrectAnswer = "B" },
                 new Question { QuestionText = "[(84 ÷ 12) × (9 + 3)] ÷ 4 = ___", A = "14", B = "15", C = "16", D = "17", CorrectAnswer = "A" },
                 new Question { QuestionText = "(72 ÷ 6) × (100 ÷ 10) = ___", A = "120", B = "122", C = "124", D = "126", CorrectAnswer = "A" },
-                
+
                 new Question { QuestionText = "(144 ÷ 12) + (96 ÷ 8) = ___", A = "24", B = "25", C = "26", D = "27", CorrectAnswer = "B" },
                 new Question { QuestionText = "(225 ÷ 15) × (80 ÷ 10) = ___", A = "120", B = "122", C = "124", D = "126", CorrectAnswer = "A" },
                 new Question { QuestionText = "(160 ÷ 10) + (108 ÷ 12) = ___", A = "26", B = "27", C = "28", D = "29", CorrectAnswer = "B" },
                 new Question { QuestionText = "[(96 ÷ 12) × (5 + 4)] ÷ 3 = ___", A = "14", B = "15", C = "16", D = "17", CorrectAnswer = "C" },
                 new Question { QuestionText = "(132 ÷ 11) × (6 + 4) = ___", A = "108", B = "110", C = "112", D = "114", CorrectAnswer = "B" },
-                
+
                 new Question { QuestionText = "(180 ÷ 12) × (48 ÷ 8) = ___", A = "90", B = "92", C = "94", D = "96", CorrectAnswer = "A" },
                 new Question { QuestionText = "(72 ÷ 6) + (100 ÷ 10) = ___", A = "22", B = "23", C = "24", D = "25", CorrectAnswer = "C" },
                 new Question { QuestionText = "(144 ÷ 12) × (10 + 2) = ___", A = "108", B = "110", C = "112", D = "114", CorrectAnswer = "B" },
                 new Question { QuestionText = "(160 ÷ 10) × (36 ÷ 6) = ___", A = "92", B = "94", C = "96", D = "98", CorrectAnswer = "C" },
                 new Question { QuestionText = "(225 ÷ 15) × (64 ÷ 8) = ___", A = "120", B = "122", C = "124", D = "126", CorrectAnswer = "A" },
-                
+
                 new Question { QuestionText = "(81 ÷ 9) × (72 ÷ 9) = ___", A = "64", B = "66", C = "68", D = "70", CorrectAnswer = "C" },
                 new Question { QuestionText = "(72 ÷ 6) × (96 ÷ 8) = ___", A = "144", B = "146", C = "148", D = "150", CorrectAnswer = "A" },
                 new Question { QuestionText = "(180 ÷ 12) × (24 ÷ 6) = ___", A = "90", B = "92", C = "94", D = "96", CorrectAnswer = "A" },

@@ -94,11 +94,11 @@
             this.label4.BackColor = System.Drawing.Color.LimeGreen;
             this.label4.Font = new System.Drawing.Font("Verdana", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label4.Location = new System.Drawing.Point(74, 167);
+            this.label4.Location = new System.Drawing.Point(99, 167);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(131, 40);
+            this.label4.Size = new System.Drawing.Size(82, 40);
             this.label4.TabIndex = 27;
-            this.label4.Text = "FITNESS";
+            this.label4.Text = "EASY";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label4.UseCompatibleTextRendering = true;
             this.label4.Click += new System.EventHandler(this.label4_Click);
@@ -109,11 +109,11 @@
             this.label5.BackColor = System.Drawing.Color.LimeGreen;
             this.label5.Font = new System.Drawing.Font("Verdana", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label5.Location = new System.Drawing.Point(59, 361);
+            this.label5.Location = new System.Drawing.Point(77, 361);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(162, 40);
+            this.label5.Size = new System.Drawing.Size(127, 40);
             this.label5.TabIndex = 28;
-            this.label5.Text = "WELLNESS";
+            this.label5.Text = "MEDIUM";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label5.UseCompatibleTextRendering = true;
             // 
@@ -123,11 +123,11 @@
             this.label6.BackColor = System.Drawing.Color.LimeGreen;
             this.label6.Font = new System.Drawing.Font("Verdana", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label6.Location = new System.Drawing.Point(87, 556);
+            this.label6.Location = new System.Drawing.Point(93, 556);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(105, 40);
+            this.label6.Size = new System.Drawing.Size(90, 40);
             this.label6.TabIndex = 29;
-            this.label6.Text = "STUDY";
+            this.label6.Text = "HARD";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label6.UseCompatibleTextRendering = true;
             // 
@@ -299,7 +299,7 @@
             // pictureBox10
             // 
             this.pictureBox10.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox10.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox10.Image")));
+            this.pictureBox10.Image = global::DCP.Properties.Resources.HardLearning;
             this.pictureBox10.Location = new System.Drawing.Point(33, 602);
             this.pictureBox10.Name = "pictureBox10";
             this.pictureBox10.Size = new System.Drawing.Size(213, 120);
@@ -322,7 +322,7 @@
             // pictureBox9
             // 
             this.pictureBox9.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox9.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox9.Image")));
+            this.pictureBox9.Image = global::DCP.Properties.Resources.MediumLearning;
             this.pictureBox9.Location = new System.Drawing.Point(33, 415);
             this.pictureBox9.Name = "pictureBox9";
             this.pictureBox9.Size = new System.Drawing.Size(213, 120);
@@ -345,7 +345,7 @@
             // pictureBox8
             // 
             this.pictureBox8.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox8.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox8.Image")));
+            this.pictureBox8.Image = global::DCP.Properties.Resources.EasyLearning;
             this.pictureBox8.Location = new System.Drawing.Point(33, 221);
             this.pictureBox8.Name = "pictureBox8";
             this.pictureBox8.Size = new System.Drawing.Size(213, 120);

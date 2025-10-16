@@ -52,6 +52,10 @@
             this.label12 = new System.Windows.Forms.Label();
             this.ArrowRight = new System.Windows.Forms.PictureBox();
             this.label11 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.MicPictureBox = new System.Windows.Forms.PictureBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
@@ -63,6 +67,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ArrowRight)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MicPictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -345,12 +351,66 @@
             this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label11.UseCompatibleTextRendering = true;
             // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.BackColor = System.Drawing.Color.PaleGreen;
+            this.label13.Font = new System.Drawing.Font("Verdana", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label13.Location = new System.Drawing.Point(586, 521);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(302, 34);
+            this.label13.TabIndex = 463;
+            this.label13.Text = "-   VOICE RECOGNITION";
+            this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label13.UseCompatibleTextRendering = true;
+            // 
+            // MicPictureBox
+            // 
+            this.MicPictureBox.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.MicPictureBox.Image = global::DCP.Properties.Resources.Mic_Off;
+            this.MicPictureBox.Location = new System.Drawing.Point(475, 503);
+            this.MicPictureBox.Name = "MicPictureBox";
+            this.MicPictureBox.Size = new System.Drawing.Size(67, 61);
+            this.MicPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.MicPictureBox.TabIndex = 462;
+            this.MicPictureBox.TabStop = false;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.PaleGreen;
+            this.label3.Font = new System.Drawing.Font("Verdana", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label3.Location = new System.Drawing.Point(117, 521);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(279, 34);
+            this.label3.TabIndex = 465;
+            this.label3.Text = "-   FEEDBACK BUTTON";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label3.UseCompatibleTextRendering = true;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.pictureBox5.Image = global::DCP.Properties.Resources.Feedbacks;
+            this.pictureBox5.Location = new System.Drawing.Point(33, 508);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(67, 61);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox5.TabIndex = 464;
+            this.pictureBox5.TabStop = false;
+            // 
             // LearningGuide
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.PaleGreen;
-            this.ClientSize = new System.Drawing.Size(969, 517);
+            this.ClientSize = new System.Drawing.Size(969, 582);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.pictureBox5);
+            this.Controls.Add(this.label13);
+            this.Controls.Add(this.MicPictureBox);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.ArrowRight);
             this.Controls.Add(this.label12);
@@ -375,6 +435,7 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.pictureBox4);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "LearningGuide";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
@@ -387,6 +448,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ArrowRight)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MicPictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -417,5 +480,9 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.PictureBox ArrowRight;
         private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.PictureBox MicPictureBox;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.PictureBox pictureBox5;
     }
 }

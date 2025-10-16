@@ -160,7 +160,7 @@
             // 
             // pictureBox4
             // 
-            this.pictureBox4.Image = global::DCP.Properties.Resources.HCS_Logo_LightCoral;
+            this.pictureBox4.Image = global::DCP.Properties.Resources.LCS_Logo_B;
             this.pictureBox4.Location = new System.Drawing.Point(957, 148);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(420, 387);

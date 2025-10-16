@@ -51,67 +51,67 @@ namespace DCP.Resources
                 new Question { QuestionText = "Which place follows in this pattern: Manila, Bangkok, Tokyo, Beijing, ?", A = "Jakarta", B = "Seoul", C = "Hanoi", D = "Taipei", CorrectAnswer = "B" },
                 new Question { QuestionText = "If A = 1, B = 3, C = 6, D = 10, then what is F?", A = "15", B = "21", C = "28", D = "36", CorrectAnswer = "C" },
                 new Question { QuestionText = "In a pattern of professions: Doctor, Engineer, Lawyer, Teacher, ?, what comes next?", A = "Pilot", B = "Scientist", C = "Architect", D = "Nurse", CorrectAnswer = "B" },
-                
+
                 new Question { QuestionText = "Find the next in the sequence: Tesla, Edison, Newton, Einstein, ?", A = "Hawking", B = "Galileo", C = "Curie", D = "Faraday", CorrectAnswer = "B" },
                 new Question { QuestionText = "Which word logically follows this pattern: Hot, Warm, Cool, ?", A = "Boiling", B = "Freezing", C = "Cold", D = "Chilly", CorrectAnswer = "C" },
                 new Question { QuestionText = "Which number logically follows the pattern: 19, 37, 79, 163, ?", A = "247", B = "329", C = "303", D = "331", CorrectAnswer = "D" },
                 new Question { QuestionText = "What city follows in this pattern: Paris, Berlin, Madrid, Rome, ?", A = "Vienna", B = "Lisbon", C = "London", D = "Athens", CorrectAnswer = "C" },
                 new Question { QuestionText = "What is the next logical letter in the sequence: C, G, L, R, ?", A = "T", B = "W", C = "X", D = "Z", CorrectAnswer = "B" },
-                
+
                 new Question { QuestionText = "If the sequence follows: Mercury, Venus, Earth, Mars, ?, what comes next?", A = "Jupiter", B = "Saturn", C = "Neptune", D = "Uranus", CorrectAnswer = "A" },
                 new Question { QuestionText = "If 2, 6, 12, 20, ?, what comes next?", A = "26", B = "30", C = "32", D = "36", CorrectAnswer = "C" },
                 new Question { QuestionText = "Which book logically follows: The Fellowship of the Ring, The Two Towers, ?", A = "The Hobbit", B = "The Return of the King", C = "The Silmarillion", D = "Harry Potter", CorrectAnswer = "B" },
                 new Question { QuestionText = "What country follows this pattern: USA, Canada, Mexico, Guatemala, ?", A = "Panama", B = "El Salvador", C = "Honduras", D = "Costa Rica", CorrectAnswer = "C" },
                 new Question { QuestionText = "What profession follows this pattern: Pilot, Captain, Commander, ?", A = "Lieutenant", B = "General", C = "Marshal", D = "Admiral", CorrectAnswer = "D" },
-                
+
                 new Question { QuestionText = "Which Philippine historical figure follows: Rizal, Bonifacio, Del Pilar, Mabini, ?", A = "Aguinaldo", B = "Luna", C = "Quezon", D = "Osmeña", CorrectAnswer = "B" },
                 new Question { QuestionText = "Which historical event follows: American Revolution, French Revolution, Industrial Revolution, ?", A = "Renaissance", B = "Civil Rights Movement", C = "World War I", D = "Russian Revolution", CorrectAnswer = "D" },
                 new Question { QuestionText = "Which TV show follows: Breaking Bad, Game of Thrones, The Walking Dead, ?", A = "Stranger Things", B = "House of Cards", C = "Westworld", D = "Sherlock", CorrectAnswer = "C" },
                 new Question { QuestionText = "What is the next famous inventor in this pattern: Galileo, Newton, Edison, Tesla, ?", A = "Faraday", B = "Curie", C = "Einstein", D = "Hawking", CorrectAnswer = "C" },
                 new Question { QuestionText = "Which Disney movie follows: Snow White, Cinderella, Sleeping Beauty, The Little Mermaid, ?", A = "Beauty and the Beast", B = "Mulan", C = "Aladdin", D = "Frozen", CorrectAnswer = "A" },
-                
+
                 new Question { QuestionText = "What game title follows: Super Mario Bros, The Legend of Zelda, Metroid, ?", A = "Kirby", B = "Donkey Kong", C = "Mega Man", D = "Final Fantasy", CorrectAnswer = "B" },
                 new Question { QuestionText = "Which mobile brand follows: Nokia, BlackBerry, Apple, Samsung, ?", A = "Sony", B = "Xiaomi", C = "Huawei", D = "Motorola", CorrectAnswer = "C" },
                 new Question { QuestionText = "What follows this sequence: January, March, May, July, ?", A = "September", B = "October", C = "November", D = "August", CorrectAnswer = "C" },
                 new Question { QuestionText = "Which fast-food chain follows: McDonald's, Burger King, Wendy's, KFC, ?", A = "Subway", B = "Pizza Hut", C = "Taco Bell", D = "Domino's", CorrectAnswer = "C" },
                 new Question { QuestionText = "Which Pokémon follows this evolution pattern: Charmander, Charmeleon, ?", A = "Charizard", B = "Dragonite", C = "Arcanine", D = "Gyarados", CorrectAnswer = "A" },
-                
+
                 new Question { QuestionText = "Which number follows this sequence: 2, 5, 10, 17, ?", A = "25", B = "26", C = "28", D = "30", CorrectAnswer = "B" },
                 new Question { QuestionText = "Which planet follows: Jupiter, Saturn, Uranus, ?", A = "Earth", B = "Neptune", C = "Venus", D = "Mars", CorrectAnswer = "B" },
                 new Question { QuestionText = "Which singer follows: Michael Jackson, Elvis Presley, Madonna, ?", A = "Whitney Houston", B = "Beyoncé", C = "Freddie Mercury", D = "Adele", CorrectAnswer = "C" },
                 new Question { QuestionText = "Which sport follows: Football, Basketball, Baseball, Tennis, ?", A = "Soccer", B = "Golf", C = "Cricket", D = "Hockey", CorrectAnswer = "D" },
                 new Question { QuestionText = "If the pattern follows: Shakespeare, Dickens, Hemingway, Orwell, ?, who comes next?", A = "Austen", B = "Tolkien", C = "Fitzgerald", D = "Poe", CorrectAnswer = "C" },
-                
+
                 new Question { QuestionText = "Which event follows: World War I, World War II, Cold War, ?", A = "Industrial Revolution", B = "Vietnam War", C = "Moon Landing", D = "9/11", CorrectAnswer = "B" },
                 new Question { QuestionText = "Which scientist follows: Galileo, Newton, Einstein, Hawking, ?", A = "Bohr", B = "Curie", C = "Tesla", D = "Darwin", CorrectAnswer = "A" },
                 new Question { QuestionText = "Which social media platform follows: Friendster, MySpace, Facebook, Instagram, ?", A = "Snapchat", B = "TikTok", C = "Twitter", D = "Reddit", CorrectAnswer = "B" },
                 new Question { QuestionText = "If the sequence follows: iPhone 4, iPhone 5, iPhone 6, iPhone 7, ?, what comes next?", A = "iPhone 8", B = "iPhone X", C = "iPhone SE", D = "iPhone XR", CorrectAnswer = "A" },
                 new Question { QuestionText = "If 5, 12, 24, 41, ?, what comes next?", A = "60", B = "63", C = "65", D = "70", CorrectAnswer = "B" },
-                
+
                 new Question { QuestionText = "Which Olympic host city follows: Athens, Beijing, London, Rio, ?", A = "Tokyo", B = "Paris", C = "Los Angeles", D = "Berlin", CorrectAnswer = "A" },
                 new Question { QuestionText = "If the pattern follows: New York, Los Angeles, Chicago, Houston, ?, which city comes next?", A = "Philadelphia", B = "San Francisco", C = "Phoenix", D = "Dallas", CorrectAnswer = "C" },
                 new Question { QuestionText = "Which software company follows: Microsoft, Apple, Google, Amazon, ?", A = "Facebook", B = "IBM", C = "Netflix", D = "Adobe", CorrectAnswer = "A" },
                 new Question { QuestionText = "Which car brand follows: Toyota, Honda, Ford, BMW, ?", A = "Mercedes", B = "Nissan", C = "Chevrolet", D = "Tesla", CorrectAnswer = "D" },
                 new Question { QuestionText = "Which chess champion follows: Fischer, Kasparov, Kramnik, Carlsen, ?", A = "Nakamura", B = "Ding Liren", C = "Caruana", D = "Anand", CorrectAnswer = "B" },
-                
+
                 new Question { QuestionText = "Which cryptocurrency follows: Bitcoin, Ethereum, Litecoin, Dogecoin, ?", A = "Cardano", B = "Solana", C = "Polkadot", D = "Ripple", CorrectAnswer = "B" },
                 new Question { QuestionText = "Which video game follows: Counter-Strike, Call of Duty, Battlefield, Halo, ?", A = "Valorant", B = "Overwatch", C = "Apex Legends", D = "Destiny", CorrectAnswer = "A" },
                 new Question { QuestionText = "If the pattern follows: Tiger, Elephant, Lion, Giraffe, ?, what comes next?", A = "Cheetah", B = "Zebra", C = "Rhino", D = "Bear", CorrectAnswer = "B" },
                 new Question { QuestionText = "Which YouTuber follows: PewDiePie, MrBeast, Markiplier, Jacksepticeye, ?", A = "Dream", B = "Ninja", C = "Logan Paul", D = "Corpse", CorrectAnswer = "A" },
                 new Question { QuestionText = "Which anime follows: Naruto, One Piece, Bleach, Dragon Ball, ?", A = "Demon Slayer", B = "Attack on Titan", C = "Fairy Tail", D = "Death Note", CorrectAnswer = "C" },
-                
+
                 new Question { QuestionText = "If the sequence follows: Rock, Paper, Scissors, ?, what comes next?", A = "Lizard", B = "Spock", C = "Both A and B", D = "None", CorrectAnswer = "C" },
                 new Question { QuestionText = "Which mobile app follows: WhatsApp, Messenger, Telegram, Signal, ?", A = "Viber", B = "WeChat", C = "Snapchat", D = "Discord", CorrectAnswer = "B" },
                 new Question { QuestionText = "Which horror movie follows: The Exorcist, The Shining, A Nightmare on Elm Street, The Conjuring, ?", A = "Hereditary", B = "It", C = "Insidious", D = "Paranormal Activity", CorrectAnswer = "B" },
                 new Question { QuestionText = "If the sequence follows: 4, 8, 15, 16, 23, ?, what comes next?", A = "42", B = "50", C = "30", D = "33", CorrectAnswer = "A" },
                 new Question { QuestionText = "Which Marvel superhero follows: Iron Man, Captain America, Thor, Hulk, ?", A = "Black Widow", B = "Doctor Strange", C = "Spider-Man", D = "Hawkeye", CorrectAnswer = "C" },
-                
+
                 new Question { QuestionText = "Which Game of Thrones house follows: Stark, Lannister, Baratheon, Targaryen, ?", A = "Tully", B = "Martell", C = "Greyjoy", D = "Bolton", CorrectAnswer = "C" },
                 new Question { QuestionText = "If the pattern follows: Red, Orange, Yellow, Green, Blue, ?, what comes next?", A = "Indigo", B = "Violet", C = "Pink", D = "Cyan", CorrectAnswer = "A" },
                 new Question { QuestionText = "Which programming language follows: C, Java, Python, JavaScript, ?", A = "Swift", B = "Kotlin", C = "Ruby", D = "C#", CorrectAnswer = "D" },
                 new Question { QuestionText = "Which fast food chain follows: Jollibee, McDonald’s, KFC, Burger King, ?", A = "Wendy’s", B = "Chowking", C = "Shakey’s", D = "Pizza Hut", CorrectAnswer = "A" },
                 new Question { QuestionText = "Which K-pop group follows: BTS, Blackpink, EXO, TWICE, ?", A = "ITZY", B = "Stray Kids", C = "Red Velvet", D = "SEVENTEEN", CorrectAnswer = "D" },
-                
+
                 new Question { QuestionText = "Which NBA team follows: Lakers, Bulls, Celtics, Warriors, ?", A = "Heat", B = "Suns", C = "Mavericks", D = "Bucks", CorrectAnswer = "A" },
                 new Question { QuestionText = "Which game console follows: PlayStation 1, PlayStation 2, PlayStation 3, ?", A = "PlayStation 4", B = "PlayStation 5", C = "Xbox 360", D = "Nintendo Switch", CorrectAnswer = "A" },
                 new Question { QuestionText = "Which car model follows: Mustang, Camaro, Challenger, Corvette, ?", A = "Lamborghini", B = "Ferrari", C = "Dodge Charger", D = "Tesla Model S", CorrectAnswer = "C" },

@@ -271,6 +271,9 @@
   <data name="Diamond_Push_Ups__Medium_F" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Diamond_Push_Ups__Medium_F.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Download_Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Download-Icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="DR" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\DR.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -447,6 +450,12 @@
   </data>
   <data name="JumpSquatT" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\JumpSquatT.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LCS_Logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LCS-Logo.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LCS_Logo_B" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LCS-Logo-B.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="LearningLettering" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\LearningLettering.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>

@@ -12,6 +12,7 @@ using System.IO;
 using DCP.Resources;
 using Newtonsoft.Json;
 using System.Media;
+using ClosedXML.Excel;
 
 
 namespace DCP
@@ -187,7 +188,7 @@ namespace DCP
                     {
                         performance = $"{record.Rot} Rot";
                     }
-                    else if (record.Glass != null) 
+                    else if (record.Glass != null)
                     {
                         performance = $"{record.Glass} Glass";
                     }
@@ -294,6 +295,125 @@ namespace DCP
 #endif
 
                 MessageBox.Show("Selected record(s) deleted successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            player.Play();
+
+            if (dataGridView1.Rows.Count == 0)
+            {
+                MessageBox.Show("There are no records to export.", "No Data", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+
+            DialogResult result = MessageBox.Show(
+                "Do you want to save your records as an Excel file?",
+                "Confirmation",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question
+            );
+
+            if (result == DialogResult.No)
+            {
+                MessageBox.Show("Export canceled.", "Canceled", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+
+            try
+            {
+                using (SaveFileDialog saveFileDialog = new SaveFileDialog())
+                {
+                    saveFileDialog.Filter = "Excel Files|*.xlsx";
+                    saveFileDialog.Title = "Save Records to Excel";
+                    saveFileDialog.FileName = $"{Login.CurrentUsername}_Records.xlsx";
+
+                    if (saveFileDialog.ShowDialog() == DialogResult.OK)
+                    {
+                        string filePath = saveFileDialog.FileName;
+
+                        using (var workbook = new ClosedXML.Excel.XLWorkbook())
+                        {
+                            var worksheet = workbook.Worksheets.Add("Challenge Records");
+
+                            // 🔹 Title
+                            worksheet.Cell("A1").Value = $"{Login.CurrentUsername}'s Challenge Records";
+                            worksheet.Range("A1:D1").Merge();
+                            worksheet.Row(1).Height = 30;
+                            worksheet.Cell("A1").Style.Font.Bold = true;
+                            worksheet.Cell("A1").Style.Font.FontSize = 16;
+                            worksheet.Cell("A1").Style.Alignment.Horizontal = ClosedXML.Excel.XLAlignmentHorizontalValues.Center;
+                            worksheet.Cell("A1").Style.Alignment.Vertical = ClosedXML.Excel.XLAlignmentVerticalValues.Center;
+                            worksheet.Cell("A1").Style.Fill.BackgroundColor = ClosedXML.Excel.XLColor.LimeGreen;
+                            worksheet.Cell("A1").Style.Font.FontColor = ClosedXML.Excel.XLColor.White;
+
+                            // 🔹 Column Headers
+                            for (int i = 0; i < dataGridView1.Columns.Count; i++)
+                            {
+                                worksheet.Cell(2, i + 1).Value = dataGridView1.Columns[i].HeaderText;
+                            }
+
+                            var headerRange = worksheet.Range(2, 1, 2, dataGridView1.Columns.Count);
+                            headerRange.Style.Font.Bold = true;
+                            headerRange.Style.Fill.BackgroundColor = ClosedXML.Excel.XLColor.FromHtml("#98FB98"); // Pale Green
+                            headerRange.Style.Alignment.Horizontal = ClosedXML.Excel.XLAlignmentHorizontalValues.Center;
+                            headerRange.Style.Border.OutsideBorder = ClosedXML.Excel.XLBorderStyleValues.Thin;
+                            headerRange.Style.Border.InsideBorder = ClosedXML.Excel.XLBorderStyleValues.Thin;
+
+                            // 🔹 Data Rows
+                            for (int i = 0; i < dataGridView1.Rows.Count; i++)
+                            {
+                                for (int j = 0; j < dataGridView1.Columns.Count; j++)
+                                {
+                                    worksheet.Cell(i + 3, j + 1).Value = dataGridView1.Rows[i].Cells[j].Value?.ToString();
+                                }
+                            }
+
+                            // 🔹 Data Styling
+                            var dataRange = worksheet.Range(3, 1, dataGridView1.Rows.Count + 2, dataGridView1.Columns.Count);
+                            dataRange.Style.Border.OutsideBorder = ClosedXML.Excel.XLBorderStyleValues.Thin;
+                            dataRange.Style.Border.InsideBorder = ClosedXML.Excel.XLBorderStyleValues.Thin;
+                            dataRange.Style.Alignment.Horizontal = ClosedXML.Excel.XLAlignmentHorizontalValues.Center;
+                            dataRange.Style.Alignment.Vertical = ClosedXML.Excel.XLAlignmentVerticalValues.Center;
+
+                            // 🔹 Alternating Row Colors (Pale Green and White)
+                            for (int row = 3; row <= dataGridView1.Rows.Count + 2; row++)
+                            {
+                                if (row % 2 == 0)
+                                    worksheet.Row(row).Style.Fill.BackgroundColor = ClosedXML.Excel.XLColor.FromHtml("#98FB98"); // Pale Green
+                                else
+                                    worksheet.Row(row).Style.Fill.BackgroundColor = ClosedXML.Excel.XLColor.White;
+                            }
+
+                            // 🔹 Auto-fit + Make columns slightly wider
+                            worksheet.Columns().AdjustToContents();
+                            foreach (var column in worksheet.Columns())
+                            {
+                                column.Width += 5; // add extra width for better spacing
+                            }
+
+                            // 🔹 Freeze header row
+                            worksheet.SheetView.FreezeRows(2);
+
+                            // 🔹 Optional: timestamp
+                            worksheet.Cell(dataGridView1.Rows.Count + 4, 1).Value =
+                                $"Exported on: {DateTime.Now:MMMM dd, yyyy - hh:mm tt}";
+                            worksheet.Cell(dataGridView1.Rows.Count + 4, 1).Style.Font.Italic = true;
+                            worksheet.Cell(dataGridView1.Rows.Count + 4, 1).Style.Font.FontColor = ClosedXML.Excel.XLColor.Gray;
+                            worksheet.Range(dataGridView1.Rows.Count + 4, 1, dataGridView1.Rows.Count + 4, dataGridView1.Columns.Count)
+                                .Merge();
+
+                            workbook.SaveAs(filePath);
+                        }
+
+                        MessageBox.Show("Records have been successfully saved to Excel.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error saving Excel file: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

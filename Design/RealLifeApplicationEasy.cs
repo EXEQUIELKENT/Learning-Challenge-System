@@ -52,37 +52,37 @@ namespace DCP.Resources
                 new Question { QuestionText = "You buy a shirt for $30, and the sales tax is 10%. How much will you pay in total?", A = "$33", B = "$32", C = "$31", D = "$35", CorrectAnswer = "A" },
                 new Question { QuestionText = "A school has 500 students. If 60% of them are boys, how many boys are there?", A = "300 boys", B = "350 boys", C = "400 boys", D = "250 boys", CorrectAnswer = "A" },
                 new Question { QuestionText = "A recipe calls for 3 cups of flour to make 12 cookies. How many cups of flour are needed to make 24 cookies?", A = "6 cups", B = "5 cups", C = "4 cups", D = "3 cups", CorrectAnswer = "A" },
-                
+
                 new Question { QuestionText = "If a person drinks 2 liters of water per day, how much water will they drink in a week?", A = "10 liters", B = "12 liters", C = "14 liters", D = "16 liters", CorrectAnswer = "C" },
                 new Question { QuestionText = "A taxi charges a base fare of $5 plus $2 per mile. How much will a 3-mile ride cost?", A = "$10", B = "$11", C = "$12", D = "$13", CorrectAnswer = "C" },
                 new Question { QuestionText = "A train leaves at 2:30 PM and arrives at its destination at 5:15 PM. How long is the journey?", A = "2 hours 30 minutes", B = "2 hours 45 minutes", C = "3 hours", D = "2 hours 15 minutes", CorrectAnswer = "B" },
                 new Question { QuestionText = "If a pizza is cut into 8 slices and you eat 3, how many slices are left?", A = "3", B = "4", C = "5", D = "6", CorrectAnswer = "C" },
                 new Question { QuestionText = "A pack of 12 pens costs $6. How much does one pen cost?", A = "$0.50", B = "$1.00", C = "$1.50", D = "$2.00", CorrectAnswer = "A" },
-                
+
                 new Question { QuestionText = "A bus has 40 seats. If 25 people are sitting, how many seats are empty?", A = "10", B = "15", C = "20", D = "25", CorrectAnswer = "B" },
                 new Question { QuestionText = "A cellphone battery is at 80%. If it loses 5% per hour, how much battery will be left after 3 hours?", A = "50%", B = "65%", C = "70%", D = "75%", CorrectAnswer = "C" },
                 new Question { QuestionText = "A farmer sells eggs for $3 per dozen. How much does 3 dozen eggs cost?", A = "$6", B = "$9", C = "$12", D = "$15", CorrectAnswer = "B" },
                 new Question { QuestionText = "If a person jogs 3 km per day, how far will they jog in 10 days?", A = "20 km", B = "25 km", C = "30 km", D = "35 km", CorrectAnswer = "C" },
                 new Question { QuestionText = "A bakery sells 4 cupcakes for $5. How much do 8 cupcakes cost?", A = "$8", B = "$10", C = "$12", D = "$15", CorrectAnswer = "B" },
-                
+
                 new Question { QuestionText = "A family dinner costs $45. If a 15% tip is added, what is the total cost?", A = "$48", B = "$50", C = "$51.75", D = "$55", CorrectAnswer = "C" },
                 new Question { QuestionText = "You buy a coffee for $3.50 and pay with a $10 bill. How much change do you get?", A = "$6.00", B = "$6.50", C = "$7.00", D = "$7.50", CorrectAnswer = "B" },
                 new Question { QuestionText = "A car uses 8 liters of gas per 100 km. How much gas is needed for a 200 km trip?", A = "12 liters", B = "14 liters", C = "16 liters", D = "18 liters", CorrectAnswer = "C" },
                 new Question { QuestionText = "A book costs $15. If there is a 20% discount, how much do you pay?", A = "$10", B = "$12", C = "$13", D = "$14", CorrectAnswer = "C" },
                 new Question { QuestionText = "A soccer game lasts 90 minutes. If the first half is 45 minutes, how long is the second half?", A = "30 minutes", B = "40 minutes", C = "45 minutes", D = "50 minutes", CorrectAnswer = "C" },
-                
+
                 new Question { QuestionText = "A store sells a TV for $600. If you pay in 6 equal monthly installments, how much is each payment?", A = "$50", B = "$75", C = "$100", D = "$125", CorrectAnswer = "D" },
                 new Question { QuestionText = "If a movie ticket costs $9 and you buy 3 tickets, how much is the total cost?", A = "$18", B = "$21", C = "$24", D = "$27", CorrectAnswer = "B" },
                 new Question { QuestionText = "A bicycle wheel spins 5 times per second. How many times does it spin in 1 minute?", A = "100", B = "150", C = "200", D = "300", CorrectAnswer = "D" },
                 new Question { QuestionText = "A worker earns $8 per hour. How much do they earn for 6 hours of work?", A = "$36", B = "$40", C = "$42", D = "$48", CorrectAnswer = "D" },
                 new Question { QuestionText = "A box of cereal weighs 500 grams. How many kilograms is that?", A = "0.5 kg", B = "1 kg", C = "1.5 kg", D = "2 kg", CorrectAnswer = "A" },
-                
+
                 new Question { QuestionText = "A parking fee is $2 per hour. If you park for 5 hours, how much do you pay?", A = "$8", B = "$9", C = "$10", D = "$12", CorrectAnswer = "C" },
                 new Question { QuestionText = "A bus ride costs $1.50 per trip. If you take 4 trips, how much do you spend?", A = "$4", B = "$5", C = "$6", D = "$7", CorrectAnswer = "C" },
                 new Question { QuestionText = "A water bottle holds 2 liters. How many milliliters is that?", A = "200 mL", B = "2000 mL", C = "20,000 mL", D = "2,000,000 mL", CorrectAnswer = "B" },
                 new Question { QuestionText = "A shop sells 2 shirts for $25 each. How much do both shirts cost?", A = "$40", B = "$45", C = "$50", D = "$55", CorrectAnswer = "C" },
                 new Question { QuestionText = "A pencil costs $1.20. How much do 5 pencils cost?", A = "$5.50", B = "$6.00", C = "$6.50", D = "$7.00", CorrectAnswer = "B" },
-                
+
                 new Question { QuestionText = "A taxi ride costs $10. If you tip 20%, how much do you pay in total?", A = "$10.50", B = "$11", C = "$12", D = "$13", CorrectAnswer = "C" },
                 new Question { QuestionText = "A basketball game starts at 7:00 PM and ends at 9:15 PM. How long did it last?", A = "2 hours", B = "2 hours 15 minutes", C = "2 hours 30 minutes", D = "3 hours", CorrectAnswer = "B" },
                 new Question { QuestionText = "A clock shows 3:45 PM. What time will it be in 2 hours?", A = "5:15 PM", B = "5:30 PM", C = "5:45 PM", D = "6:00 PM", CorrectAnswer = "C" },
