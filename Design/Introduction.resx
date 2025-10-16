@@ -118,18 +118,14 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="label2.Text" xml:space="preserve">
-    <value>The Health Challenge System is a desktop application designed 
-to help users stay active and improve themselves through 
-different challenges. It features a difficulty selection system 
-that ensures workouts are suited to different fitness levels. 
-Users can track their progress, customize their challenges, 
-and stay motivated with an interactive and engaging
-experience. With an AI-powered search and voice 
-recognition feature, the system makes selecting challenges 
-easier and more accessible. By offering a personalized and 
-dynamic fitness, learning, and wellness journey, the Health 
-Challenge System encourages users to maintain a health 
-and active lifestyle effortlessly.</value>
+    <value>The Learning Challenge System is a desktop application 
+designed to help users enhance their knowledge and 
+skills through interactive learning challenges. It offers 
+multiple difficulty levels to suit different learners and 
+allows users to track their progress easily. With its 
+intuitive and engaging interface, the system promotes 
+continuous learning and personal growth in a fun and 
+motivating way.</value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="button4.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">

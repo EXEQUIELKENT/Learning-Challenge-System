@@ -2157,6 +2157,7 @@
     <None Include="Resources\Fitness Lettering.png" />
     <None Include="Resources\Health Lettering.png" />
     <None Include="Resources\System Lettering.png" />
+    <None Include="Resources\Loading.gif" />
     <Content Include="YEAH.ico" />
   </ItemGroup>
   <ItemGroup>

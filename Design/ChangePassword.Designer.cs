@@ -56,11 +56,11 @@
             // 
             // button3
             // 
-            this.button3.BackColor = System.Drawing.Color.Crimson;
+            this.button3.BackColor = System.Drawing.Color.LimeGreen;
             this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button3.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Tomato;
-            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Tomato;
+            this.button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Verdana", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
@@ -74,7 +74,7 @@
             // 
             // textBox1
             // 
-            this.textBox1.BackColor = System.Drawing.Color.LightCoral;
+            this.textBox1.BackColor = System.Drawing.Color.PaleGreen;
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox1.Font = new System.Drawing.Font("Verdana", 12F);
             this.textBox1.Location = new System.Drawing.Point(151, 383);
@@ -86,7 +86,7 @@
             // 
             // textBox2
             // 
-            this.textBox2.BackColor = System.Drawing.Color.LightCoral;
+            this.textBox2.BackColor = System.Drawing.Color.PaleGreen;
             this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox2.Font = new System.Drawing.Font("Verdana", 12F);
             this.textBox2.Location = new System.Drawing.Point(151, 446);
@@ -99,7 +99,7 @@
             // 
             // textBox3
             // 
-            this.textBox3.BackColor = System.Drawing.Color.LightCoral;
+            this.textBox3.BackColor = System.Drawing.Color.PaleGreen;
             this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox3.Font = new System.Drawing.Font("Verdana", 12F);
             this.textBox3.Location = new System.Drawing.Point(151, 318);
@@ -224,7 +224,7 @@
             // 
             // pictureBox2
             // 
-            this.pictureBox2.BackColor = System.Drawing.Color.Crimson;
+            this.pictureBox2.BackColor = System.Drawing.Color.LimeGreen;
             this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.pictureBox2.Location = new System.Drawing.Point(0, 665);
             this.pictureBox2.Name = "pictureBox2";
@@ -234,7 +234,7 @@
             // 
             // pictureBox7
             // 
-            this.pictureBox7.BackColor = System.Drawing.Color.Crimson;
+            this.pictureBox7.BackColor = System.Drawing.Color.LimeGreen;
             this.pictureBox7.Dock = System.Windows.Forms.DockStyle.Top;
             this.pictureBox7.Location = new System.Drawing.Point(0, 0);
             this.pictureBox7.Name = "pictureBox7";
@@ -246,7 +246,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.LightCoral;
+            this.BackColor = System.Drawing.Color.PaleGreen;
             this.ClientSize = new System.Drawing.Size(590, 711);
             this.Controls.Add(this.pictureBox11);
             this.Controls.Add(this.panel3);
