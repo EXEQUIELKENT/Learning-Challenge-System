@@ -82,11 +82,11 @@
             // 
             // buttonNext
             // 
-            this.buttonNext.BackColor = System.Drawing.Color.Crimson;
+            this.buttonNext.BackColor = System.Drawing.Color.LimeGreen;
             this.buttonNext.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonNext.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.buttonNext.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Tomato;
-            this.buttonNext.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Tomato;
+            this.buttonNext.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.buttonNext.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.buttonNext.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonNext.Font = new System.Drawing.Font("Verdana", 9F);
             this.buttonNext.Location = new System.Drawing.Point(478, 467);
@@ -99,11 +99,11 @@
             // 
             // buttonBack
             // 
-            this.buttonBack.BackColor = System.Drawing.Color.Crimson;
+            this.buttonBack.BackColor = System.Drawing.Color.LimeGreen;
             this.buttonBack.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonBack.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.buttonBack.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Tomato;
-            this.buttonBack.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Tomato;
+            this.buttonBack.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.buttonBack.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.buttonBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonBack.Font = new System.Drawing.Font("Verdana", 9F);
             this.buttonBack.Location = new System.Drawing.Point(319, 467);
@@ -128,7 +128,7 @@
             // 
             // pictureBox4
             // 
-            this.pictureBox4.Image = global::DCP.Properties.Resources.HCS_Logo_Crimson;
+            this.pictureBox4.Image = global::DCP.Properties.Resources.LCS_Logo;
             this.pictureBox4.Location = new System.Drawing.Point(22, 50);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(232, 207);
@@ -138,7 +138,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.Crimson;
+            this.panel1.BackColor = System.Drawing.Color.LimeGreen;
             this.panel1.Controls.Add(this.pictureBox4);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -152,7 +152,7 @@
             this.label2.Font = new System.Drawing.Font("Verdana", 9F);
             this.label2.Location = new System.Drawing.Point(303, 54);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(327, 108);
+            this.label2.Size = new System.Drawing.Size(306, 108);
             this.label2.TabIndex = 44;
             this.label2.Text = resources.GetString("label2.Text");
             // 
@@ -171,7 +171,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.LightCoral;
+            this.BackColor = System.Drawing.Color.PaleGreen;
             this.ClientSize = new System.Drawing.Size(682, 543);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.richTextBox1);

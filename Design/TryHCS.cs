@@ -51,13 +51,13 @@ namespace DCP
             formMap = new Dictionary<string, Form> {
 
               //Fitness
-              { "Push_Ups__Easy__F", null },
-              
-              { "Hold_Your_Breath__Easy_H", null },
-              
-              { "Grammar__Easy_E", null },
-              
-        };
+              { "Math_Puzzle__Easy_M", null },
+
+              { "Math_Puzzle__Medium_M", null },
+
+              { "Math_Puzzle__Hard_M", null },
+
+            };
 
 
             timer = new Timer();
@@ -137,12 +137,12 @@ namespace DCP
             switch (identifier)
             {
                 //Fitness
-                case "Push_Ups__Easy__F":
-                    return "               PUSH UPS";
-                case "Hold_Your_Breath__Easy_H":
-                    return "            HOLD BREATH";
-                case "Grammar__Easy_E":
-                    return "    GRAMMAR QUESTION ENG";
+                case "Math_Puzzle__Easy_M":
+                    return "         MATH PUZZLE (EASY)";
+                case "Math_Puzzle__Medium_M":
+                    return "      MATH PUZZLE (MEDIUM)";
+                case "Math_Puzzle__Hard_M":
+                    return "        MATH PUZZLE (HARD)";
                 default:
                     return identifier; // Default case for unknown identifiers
             }
@@ -221,9 +221,9 @@ namespace DCP
             switch (formKey)
             {
                 //Challenges
-                case "Push_Ups__Easy__F": return new PushUpTry();
-                case "Hold_Your_Breath__Easy_H": return new HoldYourBreathTry();
-                case "Grammar__Easy_E": return new GrammarTry();
+                case "Math_Puzzle__Easy_M": return new MathPuzzleEasyTry();
+                case "Math_Puzzle__Medium_M": return new MathPuzzleMediumTry();
+                case "Math_Puzzle__Hard_M": return new MathPuzzleHardTry();
 
                 default:
                     MessageBox.Show("Form not defined for this challenge.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);

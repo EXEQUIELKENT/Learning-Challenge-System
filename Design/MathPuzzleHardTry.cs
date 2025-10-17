@@ -14,13 +14,12 @@ using System.IO;
 using Newtonsoft.Json;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ToolBar;
 
-
 namespace DCP
 {
-    public partial class MathPuzzleMedium : Form
+    public partial class MathPuzzleHardTry : Form
     {
         private Timer timer;
-        private int progressDuration = 600; // total time for progress bar in seconds
+        private int progressDuration = 1200; // total time for progress bar in seconds
         private int timeRemaining;
         private SoundPlayer soundPlayer;
         private SoundPlayer click;
@@ -42,62 +41,98 @@ namespace DCP
             public string D { get; set; }
             public string CorrectAnswer { get; set; }
         }
-        public MathPuzzleMedium()
+        public MathPuzzleHardTry()
         {
             InitializeComponent();
             questions = new List<Question>
             {
-                new Question { QuestionText = "15 + ___ = 37", A = "20", B = "21", C = "22", D = "23", CorrectAnswer = "C" },
-                new Question { QuestionText = "___ - 18 = 27", A = "42", B = "44", C = "45", D = "46", CorrectAnswer = "C" },
-                new Question { QuestionText = "9 x ___ = 81", A = "7", B = "8", C = "9", D = "10", CorrectAnswer = "C" },
-                new Question { QuestionText = "___ ÷ 6 = 9", A = "42", B = "48", C = "54", D = "60", CorrectAnswer = "C" },
-                new Question { QuestionText = "50 - ___ = 32", A = "15", B = "16", C = "17", D = "18", CorrectAnswer = "D" },
+                new Question { QuestionText = "(8 × 3) + ___ = 32", A = "5", B = "6", C = "7", D = "8", CorrectAnswer = "C" },
+                new Question { QuestionText = "72 ÷ (9 - 3) = ___", A = "8", B = "9", C = "10", D = "12", CorrectAnswer = "A" },
+                new Question { QuestionText = "(25 + 15) ÷ ___ = 10", A = "3", B = "4", C = "5", D = "6", CorrectAnswer = "C" },
+                new Question { QuestionText = "84 - (12 × 6) = ___", A = "8", B = "12", C = "14", D = "16", CorrectAnswer = "A" },
+                new Question { QuestionText = "___ ÷ (6 + 2) = 10", A = "60", B = "70", C = "80", D = "90", CorrectAnswer = "C" },
 
-                new Question { QuestionText = "___ + 17 = 45", A = "25", B = "26", C = "27", D = "28", CorrectAnswer = "C" },
-                new Question { QuestionText = "96 ÷ ___ = 12", A = "6", B = "7", C = "8", D = "9", CorrectAnswer = "C" },
-                new Question { QuestionText = "___ x 4 = 88", A = "20", B = "21", C = "22", D = "23", CorrectAnswer = "C" },
-                new Question { QuestionText = "36 + ___ = 80", A = "42", B = "43", C = "44", D = "45", CorrectAnswer = "C" },
-                new Question { QuestionText = "___ - 33 = 52", A = "81", B = "82", C = "83", D = "84", CorrectAnswer = "C" },
+                new Question { QuestionText = "(144 ÷ 12) × 3 = ___", A = "30", B = "32", C = "36", D = "40", CorrectAnswer = "C" },
+                new Question { QuestionText = "(18 + 42) ÷ (5 × 2) = ___", A = "4", B = "5", C = "6", D = "7", CorrectAnswer = "B" },
+                new Question { QuestionText = "96 ÷ (12 - 4) + ___ = 16", A = "3", B = "4", C = "5", D = "6", CorrectAnswer = "C" },
+                new Question { QuestionText = "(5 × 7) - (6 × 4) = ___", A = "10", B = "11", C = "12", D = "13", CorrectAnswer = "C" },
+                new Question { QuestionText = "[(72 ÷ 8) + 9] × 2 = ___", A = "30", B = "32", C = "34", D = "36", CorrectAnswer = "B" },
 
-                new Question { QuestionText = "7 x ___ = 84", A = "10", B = "11", C = "12", D = "13", CorrectAnswer = "C" },
-                new Question { QuestionText = "___ ÷ 9 = 11", A = "90", B = "91", C = "99", D = "100", CorrectAnswer = "C" },
-                new Question { QuestionText = "64 - ___ = 39", A = "24", B = "25", C = "26", D = "27", CorrectAnswer = "C" },
-                new Question { QuestionText = "___ + 36 = 79", A = "41", B = "42", C = "43", D = "44", CorrectAnswer = "C" },
-                new Question { QuestionText = "144 ÷ ___ = 12", A = "10", B = "11", C = "12", D = "13", CorrectAnswer = "C" },
+                new Question { QuestionText = "(9 × 9) - (6 × 7) = ___", A = "21", B = "23", C = "25", D = "27", CorrectAnswer = "A" },
+                new Question { QuestionText = "(36 ÷ 6) × (8 ÷ 2) = ___", A = "20", B = "24", C = "28", D = "32", CorrectAnswer = "B" },
+                new Question { QuestionText = "[(8 + 4) × 5] ÷ 2 = ___", A = "24", B = "26", C = "28", D = "30", CorrectAnswer = "A" },
+                new Question { QuestionText = "(54 ÷ 6) + (45 ÷ 9) = ___", A = "11", B = "12", C = "13", D = "14", CorrectAnswer = "B" },
+                new Question { QuestionText = "(7 × 6) - (5 × 4) + ___ = 34", A = "2", B = "3", C = "4", D = "5", CorrectAnswer = "D" },
 
-                new Question { QuestionText = "___ x 6 = 108", A = "16", B = "17", C = "18", D = "19", CorrectAnswer = "C" },
-                new Question { QuestionText = "49 + ___ = 92", A = "42", B = "43", C = "44", D = "45", CorrectAnswer = "C" },
-                new Question { QuestionText = "___ - 45 = 63", A = "102", B = "103", C = "108", D = "109", CorrectAnswer = "C" },
-                new Question { QuestionText = "8 x ___ = 96", A = "10", B = "11", C = "12", D = "13", CorrectAnswer = "C" },
-                new Question { QuestionText = "___ ÷ 7 = 13", A = "84", B = "85", C = "86", D = "91", CorrectAnswer = "D" },
+                new Question { QuestionText = "[(9 × 5) + (4 × 3)] ÷ 3 = ___", A = "14", B = "15", C = "16", D = "17", CorrectAnswer = "A" },
+                new Question { QuestionText = "[(100 ÷ 5) × (4 + 1)] ÷ 10 = ___", A = "8", B = "9", C = "10", D = "11", CorrectAnswer = "C" },
+                new Question { QuestionText = "[(7 + 3) × 4] - (6 × 5) = ___", A = "10", B = "12", C = "14", D = "16", CorrectAnswer = "C" },
+                new Question { QuestionText = "(81 ÷ 9) + (56 ÷ 7) = ___", A = "15", B = "16", C = "17", D = "18", CorrectAnswer = "A" },
+                new Question { QuestionText = "[(120 ÷ 10) × (3 + 2)] ÷ 5 = ___", A = "6", B = "7", C = "8", D = "9", CorrectAnswer = "B" },
 
-                new Question { QuestionText = "72 - ___ = 49", A = "21", B = "22", C = "23", D = "24", CorrectAnswer = "C" },
-                new Question { QuestionText = "___ + 51 = 109", A = "55", B = "56", C = "57", D = "58", CorrectAnswer = "C" },
-                new Question { QuestionText = "168 ÷ ___ = 14", A = "10", B = "11", C = "12", D = "13", CorrectAnswer = "C" },
-                new Question { QuestionText = "___ x 9 = 153", A = "16", B = "17", C = "18", D = "19", CorrectAnswer = "C" },
-                new Question { QuestionText = "88 + ___ = 146", A = "54", B = "55", C = "56", D = "57", CorrectAnswer = "C" },
+                new Question { QuestionText = "(12 × 5) ÷ (3 × 2) = ___", A = "8", B = "9", C = "10", D = "11", CorrectAnswer = "A" },
+                new Question { QuestionText = "[(9 × 8) + (4 × 6)] ÷ 6 = ___", A = "14", B = "15", C = "16", D = "17", CorrectAnswer = "B" },
+                new Question { QuestionText = "(100 ÷ 4) - (36 ÷ 6) = ___", A = "19", B = "20", C = "21", D = "22", CorrectAnswer = "C" },
+                new Question { QuestionText = "(18 × 3) - (45 ÷ 5) = ___", A = "42", B = "43", C = "44", D = "45", CorrectAnswer = "A" },
+                new Question { QuestionText = "[(16 × 5) + (6 × 8)] ÷ 4 = ___", A = "21", B = "22", C = "23", D = "24", CorrectAnswer = "B" },
 
-                new Question { QuestionText = "___ - 54 = 87", A = "138", B = "139", C = "140", D = "141", CorrectAnswer = "C" },
-                new Question { QuestionText = "9 x ___ = 135", A = "12", B = "13", C = "14", D = "15", CorrectAnswer = "D" },
-                new Question { QuestionText = "___ ÷ 6 = 19", A = "112", B = "113", C = "114", D = "115", CorrectAnswer = "C" },
-                new Question { QuestionText = "96 - ___ = 58", A = "37", B = "38", C = "39", D = "40", CorrectAnswer = "C" },
-                new Question { QuestionText = "___ + 66 = 132", A = "63", B = "64", C = "65", D = "66", CorrectAnswer = "C" },
+                new Question { QuestionText = "(60 ÷ 5) × (3 + 2) = ___", A = "55", B = "56", C = "57", D = "58", CorrectAnswer = "C" },
+                new Question { QuestionText = "(14 × 7) ÷ (10 - 4) = ___", A = "14", B = "15", C = "16", D = "17", CorrectAnswer = "A" },
+                new Question { QuestionText = "(80 ÷ 4) + (9 × 2) = ___", A = "38", B = "39", C = "40", D = "41", CorrectAnswer = "C" },
+                new Question { QuestionText = "(48 ÷ 6) × (9 - 6) = ___", A = "22", B = "23", C = "24", D = "25", CorrectAnswer = "C" },
+                new Question { QuestionText = "[(132 ÷ 11) × 4] ÷ 2 = ___", A = "22", B = "23", C = "24", D = "25", CorrectAnswer = "C" },
 
-                new Question { QuestionText = "180 ÷ ___ = 15", A = "10", B = "11", C = "12", D = "13", CorrectAnswer = "C" },
-                new Question { QuestionText = "___ x 11 = 187", A = "15", B = "16", C = "17", D = "18", CorrectAnswer = "C" },
-                new Question { QuestionText = "102 + ___ = 167", A = "62", B = "63", C = "64", D = "65", CorrectAnswer = "C" },
-                new Question { QuestionText = "___ - 69 = 102", A = "168", B = "169", C = "170", D = "171", CorrectAnswer = "C" },
-                new Question { QuestionText = "10 x ___ = 140", A = "12", B = "13", C = "14", D = "15", CorrectAnswer = "C" },
+                new Question { QuestionText = "(90 ÷ 9) + (64 ÷ 8) = ___", A = "16", B = "17", C = "18", D = "19", CorrectAnswer = "A" },
+                new Question { QuestionText = "[(72 ÷ 9) × 5] ÷ 3 = ___", A = "12", B = "13", C = "14", D = "15", CorrectAnswer = "B" },
+                new Question { QuestionText = "(84 ÷ 12) + (30 ÷ 5) = ___", A = "12", B = "13", C = "14", D = "15", CorrectAnswer = "C" },
+                new Question { QuestionText = "[(15 × 4) - 10] ÷ 5 = ___", A = "9", B = "10", C = "11", D = "12", CorrectAnswer = "A" },
+                new Question { QuestionText = "(100 ÷ 5) + (8 × 3) = ___", A = "34", B = "35", C = "36", D = "37", CorrectAnswer = "B" },
 
-                new Question { QuestionText = "___ ÷ 8 = 21", A = "162", B = "164", C = "166", D = "168", CorrectAnswer = "D" },
-                new Question { QuestionText = "112 - ___ = 76", A = "35", B = "36", C = "37", D = "38", CorrectAnswer = "C" },
-                new Question { QuestionText = "___ + 80 = 160", A = "74", B = "75", C = "76", D = "77", CorrectAnswer = "C" },
+                new Question { QuestionText = "(144 ÷ 12) × (18 ÷ 3) = ___", A = "68", B = "70", C = "72", D = "74", CorrectAnswer = "C" },
+                new Question { QuestionText = "[(18 × 5) + (60 ÷ 4)] ÷ 6 = ___", A = "14", B = "15", C = "16", D = "17", CorrectAnswer = "A" },
+                new Question { QuestionText = "(225 ÷ 15) × (36 ÷ 6) = ___", A = "86", B = "88", C = "90", D = "92", CorrectAnswer = "C" },
+                new Question { QuestionText = "(14 × 7) - (10 × 5) = ___", A = "48", B = "50", C = "52", D = "54", CorrectAnswer = "A" },
+                new Question { QuestionText = "[(96 ÷ 12) × 5] - (9 × 3) = ___", A = "30", B = "32", C = "34", D = "36", CorrectAnswer = "B" },
+
+                new Question { QuestionText = "(144 ÷ 8) + (54 ÷ 9) = ___", A = "24", B = "25", C = "26", D = "27", CorrectAnswer = "A" },
+                new Question { QuestionText = "(120 ÷ 10) × (6 + 3) = ___", A = "102", B = "104", C = "108", D = "110", CorrectAnswer = "C" },
+                new Question { QuestionText = "(88 ÷ 8) + (64 ÷ 8) = ___", A = "18", B = "19", C = "20", D = "21", CorrectAnswer = "A" },
+                new Question { QuestionText = "[(132 ÷ 11) × (4 + 2)] ÷ 3 = ___", A = "22", B = "23", C = "24", D = "25", CorrectAnswer = "C" },
+                new Question { QuestionText = "(225 ÷ 15) - (96 ÷ 12) = ___", A = "11", B = "12", C = "13", D = "14", CorrectAnswer = "A" },
+
+                new Question { QuestionText = "[(90 ÷ 9) + (72 ÷ 9)] × 2 = ___", A = "34", B = "35", C = "36", D = "37", CorrectAnswer = "C" },
+                new Question { QuestionText = "(84 ÷ 12) × (48 ÷ 8) = ___", A = "28", B = "29", C = "30", D = "31", CorrectAnswer = "A" },
+                new Question { QuestionText = "(196 ÷ 14) + (80 ÷ 10) = ___", A = "20", B = "21", C = "22", D = "23", CorrectAnswer = "B" },
+                new Question { QuestionText = "[(144 ÷ 12) × (4 + 2)] ÷ 3 = ___", A = "22", B = "23", C = "24", D = "25", CorrectAnswer = "C" },
+                new Question { QuestionText = "(60 ÷ 6) + (100 ÷ 10) = ___", A = "15", B = "16", C = "17", D = "18", CorrectAnswer = "A" },
+
+                new Question { QuestionText = "[(132 ÷ 11) × (5 + 3)] ÷ 4 = ___", A = "24", B = "25", C = "26", D = "27", CorrectAnswer = "B" },
+                new Question { QuestionText = "(180 ÷ 12) × (24 ÷ 6) = ___", A = "28", B = "29", C = "30", D = "31", CorrectAnswer = "C" },
+                new Question { QuestionText = "(81 ÷ 9) + (72 ÷ 8) = ___", A = "17", B = "18", C = "19", D = "20", CorrectAnswer = "B" },
+                new Question { QuestionText = "[(84 ÷ 12) × (9 + 3)] ÷ 4 = ___", A = "14", B = "15", C = "16", D = "17", CorrectAnswer = "A" },
+                new Question { QuestionText = "(72 ÷ 6) × (100 ÷ 10) = ___", A = "120", B = "122", C = "124", D = "126", CorrectAnswer = "A" },
+
+                new Question { QuestionText = "(144 ÷ 12) + (96 ÷ 8) = ___", A = "24", B = "25", C = "26", D = "27", CorrectAnswer = "B" },
+                new Question { QuestionText = "(225 ÷ 15) × (80 ÷ 10) = ___", A = "120", B = "122", C = "124", D = "126", CorrectAnswer = "A" },
+                new Question { QuestionText = "(160 ÷ 10) + (108 ÷ 12) = ___", A = "26", B = "27", C = "28", D = "29", CorrectAnswer = "B" },
+                new Question { QuestionText = "[(96 ÷ 12) × (5 + 4)] ÷ 3 = ___", A = "14", B = "15", C = "16", D = "17", CorrectAnswer = "C" },
+                new Question { QuestionText = "(132 ÷ 11) × (6 + 4) = ___", A = "108", B = "110", C = "112", D = "114", CorrectAnswer = "B" },
+
+                new Question { QuestionText = "(180 ÷ 12) × (48 ÷ 8) = ___", A = "90", B = "92", C = "94", D = "96", CorrectAnswer = "A" },
+                new Question { QuestionText = "(72 ÷ 6) + (100 ÷ 10) = ___", A = "22", B = "23", C = "24", D = "25", CorrectAnswer = "C" },
+                new Question { QuestionText = "(144 ÷ 12) × (10 + 2) = ___", A = "108", B = "110", C = "112", D = "114", CorrectAnswer = "B" },
+                new Question { QuestionText = "(160 ÷ 10) × (36 ÷ 6) = ___", A = "92", B = "94", C = "96", D = "98", CorrectAnswer = "C" },
+                new Question { QuestionText = "(225 ÷ 15) × (64 ÷ 8) = ___", A = "120", B = "122", C = "124", D = "126", CorrectAnswer = "A" },
+
+                new Question { QuestionText = "(81 ÷ 9) × (72 ÷ 9) = ___", A = "64", B = "66", C = "68", D = "70", CorrectAnswer = "C" },
+                new Question { QuestionText = "(72 ÷ 6) × (96 ÷ 8) = ___", A = "144", B = "146", C = "148", D = "150", CorrectAnswer = "A" },
+                new Question { QuestionText = "(180 ÷ 12) × (24 ÷ 6) = ___", A = "90", B = "92", C = "94", D = "96", CorrectAnswer = "A" },
 
             };
 
             // Initialize answeredQuestions with false values (indicating that no question has been answered yet)
             Random rand = new Random();
-            questions = questions.OrderBy(q => rand.Next()).Take(10).ToList();
+            questions = questions.OrderBy(q => rand.Next()).Take(20).ToList();
 
             answeredQuestions = new List<bool>(new bool[questions.Count]);
             answeredAnswers = new List<string>();
@@ -175,71 +210,11 @@ namespace DCP
                 progressBar1.Value = progressBar1.Maximum; // Set progress bar to max on completion
                 textBox2.Text = TimeSpan.FromSeconds(progressDuration).ToString("hh\\:mm\\:ss"); // Set the final time
 
-                // Save challenge data to JSON file
-                SaveChallengeDataFailed(Login.CurrentUsername, textBox2.Text, score);
-
                 MessageBox.Show("Challenge not completed. Returning to the homepage.", "Challenge Unsuccessful", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 TransitionToHomePage();
             }
         }
-        public void SaveChallengeDataSuccess(string username, string status, string time, int score)
-        {
-            // File path for the challenge data
-            string date = DateTime.Now.ToString("MM-dd-yy");
-            string challengeFilePath = $"{username}_challenge.json";
-            var challengeList = new List<dynamic>(); // Use dynamic for flexibility with old/new records
 
-            // Load existing challenge data
-            if (File.Exists(challengeFilePath))
-            {
-                var existingData = File.ReadAllText(challengeFilePath);
-                challengeList = JsonConvert.DeserializeObject<List<dynamic>>(existingData);
-            }
-
-            // Add the new challenge data
-            var newChallengeData = new
-            {
-                Date = date,
-                FormTitle = "Math Puzzle (Medium)",
-                Score = $"Completed {score}", // New property for jogging
-                Time = time
-            };
-
-            challengeList.Add(newChallengeData);
-
-            // Save back to the JSON file
-            var updatedChallengeData = JsonConvert.SerializeObject(challengeList, Formatting.Indented);
-            File.WriteAllText(challengeFilePath, updatedChallengeData);
-        }
-        public void SaveChallengeDataFailed(string username, string time, int score)
-        {
-            // File path for the challenge data
-            string date = DateTime.Now.ToString("MM-dd-yy");
-            string challengeFilePath = $"{username}_challenge.json";
-            var challengeList = new List<dynamic>(); // Use dynamic for flexibility with old/new records
-
-            // Load existing challenge data
-            if (File.Exists(challengeFilePath))
-            {
-                var existingData = File.ReadAllText(challengeFilePath);
-                challengeList = JsonConvert.DeserializeObject<List<dynamic>>(existingData);
-            }
-
-            // Add the new challenge data
-            var newChallengeData = new
-            {
-                Date = date,
-                FormTitle = "Math Puzzle (Medium)",
-                Score = $"Failed {score}", // New property for jogging
-                Time = time
-            };
-
-            challengeList.Add(newChallengeData);
-
-            // Save back to the JSON file
-            var updatedChallengeData = JsonConvert.SerializeObject(challengeList, Formatting.Indented);
-            File.WriteAllText(challengeFilePath, updatedChallengeData);
-        }
         private void ResetChallenge()
         {
             timer.Stop();
@@ -263,18 +238,18 @@ namespace DCP
                     this.Close();
 
                     // Open HOMEPAGE with fade-in effect
-                    HOMEPAGE hOMEPAGE = new HOMEPAGE();
-                    hOMEPAGE.StartPosition = FormStartPosition.CenterScreen;
-                    hOMEPAGE.Opacity = 0;
-                    hOMEPAGE.Show();
+                    TryHCS tryHCS = new TryHCS();
+                    tryHCS.StartPosition = FormStartPosition.CenterScreen;
+                    tryHCS.Opacity = 0;
+                    tryHCS.Show();
 
                     Timer fadeInTimer = new Timer();
                     fadeInTimer.Interval = 20;
                     fadeInTimer.Tick += (s2, ev2) =>
                     {
-                        if (hOMEPAGE.Opacity < 1)
+                        if (tryHCS.Opacity < 1)
                         {
-                            hOMEPAGE.Opacity += 0.05;
+                            tryHCS.Opacity += 0.05;
                         }
                         else
                         {
@@ -325,8 +300,6 @@ namespace DCP
                             DialogResult result2 = MessageBox.Show("Are you sure you want to go back? This will fail the challenge.", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
                             if (result2 == DialogResult.Yes)
                             {
-                                // Save challenge data to JSON file
-                                SaveChallengeDataFailed(Login.CurrentUsername, textBox2.Text, score);
 
                                 timer.Stop();
                                 fail.Play();
@@ -494,8 +467,6 @@ namespace DCP
                     DialogResult result2 = MessageBox.Show("Are you sure you want to go back? This will fail the challenge.", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
                     if (result2 == DialogResult.Yes)
                     {
-                        // Save challenge data to JSON file
-                        SaveChallengeDataFailed(Login.CurrentUsername, textBox2.Text, score);
 
                         timer.Stop();
                         fail.Play();
@@ -519,18 +490,18 @@ namespace DCP
                         this.Close();
 
                         // Open Introduction form with fade-in effect
-                        HOMEPAGE hOMEPAGE = new HOMEPAGE();
-                        hOMEPAGE.StartPosition = FormStartPosition.CenterScreen;
-                        hOMEPAGE.Opacity = 0;
-                        hOMEPAGE.Show();
+                        TryHCS tryHCS = new TryHCS();
+                        tryHCS.StartPosition = FormStartPosition.CenterScreen;
+                        tryHCS.Opacity = 0;
+                        tryHCS.Show();
 
                         Timer fadeInTimer = new Timer();
                         fadeInTimer.Interval = 20;
                         fadeInTimer.Tick += (s2, ev2) =>
                         {
-                            if (hOMEPAGE.Opacity < 1)
+                            if (tryHCS.Opacity < 1)
                             {
-                                hOMEPAGE.Opacity += 0.05;
+                                tryHCS.Opacity += 0.05;
                             }
                             else
                             {
@@ -588,17 +559,15 @@ namespace DCP
                         MessageBox.Show($"Quiz completed! Your score is: {score}/{questions.Count}", "Quiz Complete", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                         // Save challenge data (including score)
-                        if (score >= 8) // Check if the challenge is passed
+                        if (score >= 15) // Check if the challenge is passed
                         {
                             success.Play();
-                            SaveChallengeDataSuccess(Login.CurrentUsername, "Completed", textBox2.Text, score);
                             MessageBox.Show("Returning to the homepage.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             TransitionToHomePage();
                         }
                         else
                         {
                             fail.Play();
-                            SaveChallengeDataFailed(Login.CurrentUsername, textBox2.Text, score);
                             MessageBox.Show("Challenge failed. Returning to the homepage.", "Challenge Unsuccessful", MessageBoxButtons.OK, MessageBoxIcon.Error);
                             TransitionToHomePage();
                         }
@@ -657,8 +626,6 @@ namespace DCP
                     DialogResult result2 = MessageBox.Show("Are you sure you want to close? This will fail the challenge.", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
                     if (result2 == DialogResult.Yes)
                     {
-                        // Save challenge data to JSON file
-                        SaveChallengeDataFailed(Login.CurrentUsername, textBox2.Text, score);
 
                         timer.Stop();
                         fail.Play();
@@ -682,18 +649,18 @@ namespace DCP
                         this.Close();
 
                         // Open Introduction form with fade-in effect
-                        HOMEPAGE hOMEPAGE = new HOMEPAGE();
-                        hOMEPAGE.StartPosition = FormStartPosition.CenterScreen;
-                        hOMEPAGE.Opacity = 0;
-                        hOMEPAGE.Show();
+                        TryHCS tryHCS = new TryHCS();
+                        tryHCS.StartPosition = FormStartPosition.CenterScreen;
+                        tryHCS.Opacity = 0;
+                        tryHCS.Show();
 
                         Timer fadeInTimer = new Timer();
                         fadeInTimer.Interval = 20;
                         fadeInTimer.Tick += (s2, ev2) =>
                         {
-                            if (hOMEPAGE.Opacity < 1)
+                            if (tryHCS.Opacity < 1)
                             {
-                                hOMEPAGE.Opacity += 0.05;
+                                tryHCS.Opacity += 0.05;
                             }
                             else
                             {
@@ -775,11 +742,6 @@ namespace DCP
         }
 
         private void GrammarEasy_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button4_Click_1(object sender, EventArgs e)
         {
 
         }

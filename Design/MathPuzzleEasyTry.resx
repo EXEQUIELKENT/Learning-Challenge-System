@@ -117,41 +117,6 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="richTextBox1.Text" xml:space="preserve">
-    <value>Preparation
-
-• Stretch before starting this challenge.
-
-• Find a suitable space for this exercise before pressing START.
-
-• You’ll have a 4-second countdown after pressing START to prepare.
-
-During the Challenge
-
-• Aim for at least 10 repetitions or more.
-
-• Complete as many reps as you can within 30 seconds.
-
-• If time runs out, you’ll be redirected back to the homepage.
-
-Finishing the Challenge
-
-• When done, enter the number of reps you completed in the REPS field, then press DONE.
-
-Exercise Guide
-
-• Start in a plank position and hands shoulder-width apart.
-
-• Lower your body and Bring your chest close to the floor, then push back up.
-
-• Maintain form and keep your body straight and engage your core.
-
-Note
-
-Be honest with your exercise. This challenge is here to help you grow stronger so put in your best effort!
-
-"Strength doesn’t come from what you can do. It comes from overcoming the things you once thought you couldn’t."</value>
-  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="pictureBox11.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>

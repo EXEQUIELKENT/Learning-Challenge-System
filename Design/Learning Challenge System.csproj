@@ -331,12 +331,6 @@
     <Compile Include="HoldBreathMedium.Designer.cs">
       <DependentUpon>HoldBreathMedium.cs</DependentUpon>
     </Compile>
-    <Compile Include="HoldYourBreathTry.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="HoldYourBreathTry.Designer.cs">
-      <DependentUpon>HoldYourBreathTry.cs</DependentUpon>
-    </Compile>
     <Compile Include="HomepageDescriptions.cs" />
     <Compile Include="HydrationEasy.cs">
       <SubType>Form</SubType>
@@ -430,11 +424,23 @@
     <Compile Include="MathPuzzleHard.Designer.cs">
       <DependentUpon>MathPuzzleHard.cs</DependentUpon>
     </Compile>
+    <Compile Include="MathPuzzleHardTry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MathPuzzleHardTry.Designer.cs">
+      <DependentUpon>MathPuzzleHardTry.cs</DependentUpon>
+    </Compile>
     <Compile Include="MathPuzzleMedium.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="MathPuzzleMedium.Designer.cs">
       <DependentUpon>MathPuzzleMedium.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MathPuzzleMediumTry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MathPuzzleMediumTry.Designer.cs">
+      <DependentUpon>MathPuzzleMediumTry.cs</DependentUpon>
     </Compile>
     <Compile Include="MountainClimbersEasy.cs">
       <SubType>Form</SubType>
@@ -492,11 +498,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="PushUpTry.cs">
+    <Compile Include="MathPuzzleEasyTry.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PushUpTry.Designer.cs">
-      <DependentUpon>PushUpTry.cs</DependentUpon>
+    <Compile Include="MathPuzzleEasyTry.Designer.cs">
+      <DependentUpon>MathPuzzleEasyTry.cs</DependentUpon>
     </Compile>
     <Compile Include="PushUpsEasy.cs">
       <SubType>Form</SubType>
@@ -1369,9 +1375,6 @@
     <EmbeddedResource Include="HoldBreathMedium.resx">
       <DependentUpon>HoldBreathMedium.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="HoldYourBreathTry.resx">
-      <DependentUpon>HoldYourBreathTry.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="HydrationEasy.resx">
       <DependentUpon>HydrationEasy.cs</DependentUpon>
     </EmbeddedResource>
@@ -1414,8 +1417,14 @@
     <EmbeddedResource Include="MathPuzzleHard.resx">
       <DependentUpon>MathPuzzleHard.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="MathPuzzleHardTry.resx">
+      <DependentUpon>MathPuzzleHardTry.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MathPuzzleMedium.resx">
       <DependentUpon>MathPuzzleMedium.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MathPuzzleMediumTry.resx">
+      <DependentUpon>MathPuzzleMediumTry.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MountainClimbersEasy.resx">
       <DependentUpon>MountainClimbersEasy.cs</DependentUpon>
@@ -1454,8 +1463,8 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="PushUpTry.resx">
-      <DependentUpon>PushUpTry.cs</DependentUpon>
+    <EmbeddedResource Include="MathPuzzleEasyTry.resx">
+      <DependentUpon>MathPuzzleEasyTry.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PushUpsEasy.resx">
       <DependentUpon>PushUpsEasy.cs</DependentUpon>

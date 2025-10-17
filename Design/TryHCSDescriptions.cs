@@ -23,9 +23,9 @@ namespace Design
             // Initialize images from .resx with unique identifiers
            
             {
-            { DCP.Properties.Resources.Push_Ups__Easy__F, "Push_Ups__Easy__F" },
-            { DCP.Properties.Resources.Hold_Your_Breath__Easy_H, "Hold_Your_Breath__Easy_H" },
-            { DCP.Properties.Resources.Grammar__Easy_E, "Grammar__Easy_E" },
+            { DCP.Properties.Resources.Math_Puzzle__Easy_M, "Math_Puzzle__Easy_M" },
+            { DCP.Properties.Resources.Math_Puzzle__Medium_M, "Math_Puzzle__Medium_M" },
+            { DCP.Properties.Resources.Math_Puzzle__Hard_M, "Math_Puzzle__Hard_M" },
             };
 
 
@@ -33,9 +33,9 @@ namespace Design
                 // Initialize descriptions for each identifier
                 ImageDescriptions = new Dictionary<string, string>
             {
-                { "Push_Ups__Easy__F", GenerateDescription("Push_Ups__Easy__F")},
-                { "Hold_Your_Breath__Easy_H", GenerateDescription("Hold_Your_Breath__Easy_H")},
-                { "Grammar__Easy_E", GenerateDescription("Grammar__Easy_E") },
+                { "Math_Puzzle__Easy_M", GenerateDescription("Math_Puzzle__Easy_M")},
+                { "Math_Puzzle__Medium_M", GenerateDescription("Math_Puzzle__Medium_M")},
+                { "Math_Puzzle__Hard_M", GenerateDescription("Math_Puzzle__Hard_M") },
                 // Additional descriptions here...
             };
                 Images = new List<Image>(ImageIdentifiers.Keys);
@@ -47,27 +47,27 @@ namespace Design
             // Sample long description, modify as needed
             switch (identifier)
             {
-                case "Push_Ups__Easy__F":
-                    return "                            PUSH UPS\n\n" +
+                case "Math_Puzzle__Easy_M":
+                    return "                            MATH PUZZLE (EASY)\n\n" +
                       "Description:\n" +
-                      "Push-ups introduce individuals to this fundamental bodyweight exercise, targeting the chest, shoulders, and triceps. Participants can start with modifications, such as performing push-ups on their knees, to ensure proper form with hands placed shoulder-width apart and body aligned. This allows for gradual building of strength and endurance in the upper body while focusing on technique.\n\n" +
-                      "Individuals should concentrate on engaging their core and maintaining a straight line during the movement. The key is to lower the chest towards the ground by bending the elbows, then pressing back up to the starting position. Incorporating push-ups into a regular fitness routine can lead to increased muscle tone and overall upper body strength.\n\n" +
-                      "Over time, participants can progress to more challenging variations as they build confidence and strength, making push-ups a versatile exercise adaptable to various fitness levels.";
+                      "The easy level of the Math Puzzle challenge introduces participants to fundamental mathematical concepts and operations in a fun and engaging way. This level is designed to build confidence as individuals tackle simple equations, patterns, and logical reasoning puzzles, enhancing their basic math skills.\n\n" +
+                      "By participating in the easy challenge, individuals will develop their problem-solving abilities while enjoying the process of working through various math puzzles. This level serves as a foundation for more advanced challenges, ensuring participants are well-prepared as they progress. Regular practice at this level fosters a positive attitude toward mathematics and encourages critical thinking from an early stage.\n\n" +
+                      "Engaging with the easy math puzzle challenge helps participants recognize the relevance of math in everyday life, reinforcing the idea that math can be both enjoyable and practical.";
 
-
-                case "Hold_Your_Breath__Easy_H":
-                    return "                            HOLD BREATH\n\n" +
+                case "Math_Puzzle__Medium_M":
+                    return "                            MATH PUZZLE (MEDIUM)\n\n" +
                       "Description:\n" +
-                      "The hold breath challenge encourages participants to focus on their breathing techniques and lung capacity. This exercise starts with a deep inhale, followed by holding the breath for a set duration. It serves as an excellent introduction to breath control, which is beneficial for overall respiratory health.\n\n" +
-                      "Practicing breath holds can help increase oxygen efficiency and improve focus. It is essential to remain relaxed and calm throughout the process, ensuring not to strain the body. This practice can also be a great way to enhance mindfulness and reduce stress levels by promoting a sense of tranquility.\n\n" +
-                      "As participants become more comfortable with this exercise, it can be seamlessly integrated into daily routines, enhancing both physical and mental well-being and setting the foundation for more advanced breath-holding techniques.";
+                      "The medium level of the Math Puzzle challenge escalates the complexity of the puzzles, requiring participants to apply a deeper understanding of mathematical concepts and relationships. This level encourages critical thinking and logical reasoning as individuals work through more intricate problems that challenge their math skills.\n\n" +
+                      "By engaging with the medium challenge, participants will refine their problem-solving strategies and enhance their ability to think critically under pressure. This level is designed to build on the foundation established in the easy challenge, allowing individuals to explore more advanced mathematical relationships and techniques. Regular practice at this level prepares participants for higher-level math and fosters a love for solving complex problems.\n\n" +
+                      "As individuals tackle the medium math puzzle challenge, they will develop greater confidence in their mathematical abilities, paving the way for success in future academic endeavors.";
 
-                case "Grammar__Easy_E":
-                    return "                            GRAMMAR QUESTION ENGLISH\n\n" +
-                     "Description:\n" +
-                     "The Grammar Question challenge focuses on fundamental grammar rules and usage. Participants will engage with questions that test knowledge of sentence structure, punctuation, and word forms. This challenge is designed to enhance grammatical understanding and build confidence in language use.\n\n" +
-                     "Through practice, participants will reinforce their grasp of essential grammar concepts, making it easier to identify correct usage in writing and speaking. This exercise fosters a solid foundation in grammar, essential for effective communication in English. By mastering these concepts, individuals prepare themselves for more complex grammatical challenges.\n\n" +
-                     "Consistent engagement with grammar questions improves language skills and boosts confidence in applying these rules in various contexts. Participants will find themselves more comfortable with English grammar, setting the stage for ongoing learning and development.";
+                case "Math_Puzzle__Hard_M":
+                    return "                            MATH PUZZLE (HARD)\n\n" +
+                      "Description:\n" +
+                      "The hard level of the Math Puzzle challenge presents participants with complex and challenging puzzles that require advanced mathematical thinking and creativity. This level is designed for those who are eager to push their limits and tackle intricate problems that involve multiple steps and sophisticated concepts.\n\n" +
+                      "Engaging with hard math puzzles fosters resilience and adaptability, as individuals learn to navigate challenging scenarios and apply their knowledge in innovative ways. This level promotes a high degree of analytical thinking and encourages participants to approach problems with a strategic mindset. Tackling these challenging puzzles builds confidence and enhances participants' abilities to think outside the box.\n\n" +
+                      "Committing to the hard math puzzle challenge not only sharpens mathematical skills but also cultivates a profound appreciation for the beauty and complexity of mathematics. Participants will emerge as proficient problem solvers, ready to face advanced mathematical challenges with confidence and ingenuity.";
+
 
                 // Add more cases for other identifiers...
 

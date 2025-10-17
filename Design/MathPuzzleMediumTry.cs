@@ -14,10 +14,9 @@ using System.IO;
 using Newtonsoft.Json;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ToolBar;
 
-
 namespace DCP
 {
-    public partial class MathPuzzleMedium : Form
+    public partial class MathPuzzleMediumTry : Form
     {
         private Timer timer;
         private int progressDuration = 600; // total time for progress bar in seconds
@@ -42,7 +41,7 @@ namespace DCP
             public string D { get; set; }
             public string CorrectAnswer { get; set; }
         }
-        public MathPuzzleMedium()
+        public MathPuzzleMediumTry()
         {
             InitializeComponent();
             questions = new List<Question>
@@ -175,70 +174,9 @@ namespace DCP
                 progressBar1.Value = progressBar1.Maximum; // Set progress bar to max on completion
                 textBox2.Text = TimeSpan.FromSeconds(progressDuration).ToString("hh\\:mm\\:ss"); // Set the final time
 
-                // Save challenge data to JSON file
-                SaveChallengeDataFailed(Login.CurrentUsername, textBox2.Text, score);
-
                 MessageBox.Show("Challenge not completed. Returning to the homepage.", "Challenge Unsuccessful", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 TransitionToHomePage();
             }
-        }
-        public void SaveChallengeDataSuccess(string username, string status, string time, int score)
-        {
-            // File path for the challenge data
-            string date = DateTime.Now.ToString("MM-dd-yy");
-            string challengeFilePath = $"{username}_challenge.json";
-            var challengeList = new List<dynamic>(); // Use dynamic for flexibility with old/new records
-
-            // Load existing challenge data
-            if (File.Exists(challengeFilePath))
-            {
-                var existingData = File.ReadAllText(challengeFilePath);
-                challengeList = JsonConvert.DeserializeObject<List<dynamic>>(existingData);
-            }
-
-            // Add the new challenge data
-            var newChallengeData = new
-            {
-                Date = date,
-                FormTitle = "Math Puzzle (Medium)",
-                Score = $"Completed {score}", // New property for jogging
-                Time = time
-            };
-
-            challengeList.Add(newChallengeData);
-
-            // Save back to the JSON file
-            var updatedChallengeData = JsonConvert.SerializeObject(challengeList, Formatting.Indented);
-            File.WriteAllText(challengeFilePath, updatedChallengeData);
-        }
-        public void SaveChallengeDataFailed(string username, string time, int score)
-        {
-            // File path for the challenge data
-            string date = DateTime.Now.ToString("MM-dd-yy");
-            string challengeFilePath = $"{username}_challenge.json";
-            var challengeList = new List<dynamic>(); // Use dynamic for flexibility with old/new records
-
-            // Load existing challenge data
-            if (File.Exists(challengeFilePath))
-            {
-                var existingData = File.ReadAllText(challengeFilePath);
-                challengeList = JsonConvert.DeserializeObject<List<dynamic>>(existingData);
-            }
-
-            // Add the new challenge data
-            var newChallengeData = new
-            {
-                Date = date,
-                FormTitle = "Math Puzzle (Medium)",
-                Score = $"Failed {score}", // New property for jogging
-                Time = time
-            };
-
-            challengeList.Add(newChallengeData);
-
-            // Save back to the JSON file
-            var updatedChallengeData = JsonConvert.SerializeObject(challengeList, Formatting.Indented);
-            File.WriteAllText(challengeFilePath, updatedChallengeData);
         }
         private void ResetChallenge()
         {
@@ -263,18 +201,18 @@ namespace DCP
                     this.Close();
 
                     // Open HOMEPAGE with fade-in effect
-                    HOMEPAGE hOMEPAGE = new HOMEPAGE();
-                    hOMEPAGE.StartPosition = FormStartPosition.CenterScreen;
-                    hOMEPAGE.Opacity = 0;
-                    hOMEPAGE.Show();
+                    TryHCS tryHCS = new TryHCS();
+                    tryHCS.StartPosition = FormStartPosition.CenterScreen;
+                    tryHCS.Opacity = 0;
+                    tryHCS.Show();
 
                     Timer fadeInTimer = new Timer();
                     fadeInTimer.Interval = 20;
                     fadeInTimer.Tick += (s2, ev2) =>
                     {
-                        if (hOMEPAGE.Opacity < 1)
+                        if (tryHCS.Opacity < 1)
                         {
-                            hOMEPAGE.Opacity += 0.05;
+                            tryHCS.Opacity += 0.05;
                         }
                         else
                         {
@@ -325,8 +263,6 @@ namespace DCP
                             DialogResult result2 = MessageBox.Show("Are you sure you want to go back? This will fail the challenge.", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
                             if (result2 == DialogResult.Yes)
                             {
-                                // Save challenge data to JSON file
-                                SaveChallengeDataFailed(Login.CurrentUsername, textBox2.Text, score);
 
                                 timer.Stop();
                                 fail.Play();
@@ -494,9 +430,6 @@ namespace DCP
                     DialogResult result2 = MessageBox.Show("Are you sure you want to go back? This will fail the challenge.", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
                     if (result2 == DialogResult.Yes)
                     {
-                        // Save challenge data to JSON file
-                        SaveChallengeDataFailed(Login.CurrentUsername, textBox2.Text, score);
-
                         timer.Stop();
                         fail.Play();
                         progressBar1.Value = progressBar1.Maximum; // Set progress bar to max
@@ -519,18 +452,18 @@ namespace DCP
                         this.Close();
 
                         // Open Introduction form with fade-in effect
-                        HOMEPAGE hOMEPAGE = new HOMEPAGE();
-                        hOMEPAGE.StartPosition = FormStartPosition.CenterScreen;
-                        hOMEPAGE.Opacity = 0;
-                        hOMEPAGE.Show();
+                        TryHCS tryHCS = new TryHCS();
+                        tryHCS.StartPosition = FormStartPosition.CenterScreen;
+                        tryHCS.Opacity = 0;
+                        tryHCS.Show();
 
                         Timer fadeInTimer = new Timer();
                         fadeInTimer.Interval = 20;
                         fadeInTimer.Tick += (s2, ev2) =>
                         {
-                            if (hOMEPAGE.Opacity < 1)
+                            if (tryHCS.Opacity < 1)
                             {
-                                hOMEPAGE.Opacity += 0.05;
+                                tryHCS.Opacity += 0.05;
                             }
                             else
                             {
@@ -591,14 +524,12 @@ namespace DCP
                         if (score >= 8) // Check if the challenge is passed
                         {
                             success.Play();
-                            SaveChallengeDataSuccess(Login.CurrentUsername, "Completed", textBox2.Text, score);
                             MessageBox.Show("Returning to the homepage.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             TransitionToHomePage();
                         }
                         else
                         {
                             fail.Play();
-                            SaveChallengeDataFailed(Login.CurrentUsername, textBox2.Text, score);
                             MessageBox.Show("Challenge failed. Returning to the homepage.", "Challenge Unsuccessful", MessageBoxButtons.OK, MessageBoxIcon.Error);
                             TransitionToHomePage();
                         }
@@ -657,8 +588,6 @@ namespace DCP
                     DialogResult result2 = MessageBox.Show("Are you sure you want to close? This will fail the challenge.", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
                     if (result2 == DialogResult.Yes)
                     {
-                        // Save challenge data to JSON file
-                        SaveChallengeDataFailed(Login.CurrentUsername, textBox2.Text, score);
 
                         timer.Stop();
                         fail.Play();
@@ -682,18 +611,18 @@ namespace DCP
                         this.Close();
 
                         // Open Introduction form with fade-in effect
-                        HOMEPAGE hOMEPAGE = new HOMEPAGE();
-                        hOMEPAGE.StartPosition = FormStartPosition.CenterScreen;
-                        hOMEPAGE.Opacity = 0;
-                        hOMEPAGE.Show();
+                        TryHCS tryHCS = new TryHCS();
+                        tryHCS.StartPosition = FormStartPosition.CenterScreen;
+                        tryHCS.Opacity = 0;
+                        tryHCS.Show();
 
                         Timer fadeInTimer = new Timer();
                         fadeInTimer.Interval = 20;
                         fadeInTimer.Tick += (s2, ev2) =>
                         {
-                            if (hOMEPAGE.Opacity < 1)
+                            if (tryHCS.Opacity < 1)
                             {
-                                hOMEPAGE.Opacity += 0.05;
+                                tryHCS.Opacity += 0.05;
                             }
                             else
                             {
@@ -775,11 +704,6 @@ namespace DCP
         }
 
         private void GrammarEasy_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button4_Click_1(object sender, EventArgs e)
         {
 
         }

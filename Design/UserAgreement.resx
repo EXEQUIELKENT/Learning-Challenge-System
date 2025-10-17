@@ -120,24 +120,26 @@
   <data name="richTextBox1.Text" xml:space="preserve">
     <value>1. Acceptance of Terms
 
-By registering and accessing the Health Challenge System, you agree to comply with and be bound by this User Agreement. 
-If you do not agree with any part of these terms, please do not use the application.
+By registering and accessing the Math Learning Challenge System, you agree to comply with and be bound by this 
+User Agreement. If you do not agree with any part of these terms, please do not use the application.
 
 2. Account Registration and Security
 
 • You must provide accurate and complete information when registering an account.
 
-• You are responsible for maintaining the confidentiality of your login credentials and for all activities under your account.
+• You are responsible for maintaining the confidentiality of your login credentials and for all activities that occur under your account.
 
 • You must immediately notify us of any unauthorized access or security breach related to your account by contacting us via email.
 
-3. Use of the Health Challenge System
+3. Use of the Math Learning Challenge System
 
-• This system provides randomized fitness challenges based on the difficulty level you choose (Easy, Medium, Hard).
+• This system provides randomized learning challenges based on the difficulty level you choose (Easy, Medium, Hard).
 
-• The challenges are for personal improvement and should not be considered as medical or professional health advice.
+• The challenges are designed for educational and learning enhancement purposes only.
 
-• You agree to use the system responsibly and at your own risk. Consult a yourself before engaging in any physical activities if you have medical conditions.
+• You agree to use the system responsibly and ensure that all submitted answers or activities are your own work.
+
+• The system is intended to promote learning, practice, and engagement—not to replace formal education or instruction.
 
 4. Privacy and Data Protection
 
@@ -145,7 +147,7 @@ If you do not agree with any part of these terms, please do not use the applicat
 
 • Your data will not be shared with third parties without your consent, except as required by law.
 
-• By using the system, you agree to our Privacy Policy, which explains how your data is handled.
+• By using the system, you agree to our Privacy Policy, which explains how your data is handled and protected.
 
 5. User Responsibilities and Restrictions
 
@@ -153,44 +155,47 @@ You agree NOT to:
 
 • Share, sell, or distribute your account to others.
 
-• Modify, hack, or interfere with the system’s functionality.
+• Modify, hack, or interfere with the system’s functionality or data.
 
-• Use the system for any illegal or unauthorized activities.
+• Use the system for any illegal, deceptive, or unauthorized purposes.
 
-• Upload or share any harmful, offensive, or misleading content.
+• Upload or share any offensive, false, or inappropriate content within the platform.
 
 6. Limitation of Liability
 
-• The Health Challenge System is provided "as is", without any guarantees of specific results.
+• The Learning Challenge System is provided “as is,” without any guarantees of achieving specific academic outcomes.
 
-• We are not responsible for injuries, health issues, or damages that may occur from using the system.
+• We are not responsible for any data loss, technical errors, or damages that may occur while using the system.
 
-• You acknowledge that participating in physical activities involves risks, and you assume full responsibility for your actions.
+• You acknowledge that your learning progress depends on your own effort and participation.
 
 7. Account Termination
 
-• We reserve the right to suspend or terminate your account if you violate this agreement.
+• We reserve the right to suspend or terminate your account if you violate this agreement or misuse the system.
 
-• Users can delete the application at any time.
+• Users may delete their accounts or uninstall the application at any time.
 
 8. Changes to the Agreement
 
-• We may update this agreement as necessary. Users will be notified of any significant changes, and continued use of the system will indicate acceptance of the revised terms.
+• We may update or modify this User Agreement as necessary. Users will be notified of any significant changes.
+
+• Continued use of the system after changes take effect indicates your acceptance of the revised terms.
 
 9. Contact Information
 
-• For any questions or concerns regarding this agreement, please contact [bartolomeexequielkent@gmail.com].
+For any questions, feedback, or concerns regarding this agreement, please contact:
+📧 bartolomeexequielkent@gmail.com
 
-By clicking "I accept the agreement", you confirm that you have read, understood, and accepted the terms of this User Agreement.
+By clicking “I accept the agreement”, you confirm that you have read, understood, and accepted the terms of this User Agreement.
 
-[I accept the agreement] ✅</value>
+✅ [I accept the agreement]</value>
   </data>
   <data name="label2.Text" xml:space="preserve">
-    <value>Welcome to the Health Challenge System! 
-Before you start using our platform, 
-please read this User Agreement carefully. 
-By creating an account and using our 
-services, you agree to the terms and 
+    <value>Welcome to the Learning Challenge 
+System! Before you start using our 
+platform, please read this User 
+Agreement carefully. By creating 
+an account,you agree to the terms and 
 conditions outlined below.</value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
