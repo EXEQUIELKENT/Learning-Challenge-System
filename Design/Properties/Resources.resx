@@ -118,6 +118,15 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="Addition_Easy_M" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Addition_Easy_M.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Addition_Hard_M" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Addition_Hard_M.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Addition_Medium_M" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Addition_Medium_M.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="AG" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\AG.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -270,6 +279,15 @@
   </data>
   <data name="Diamond_Push_Ups__Medium_F" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Diamond_Push_Ups__Medium_F.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Division_Easy_M" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Division_Easy_M.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Division_Hard_M" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Division_Hard_M.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Division_Medium_M" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Division_Medium_M.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Download_Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Download-Icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -562,6 +580,15 @@
   <data name="Mountain_Climbers__Medium_F" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Mountain_Climbers__Medium_F.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Multiplication_Easy_M" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Multiplication_Easy_M.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Multiplication_Hard_M" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Multiplication_Hard_M.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Multiplication_Medium_M" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Multiplication_Medium_M.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="No_Blinking__Easy_H" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\No_Blinking__Easy_H.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -822,6 +849,15 @@
   </data>
   <data name="Story_Retelling__Medium_F" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Story_Retelling__Medium_F.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Subtraction_Easy_M" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Subtraction_Easy_M.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Subtraction_Hard_M" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Subtraction_Hard_M.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Subtraction_Medium_M" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Subtraction_Medium_M.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Success" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Success.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>

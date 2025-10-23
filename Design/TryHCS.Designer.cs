@@ -64,7 +64,7 @@
             // 
             this.richTextBox1.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.richTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.richTextBox1.Font = new System.Drawing.Font("Verdana", 11F);
+            this.richTextBox1.Font = new System.Drawing.Font("Verdana", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.richTextBox1.Location = new System.Drawing.Point(638, 262);
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.ReadOnly = true;

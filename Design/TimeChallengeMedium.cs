@@ -46,49 +46,49 @@ namespace DCP.Resources
             InitializeComponent();
             questions = new List<Question>
             {
-                new Question { QuestionText = "How many minutes are in 2 hours?", A = "60 minutes", B = "90 minutes", C = "120 minutes", D = "180 minutes", CorrectAnswer = "C" },
-                new Question { QuestionText = "If you need 30 minutes to complete a task and you start at 2:15 PM, what time will you finish?", A = "2:30 PM", B = "2:45 PM", C = "2:50 PM", D = "2:55 PM", CorrectAnswer = "B" },
-                new Question { QuestionText = "How long is one-quarter of an hour?", A = "5 minutes", B = "10 minutes", C = "15 minutes", D = "30 minutes", CorrectAnswer = "C" },
-                new Question { QuestionText = "You have a meeting that starts at 3:00 PM and lasts for 45 minutes. What time will the meeting end?", A = "3:45 PM", B = "4:00 PM", C = "4:15 PM", D = "4:30 PM", CorrectAnswer = "A" },
-                new Question { QuestionText = "If you spend 45 minutes working on one task, then 30 minutes on another, how much total time have you spent?", A = "75 minutes", B = "70 minutes", C = "80 minutes", D = "90 minutes", CorrectAnswer = "A" },
-                
-                new Question { QuestionText = "You have a 2-hour break. If you spend 45 minutes eating lunch and 30 minutes browsing the internet, how much time remains?", A = "60 minutes", B = "45 minutes", C = "50 minutes", D = "55 minutes", CorrectAnswer = "A" },
-                new Question { QuestionText = "How do you calculate the total time if you have several tasks each taking 20 minutes? If you do 3 tasks, how long will you be working?", A = "50 minutes", B = "60 minutes", C = "70 minutes", D = "80 minutes", CorrectAnswer = "B" },
-                new Question { QuestionText = "A task takes 25 minutes to complete. How many tasks can you complete in 2 hours?", A = "3 tasks", B = "4 tasks", C = "5 tasks", D = "6 tasks", CorrectAnswer = "B" },
-                new Question { QuestionText = "What is the best way to manage time when multiple tasks have similar deadlines?", A = "Focus on one task at a time", B = "Multitask and do them together", C = "Finish the easiest first", D = "Delegate all tasks", CorrectAnswer = "A" },
-                new Question { QuestionText = "You have 90 minutes left before a deadline, and you have two tasks left. Task A will take 40 minutes and Task B will take 50 minutes. Which task should you complete first to manage time effectively?", A = "Complete Task A first", B = "Complete Task B first", C = "Do both tasks simultaneously", D = "Complete whichever task you feel like", CorrectAnswer = "A" },
-                
-                new Question { QuestionText = "A train leaves the station at 9:40 AM and arrives at its destination 3 hours and 25 minutes later. What time does it arrive?", A = "12:00 PM", B = "12:05 PM", C = "12:15 PM", D = "12:30 PM", CorrectAnswer = "C" },
-                new Question { QuestionText = "You started studying at 2:15 PM and finished at 5:50 PM. How long did you study?", A = "2 hours 35 minutes", B = "3 hours 25 minutes", C = "3 hours 35 minutes", D = "4 hours", CorrectAnswer = "B" },
-                new Question { QuestionText = "A bakery opens at 6:45 AM and closes at 7:30 PM. How many hours and minutes is it open?", A = "12 hours 45 minutes", B = "13 hours 45 minutes", C = "14 hours 15 minutes", D = "15 hours", CorrectAnswer = "B" },
-                new Question { QuestionText = "Convert 3:45 PM to 24-hour format.", A = "15:45", B = "16:45", C = "17:45", D = "18:45", CorrectAnswer = "A" },
-                new Question { QuestionText = "If a clock shows 10:55 AM, how many minutes until it reaches 12:00 PM?", A = "55 minutes", B = "60 minutes", C = "65 minutes", D = "70 minutes", CorrectAnswer = "C" },
-                
-                new Question { QuestionText = "You take a break at 11:20 AM for 40 minutes and then return to work. What time is it when you resume?", A = "11:50 AM", B = "12:00 PM", C = "12:10 PM", D = "12:20 PM", CorrectAnswer = "C" },
-                new Question { QuestionText = "If 1 day = 24 hours, how many hours are there in 5 days?", A = "100", B = "110", C = "120", D = "125", CorrectAnswer = "C" },
-                new Question { QuestionText = "A sports event lasts for 1 hour and 45 minutes. If it started at 3:30 PM, what time does it end?", A = "4:45 PM", B = "5:00 PM", C = "5:15 PM", D = "5:30 PM", CorrectAnswer = "C" },
-                new Question { QuestionText = "A conference starts at 9:00 AM and consists of 4 sessions, each lasting 1 hour and 20 minutes. What time does it end?", A = "1:00 PM", B = "1:20 PM", C = "1:40 PM", D = "2:00 PM", CorrectAnswer = "C" },
-                new Question { QuestionText = "Convert 135 minutes into hours and minutes.", A = "2 hours 10 minutes", B = "2 hours 15 minutes", C = "2 hours 20 minutes", D = "2 hours 30 minutes", CorrectAnswer = "B" },
-                
-                new Question { QuestionText = "A meeting was scheduled from 2:10 PM to 4:05 PM. How long did it last?", A = "1 hour 45 minutes", B = "1 hour 55 minutes", C = "2 hours", D = "2 hours 5 minutes", CorrectAnswer = "B" },
-                new Question { QuestionText = "A flight departs at 11:30 PM and lasts 6 hours 40 minutes. What time does it arrive (24-hour format)?", A = "05:40", B = "06:10", C = "06:30", D = "06:40", CorrectAnswer = "D" },
-                new Question { QuestionText = "Convert 8:20 AM to 24-hour format.", A = "08:20", B = "09:20", C = "10:20", D = "11:20", CorrectAnswer = "A" },
-                new Question { QuestionText = "How many weeks are in 100 days?", A = "12 weeks", B = "14 weeks", C = "15 weeks", D = "16 weeks", CorrectAnswer = "C" },
-                new Question { QuestionText = "A worker’s shift starts at 7:45 AM and ends at 3:15 PM. How long is the shift?", A = "7 hours", B = "7 hours 30 minutes", C = "8 hours", D = "8 hours 30 minutes", CorrectAnswer = "D" },
-                
-                new Question { QuestionText = "What is 90 minutes converted to hours and minutes?", A = "1 hour 20 minutes", B = "1 hour 30 minutes", C = "1 hour 40 minutes", D = "2 hours", CorrectAnswer = "B" },
-                new Question { QuestionText = "If a store is open for 11 hours a day, how many hours is it open in a week?", A = "60", B = "70", C = "77", D = "80", CorrectAnswer = "C" },
-                new Question { QuestionText = "If you take a bus at 4:05 PM and the ride is 1 hour 25 minutes long, what time do you arrive?", A = "5:10 PM", B = "5:20 PM", C = "5:30 PM", D = "5:45 PM", CorrectAnswer = "C" },
-                new Question { QuestionText = "Convert 7200 seconds into hours.", A = "1 hour", B = "2 hours", C = "2 hours 30 minutes", D = "3 hours", CorrectAnswer = "B" },
-                new Question { QuestionText = "If a trip starts at 7:25 AM and lasts 3 hours 40 minutes, what time does it end?", A = "10:50 AM", B = "11:00 AM", C = "11:05 AM", D = "11:10 AM", CorrectAnswer = "C" },
-                
-                new Question { QuestionText = "A train journey is 5 hours and 45 minutes long. If it departs at 9:15 AM, what time does it arrive?", A = "2:45 PM", B = "3:00 PM", C = "3:15 PM", D = "3:30 PM", CorrectAnswer = "C" },
-                new Question { QuestionText = "Convert 5 hours and 20 minutes into minutes.", A = "300 minutes", B = "320 minutes", C = "340 minutes", D = "360 minutes", CorrectAnswer = "C" },
-                new Question { QuestionText = "A class starts at 10:50 AM and lasts for 75 minutes. What time does it end?", A = "11:50 AM", B = "12:00 PM", C = "12:05 PM", D = "12:15 PM", CorrectAnswer = "C" },
-                new Question { QuestionText = "You go to bed at 10:20 PM and wake up 7 hours later. What time do you wake up?", A = "5:00 AM", B = "5:10 AM", C = "5:20 AM", D = "5:30 AM", CorrectAnswer = "C" },
-                new Question { QuestionText = "A race starts at 8:15 AM. It lasts 3 hours 50 minutes. What time does it end?", A = "11:50 AM", B = "12:00 PM", C = "12:05 PM", D = "12:15 PM", CorrectAnswer = "C" },
-                
-                new Question { QuestionText = "A movie starts at 6:40 PM and lasts for 2 hours 15 minutes. What time does it end?", A = "8:45 PM", B = "8:50 PM", C = "9:00 PM", D = "9:05 PM", CorrectAnswer = "D" },
+                new Question { QuestionText = "Ilang minuto mayroon sa 2 oras?", A = "60 minuto", B = "90 minuto", C = "120 minuto", D = "180 minuto", CorrectAnswer = "C" },
+                new Question { QuestionText = "Kailangan mong 30 minuto para matapos ang isang gawain at nagsimula ka ng 2:15 PM. Anong oras ka matatapos?", A = "2:30 PM", B = "2:45 PM", C = "2:50 PM", D = "2:55 PM", CorrectAnswer = "B" },
+                new Question { QuestionText = "Gaano katagal ang isang-kapat (quarter) ng isang oras?", A = "5 minuto", B = "10 minuto", C = "15 minuto", D = "30 minuto", CorrectAnswer = "C" },
+                new Question { QuestionText = "May pulong mula 3:00 PM na tumagal ng 45 minuto. Anong oras ito natapos?", A = "3:45 PM", B = "4:00 PM", C = "4:15 PM", D = "4:30 PM", CorrectAnswer = "A" },
+                new Question { QuestionText = "Nagtrabaho ka ng 45 minuto sa isang gawain at 30 minuto sa isa pa. Gaano katagal ang kabuuang ginugol?", A = "75 minuto", B = "70 minuto", C = "80 minuto", D = "90 minuto", CorrectAnswer = "A" },
+
+                new Question { QuestionText = "May 2-oras na pahinga. Gumugol ka ng 45 minuto sa pagkain at 30 minuto sa pag‑browse. Ilang minuto ang natitira?", A = "60 minuto", B = "45 minuto", C = "50 minuto", D = "55 minuto", CorrectAnswer = "A" },
+                new Question { QuestionText = "Kung ang bawat gawain ay 20 minuto at gagawin mo ang 3 gawain, gaano katagal ka magtatrabaho?", A = "50 minuto", B = "60 minuto", C = "70 minuto", D = "80 minuto", CorrectAnswer = "B" },
+                new Question { QuestionText = "Isang gawain ay tumatagal ng 25 minuto. Ilang gawain ang matatapos mo sa loob ng 2 oras?", A = "3 gawain", B = "4 gawain", C = "5 gawain", D = "6 gawain", CorrectAnswer = "B" },
+                new Question { QuestionText = "Ano ang pinakamahusay na paraan ng pamamahala ng oras kung maraming gawain na magkakalapit ang deadline?", A = "Mag‑focus sa isang gawain nang paisa‑isa", B = "Gawin lahat sabay‑sabay", C = "Tapusin muna ang pinakamadali", D = "Ibigay sa iba lahat", CorrectAnswer = "A" },
+                new Question { QuestionText = "May 90 minuto bago ang deadline at may dalawang gawain: A = 40 minuto, B = 50 minuto. Ano ang unang dapat tapusin para mag‑manage ng oras nang maayos?", A = "Tapusin muna ang Gawain A", B = "Tapusin muna ang Gawain B", C = "Gawin sabay ang dalawang gawain", D = "Tapusin ayon sa pakiramdam", CorrectAnswer = "A" },
+
+                new Question { QuestionText = "Umalis ang tren ng 9:40 AM at dumating 3 oras at 25 minuto pagkatapos. Anong oras ito dumating?", A = "12:00 PM", B = "12:05 PM", C = "12:15 PM", D = "12:30 PM", CorrectAnswer = "C" },
+                new Question { QuestionText = "Nagsimula kang mag‑aral ng 2:15 PM at natapos ng 5:50 PM. Gaano katagal kang nag‑aral?", A = "2 oras 35 minuto", B = "3 oras 25 minuto", C = "3 oras 35 minuto", D = "4 oras", CorrectAnswer = "B" },
+                new Question { QuestionText = "Ang panaderya ay bukas mula 6:45 AM hanggang 7:30 PM. Ilang oras at minuto ito bukas sa isang araw?", A = "12 oras 45 minuto", B = "13 oras 45 minuto", C = "14 oras 15 minuto", D = "15 oras", CorrectAnswer = "B" },
+                new Question { QuestionText = "I‑convert ang 3:45 PM sa 24‑hour format.", A = "15:45", B = "16:45", C = "17:45", D = "18:45", CorrectAnswer = "A" },
+                new Question { QuestionText = "Kung ang oras ay 10:55 AM, ilang minuto pa hanggang mag‑12:00 PM?", A = "55 minuto", B = "60 minuto", C = "65 minuto", D = "70 minuto", CorrectAnswer = "C" },
+
+                new Question { QuestionText = "Nag‑break ka mula 11:20 AM nang 40 minuto. Anong oras ka bumalik sa trabaho?", A = "11:50 AM", B = "12:00 PM", C = "12:10 PM", D = "12:20 PM", CorrectAnswer = "C" },
+                new Question { QuestionText = "Kung 1 araw = 24 oras, ilan ang oras sa loob ng 5 araw?", A = "100", B = "110", C = "120", D = "125", CorrectAnswer = "C" },
+                new Question { QuestionText = "Ang palaro sa barangay ay tumagal ng 1 oras 45 minuto at nagsimula ng 3:30 PM. Anong oras ito natapos?", A = "4:45 PM", B = "5:00 PM", C = "5:15 PM", D = "5:30 PM", CorrectAnswer = "C" },
+                new Question { QuestionText = "May conference na nagsimula 9:00 AM na may 4 session, bawat session 1 oras 20 minuto. Anong oras ito matatapos?", A = "1:00 PM", B = "1:20 PM", C = "1:40 PM", D = "2:00 PM", CorrectAnswer = "C" },
+                new Question { QuestionText = "I‑convert ang 135 minuto sa oras at minuto.", A = "2 oras 10 minuto", B = "2 oras 15 minuto", C = "2 oras 20 minuto", D = "2 oras 30 minuto", CorrectAnswer = "B" },
+
+                new Question { QuestionText = "May pulong mula 2:10 PM hanggang 4:05 PM. Gaano ito katagal?", A = "1 oras 45 minuto", B = "1 oras 55 minuto", C = "2 oras", D = "2 oras 5 minuto", CorrectAnswer = "B" },
+                new Question { QuestionText = "Lumipad ang eroplano ng 11:30 PM at tumagal ng 6 oras 40 minuto. Anong oras ang paglapag (24‑hour format)?", A = "05:40", B = "06:10", C = "06:30", D = "06:40", CorrectAnswer = "D" },
+                new Question { QuestionText = "I‑convert ang 8:20 AM sa 24‑hour format.", A = "08:20", B = "09:20", C = "10:20", D = "11:20", CorrectAnswer = "A" },
+                new Question { QuestionText = "Ilang linggo mayroon sa 100 araw (approx)?", A = "12 linggo", B = "14 linggo", C = "15 linggo", D = "16 linggo", CorrectAnswer = "C" },
+                new Question { QuestionText = "Ang shift ng manggagawa ay nagsimula 7:45 AM at nagtapos 3:15 PM. Gaano kahaba ang shift?", A = "7 oras", B = "7 oras 30 minuto", C = "8 oras", D = "8 oras 30 minuto", CorrectAnswer = "D" },
+
+                new Question { QuestionText = "Ilang oras at minuto ang 90 minuto?", A = "1 oras 20 minuto", B = "1 oras 30 minuto", C = "1 oras 40 minuto", D = "2 oras", CorrectAnswer = "B" },
+                new Question { QuestionText = "Kung bukas ang tindahan ng 11 oras sa isang araw, ilang oras ito bukas sa isang linggo?", A = "60", B = "70", C = "77", D = "80", CorrectAnswer = "C" },
+                new Question { QuestionText = "Sumakay ka ng bus 4:05 PM at 1 oras 25 minuto ang biyahe. Anong oras ka darating?", A = "5:10 PM", B = "5:20 PM", C = "5:30 PM", D = "5:45 PM", CorrectAnswer = "C" },
+                new Question { QuestionText = "I‑convert ang 7200 segundo sa oras.", A = "1 oras", B = "2 oras", C = "2 oras 30 minuto", D = "3 oras", CorrectAnswer = "B" },
+                new Question { QuestionText = "Kung ang byahe ay nagsimula 7:25 AM at tumagal ng 3 oras 40 minuto, anong oras ito natapos?", A = "10:50 AM", B = "11:00 AM", C = "11:05 AM", D = "11:10 AM", CorrectAnswer = "C" },
+
+                new Question { QuestionText = "Ang biyahe ng tren ay 5 oras 45 minuto. Umalis ito 9:15 AM. Anong oras dumating?", A = "2:45 PM", B = "3:00 PM", C = "3:15 PM", D = "3:30 PM", CorrectAnswer = "C" },
+                new Question { QuestionText = "I‑convert ang 5 oras 20 minuto sa minuto.", A = "300 minuto", B = "320 minuto", C = "340 minuto", D = "360 minuto", CorrectAnswer = "C" },
+                new Question { QuestionText = "Ang klase ay nagsimula 10:50 AM at tumagal ng 75 minuto. Anong oras ito natapos?", A = "11:50 AM", B = "12:00 PM", C = "12:05 PM", D = "12:15 PM", CorrectAnswer = "C" },
+                new Question { QuestionText = "Matulog ka ng 10:20 PM at nagising pagkatapos ng 7 oras. Anong oras ka nagising?", A = "5:00 AM", B = "5:10 AM", C = "5:20 AM", D = "5:30 AM", CorrectAnswer = "C" },
+                new Question { QuestionText = "Nagsimula ang karera ng 8:15 AM at tumagal ng 3 oras 50 minuto. Anong oras ito natapos?", A = "11:50 AM", B = "12:00 PM", C = "12:05 PM", D = "12:15 PM", CorrectAnswer = "C" },
+
+                new Question { QuestionText = "Nagsimula ang pelikula 6:40 PM at tumagal ng 2 oras 15 minuto. Anong oras ito natapos?", A = "8:45 PM", B = "8:50 PM", C = "9:00 PM", D = "9:05 PM", CorrectAnswer = "D" },
             };
             // Initialize answeredQuestions with false values (indicating that no question has been answered yet)
             Random rand = new Random();
@@ -157,8 +157,6 @@ namespace DCP.Resources
                     progressBar1.Value = progressDuration - timeRemaining;
                 }
                 textBox2.Text = TimeSpan.FromSeconds(progressDuration - timeRemaining).ToString("hh\\:mm\\:ss");
-
-                count.Play();
 
                 timeRemaining--;
             }

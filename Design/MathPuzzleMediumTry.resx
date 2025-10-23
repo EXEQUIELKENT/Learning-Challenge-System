@@ -118,47 +118,53 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="richTextBox2.Text" xml:space="preserve">
-    <value>Preparation
+    <value>Paghahanda
 
-• Find a comfortable and quiet place where you can concentrate.
+• Humanap ng komportableng at tahimik na lugar kung saan makakapag-concentrate ka.
 
-• Relax your body, especially your hands and shoulders, before starting.
+• I-relax ang iyong katawan, lalo na ang mga kamay at balikat, bago magsimula.
 
-• Focus your mind and clear away any distractions.
+• Linisin ang isipan at iwasan ang anumang makakagambala habang nagso-solve.
 
-• When ready, press START to begin the challenge, and a 4-second countdown will appear.
+• Kapag handa ka na, pindutin ang START upang simulan ang challenge. Magkakaroon ng 4-segundong countdown bago magsimula.
 
-During the Challenge
+Habang Ginagawa ang Challenge
 
-• Read each puzzle carefully and solve it as quickly as possible.
+• Basahing mabuti ang bawat puzzle bago sagutin.
 
-• Use mental math and logic to work through the problems, but don’t rush too much. Accuracy matters.
+• Gamitin ang mental math at lohika sa pagsagot
 
-• Press DONE if you finish answering the questions.
+• Huwag magmadali, mas mahalaga ang tamang sagot kaysa sa bilis.
 
-• Read each question carefully before selecting your answer (A, B, C and D).
+• Pindutin ang DONE kapag tapos ka nang sagutan ang lahat ng tanong.
 
-• Stay calm, keep your mind focused, and enjoy solving each puzzle!
+• Basahing mabuti ang bawat tanong bago pumili ng sagot (A, B, C, o D).
 
-Finishing the Challenge
+• Manatiling kalmado, mag-isip nang maayos, at enjoyin ang bawat puzzle!
 
-• After completing all the puzzles, your score will be displayed.
+Pagkatapos ng Challenge
 
-• If you wish, you can repeat the challenge or try a different level of difficulty.
+• Pagkatapos mong sagutan ang lahat ng puzzles, ipapakita ang iyong score.
 
-Guide
+• Maaari mong ulitin ang challenge o subukan ang ibang level ng kahirapan (Easy, Medium, Hard).
 
-• Stay relaxed, but focused on each puzzle.
+Gabay
 
-• Don't be afraid to take a moment to think. The key is to maintain clear focus and logical reasoning.
+• Manatiling kalmado ngunit nakapokus sa bawat tanong.
 
-• If you make an error, don’t worry—simply keep going and aim to improve with each new challenge.
+• Kung hindi mo agad makuha ang sagot, huminga muna at isipin muli.
 
-Note
+• Ang mahalaga ay maunawaan mo ang proseso ng pagkuha ng tamang sagot.
 
-This challenge is designed to improve your mental agility, problem-solving skills, and mathematical thinking. The more you practice, the faster and more accurate you’ll become.
+• Kung magkamali, huwag mawalan ng loob  bawat pagkakamali ay pagkakataong matuto.
 
-"Sharpen your mind, solve the puzzles, and embrace the challenge!"</value>
+Tandaan 
+
+Ang challenge na ito ay dinisenyo upang hasaing ang iyong isipan sa pagsusuri, lohikal na pag-iisip, at bilis sa matematika.
+Habang paulit-ulit mong ginagawa ito, mas magiging mabilis at matalino ka sa pagsagot ng mga math problems.
+
+"Hasain ang iyong isip, lutasin ang mga puzzle, at tanggapin ang hamon!"
+</value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="button4.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">

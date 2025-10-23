@@ -93,6 +93,18 @@ namespace Design
               { "Time_Challenge__Easy_M", null },
               { "Time_Challenge__Medium_M", null },
               { "Time_Challenge__Hard_M", null },
+              { "Addition_Easy_M", null },
+              { "Addition_Medium_M", null },
+              { "Addition_Hard_M", null },
+              { "Subtraction_Easy_M", null },
+              { "Subtraction_Medium_M", null },
+              { "Subtraction_Hard_M", null },
+              { "Multiplication_Easy_M", null },
+              { "Multiplication_Medium_M", null },
+              { "Multiplication_Hard_M", null },
+              { "Division_Easy_M", null },
+              { "Division_Medium_M", null },
+              { "Division_Hard_M", null },
         };
 
 
@@ -183,62 +195,52 @@ namespace Design
             }
         }
         private void SetDifficultyMode(string difficulty)
-        {
-            // If the same difficulty is already active, reset to normal mode
-            if ((difficulty == "Easy" && isEasyMode) ||
-                (difficulty == "Medium" && isMediumMode) ||
-                (difficulty == "Hard" && isHardMode))
-            {
-                // Reset all flags
-                isEasyMode = false;
-                isMediumMode = false;
-                isHardMode = false;
+{
+    if ((difficulty == "Easy" && isEasyMode) ||
+        (difficulty == "Medium" && isMediumMode) ||
+        (difficulty == "Hard" && isHardMode))
+    {
+        isEasyMode = isMediumMode = isHardMode = false;
+        filteredItems = new Dictionary<Image, string>(challengeDescriptions.ImageIdentifiers);
+        comboBoxChallenge.Items.Clear();
+        foreach (var item in filteredItems.Values)
+            comboBoxChallenge.Items.Add(GetChallengeWithDifficulty(item));
 
-                // Reset to include all challenges
-                filteredItems = new Dictionary<Image, string>(challengeDescriptions.ImageIdentifiers);
+        MessageBox.Show("Randomization will now include all challenges.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        return;
+    }
 
-                // Update ComboBox with all challenges again
-                comboBoxChallenge.Items.Clear();
-                foreach (var item in filteredItems.Values)
-                {
-                    comboBoxChallenge.Items.Add(GetChallengeWithDifficulty(item));
-                }
+    isEasyMode = isMediumMode = isHardMode = false;
+    switch (difficulty)
+    {
+        case "Easy": isEasyMode = true; break;
+        case "Medium": isMediumMode = true; break;
+        case "Hard": isHardMode = true; break;
+    }
 
-                MessageBox.Show("Randomization will now include all challenges.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                return;
-            }
+    // FIXED: Support both single "_" and double "__"
+    filteredItems = challengeDescriptions.ImageIdentifiers
+        .Where(pair =>
+            pair.Value.Contains($"__{difficulty}_") ||   // e.g. "__Easy__M"
+            pair.Value.Contains($"_{difficulty}_") ||    // e.g. "_Easy_M"
+            pair.Value.EndsWith($"_{difficulty}") ||     // e.g. "_Easy"
+            pair.Value.Contains($"__{difficulty}")       // e.g. "__Easy"
+        )
+        .ToDictionary(pair => pair.Key, pair => pair.Value);
 
-            // Otherwise, set the new difficulty mode
-            isEasyMode = isMediumMode = isHardMode = false;
+    if (filteredItems.Count == 0)
+    {
+        MessageBox.Show($"No '{difficulty}' challenges found.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        filteredItems = new Dictionary<Image, string>(challengeDescriptions.ImageIdentifiers);
+        return;
+    }
 
-            switch (difficulty)
-            {
-                case "Easy": isEasyMode = true; break;
-                case "Medium": isMediumMode = true; break;
-                case "Hard": isHardMode = true; break;
-            }
+    comboBoxChallenge.Items.Clear();
+    foreach (var item in filteredItems.Values)
+        comboBoxChallenge.Items.Add(GetChallengeWithDifficulty(item));
 
-            // Filter challenges by selected difficulty
-            filteredItems = challengeDescriptions.ImageIdentifiers
-                .Where(pair => pair.Value.Contains($"__{difficulty}_"))
-                .ToDictionary(pair => pair.Key, pair => pair.Value);
-
-            if (filteredItems.Count == 0)
-            {
-                MessageBox.Show($"No '{difficulty}' challenges found.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                filteredItems = new Dictionary<Image, string>(challengeDescriptions.ImageIdentifiers);
-                return;
-            }
-
-            // Update ComboBox with filtered items
-            comboBoxChallenge.Items.Clear();
-            foreach (var item in filteredItems.Values)
-            {
-                comboBoxChallenge.Items.Add(GetChallengeWithDifficulty(item));
-            }
-
-            MessageBox.Show($"{difficulty} challenges will now be randomized.", "Difficulty Selected", MessageBoxButtons.OK, MessageBoxIcon.Information);
-        }
+    MessageBox.Show($"{difficulty} challenges will now be randomized.", "Difficulty Selected", MessageBoxButtons.OK, MessageBoxIcon.Information);
+}
         private void StopVoiceRecognition()
         {
             try
@@ -484,279 +486,6 @@ namespace Design
         {
             switch (identifier)
             {
-                //Fitness
-                case "Push_Ups__Easy__F":
-                    return "               PUSH UPS";
-                case "Push_Ups__Medium_F":
-                    return "               PUSH UPS";
-                case "Push_Ups__Hard_F":
-                    return "               PUSH UPS";
-                case "Bear_Crawl__Easy_F":
-                    return "             BEAR CRAWL";
-                case "Bear_Crawl__Medium_F":
-                    return "             BEAR CRAWL";
-                case "Bear_Crawl__Hard_F":
-                    return "             BEAR CRAWL";
-                case "Bicycle_Crunches__Easy_F":
-                    return "        BICYCLE CRUNCHES";
-                case "Bicycle_Crunches__Medium_F":
-                    return "        BICYCLE CRUNCHES";
-                case "Bicycle_Crunches__Hard_F":
-                    return "        BICYCLE CRUNCHES";
-                case "Calf_Raises__Easy_F":
-                    return "             CALF RAISES";
-                case "Calf_Raises__Medium_F":
-                    return "             CALF RAISES";
-                case "Calf_Raises__Hard_F":
-                    return "             CALF RAISES";
-                case "Diamond_Push_Ups__Easy_F":
-                    return "         DIAMOND PUSH UP";
-                case "Diamond_Push_Ups__Medium_F":
-                    return "         DIAMOND PUSH UP";
-                case "Diamond_Push_Ups__Hard_F":
-                    return "         DIAMOND PUSH UP";
-                case "Glute_Bridges__Easy_F":
-                    return "           GLUTE BRIDGES";
-                case "Glute_Bridges__Medium_F":
-                    return "           GLUTE BRIDGES";
-                case "Glute_Bridges__Hard_F":
-                    return "           GLUTE BRIDGES";
-                case "High_Knees__Easy_F":
-                    return "              HIGH KNEES";
-                case "High_Knees__Medium_F":
-                    return "              HIGH KNEES";
-                case "High_Knees__Hard_F":
-                    return "              HIGH KNEES";
-                case "Jogging__Easy_F":
-                    return "                JOGGING";
-                case "Jogging__Medium_F":
-                    return "                JOGGING";
-                case "Jogging__Hard_F":
-                    return "                JOGGING";
-                case "Jumping_Jacks__Easy_F":
-                    return "           JUMPING JACKS";
-                case "Jumping_Jacks__Medium_F":
-                    return "           JUMPING JACKS";
-                case "Jumping_Jacks__Hard_F":
-                    return "           JUMPING JACKS";
-                case "Jumping_Squat__Easy_F":
-                    return "              JUMP SQUAT";
-                case "Jumping_Squat__Medium_F":
-                    return "              JUMP SQUAT";
-                case "Jumping_Squat__Hard_F":
-                    return "              JUMP SQUAT";
-                case "Leg_Raise__Easy_F":
-                    return "                LEG RAISE";
-                case "Leg_Raise__Medium_F":
-                    return "                LEG RAISE";
-                case "Leg_Raise__Hard_F":
-                    return "                LEG RAISE";
-                case "Mountain_Climbers__Easy_F":
-                    return "        MOUNTAIN CLIMBERS";
-                case "Mountain_Climbers__Medium_F":
-                    return "        MOUNTAIN CLIMBERS";
-                case "Mountain_Climbers__Hard_F":
-                    return "        MOUNTAIN CLIMBERS";
-                case "Planking__Easy_F":
-                    return "               PLANKING";
-                case "Planking__Medium_F":
-                    return "               PLANKING";
-                case "Planking__Hard_F":
-                    return "               PLANKING";
-                case "Reverse_Lunges__Easy_F":
-                    return "          REVERSE LUNGES";
-                case "Reverse_Lunges__Medium_F":
-                    return "          REVERSE LUNGES";
-                case "Reverse_Lunges__Hard_F":
-                    return "          REVERSE LUNGES";
-                case "Russian_Twist__Easy_F":
-                    return "           RUSSIAN TWIST";
-                case "Russian_Twist__Medium_F":
-                    return "           RUSSIAN TWIST";
-                case "Russian_Twist__Hard_F":
-                    return "           RUSSIAN TWIST";
-                case "Side_Lunges__Easy_F":
-                    return "             SIDE LUNGES";
-                case "Side_Lunges__Medium_F":
-                    return "             SIDE LUNGES";
-                case "Side_Lunges__Hard_F":
-                    return "             SIDE LUNGES";
-                case "Side_Plank__Easy_F":
-                    return "              SIDE PLANK";
-                case "Side_Plank__Medium_F":
-                    return "              SIDE PLANK";
-                case "Side_Plank__Hard_F":
-                    return "              SIDE PLANK";
-                case "Squat__Easy_F":
-                    return "                  SQUAT";
-                case "Squat__Medium_F":
-                    return "                  SQUAT";
-                case "Squat__Hard_F":
-                    return "                  SQUAT";
-                case "Standing_Side_Leg_Raises__Easy_F":
-                    return "           SIDE LEG RAISE";
-                case "Standing_Side_Leg_Raises__Medium__F":
-                    return "           SIDE LEG RAISE";
-                case "Standing_Side_Leg_Raises__Hard_F":
-                    return "           SIDE LEG RAISE";
-                case "Step_Up__Easy_F":
-                    return "                STEP UP";
-                case "Step_Up__Medium_F":
-                    return "                STEP UP";
-                case "Step_Up__Hard_F":
-                    return "                STEP UP";
-                case "Toe_Top__Easy_F":
-                    return "                 TOE TOP";
-                case "Toe_Top__Medium_F":
-                    return "                 TOE TOP";
-                case "Toe_Top__Hard_F":
-                    return "                 TOE TOP";
-                case "Wall_Sit__Easy_F":
-                    return "                WALL SIT";
-                case "Wall_Sit__Medium_F":
-                    return "                WALL SIT";
-                case "Wall_Sit__Hard_F":
-                    return "                WALL SIT";
-                //Health
-                case "Gratitude__Easy_H":
-                    return "             GRATITUDE";
-                case "Gratitude__Medium_H":
-                    return "             GRATITUDE";
-                case "Gratitude__Hard_H":
-                    return "             GRATITUDE";
-                case "Hold_Your_Breath__Easy_H":
-                    return "            HOLD BREATH";
-                case "Hold_Your_Breath__Medium_H":
-                    return "            HOLD BREATH";
-                case "Hold_Your_Breath__Hard_H":
-                    return "            HOLD BREATH";
-                case "Hydration__Easy_H":
-                    return "              HYDRATION";
-                case "Hydration__Medium_H":
-                    return "              HYDRATION";
-                case "Hydration__Hard_H":
-                    return "              HYDRATION";
-                case "Mindful_Breathing__Easy_H":
-                    return "        MINDFUL BREATHING";
-                case "Mindful_Breathing__Medium_H":
-                    return "        MINDFUL BREATHING";
-                case "Mindful_Breathing__Hard_H":
-                    return "        MINDFUL BREATHING";
-                case "Mindful_Eating__Easy_H":
-                    return "           MINDFUL EATING";
-                case "Mindful_Eating__Medium_H":
-                    return "           MINDFUL EATING";
-                case "Mindful_Eating__Hard_H":
-                    return "           MINDFUL EATING";
-                case "No_Blinking__Easy_H":
-                    return "             NO BLINKING";
-                case "No_Blinking__Medium_H":
-                    return "             NO BLINKING";
-                case "No_Blinking__Hard_H":
-                    return "             NO BLINKING";
-                case "Quick_Stretching__Easy_H":
-                    return "         QUICK STRETCHING";
-                case "Quick_Stretching__Medium_H":
-                    return "         QUICK STRETCHING";
-                case "Quick_Stretching__Hard_H":
-                    return "         QUICK STRETCHING";
-                case "Plan_your_week__Easy_H":
-                    return "         PLAN YOUR WEEK";
-                case "Plan_your_week__Medium_H":
-                    return "         PLAN YOUR WEEK";
-                case "Plan_your_week__Hard_H":
-                    return "          PLAN YOUR WEEK";
-                case "Plan_Your_Week_Mental__Easy_H":
-                    return "            MENTAL WEEK";
-                case "Plan_Your_Week_Mental__Medium_H":
-                    return "            MENTAL WEEK";
-                case "Plan_Your_Week_Mental__Hard_H":
-                    return "            MENTAL WEEK";
-                case "Quiz_Mental__Easy_H":
-                    return "             QUIZ MENTAL";
-                case "Quiz_Mental__Medium_H":
-                    return "             QUIZ MENTAL";
-                case "Quiz_Mental__Hard_H":
-                    return "             QUIZ MENTAL";
-                case "Reading_Time__Easy_H":
-                    return "            READING TIME";
-                case "Reading_Time__Medium_H":
-                    return "            READING TIME";
-                case "Reading_Time__Hard_H":
-                    return "            READING TIME";
-                case "Take_a_Cold_Shower__Easy_H":
-                    return "            COLD SHOWER";
-                case "Take_a_Cold_Shower__Medium_H":
-                    return "            COLD SHOWER";
-                case "Take_a_Cold_Shower__Hard_H":
-                    return "            COLD SHOWER";
-                case "Walking_Easy_H":
-                    return "                WALKING";
-                case "Walking_Medium_H":
-                    return "                WALKING";
-                case "Walking_Hard_H":
-                    return "                WALKING";
-                //Learning
-                case "Book_Summary__Easy_E":
-                    return "           BOOK SUMMARY";
-                case "Book_Summary__Medium_E":
-                    return "           BOOK SUMMARY";
-                case "Book_Summary__Hard_E":
-                    return "           BOOK SUMMARY";
-                case "Character_Analysis_English__Easy_E":
-                    return "       CHARACTER ANALYSIS";
-                case "Character_Analysis_English_Medium_E":
-                    return "       CHARACTER ANALYSIS";
-                case "Character_Analysis_English__Hard_E":
-                    return "       CHARACTER ANALYSIS";
-                case "Characteristic_Analysis_Filipino__Easy_F":
-                    return "       CHARACTER ANALYSIS";
-                case "Characteristic_Analysis_Filipino___Medium_F":
-                    return "       CHARACTER ANALYSIS";
-                case "Characteristic_Analysis_Filipino___Hard_F":
-                    return "       CHARACTER ANALYSIS";
-                case "Grammar__Easy_E":
-                    return "    GRAMMAR QUESTION ENG";
-                case "Grammar__Medium_E":
-                    return "    GRAMMAR QUESTION ENG";
-                case "Grammar__Hard_E":
-                    return "    GRAMMAR QUESTION ENG";
-                case "Vocabulary_Challenge__Easy_E":
-                    return "         VOCABULARY ENG";
-                case "Vocabulary_Challenge__Medium_E":
-                    return "         VOCABULARY ENG";
-                case "Vocabulary_Challenge__Hard_E":
-                    return "         VOCABULARY ENG";
-                case "Word_Count_Challenge_Easy_E":
-                    return "            WORD COUNT";
-                case "Word_Count_Challenge_Medium_E":
-                    return "            WORD COUNT";
-                case "Word_Count_Challenge_Hard_E":
-                    return "            WORD COUNT";
-                case "Dialog_Analysis__Easy_F":
-                    return "       DIALOG ANALYSIS FIL";
-                case "Dialog_Analysis__Medium_F":
-                    return "       DIALOG ANALYSIS FIL";
-                case "Dialog_Analysis__Hard_F":
-                    return "       DIALOG ANALYSIS FIL";
-                case "Filipino_Quiz__Easy_F":
-                    return "           FILIPINO QUIZ";
-                case "Filipino_Quiz__Medium_F":
-                    return "           FILIPINO QUIZ";
-                case "Filipino_Quiz__Hard_F":
-                    return "           FILIPINO QUIZ";
-                case "Poetry_Challenge__Easy_F":
-                    return "              POETRY FIL";
-                case "Poetry_Challenge__Medium_F":
-                    return "              POETRY FIL";
-                case "Poetry_Challenge__Hard_F":
-                    return "              POETRY FIL";
-                case "Story_Retelling__Easy_F":
-                    return "       STORY RETELLING FIL";
-                case "Story_Retelling__Medium_F":
-                    return "       STORY RETELLING FIL";
-                case "Story_Retelling__Hard_F":
-                    return "       STORY RETELLING FIL";
                 case "Budget_Problem__Easy_M":
                     return "         PROBLEM SOLVING";
                 case "Budget_Problem__Medium_M":
@@ -787,6 +516,30 @@ namespace Design
                     return "          TIME CHALLANGE";
                 case "Time_Challenge__Hard_M":
                     return "          TIME CHALLANGE";
+                case "Addition_Easy_M":
+                    return "                ADDITION";
+                case "Addition_Medium_M":
+                    return "                ADDITION";
+                case "Addition_Hard_M":
+                    return "                ADDITION";
+                case "Subtraction_Easy_M":
+                    return "            SUBTRACTION";
+                case "Subtraction_Medium_M":
+                    return "            SUBTRACTION";
+                case "Subtraction_Hard_M":
+                    return "            SUBTRACTION";
+                case "Multiplication_Easy_M":
+                    return "           MULTIPLICATION";
+                case "Multiplication_Medium_M":
+                    return "           MULTIPLICATION";
+                case "Multiplication_Hard_M":
+                    return "           MULTIPLICATION";
+                case "Division_Easy_M":
+                    return "                DIVISION";
+                case "Division_Medium_M":
+                    return "                DIVISION";
+                case "Division_Hard_M":
+                    return "                DIVISION";
                 default:
                     return identifier; // Default case for unknown identifiers
             }
@@ -918,146 +671,7 @@ namespace Design
         {
             switch (formKey)
             {
-                //Fitness
-                case "Push_Ups__Easy__F": return new PushUpsEasy();
-                case "Push_Ups__Medium_F": return new PushUpsMedium();
-                case "Push_Ups__Hard_F": return new PushUpsHard();
-                case "Bear_Crawl__Easy_F": return new BearCrawlEasy();
-                case "Bear_Crawl__Medium_F": return new BearCrawlMedium();
-                case "Bear_Crawl__Hard_F": return new BearCrawlHard();
-                case "Bicycle_Crunches__Easy_F": return new BicycleCrunchesEasy();
-                case "Bicycle_Crunches__Medium_F": return new BicycleCrunchesMedium();
-                case "Bicycle_Crunches__Hard_F": return new BicycleCrunchesHard();
-                case "Calf_Raises__Easy_F": return new CalfRaisesEasy();
-                case "Calf_Raises__Medium_F": return new CalfRaisesMedium();
-                case "Calf_Raises__Hard_F": return new Calf_RaisesHard();
-                case "Diamond_Push_Ups__Easy_F": return new DiamondPushUpEasy();
-                case "Diamond_Push_Ups__Medium_F": return new DiamondPushUpsMedium();
-                case "Diamond_Push_Ups__Hard_F": return new DiamondPushUpsHard();
-                case "Glute_Bridges__Easy_F": return new GlutesBridgesEasy();
-                case "Glute_Bridges__Medium_F": return new GlutesBridgesMedium();
-                case "Glute_Bridges__Hard_F": return new GlutesBridgesHard();
-                case "High_Knees__Easy_F": return new HighKnessEasy();
-                case "High_Knees__Medium_F": return new HighKneesMedium();
-                case "High_Knees__Hard_F": return new HighKneesHard();
-                case "Jogging__Easy_F": return new JoggingEasy();
-                case "Jogging__Medium_F": return new JoggingMedium();
-                case "Jogging__Hard_F": return new JoggingHard();
-                case "Jumping_Jacks__Easy_F": return new JumpingJacksEasy();
-                case "Jumping_Jacks__Medium_F": return new JumpingJacksMedium();
-                case "Jumping_Jacks__Hard_F": return new JumpingJacksHard();
-                case "Jumping_Squat__Easy_F": return new JumpingSquatEasy();
-                case "Jumping_Squat__Medium_F": return new JumpingSquatMedium();
-                case "Jumping_Squat__Hard_F": return new JumpingSquatHard();
-                case "Leg_Raise__Easy_F": return new LegRaisesEasy();
-                case "Leg_Raise__Medium_F": return new LegRaisesMedium();
-                case "Leg_Raise__Hard_F": return new LegRaisesHard();
-                case "Mountain_Climbers__Easy_F": return new MountainClimbersEasy();
-                case "Mountain_Climbers__Medium_F": return new MountainClimbersMedium();
-                case "Mountain_Climbers__Hard_F": return new MountainClimbersHard();
-                case "Planking__Easy_F": return new PlankingEasy();
-                case "Planking__Medium_F": return new PlankingMedium();
-                case "Planking__Hard_F": return new PlankingHard();
-                case "Reverse_Lunges__Easy_F": return new ReverseLungesEasy();
-                case "Reverse_Lunges__Medium_F": return new ReverseLungesMedium();
-                case "Reverse_Lunges__Hard_F": return new ReverseLungesHard();
-                case "Russian_Twist__Easy_F": return new RussianTwistEasy();
-                case "Russian_Twist__Medium_F": return new RussianTwistMedium();
-                case "Russian_Twist__Hard_F": return new RussianTwistHard();
-                case "Side_Lunges__Easy_F": return new SideLungesEasy();
-                case "Side_Lunges__Medium_F": return new SideLungesMedium();
-                case "Side_Lunges__Hard_F": return new SideLungesHard();
-                case "Side_Plank__Easy_F": return new SidePlankEasy();
-                case "Side_Plank__Medium_F": return new SidePlankMedium();
-                case "Side_Plank__Hard_F": return new SidePlankHard();
-                case "Squat__Easy_F": return new SquatsEasy();
-                case "Squat__Medium_F": return new SquatsMedium();
-                case "Squat__Hard_F": return new SquatsHard();
-                case "Standing_Side_Leg_Raises__Easy_F": return new StandingSideLegRaisesEasy();
-                case "Standing_Side_Leg_Raises__Medium__F": return new StandingSideLegRaisesMedium();
-                case "Standing_Side_Leg_Raises__Hard_F": return new StandingSideLegRaisesHard();
-                case "Step_Up__Easy_F": return new StepUpEasy();
-                case "Step_Up__Medium_F": return new StepUpMedium();
-                case "Step_Up__Hard_F": return new StepUpHard();
-                case "Toe_Top__Easy_F": return new ToeTopEasy();
-                case "Toe_Top__Medium_F": return new ToeTopMedium();
-                case "Toe_Top__Hard_F": return new ToeTopHard();
-                case "Wall_Sit__Easy_F": return new WallSitEasy();
-                case "Wall_Sit__Medium_F": return new WallSitMedium();
-                case "Wall_Sit__Hard_F": return new WallSitHard();
-
-                //Health
-                case "Gratitude__Easy_H": return new GratitudeEasy();
-                case "Gratitude__Medium_H": return new GratitudeMedium();
-                case "Gratitude__Hard_H": return new GratitudeHard();
-                case "Hold_Your_Breath__Easy_H": return new HoldBreathEasy();
-                case "Hold_Your_Breath__Medium_H": return new HoldBreathMedium();
-                case "Hold_Your_Breath__Hard_H": return new HoldBreathHard();
-                case "Hydration__Easy_H": return new HydrationEasy();
-                case "Hydration__Medium_H": return new HydrationMedium();
-                case "Hydration__Hard_H": return new HydrationHard();
-                case "Mindful_Breathing__Easy_H": return new MindfulBreathingEasy();
-                case "Mindful_Breathing__Medium_H": return new MindfulBreathingMedium();
-                case "Mindful_Breathing__Hard_H": return new MindfulBreathingHard();
-                case "Mindful_Eating__Easy_H": return new MindFulEatingEasy();
-                case "Mindful_Eating__Medium_H": return new MindfulEatingMedium();
-                case "Mindful_Eating__Hard_H": return new MindFulEatingHard();
-                case "No_Blinking__Easy_H": return new NoBlinkingEasy();
-                case "No_Blinking__Medium_H": return new NoBlinkingMedium();
-                case "No_Blinking__Hard_H": return new NoBlinkingHard();
-                case "Quick_Stretching__Easy_H": return new QuickStretchingEasy();
-                case "Quick_Stretching__Medium_H": return new QuickStretchingMedium();
-                case "Quick_Stretching__Hard_H": return new QuickStretchingHard();
-                case "Plan_your_week__Easy_H": return new PlanYourWeekendEasy();
-                case "Plan_your_week__Medium_H": return new PlanYourWeekendMedium();
-                case "Plan_your_week__Hard_H": return new PlanYourWeekendHard();
-                case "Plan_Your_Week_Mental__Easy_H": return new PlanYourWeekendMenEasy();
-                case "Plan_Your_Week_Mental__Medium_H": return new PlanYourWeekendMenMedium();
-                case "Plan_Your_Week_Mental__Hard_H": return new PlanYourWeekendMenHard();
-                case "Quiz_Mental__Easy_H": return new QuizMentalEasy();
-                case "Quiz_Mental__Medium_H": return new QuizMentalMedium();
-                case "Quiz_Mental__Hard_H": return new QuizMentalHard();
-                case "Reading_Time__Easy_H": return new ReadingTimeEasy();
-                case "Reading_Time__Medium_H": return new ReadingTimeMedium();
-                case "Reading_Time__Hard_H": return new ReadingTimeHard();
-                case "Take_a_Cold_Shower__Easy_H": return new TakeAColdShowerEasy();
-                case "Take_a_Cold_Shower__Medium_H": return new TakeAColdShowerMedium();
-                case "Take_a_Cold_Shower__Hard_H": return new TakeAColdShowerHard();
-                case "Walking_Easy_H": return new WalkingEasy();
-                case "Walking_Medium_H": return new WalkingMedium();
-                case "Walking_Hard_H": return new WalkingHard();
-
-                //Learning
-                case "Book_Summary__Easy_E": return new BookSummaryEasy();
-                case "Book_Summary__Medium_E": return new BookSummaryMedium();
-                case "Book_Summary__Hard_E": return new BookSummaryHard();
-                case "Character_Analysis_English__Easy_E": return new CharacterAnalysisEasy();
-                case "Character_Analysis_English__Medium_E": return new CharacterAnalysisMedium();
-                case "Character_Analysis_English__Hard_E": return new CharacterAnalysisHard();
-                case "Characteristic_Analysis_Filipino__Easy_F": return new CharacterAnalysisFilEasy();
-                case "Characteristic_Analysis_Filipino__Medium_F": return new CharacterAnalysisFilMedium();
-                case "Characteristic_Analysis_Filipino__Hard_F": return new CharacterAnalysisFilHard();
-                case "Grammar__Easy_E": return new GrammarEasy();
-                case "Grammar__Medium_E": return new GrammarMedium();
-                case "Grammar__Hard_E": return new GrammarHard();
-                case "Vocabulary_Challenge__Easy_E": return new VocabularyEasy();
-                case "Vocabulary_Challenge__Medium_E": return new VocabularyMedium();
-                case "Vocabulary_Challenge__Hard_E": return new VocabularyHard();
-                case "Word_Count_Challenge_Easy_E": return new WordCountEasy();
-                case "Word_Count_Challenge_Medium_E": return new WordCountMedium();
-                case "Word_Count_Challenge_Hard_E": return new WordCountHard();
-                case "Dialog_Analysis__Easy_F": return new DialogAnalysisEasy();
-                case "Dialog_Analysis__Medium_F": return new DialogAnalysisMedium();
-                case "Dialog_Analysis__Hard_F": return new DialogAnalysisHard();
-                case "Filipino_Quiz__Easy_F": return new FilipinoQuizEasy();
-                case "Filipino_Quiz__Medium_F": return new FilipinoQuizMedium();
-                case "Filipino_Quiz__Hard_F": return new FilipinoQuizHard();
-                case "Poetry_Challenge__Easy_F": return new PoetryEasy();
-                case "Poetry_Challenge__Medium_F": return new PoetryMedium();
-                case "Poetry_Challenge__Hard_F": return new PoetryHard();
-                case "Story_Retelling__Easy_F": return new StoryRetellingEasy();
-                case "Story_Retelling__Medium_F": return new StoryRetellingMedium();
-                case "Story_Retelling__Hard_F": return new StoryRetellingHard();
+                //Math Challenges
                 case "Budget_Problem__Easy_M": return new BudjetProblemEasy();
                 case "Budget_Problem__Medium_M": return new BudjetProblemMedium();
                 case "Budget_Problem__Hard_M": return new BudjetProblemHard();
@@ -1073,6 +687,18 @@ namespace Design
                 case "Time_Challenge__Easy_M": return new TimeChallengeEasy();
                 case "Time_Challenge__Medium_M": return new TimeChallengeMedium();
                 case "Time_Challenge__Hard_M": return new TimeChallengeHard();
+                case "Addition_Easy_M": return new AdditionEasy();
+                case "Addition_Medium_M": return new AdditionMedium();
+                case "Addition_Hard_M": return new AdditionHard();
+                case "Subtraction_Easy_M": return new SubtractionEasy();
+                case "Subtraction_Medium_M": return new SubtractionMedium();
+                case "Subtraction_Hard_M": return new SubtractionHard();
+                case "Multiplication_Easy_M": return new MultiplicationEasy();
+                case "Multiplication_Medium_M": return new MultiplicationMedium();
+                case "Multiplication_Hard_M": return new MultiplicationHard();
+                case "Division_Easy_M": return new DivisionEasy();
+                case "Division_Medium_M": return new DivisionMedium();
+                case "Division_Hard_M": return new DivisionHard();
 
                 default:
                     MessageBox.Show("Form not defined for this challenge.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);

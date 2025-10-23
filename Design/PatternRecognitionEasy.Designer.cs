@@ -370,7 +370,6 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "PatternRecognitionEasy";
-            this.Text = "PatternRecognitionEasy";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxD)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxC)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxB)).EndInit();

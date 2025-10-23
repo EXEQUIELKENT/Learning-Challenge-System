@@ -169,8 +169,6 @@ namespace DCP.Resources
                 }
                 textBox2.Text = TimeSpan.FromSeconds(progressDuration - timeRemaining).ToString("hh\\:mm\\:ss");
 
-                count.Play();
-
                 timeRemaining--;
             }
             else

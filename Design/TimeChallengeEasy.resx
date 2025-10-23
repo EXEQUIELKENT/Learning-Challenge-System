@@ -118,47 +118,49 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="richTextBox2.Text" xml:space="preserve">
-    <value>Preparation
+    <value>Paghahanda
 
-• Find a quiet and distraction-free place to work.
+• Humanap ng tahimik na lugar kung saan walang istorbo.
 
-• Sit comfortably, ensuring good posture to support focus.
+• Umupo nang maayos at siguraduhing komportable ang iyong posisyon.
 
-• Relax your hands and wrists before starting.
+• Irelax ang mga kamay at pulso bago magsimula.
 
-• Focus your eyes on the screen or paper where the problems will appear.
+• Ituon ang iyong paningin sa screen o papel kung saan lalabas ang mga tanong.
 
-• After pressing START, there’s a 4-second countdown to begin the challenge.
+• Pagkatapos pindutin ang START, may 4-segundong countdown bago magsimula ang hamon.
 
-During the Challenge
+Habang Ginagawa ang Hamon
 
-• Read each math problem carefully and solve it as quickly as you can.
+• Basahin nang mabuti ang bawat tanong sa matematika at sagutin ito nang mabilis ngunit tama.
 
-• Keep your eyes on the screen or paper and try to avoid distractions.
+• Iwasan ang mga distraksyon at manatiling nakatuon sa gawain.
 
-• Stay calm and focus on accuracy and speed, balancing both.
+• Panatilihing kalmado habang nagsosolve, at tiyaking may balanse sa bilis at katumpakan.
 
-• Press DONE if you finish answering the questions.
+• Pindutin ang DONE kapag natapos mo nang sagutan ang lahat ng tanong.
 
-• Read each question carefully before selecting your answer (A, B, C and D).
+• Basahing mabuti ang tanong bago pumili ng sagot (A, B, C, o D).
 
-Finishing the Challenge
+Pagkatapos ng Hamon
 
-• After the time is up, you will automatically be taken to the results page.
+• Kapag natapos na ang oras, awtomatikong dadalhin ka sa results page kung saan makikita mo ang iyong score.
 
-Guide
+• Suriin ang resulta at alamin kung anong bahagi ang maaari pang pagbutihin.
 
-• Maintain a steady and relaxed posture while solving problems.
+Gabay
 
-• Choose a method to solve each problem that works best for you.
+• Manatiling kalmado at maayos ang pag-upo habang nagsosolve.
 
-• Try not to rush, but keep an eye on the timer to challenge your speed.
+• Pumili ng paraan ng pagsagot na komportable at epektibo para sa iyo.
 
-Note
+• Huwag magmadali, ngunit bantayan ang timer upang masanay sa pagsagot nang mabilis at tama.
 
-This challenge aims to improve mental agility, focus, and speed in solving math problems. The goal is to build your confidence in problem-solving under time pressure.
+Paalala
 
-"Focus your mind, sharpen your skills, and embrace the challenge!"</value>
+Ang Time Challenge ay ginawa upang hasaing ang bilis ng pag-iisip, konsentrasyon, at kumpiyansa sa pagsagot ng mga tanong sa ilalim ng limitadong oras. Layunin nitong sanayin ka sa tamang disiplina sa oras at sa pagiging alerto sa bawat problema.
+
+"Tutok ang isip, bilisan nang may tiwala, at yakapin ang hamon ng oras!"</value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="pictureBox11.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">

@@ -47,46 +47,47 @@ namespace DCP.Resources
             InitializeComponent();
             questions = new List<Question>
             {
-                new Question { QuestionText = "If a car travels 60 miles per hour, how far will it travel in 4 hours?", A = "240 miles", B = "180 miles", C = "300 miles", D = "150 miles", CorrectAnswer = "A" },
-                new Question { QuestionText = "A grocery store is selling apples for $2 each. How much will 5 apples cost?", A = "$10", B = "$15", C = "$5", D = "$8", CorrectAnswer = "A" },
-                new Question { QuestionText = "You buy a shirt for $30, and the sales tax is 10%. How much will you pay in total?", A = "$33", B = "$32", C = "$31", D = "$35", CorrectAnswer = "A" },
-                new Question { QuestionText = "A school has 500 students. If 60% of them are boys, how many boys are there?", A = "300 boys", B = "350 boys", C = "400 boys", D = "250 boys", CorrectAnswer = "A" },
-                new Question { QuestionText = "A recipe calls for 3 cups of flour to make 12 cookies. How many cups of flour are needed to make 24 cookies?", A = "6 cups", B = "5 cups", C = "4 cups", D = "3 cups", CorrectAnswer = "A" },
+                new Question { QuestionText = "Si Ana ay may baong ₱200. Gumastos siya ng ₱45 para sa pamasahe at ₱55 para sa meryenda. Magkano ang natira?", A = "₱90", B = "₱100", C = "₱85", D = "₱95", CorrectAnswer = "A" },
+                new Question { QuestionText = "Nagbenta si Lola ng 3 tray ng itlog sa palengke. Bawat tray ay ₱180. Kung kumita siya ng ₱50 tubo, magkano ang kabuuang kita (kita = presyo ng benta)?", A = "₱540", B = "₱590", C = "₱600", D = "₱620", CorrectAnswer = "B" },
+                new Question { QuestionText = "Ang jeepney pamasahe ay ₱9. Kung gumastos si Marco ng ₱36 araw-araw sa pag-commute, ilang biyahe ang nagawa niya?", A = "4 biyahe", B = "3 biyahe", C = "5 biyahe", D = "6 biyahe", CorrectAnswer = "C" },
+                new Question { QuestionText = "Bumili ang pamilya ng 5 kilo ng bigas ₱48/kg at gulay na ₱120. Kung may ₱500 sila, magkano ang natira?", A = "₱20", B = "₱40", C = "₱60", D = "₱80", CorrectAnswer = "C" },
+                new Question { QuestionText = "Sa fiesta ng barangay, may ₱2,000 na pondo. Gumastos ₱650 para sa pagkain at ₱450 para sa dekorasyon. Magkano ang natira?", A = "₱850", B = "₱900", C = "₱1,000", D = "₱1,200", CorrectAnswer = "B" },
 
-                new Question { QuestionText = "If a person drinks 2 liters of water per day, how much water will they drink in a week?", A = "10 liters", B = "12 liters", C = "14 liters", D = "16 liters", CorrectAnswer = "C" },
-                new Question { QuestionText = "A taxi charges a base fare of $5 plus $2 per mile. How much will a 3-mile ride cost?", A = "$10", B = "$11", C = "$12", D = "$13", CorrectAnswer = "C" },
-                new Question { QuestionText = "A train leaves at 2:30 PM and arrives at its destination at 5:15 PM. How long is the journey?", A = "2 hours 30 minutes", B = "2 hours 45 minutes", C = "3 hours", D = "2 hours 15 minutes", CorrectAnswer = "B" },
-                new Question { QuestionText = "If a pizza is cut into 8 slices and you eat 3, how many slices are left?", A = "3", B = "4", C = "5", D = "6", CorrectAnswer = "C" },
-                new Question { QuestionText = "A pack of 12 pens costs $6. How much does one pen cost?", A = "$0.50", B = "$1.00", C = "$1.50", D = "$2.00", CorrectAnswer = "A" },
+                new Question { QuestionText = "Si Liza nagtitinda ng pandesal at kumita ng ₱1,200 sa isang linggo. Kung 25% ang inilaan niya sa ipon, magkano ang inilaan sa ipon?", A = "₱250", B = "₱300", C = "₱350", D = "₱400", CorrectAnswer = "B" },
+                new Question { QuestionText = "Ang sari-sari store ay nag-order ng softdrinks na ₱1,200 kabuuan at ititinda na may 15% tubo. Magkano ang kabuuang bentahan?", A = "₱1,380", B = "₱1,300", C = "₱1,440", D = "₱1,500", CorrectAnswer = "A" },
+                new Question { QuestionText = "Nagbayad si Juan ng tricycle na ₱60 para sa 3 biyaheng pareho ang presyo. Magkano ang presyo ng isang biyahe?", A = "₱18", B = "₱20", C = "₱25", D = "₱30", CorrectAnswer = "D" },
+                new Question { QuestionText = "Si Nora bumili ng 2 kg mangga ₱120/kg at 1 tray itlog ₱180. Kung nagbayad siya ng ₱500, magkano ang sukli?", A = "₱80", B = "₱60", C = "₱40", D = "₱100", CorrectAnswer = "A" },
+                new Question { QuestionText = "May ₱5,000 ang PTA. Nagbayad sila ng ₱1,250 para sa cleaning supplies at ₱2,000 para sa prizes. Magkano ang natira?", A = "₱1,750", B = "₱1,850", C = "₱1,500", D = "₱1,250", CorrectAnswer = "C" },
 
-                new Question { QuestionText = "A bus has 40 seats. If 25 people are sitting, how many seats are empty?", A = "10", B = "15", C = "20", D = "25", CorrectAnswer = "B" },
-                new Question { QuestionText = "A cellphone battery is at 80%. If it loses 5% per hour, how much battery will be left after 3 hours?", A = "50%", B = "65%", C = "70%", D = "75%", CorrectAnswer = "C" },
-                new Question { QuestionText = "A farmer sells eggs for $3 per dozen. How much does 3 dozen eggs cost?", A = "$6", B = "$9", C = "$12", D = "$15", CorrectAnswer = "B" },
-                new Question { QuestionText = "If a person jogs 3 km per day, how far will they jog in 10 days?", A = "20 km", B = "25 km", C = "30 km", D = "35 km", CorrectAnswer = "C" },
-                new Question { QuestionText = "A bakery sells 4 cupcakes for $5. How much do 8 cupcakes cost?", A = "$8", B = "$10", C = "$12", D = "$15", CorrectAnswer = "B" },
+                new Question { QuestionText = "Si Carlo nag-ipon ng ₱3,600 sa 6 buwan. Kung pantay-pantay ang naiipon niya kada buwan, magkano kada buwan?", A = "₱600", B = "₱700", C = "₱500", D = "₱800", CorrectAnswer = "A" },
+                new Question { QuestionText = "Sa palengke, ang isang prutas ay ₱80 pero may 20% diskwento. Magkano ang presyo matapos ang diskwento?", A = "₱64", B = "₱60", C = "₱68", D = "₱70", CorrectAnswer = "A" },
+                new Question { QuestionText = "Isang pamilya kumain sa carinderia ng ₱420. Hatiin sa 7 miyembro, magkano ang babayaran bawat isa (pantay)?", A = "₱60", B = "₱70", C = "₱65", D = "₱75", CorrectAnswer = "B" },
+                new Question { QuestionText = "Bumili si Aling Nena ng 10 kg bigas ₱48/kg at ulam ₱1,250. Kung naglaan siya ng ₱2,000, kulang o sobra at magkano?", A = "₱570 kulang", B = "₱570 sobra", C = "₱150 kulang", D = "₱150 sobra", CorrectAnswer = "A" },
+                new Question { QuestionText = "Ang prutas sa palengke ay 3 para sa ₱100. Kung bibili ka ng 9 prutas, magkano babayaran?", A = "₱300", B = "₱275", C = "₱320", D = "₱250", CorrectAnswer = "A" },
 
-                new Question { QuestionText = "A family dinner costs $45. If a 15% tip is added, what is the total cost?", A = "$48", B = "$50", C = "$51.75", D = "$55", CorrectAnswer = "C" },
-                new Question { QuestionText = "You buy a coffee for $3.50 and pay with a $10 bill. How much change do you get?", A = "$6.00", B = "$6.50", C = "$7.00", D = "$7.50", CorrectAnswer = "B" },
-                new Question { QuestionText = "A car uses 8 liters of gas per 100 km. How much gas is needed for a 200 km trip?", A = "12 liters", B = "14 liters", C = "16 liters", D = "18 liters", CorrectAnswer = "C" },
-                new Question { QuestionText = "A book costs $15. If there is a 20% discount, how much do you pay?", A = "$10", B = "$12", C = "$13", D = "$14", CorrectAnswer = "C" },
-                new Question { QuestionText = "A soccer game lasts 90 minutes. If the first half is 45 minutes, how long is the second half?", A = "30 minutes", B = "40 minutes", C = "45 minutes", D = "50 minutes", CorrectAnswer = "C" },
+                new Question { QuestionText = "Si Maria bumili ng school uniform ₱450 at sapatos ₱1,200. Kung may ₱2,000 na inilaan, magkano ang natira o kulang?", A = "₱350 natira", B = "₱250 kulang", C = "₱350 kulang", D = "₱250 natira", CorrectAnswer = "A" },
+                new Question { QuestionText = "Nag-ambag ang 15 mag-aaral ng pantay upang makalikom ng ₱3,900. Magkano ang ambag kada isa?", A = "₱260", B = "₱240", C = "₱280", D = "₱300", CorrectAnswer = "A" },
+                new Question { QuestionText = "Si Jun bumili ng 5 lata ng bunga ng niyog ₱85 bawat isa. Kung nagbayad siya ng ₱500, magkano ang sukli?", A = "₱75", B = "₱125", C = "₱100", D = "₱150", CorrectAnswer = "A" },
+                new Question { QuestionText = "Nagbayad ang pamilya ng entrance fee sa Intramuros ₱250 bawat isa para sa 4 katao. Magkano lahat?", A = "₱1,000", B = "₱900", C = "₱1,050", D = "₱1,200", CorrectAnswer = "A" },
+                new Question { QuestionText = "May ₱8,000 para sa environmental cleanup. Ginamit ang 1/4 sa pagkain at 3/8 sa kagamitan. Magkano ang natitira?", A = "₱3,000", B = "₱3,250", C = "₱3,500", D = "₱4,000", CorrectAnswer = "B" },
 
-                new Question { QuestionText = "A store sells a TV for $600. If you pay in 6 equal monthly installments, how much is each payment?", A = "$50", B = "$75", C = "$100", D = "$125", CorrectAnswer = "D" },
-                new Question { QuestionText = "If a movie ticket costs $9 and you buy 3 tickets, how much is the total cost?", A = "$18", B = "$21", C = "$24", D = "$27", CorrectAnswer = "B" },
-                new Question { QuestionText = "A bicycle wheel spins 5 times per second. How many times does it spin in 1 minute?", A = "100", B = "150", C = "200", D = "300", CorrectAnswer = "D" },
-                new Question { QuestionText = "A worker earns $8 per hour. How much do they earn for 6 hours of work?", A = "$36", B = "$40", C = "$42", D = "$48", CorrectAnswer = "D" },
-                new Question { QuestionText = "A box of cereal weighs 500 grams. How many kilograms is that?", A = "0.5 kg", B = "1 kg", C = "1.5 kg", D = "2 kg", CorrectAnswer = "A" },
+                new Question { QuestionText = "Si Maya nag-ipon ng ₱2,400 sa loob ng 6 buwan. Kung ginamit niya ang 1/3 sa school project, magkano ang natira?", A = "₱1,600", B = "₱1,800", C = "₱1,200", D = "₱1,400", CorrectAnswer = "A" },
+                new Question { QuestionText = "Sa tindahan, 1 pen ay ₱5. Kung bibili ka ng 12 pens, magkano ang babayaran?", A = "₱60", B = "₱55", C = "₱50", D = "₱65", CorrectAnswer = "A" },
+                new Question { QuestionText = "Ang pamilya ay may ₱25,000 na buwanang kita. Gumastos sila ₱8,000 renta, ₱6,000 pagkain at ₱2,000 kuryente. Magkano ang natira?", A = "₱9,000", B = "₱10,000", C = "₱8,500", D = "₱7,000", CorrectAnswer = "A" },
+                new Question { QuestionText = "Si Aling Rosa ay may paninda na ₱4,500. Kung kumita siya ng 10% tubo, magkano ang tubo?", A = "₱450", B = "₱400", C = "₱500", D = "₱350", CorrectAnswer = "A" },
+                new Question { QuestionText = "Bumili si Pedro ng 3 notebooks ₱45 bawat isa at lapis set ₱60. Kung nagbayad siya ng ₱200, magkano ang sukli?", A = "₱5", B = "₱10", C = "₱15", D = "₱20", CorrectAnswer = "B" },
 
-                new Question { QuestionText = "A parking fee is $2 per hour. If you park for 5 hours, how much do you pay?", A = "$8", B = "$9", C = "$10", D = "$12", CorrectAnswer = "C" },
-                new Question { QuestionText = "A bus ride costs $1.50 per trip. If you take 4 trips, how much do you spend?", A = "$4", B = "$5", C = "$6", D = "$7", CorrectAnswer = "C" },
-                new Question { QuestionText = "A water bottle holds 2 liters. How many milliliters is that?", A = "200 mL", B = "2000 mL", C = "20,000 mL", D = "2,000,000 mL", CorrectAnswer = "B" },
-                new Question { QuestionText = "A shop sells 2 shirts for $25 each. How much do both shirts cost?", A = "$40", B = "$45", C = "$50", D = "$55", CorrectAnswer = "C" },
-                new Question { QuestionText = "A pencil costs $1.20. How much do 5 pencils cost?", A = "$5.50", B = "$6.00", C = "$6.50", D = "$7.00", CorrectAnswer = "B" },
+                new Question { QuestionText = "May ₱3,600 ang klase para sa stickers. Kailangan ng 12 packs ₱275 bawat pack. Kulang o sobra at magkano?", A = "₱700 kulang", B = "₱700 sobra", C = "₱300 kulang", D = "₱300 sobra", CorrectAnswer = "A" },
+                new Question { QuestionText = "Ang pamasahe sa jeepney ay ₱9. Kung gumastos ang estudyante ng ₱81 sa isang linggo, ilang biyahe ito?", A = "9 biyahe", B = "8 biyahe", C = "10 biyahe", D = "7 biyahe", CorrectAnswer = "A" },
+                new Question { QuestionText = "Isang baker ang nagbenta ng 20 pandesal sa ₱7 bawat isa. Magkano ang kinita niya sa araw na iyon (bago gastos)?", A = "₱120", B = "₱140", C = "₱160", D = "₱100", CorrectAnswer = "B" },
+                new Question { QuestionText = "Kung ang isang tindahan ay nagbigay ng 10% diskwento sa damit na ₱500, magkano ang babayaran?", A = "₱450", B = "₱400", C = "₱475", D = "₱480", CorrectAnswer = "A" },
+                new Question { QuestionText = "Si Kuya nag-donate ng ₱2,500 sa relief at hinati sa 25 pamilya. Magkano ang natanggap ng bawat pamilya?", A = "₱75", B = "₱100", C = "₱125", D = "₱150", CorrectAnswer = "C" },
 
-                new Question { QuestionText = "A taxi ride costs $10. If you tip 20%, how much do you pay in total?", A = "$10.50", B = "$11", C = "$12", D = "$13", CorrectAnswer = "C" },
-                new Question { QuestionText = "A basketball game starts at 7:00 PM and ends at 9:15 PM. How long did it last?", A = "2 hours", B = "2 hours 15 minutes", C = "2 hours 30 minutes", D = "3 hours", CorrectAnswer = "B" },
-                new Question { QuestionText = "A clock shows 3:45 PM. What time will it be in 2 hours?", A = "5:15 PM", B = "5:30 PM", C = "5:45 PM", D = "6:00 PM", CorrectAnswer = "C" },
-                new Question { QuestionText = "If a person eats 3 meals a day, how many meals do they eat in a week?", A = "14", B = "18", C = "21", D = "24", CorrectAnswer = "C" },
+                new Question { QuestionText = "May pondo ₱10,000 para sa project. Gumastos ng ₱2,500 materyales, ₱3,000 pag-print at ₱1,200 dekorasyon. Magkano ang natira?", A = "₱3,300", B = "₱3,200", C = "₱2,300", D = "₱2,800", CorrectAnswer = "A" },
+                new Question { QuestionText = "Bumili ng halo-halo sa tindahan ₱60 at tubig sa malamig na araw ₱30. Kung nagbayad ka ng ₱200, magkano ang sukli?", A = "₱110", B = "₱120", C = "₱130", D = "₱140", CorrectAnswer = "C" },
+                new Question { QuestionText = "Si Ana nag-ipon ng ₱8,400 sa loob ng 6 buwan. Kung pantay-pantay ang naiipon, magkano kada buwan?", A = "₱1,200", B = "₱1,400", C = "₱1,600", D = "₱1,800", CorrectAnswer = "B" },
+                new Question { QuestionText = "Kung ang isang karton ng pandesal ay 6 piraso at nagkakahalaga ng ₱30, magkano ang 2 karton?", A = "₱60", B = "₱90", C = "₱45", D = "₱75", CorrectAnswer = "A" },
+                new Question { QuestionText = "Sa outreach, bumili sila ng 12 hygiene kits ₱350 bawat isa. Magkano ang ginastos lahat?", A = "₱4,200", B = "₱3,500", C = "₱4,700", D = "₱5,000", CorrectAnswer = "A" },
             };
 
             // Initialize answeredQuestions with false values (indicating that no question has been answered yet)
@@ -156,8 +157,6 @@ namespace DCP.Resources
                     progressBar1.Value = progressDuration - timeRemaining;
                 }
                 textBox2.Text = TimeSpan.FromSeconds(progressDuration - timeRemaining).ToString("hh\\:mm\\:ss");
-
-                count.Play();
 
                 timeRemaining--;
             }

@@ -46,63 +46,59 @@ namespace DCP.Resources
             InitializeComponent();
             questions = new List<Question>
             {
-                new Question { QuestionText = "If you want to build a fence around a rectangular garden with a length of 15 meters and a width of 10 meters, how much fencing material will you need?", A = "30 meters", B = "40 meters", C = "50 meters", D = "60 meters", CorrectAnswer = "B" },
-                new Question { QuestionText = "You are planning to buy paint for a room with an area of 150 square feet. If one gallon of paint covers 350 square feet, how many gallons do you need?", A = "1 gallon", B = "2 gallons", C = "3 gallons", D = "4 gallons", CorrectAnswer = "B" },
-                new Question { QuestionText = "A car travels 180 miles in 3 hours. What is the average speed of the car?", A = "45 miles per hour", B = "50 miles per hour", C = "60 miles per hour", D = "70 miles per hour", CorrectAnswer = "C" },
-                new Question { QuestionText = "You are buying a laptop that costs $800. The store offers a 20% discount. How much will you pay for the laptop after the discount?", A = "$600", B = "$640", C = "$700", D = "$720", CorrectAnswer = "B" },
-                new Question { QuestionText = "A worker is paid $15 per hour. If they work 40 hours per week, how much will they earn in a month (4 weeks)?", A = "$2,000", B = "$2,400", C = "$2,600", D = "$3,000", CorrectAnswer = "B" },
+                new Question { QuestionText = "Magkano ang perimeter ng parihabang bakuran na may haba na 20 m at lapad na 12 m?", A = "64 m", B = "44 m", C = "40 m", D = "32 m", CorrectAnswer = "A" },
+                new Question { QuestionText = "Mayroong 24 litro ng tubig. Hatiin ito sa 6 bote nang pantay‑pantay. Ilang litro ang laman ng bawat bote?", A = "3 L", B = "4 L", C = "6 L", D = "2 L", CorrectAnswer = "B" },
+                new Question { QuestionText = "Kung ang isang jeepney fare ay ₱12 at sumakay ka nang 7 beses, magkano ang kabuuan?", A = "₱84", B = "₱72", C = "₱90", D = "₱96", CorrectAnswer = "A" },
+                new Question { QuestionText = "Bumili ka ng 3 kg ng bigas ₱55/kg at 2 kg gulay ₱40/kg. Magkano lahat?", A = "₱265", B = "₱255", C = "₱275", D = "₱245", CorrectAnswer = "A" },
+                new Question { QuestionText = "Ang libro ay ₱420. Kung may 15% diskwento, magkano ang iyong babayaran?", A = "₱357", B = "₱360", C = "₱370", D = "₱350", CorrectAnswer = "A" },
 
-                new Question { QuestionText = "A company increases the price of its product by 15%. If the original price was $50, what is the new price?", A = "$55", B = "$57.50", C = "$60", D = "$62.50", CorrectAnswer = "B" },
-                new Question { QuestionText = "You are planning to take a trip that will require 360 miles of travel. If your car uses 25 miles per gallon and the price of gas is $3 per gallon, how much will you spend on gas?", A = "$30", B = "$36", C = "$40", D = "$45", CorrectAnswer = "B" },
-                new Question { QuestionText = "A recipe calls for 2 cups of sugar, but you want to make half of the recipe. How much sugar should you use?", A = "1 cup", B = "1.5 cups", C = "2 cups", D = "2.5 cups", CorrectAnswer = "A" },
-                new Question { QuestionText = "A store sells a shirt for $25. The shirt is on sale with a 30% discount. How much is the discount?", A = "$5", B = "$7.50", C = "$8", D = "$10", CorrectAnswer = "B" },
-                new Question { QuestionText = "You want to buy a new phone that costs $600. The store offers a 12-month installment plan with 0% interest. How much will you pay each month?", A = "$50", B = "$55", C = "$60", D = "$65", CorrectAnswer = "A" },
+                new Question { QuestionText = "Si Ella ay nag‑ipon ng ₱9,000 at nais makapagbayad ng ₱2,500 kada buwan. Ilang buwan bago maubos?", A = "3 buwan", B = "4 buwan", C = "2 buwan", D = "5 buwan", CorrectAnswer = "B" },
+                new Question { QuestionText = "Ang isang tricycle ay naglalakbay ng 18 km sa 30 minuto. Ano ang average speed sa km/h?", A = "36 km/h", B = "32 km/h", C = "24 km/h", D = "30 km/h", CorrectAnswer = "A" },
+                new Question { QuestionText = "Kung ang isang cake recipe ay para sa 12 tao at nais mo para sa 20 tao, ano ang factor ng pagtaas ng sangkap?", A = "1.5", B = "1.66", C = "1.25", D = "2.0", CorrectAnswer = "B" },
+                new Question { QuestionText = "May ₱15,000 pondo. Gumasta ng ₱4,200 sa kagamitan at ₱3,350 sa pagkain. Magkano natira?", A = "₱7,450", B = "₱7,600", C = "₱7,150", D = "₱8,000", CorrectAnswer = "A" },
+                new Question { QuestionText = "Isang school bus may capacity na 50 estudyante. Kung 38 ang sumakay, ilang upuan ang bakante?", A = "12", B = "10", C = "8", D = "14", CorrectAnswer = "A" },
 
-                new Question { QuestionText = "If a product sells for $120 and the sales tax is 8%, what is the total price you will pay for the product?", A = "$128", B = "$130", C = "$132", D = "$135", CorrectAnswer = "A" },
-                new Question { QuestionText = "You need to invest $5,000 in an account that offers an annual interest rate of 5%. How much interest will you earn after 3 years?", A = "$250", B = "$500", C = "$750", D = "$1,000", CorrectAnswer = "B" },
-                new Question { QuestionText = "A contractor needs to build a driveway with a total area of 400 square feet. If the concrete costs $3 per square foot, how much will the driveway cost?", A = "$1,000", B = "$1,200", C = "$1,500", D = "$2,000", CorrectAnswer = "B" },
-                new Question { QuestionText = "A cyclist is training for a race and rides 40 miles in 2 hours. How long will it take the cyclist to ride 100 miles at the same pace?", A = "4 hours", B = "5 hours", C = "6 hours", D = "8 hours", CorrectAnswer = "B" },
-                new Question { QuestionText = "You are decorating a wall that is 10 feet long and 8 feet high. If wallpaper costs $15 per square meter, how much will it cost to cover the wall? (1 square meter = 10.764 square feet)", A = "$10", B = "$12", C = "$15", D = "$18", CorrectAnswer = "C" },
+                new Question { QuestionText = "Kung ₱1,200 ang kabuuang halaga at hatiin sa 15 mag‑aambag, magkano bawat isa (rounded to nearest peso)?", A = "₱80", B = "₱79", C = "₱81", D = "₱75", CorrectAnswer = "A" },
+                new Question { QuestionText = "Si Marco bumili ng school supplies ₱345 at nagbigay ng ₱500. Magkano ang sukli?", A = "₱155", B = "₱145", C = "₱135", D = "₱160", CorrectAnswer = "A" },
+                new Question { QuestionText = "Ang presyo ng itlog ay ₱6 bawat piraso. Magkano ang 1 dosenang itlog?", A = "₱60", B = "₱72", C = "₱50", D = "₱66", CorrectAnswer = "A" },
+                new Question { QuestionText = "May 120 pirasong stickers. Hatiin sa 8 grupo nang pantay‑pantay. Ilan bawat grupo?", A = "15", B = "20", C = "10", D = "12", CorrectAnswer = "B" },
+                new Question { QuestionText = "Kung 25% ng kita ay inilaan sa ipon at kumita ka ng ₱8,000, magkano ang ipon?", A = "₱2,000", B = "₱1,800", C = "₱2,200", D = "₱2,500", CorrectAnswer = "A" },
 
-                new Question { QuestionText = "A store sells shoes for $60 a pair. If you want to buy 5 pairs, how much will you spend before taxes?", A = "$250", B = "$270", C = "$280", D = "$300", CorrectAnswer = "A" },
-                new Question { QuestionText = "A group of friends went to a restaurant and the total bill was $200. If they split the bill equally among 4 people, how much does each person pay?", A = "$45", B = "$50", C = "$55", D = "$60", CorrectAnswer = "B" },
-                new Question { QuestionText = "A student earns a grade of 85% on a test with 40 questions. How many questions did the student answer correctly?", A = "32", B = "34", C = "36", D = "38", CorrectAnswer = "A" },
-                new Question { QuestionText = "You are saving money for a trip. You want to save $1,500 in 6 months. How much money do you need to save each month?", A = "$250", B = "$300", C = "$350", D = "$400", CorrectAnswer = "B" },
-                new Question { QuestionText = "A car rental company charges $40 per day for renting a car. If you rent the car for 5 days, how much will you pay in total?", A = "$180", B = "$200", C = "$220", D = "$240", CorrectAnswer = "B" },
+                new Question { QuestionText = "Isang van nagbiyahe ng 360 km gamit ang 30 L ng gasolina. Ano ang fuel efficiency (km/L)?", A = "12 km/L", B = "10 km/L", C = "9 km/L", D = "15 km/L", CorrectAnswer = "A" },
+                new Question { QuestionText = "Kung ang presyo ng manok ay ₱150/kg at bumili ka ng 2.5 kg, magkano babayaran?", A = "₱375", B = "₱350", C = "₱325", D = "₱380", CorrectAnswer = "A" },
+                new Question { QuestionText = "Bumili ng 3 shirts ₱420 bawat isa, may buy 2 get 1 half price. Magkano kabuuan?", A = "₱1,050", B = "₱1,260", C = "₱1,190", D = "₱1,240", CorrectAnswer = "C" },
+                new Question { QuestionText = "Isang bahay may monthly electric bill ₱3,200. Kung tataas ng 8%, magkano ang bagong bill?", A = "₱3,456", B = "₱3,500", C = "₱3,420", D = "₱3,600", CorrectAnswer = "A" },
+                new Question { QuestionText = "Kung ang isang klase ay may 28 estudyante at 3/7 ay babae, ilan ang babae?", A = "12", B = "10", C = "14", D = "16", CorrectAnswer = "A" },
 
-                new Question { QuestionText = "A rectangular swimming pool is 25 meters long and 10 meters wide. If the depth is 2 meters, how much water (in cubic meters) is needed to fill it?", A = "500", B = "450", C = "600", D = "550", CorrectAnswer = "A" },
-                new Question { QuestionText = "A bakery sells cakes at $35 each. If a customer buys 7 cakes and receives a 10% discount, how much will they pay?", A = "$200", B = "$220", C = "$225", D = "$230", CorrectAnswer = "B" },
-                new Question { QuestionText = "A car depreciates in value by 12% each year. If the original price was $30,000, what is its value after 2 years?", A = "$23,232", B = "$24,576", C = "$25,000", D = "$26,000", CorrectAnswer = "B" },
-                new Question { QuestionText = "A train is traveling at a speed of 90 km/h. How long will it take to travel 360 km?", A = "3 hours", B = "4 hours", C = "4.5 hours", D = "5 hours", CorrectAnswer = "B" },
-                new Question { QuestionText = "If a store applies a 25% markup on a product that originally costs $80, what is the final selling price?", A = "$90", B = "$95", C = "$100", D = "$105", CorrectAnswer = "C" },
+                new Question { QuestionText = "May 500 mL juice. Ibuhos sa 200 mL na baso. Ilang baso ang mapupuno?", A = "2 baso", B = "2.5 baso", C = "3 baso", D = "2 baso (may leftovers)", CorrectAnswer = "D" },
+                new Question { QuestionText = "Isang manggagawa kumikita ng ₱420 kada araw. Kung nagtrabaho siya ng 22 araw, magkano kinita niya?", A = "₱9,240", B = "₱8,800", C = "₱9,000", D = "₱10,000", CorrectAnswer = "A" },
+                new Question { QuestionText = "Kung ang bus trip ay 180 km at bumaba ang average speed mula 60 km/h sa 45 km/h dahil sa traffic, gaano karaming oras ang nadagdag?", A = "1 hour", B = "0.5 hour", C = "2 hours", D = "1.5 hours", CorrectAnswer = "A" },
+                new Question { QuestionText = "May pondo ₱25,000. Ilalaan 40% sa proyekto A at natitira ilalaan sa proyekto B. Magkano ang napunta sa proyekto A?", A = "₱10,000", B = "₱9,000", C = "₱12,000", D = "₱11,000", CorrectAnswer = "A" },
+                new Question { QuestionText = "Isang tindahan nagbebenta ₱3,600 ng items at may 12% profit margin. Magkano ang tubo?", A = "₱432", B = "₱360", C = "₱420", D = "₱480", CorrectAnswer = "A" },
 
-                new Question { QuestionText = "A group of people is sharing a total bill of $360 equally among 8 people. How much does each person pay?", A = "$40", B = "$45", C = "$50", D = "$55", CorrectAnswer = "A" },
-                new Question { QuestionText = "A cyclist travels at an average speed of 20 km/h for 5 hours. How far does he travel?", A = "80 km", B = "90 km", C = "100 km", D = "110 km", CorrectAnswer = "C" },
-                new Question { QuestionText = "A cell phone plan costs $50 per month plus $0.10 per text message. If a person sends 300 messages, how much is the total bill?", A = "$60", B = "$70", C = "$80", D = "$90", CorrectAnswer = "B" },
-                new Question { QuestionText = "A store offers a 15% discount on a $250 jacket. How much will you pay after the discount?", A = "$200", B = "$210", C = "$212.50", D = "$220", CorrectAnswer = "C" },
-                new Question { QuestionText = "If a 5 kg bag of rice costs $25, what is the price per kilogram?", A = "$4", B = "$5", C = "$5.50", D = "$6", CorrectAnswer = "B" },
+                new Question { QuestionText = "Kung ang average ng 5 numero ay 72, ano ang kabuuan ng mga numero?", A = "₂₈₀", B = "₃₆₀", C = "₃₆₀", D = "₃₆₀", CorrectAnswer = "A" },
+                new Question { QuestionText = "Si Ana nagbayad ₱2,750 para sa 5 buwan ng tutorial. Magkano kada buwan?", A = "₱550", B = "₱500", C = "₱600", D = "₱450", CorrectAnswer = "A" },
+                new Question { QuestionText = "Kung ang one‑way fare ng ferry ay ₱125 at gusto mong pumunta at bumalik ng 4 na beses (round trips), magkano lahat?", A = "₱1,000", B = "₱1,000", C = "₱2,000", D = "₱1,000", CorrectAnswer = "A" },
+                new Question { QuestionText = "Isang tindahan nagbigay ng 20% diskwento sa ₱2,500 na item at may 12% VAT pagkatapos. Magkano ang final price? (compute diskwento, saka VAT)", A = "₱2,240", B = "₱2,200", C = "₱2,240", D = "₱2,250", CorrectAnswer = "A" },
+                new Question { QuestionText = "May 3 itlog na pino‑package per tray; bumili ka ng 14 trays. Ilang itlog mayroon ka?", A = "42", B = "40", C = "36", D = "45", CorrectAnswer = "A" },
 
-                new Question { QuestionText = "A man invests $4,000 in a savings account that earns 4% annual interest. How much will the investment be worth after 3 years (simple interest)?", A = "$4,480", B = "$4,500", C = "$4,600", D = "$4,800", CorrectAnswer = "A" },
-                new Question { QuestionText = "A farm has 12 cows, and each cow produces 15 liters of milk per day. How much milk is produced in a week?", A = "1,200 liters", B = "1,250 liters", C = "1,260 liters", D = "1,280 liters", CorrectAnswer = "C" },
-                new Question { QuestionText = "A software developer works 40 hours per week at a rate of $30 per hour. How much does the developer earn per month (4 weeks)?", A = "$4,500", B = "$4,800", C = "$5,000", D = "$5,200", CorrectAnswer = "B" },
-                new Question { QuestionText = "If a computer processes 500 files per minute, how many files can it process in 2.5 hours?", A = "50,000", B = "60,000", C = "70,000", D = "75,000", CorrectAnswer = "B" },
-                new Question { QuestionText = "A school orders 25 tables at $40 each. If they receive a 10% bulk discount, how much is the total cost?", A = "$850", B = "$875", C = "$900", D = "$1,000", CorrectAnswer = "B" },
+                new Question { QuestionText = "Kung isang barangay naglaan ₱18,000 at ginamit 2/9 para sa kainan, magkano nagastos para kainan?", A = "₱4,000", B = "₱4,500", C = "₱4,200", D = "₱5,000", CorrectAnswer = "C" },
+                new Question { QuestionText = "Isang motor na may speed 72 km/h, ilang minuto para makarating sa 36 km?", A = "30 minutes", B = "20 minutes", C = "40 minutes", D = "50 minutes", CorrectAnswer = "A" },
+                new Question { QuestionText = "Bumili ng 8 liters ng gatas sa ₱75 bawat litro. Kung nag‑promo na buy 2 get 10% off sa bawat dalawang litro, magkano matatapos? (approx)", A = "₱540", B = "₱550", C = "₱560", D = "₱600", CorrectAnswer = "A" },
+                new Question { QuestionText = "Kung isang klase may average height na 140 cm at may 30 estudyante, ano ang kabuuang height (sum)?", A = "₄,２００ cm", B = "₄,０００ cm", C = "₄,３００ cm", D = "₄,１００ cm", CorrectAnswer = "A" },
+                new Question { QuestionText = "Isang speedboat naglalayag 48 km sa 1.5 oras. Ano ang speed sa km/h?", A = "32 km/h", B = "30 km/h", C = "28 km/h", D = "36 km/h", CorrectAnswer = "A" },
 
-                new Question { QuestionText = "A cyclist covers a distance of 120 km in 3 hours. What is his average speed?", A = "30 km/h", B = "35 km/h", C = "40 km/h", D = "45 km/h", CorrectAnswer = "C" },
-                new Question { QuestionText = "A movie streaming service charges $12 per month. How much will you pay in a year?", A = "$120", B = "$132", C = "$144", D = "$156", CorrectAnswer = "C" },
-                new Question { QuestionText = "A bottle contains 750 ml of juice. How many bottles are needed to fill 6 liters?", A = "6", B = "7", C = "8", D = "9", CorrectAnswer = "B" },
-                new Question { QuestionText = "A train ticket costs $80. If a person gets a 20% discount, what is the new price?", A = "$60", B = "$64", C = "$66", D = "$68", CorrectAnswer = "B" },
-                new Question { QuestionText = "A company has 1,500 employees. If 30% of them are working remotely, how many employees are working remotely?", A = "400", B = "425", C = "450", D = "500", CorrectAnswer = "C" },
-                new Question { QuestionText = "A plane travels 3,600 km in 4 hours. What is its average speed?", A = "800 km/h", B = "850 km/h", C = "900 km/h", D = "1,000 km/h", CorrectAnswer = "C" },
+                new Question { QuestionText = "May 1,500 students; 60% ang pumasa sa exam. Ilan ang pumasa?", A = "₉００", B = "₈５０", C = "₉５０", D = "₁,０００", CorrectAnswer = "A" },
+                new Question { QuestionText = "Kung magrenta ka ng function hall ₱6,000 at mag‑cater ₱220 bawat tao para sa 50 tao, magkano lahat?", A = "₱17,000", B = "₱16,000", C = "₱17,500", D = "₱15,000", CorrectAnswer = "A" },
+                new Question { QuestionText = "Isang mangunguma may 12 sako ng palay; bawat sako 50 kg. Kung bawat kilo ₱18, magkano ang kabuuang halaga?", A = "₱10,800", B = "₱11,000", C = "₱12,000", D = "₱9,600", CorrectAnswer = "A" },
+                new Question { QuestionText = "Kung buwanang gastusin ₱18,500 at 30% nito ay para sa renta, magkano ang renta?", A = "₱5,550", B = "₱6,000", C = "₱5,000", D = "₱5,650", CorrectAnswer = "A" },
+                new Question { QuestionText = "May project budget ₱20,000. Gumastos ₱7,250. Ano ang porsyento ng nagamit (rounded to 1 decimal)?", A = "36.3%", B = "35.0%", C = "36.2%", D = "37.5%", CorrectAnswer = "A" },
 
-                new Question { QuestionText = "A tree grows at a rate of 25 cm per year. How tall will it be after 12 years?", A = "280 cm", B = "290 cm", C = "300 cm", D = "310 cm", CorrectAnswer = "C" },
-                new Question { QuestionText = "A hotel charges $120 per night. If you stay for 6 nights, how much will you pay?", A = "$600", B = "$650", C = "$700", D = "$720", CorrectAnswer = "D" },
-                new Question { QuestionText = "A bakery makes 450 loaves of bread in 5 hours. How many loaves can they make in 8 hours?", A = "700", B = "720", C = "750", D = "800", CorrectAnswer = "B" },
-                new Question { QuestionText = "A train departs at 6:15 AM and arrives at its destination at 10:45 AM. How long is the journey?", A = "3.5 hours", B = "4 hours", C = "4.5 hours", D = "5 hours", CorrectAnswer = "C" },
-                new Question { QuestionText = "A student scores 85%, 78%, and 92% on three exams. What is the average score?", A = "81%", B = "84%", C = "85%", D = "86%", CorrectAnswer = "B" },
-
-                new Question { QuestionText = "A man walks at a speed of 5 km/h for 3 hours. How far does he travel?", A = "12 km", B = "13 km", C = "14 km", D = "15 km", CorrectAnswer = "D" },
-                new Question { QuestionText = "A cellphone battery loses 5% charge per hour. If the battery starts at 90%, what is the battery level after 7 hours?", A = "50%", B = "55%", C = "60%", D = "65%", CorrectAnswer = "B" },
+                new Question { QuestionText = "Kung isang motorcycle nagkakahalaga ng ₱85,000 at may 5% downpayment, magkano ang downpayment?", A = "₱4,250", B = "₱4,500", C = "₱5,000", D = "₱4,750", CorrectAnswer = "A" },
+                new Question { QuestionText = "Isang jeep nagdala ng 120 pasahero sa 3 trips. Kung pantay ang pasahero kada trip, ilan kada trip?", A = "40", B = "30", C = "45", D = "50", CorrectAnswer = "A" },
+                new Question { QuestionText = "Kung ang isang empleyado kumikita ng ₱12,000 at nakatanggap ng 8% bonus, magkano kabuuan kasama bonus?", A = "₱12,960", B = "₱13,000", C = "₱12,800", D = "₱13,200", CorrectAnswer = "A" },
+                new Question { QuestionText = "May 2.5 kg ng bigas. Ilang gramo ito?", A = "2,500 g", B = "2,050 g", C = "250 g", D = "2,750 g", CorrectAnswer = "A" },
+                new Question { QuestionText = "Ang tasa ng pagbabago ng presyo mula ₱450 naging ₱495, ano ang porsyento ng pagtaas?", A = "10%", B = "9%", C = "11%", D = "12%", CorrectAnswer = "A" },
             };
 
             // Initialize answeredQuestions with false values (indicating that no question has been answered yet)
@@ -172,8 +168,6 @@ namespace DCP.Resources
                     progressBar1.Value = progressDuration - timeRemaining;
                 }
                 textBox2.Text = TimeSpan.FromSeconds(progressDuration - timeRemaining).ToString("hh\\:mm\\:ss");
-
-                count.Play();
 
                 timeRemaining--;
             }

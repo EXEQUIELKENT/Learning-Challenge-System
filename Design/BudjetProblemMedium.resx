@@ -117,6 +117,51 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="richTextBox2.Text" xml:space="preserve">
+    <value>Paghahanda
+
+• Humanap ng tahimik at kumportableng lugar para maupo.
+
+• I-relax ang iyong katawan at huminga nang malalim ng ilang beses para makapag-focus.
+
+• Maghanda ng ballpen at papel o cellphone/tablet para sa iyong mga sagot.
+
+Habang Ginagawa ang Hamon
+
+• Basahing mabuti ang sitwasyon o problemang ibinigay.
+
+• Suriin ang mga numero at mga limitasyong nakasaad sa hamon.
+
+• Mag-isip nang maayos at dahan-dahan sa bawat hakbang ng solusyon.
+
+• Huwag magmadali; gamitin ang lohika sa pagdedesisyon.
+
+• Pindutin ang DONE kapag tapos ka na sa lahat ng tanong.
+
+• Manatiling kalmado at nakatuon habang hinahanap ang pinakamahusay na sagot.
+
+• Basahing mabuti ang bawat tanong bago pumili ng sagot (A, B, C, o D).
+
+Pagkatapos ng Hamon
+
+• Kapag natapos mo na o ubos na ang oras, awtomatikong babalik ka sa homepage.
+
+🔹 Gabay (Guide)
+
+• Umupo nang maayos sa lugar na walang masyadong ingay o istorbo.
+
+• Saglit na balikan ang mga datos ng iyong budget bago simulan.
+
+• Hatiin ang problema sa maliliit na bahagi para mas madali mong masolusyonan.
+
+Paalala
+
+Ang hamon na ito ay ginawa upang palakasin ang iyong kakayahan sa pagba-budget, pagplano ng pera, at paglutas ng problema.
+Layunin nitong hasaing ang iyong pagdedesisyon lalo na kapag may limitadong pera o oras.
+
+“Mag-focus, magplano nang maayos, at tanggapin ang hamon sa pagtitipid at tamang paggastos!”
+</value>
+  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="pictureBox11.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -575,51 +620,6 @@
         ExkZuXX16tXtzS1yBDkAAAAgN2g0Oh0DP3fuXCCdpW3JkiUdp02b9v706dMHrly58u09e/aEJCQk5MPp
         TAEAAACFQCPUad44dctTgJuvY0EYAAAAAAAAAAAAAPCS/B/Rm4PZHDxVUwAAAABJRU5ErkJggg==
 </value>
-  </data>
-  <data name="richTextBox2.Text" xml:space="preserve">
-    <value>Preparation
-
-• Find a quiet and comfortable place to sit.
-
-• Relax your body and take a few deep breaths to center yourself.
-
-• Have a pen and paper or a digital device ready to take notes.
-
-• Review your current budget or financial situation briefly before starting.
-
-During the Challenge
-
-• Read the scenario or problem carefully.
-
-• Analyze the numbers and constraints presented in the challenge.
-
-• Stay focused and think through each possible solution step-by-step.
-
-• Avoid rushing; take your time to solve the problem logically.
-
-• Press DONE if you finish answering the questions.
-
-• Stay calm and focused, working towards finding the best solution.
-
-• Read each question carefully before selecting your answer (A, B, C and D).
-
-Finishing the Challenge
-
-• After solving the problem or when time runs out, you’ll be returned to the homepage.
-
-Guide
-
-• Ensure you’re seated in a comfortable position with minimal distractions.
-
-• Take a moment to review all financial data before diving into the problem.
-
-• Break the challenge down into manageable pieces to avoid feeling overwhelmed.
-
-Note
-
-This challenge is designed to help improve budgeting skills, financial planning, and problem-solving abilities. The goal is to sharpen your decision-making under pressure.
-
-"Stay focused, plan wisely, and embrace the financial challenge!"</value>
   </data>
   <data name="button4.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>

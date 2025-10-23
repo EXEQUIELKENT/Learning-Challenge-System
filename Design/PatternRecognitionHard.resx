@@ -118,47 +118,49 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="richTextBox2.Text" xml:space="preserve">
-    <value>Preparation
+    <value>Paghahanda
 
-• Find a comfortable and quiet place to sit or stand.  
+• Humanap ng komportableng at tahimik na lugar kung mauupo o tatayo.
 
-• Relax your face and shoulders before starting.  
+• I-relax ang mukha at balikat bago magsimula.
 
-• Focus your eyes on a stationary object or spot directly in front of you.  
+• Piliin ang isang titik o maliit na punto na titignan, ituon ang iyong mga mata doon.
 
-• After pressing START, there’s a 4-second countdown to begin the challenge.  
+• Pindutin ang START kapag handa ka; may 4-segundong countdown bago magsimula.
 
-During the Challenge
+Habang Ginagawa ang Hamon
 
-• Keep your eyes open and focused on the chosen spot.
-  
-• Try to identify and match patterns as quickly as possible, but avoid rushing.  
+• Panatilihing bukas at nakafokus ang mga mata sa napiling punto.
 
-• Press DONE if you finish answering the questions.
- 
-• Stay calm and think critically, focusing on each pattern carefully. 
+• Tingnan nang maigi ang bawat pattern at subukang kilalanin ang pagkakatulad o pagkakaiba.
 
-• Read each question carefully before selecting your answer (A, B, C and D).
+• Sagutin nang mabilis pero huwag magmadali, mas mahalaga ang tama kaysa bilis.
 
-Finishing the Challenge
+• Pindutin ang DONE kapag tapos ka nang sumagot sa lahat ng tanong.
 
-• After the challenge is completed, you will automatically be returned to the homepage.
-  
-• Review your results and try to improve with each attempt.  
+• Manatiling kalmado at mag-isip nang maayos bago pumili ng sagot (A, B, C, o D).
 
-Guide
+Pagkatapos ng Hamon
 
-• Sit or stand in a relaxed posture.  
+• Kapag natapos ang hamon, awtomatiko kang ibabalik sa homepage.
 
-• Choose a spot to focus on, maintaining a steady and calm gaze.  
+• Suriin ang iyong resulta at subukang pagbutihin ito sa susunod na pagsubok.
 
-• Pay attention to the details of each pattern. Take your time to understand the differences and similarities.  
+Gabay
 
-Note
+• Umupo o tumayo nang relax at hindi nagmamadali.
 
-This challenge is designed to improve focus, attention to detail, and pattern recognition skills. Be patient with yourself and enjoy the process of sharpening your mind.
+• Panatilihin ang steady na tingin sa napiling spot para hindi madistract.
 
-"Focus your mind, analyze the patterns, and embrace the challenge!"  
+• Pansinin ang maliliit na detalye ng bawat pattern at pagkakasunod-sunod ng mga bilang.
+
+• Kung nahihirapan, huminga muna at i-break ang pattern sa maliliit na bahagi para mas madaling maunawaan.
+
+Paalala
+
+Ang hamong ito ay ginawa para hasaing ang iyong pokus, pansin sa detalye, at kakayahan sa pagkilala ng pattern. Maging mapag-pasensya at i-enjoy ang proseso ng pag-aaral.
+
+"Tutukan ang isip, suriin ang pattern, at tanggapin ang hamon!"
 </value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />

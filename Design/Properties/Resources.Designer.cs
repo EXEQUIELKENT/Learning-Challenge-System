@@ -63,6 +63,36 @@ namespace DCP.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Addition_Easy_M {
+            get {
+                object obj = ResourceManager.GetObject("Addition_Easy_M", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Addition_Hard_M {
+            get {
+                object obj = ResourceManager.GetObject("Addition_Hard_M", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Addition_Medium_M {
+            get {
+                object obj = ResourceManager.GetObject("Addition_Medium_M", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap AG {
             get {
                 object obj = ResourceManager.GetObject("AG", resourceCulture);
@@ -562,6 +592,36 @@ namespace DCP.Properties {
         internal static System.Drawing.Bitmap DiamondPushUpT {
             get {
                 object obj = ResourceManager.GetObject("DiamondPushUpT", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Division_Easy_M {
+            get {
+                object obj = ResourceManager.GetObject("Division_Easy_M", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Division_Hard_M {
+            get {
+                object obj = ResourceManager.GetObject("Division_Hard_M", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Division_Medium_M {
+            get {
+                object obj = ResourceManager.GetObject("Division_Medium_M", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -1538,6 +1598,36 @@ namespace DCP.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Multiplication_Easy_M {
+            get {
+                object obj = ResourceManager.GetObject("Multiplication_Easy_M", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Multiplication_Hard_M {
+            get {
+                object obj = ResourceManager.GetObject("Multiplication_Hard_M", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Multiplication_Medium_M {
+            get {
+                object obj = ResourceManager.GetObject("Multiplication_Medium_M", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap No_Blinking__Easy_H {
             get {
                 object obj = ResourceManager.GetObject("No_Blinking__Easy_H", resourceCulture);
@@ -2396,6 +2486,36 @@ namespace DCP.Properties {
         internal static System.Drawing.Bitmap Story_Retelling__Medium_F {
             get {
                 object obj = ResourceManager.GetObject("Story_Retelling__Medium_F", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Subtraction_Easy_M {
+            get {
+                object obj = ResourceManager.GetObject("Subtraction_Easy_M", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Subtraction_Hard_M {
+            get {
+                object obj = ResourceManager.GetObject("Subtraction_Hard_M", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Subtraction_Medium_M {
+            get {
+                object obj = ResourceManager.GetObject("Subtraction_Medium_M", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

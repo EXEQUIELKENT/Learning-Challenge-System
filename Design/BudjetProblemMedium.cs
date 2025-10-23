@@ -46,109 +46,104 @@ namespace DCP.Resources
             InitializeComponent();
             questions = new List<Question>
             {
-                new Question { QuestionText = "A person has a monthly income of ₱125,000. They spend ₱60,000 on rent, ₱20,000 on groceries, and ₱7,500 on utilities. How much money is left for other expenses?", A = "₱35,000", B = "₱37,500", C = "₱37,500", D = "₱40,000", CorrectAnswer = "C" },
-                new Question { QuestionText = "If you have ₱25,000 in savings and you spend ₱17,500 on groceries, how much money will remain in your savings?", A = "₱5,000", B = "₱7,500", C = "₱10,000", D = "₱2,500", CorrectAnswer = "A" },
-                new Question { QuestionText = "A family has a monthly budget of ₱200,000. They spend ₱60,000 on housing, ₱40,000 on food, ₱20,000 on transportation, and ₱10,000 on entertainment. How much is left for savings?", A = "₱50,000", B = "₱75,000", C = "₱60,000", D = "₱70,000", CorrectAnswer = "A" },
-                new Question { QuestionText = "You earn ₱160,000 per month and spend ₱50,000 on rent, ₱25,000 on transportation, and ₱15,000 on utilities. What is your remaining balance?", A = "₱70,000", B = "₱75,000", C = "₱80,000", D = "₱85,000", CorrectAnswer = "A" },
-                new Question { QuestionText = "If you have a monthly income of ₱150,000 and you spend ₱60,000 on rent, ₱20,000 on groceries, and ₱15,000 on transportation, what percentage of your income is left?", A = "30%", B = "40%", C = "50%", D = "60%", CorrectAnswer = "B" },
+                new Question { QuestionText = "Si Ana ay tumatanggap ng buwanang alkansya na ₱1,200. Gumastos siya ng ₱350 para sa pamasahe at ₱420 para sa meryenda sa loob ng isang buwan. Magkano ang natira sa kanyang alkansya?", A = "₱430", B = "₱450", C = "₱470", D = "₱400", CorrectAnswer = "A" },
+                new Question { QuestionText = "Ang pamilya ni Mang Ben ay may buwanang kita na ₱25,000. Gumastos sila ng ₱8,000 sa renta, ₱6,000 sa pagkain, at ₱2,000 sa kuryente. Magkano ang natira?", A = "₱9,000", B = "₱10,000", C = "₱8,500", D = "₱7,000", CorrectAnswer = "A" },
+                new Question { QuestionText = "Sa pista ng barangay bumili ang mag-anak ng 3 kilo ng bigas ₱45/kilo at mga pang-hapunan na ₱600. Kung may ₱2,000 na inilaan, magkano ang kulang o sobra?", A = "₱715 sobra", B = "₱715 kulang", C = "₱155 sobra", D = "₱155 kulang", CorrectAnswer = "D" },
+                new Question { QuestionText = "Nag-volunteer si Carlo sa relief drive. Bawat hygiene kit ay ₱350. Kung may 12 pamilya, magkano ang ginastos?", A = "₱4,200", B = "₱3,500", C = "₱4,700", D = "₱4,000", CorrectAnswer = "A" },
+                new Question { QuestionText = "Si Liza ay nagtitinda ng pandesal at kumita ng ₱1,500 sa isang linggo. Kung ilalaan niya ang 30% para sa ipon, magkano ang mapupunta sa ipon kada linggo?", A = "₱450", B = "₱350", C = "₱300", D = "₱400", CorrectAnswer = "A" },
                 
-                new Question { QuestionText = "A person is planning to save 20% of their income each month. If their income is ₱125,000, how much will they save in a month?", A = "₱25,000", B = "₱30,000", C = "₱35,000", D = "₱40,000", CorrectAnswer = "A" },
-                new Question { QuestionText = "You have a budget of ₱75,000 for the month. If you spend ₱25,000 on rent, ₱15,000 on food, and ₱10,000 on utilities, how much money is left for entertainment?", A = "₱15,000", B = "₱20,000", C = "₱25,000", D = "₱30,000", CorrectAnswer = "B" },
-                new Question { QuestionText = "If your monthly expenses total ₱100,000 and your income is ₱125,000, how much is left for savings?", A = "₱15,000", B = "₱20,000", C = "₱25,000", D = "₱30,000", CorrectAnswer = "B" },
-                new Question { QuestionText = "A household budget is set at ₱250,000 per month. If they spend ₱75,000 on mortgage, ₱25,000 on food, and ₱10,000 on insurance, how much is left for savings?", A = "₱140,000", B = "₱130,000", C = "₱120,000", D = "₱110,000", CorrectAnswer = "A" },
-                new Question { QuestionText = "A person has a total monthly income of ₱175,000. They spend ₱50,000 on housing, ₱30,000 on food, and ₱20,000 on utilities. How much money is left for savings?", A = "₱50,000", B = "₱60,000", C = "₱75,000", D = "₱85,000", CorrectAnswer = "B" },
+                new Question { QuestionText = "May proyekto sa klase na may pondo ₱10,000. Gumastos ng ₱2,500 para sa materyales, ₱3,000 sa pag-print, at ₱1,200 sa dekorasyon. Magkano ang natitira?", A = "₱3,300", B = "₱3,200", C = "₱2,300", D = "₱3,800", CorrectAnswer = "A" },
+                new Question { QuestionText = "Nag-uwi si Jun ng 5 lata ng bunga ng niyog sa halagang ₱85 bawat isa. Kung nagbigay siya ng ₱500, magkano ang sukli?", A = "₱75", B = "₱100", C = "₱125", D = "₱150", CorrectAnswer = "A" },
+                new Question { QuestionText = "Ang guro ay naglaan ng ₱6,000 para sa educational trip. Kung may 20 mag-aaral at pantay ang babayaran, magkano bawat isa?", A = "₱300", B = "₱350", C = "₱250", D = "₱400", CorrectAnswer = "A" },
+                new Question { QuestionText = "Si Nene bumili ng 2 kg mangga ₱120/kg at tray ng itlog ₱180. Kung nagbayad siya ng ₱500, magkano ang sukli?", A = "₱80", B = "₱100", C = "₱60", D = "₱200", CorrectAnswer = "A" },
+                new Question { QuestionText = "Sari-sari store ni Aling Rosa ay may paninda ₱4,500. Kung kumita siya ng 10% tubo, magkano ang tubo?", A = "₱450", B = "₱400", C = "₱500", D = "₱350", CorrectAnswer = "A" },
+               
+                new Question { QuestionText = "Si Marco ay nag-ipon ng ₱8,400 sa loob ng 6 buwan. Kung pantay ang naiipon kada buwan, magkano kada buwan?", A = "₱1,400", B = "₱1,600", C = "₱1,200", D = "₱1,800", CorrectAnswer = "A" },
+                new Question { QuestionText = "Magkano ang ambag ng bawat isa kung kailangan ng klase ng ₱2,700 para sa van at ₱1,200 para sa pagkain at 15 mag-aaral ang magbabayad pantay?", A = "₱260", B = "₱300", C = "₱280", D = "₱240", CorrectAnswer = "A" },
+                new Question { QuestionText = "Bumili ang pamilya ng 3 kg isda ₱180/kg at gulay ₱95. Kung ₱700 ang badyet, magkano ang natira?", A = "₱145", B = "₱225", C = "₱170", D = "₱95", CorrectAnswer = "A" },
+                new Question { QuestionText = "May ₱5,000 para sa project. Gumastos ng ₱1,250, ₱950, at ₱600. Magkano ang natira?", A = "₱2,200", B = "₱2,800", C = "₱3,200", D = "₱1,900", CorrectAnswer = "A" },
+                new Question { QuestionText = "Tita Mayang bumili ng 10 kg bigas ₱48/kg at ulam ₱1,250. Kung naglaan siya ng ₱2,000, kulang o sobra at magkano?", A = "₱570 sobra", B = "₱570 kulang", C = "₱150 sobra", D = "₱150 kulang", CorrectAnswer = "B" },
                 
-                new Question { QuestionText = "You earn ₱80,000 a month. If 25% of your salary is deducted for taxes and 10% for insurance, how much is left?", A = "₱50,000", B = "₱55,000", C = "₱52,000", D = "₱54,000", CorrectAnswer = "C" },
-                new Question { QuestionText = "If a person saves 30% of their ₱90,000 income, how much do they save monthly?", A = "₱25,000", B = "₱27,000", C = "₱30,000", D = "₱35,000", CorrectAnswer = "B" },
-                new Question { QuestionText = "A family spends 40% of their ₱200,000 monthly income on needs and 20% on wants. How much is left?", A = "₱80,000", B = "₱100,000", C = "₱120,000", D = "₱140,000", CorrectAnswer = "A" },
-                new Question { QuestionText = "You want to save ₱1,000,000 in 5 years. If you save an equal amount each month, how much should you save?", A = "₱15,000", B = "₱16,500", C = "₱17,000", D = "₱18,000", CorrectAnswer = "C" },
-                new Question { QuestionText = "A business earns ₱500,000 per quarter. If 40% goes to expenses, how much is left after a year?", A = "₱800,000", B = "₱900,000", C = "₱1,000,000", D = "₱1,200,000", CorrectAnswer = "B" },
+                new Question { QuestionText = "Sari-sari shop bumili ng softdrinks ₱1,200 kabuuan at ititinda na may 15% kita. Magkano kabuuang bentahan?", A = "₱1,380", B = "₱1,320", C = "₱1,440", D = "₱1,500", CorrectAnswer = "A" },
+                new Question { QuestionText = "Ang pamasahe sa jeepney ay ₱9. Kung gumastos ang estudyante ng ₱81 sa isang linggo, ilang biyahe iyon?", A = "9 biyahe", B = "8 biyahe", C = "10 biyahe", D = "7 biyahe", CorrectAnswer = "A" },
+                new Question { QuestionText = "Nag-donate si Kuya Paolo ng ₱2,500 para sa relief at hinati sa 25 pamilya. Magkano bawat pamilya?", A = "₱100", B = "₱125", C = "₱150", D = "₱75", CorrectAnswer = "B" },
+                new Question { QuestionText = "May pondo ₱3,600 para sa stickers. Kailangan ng 12 packs ₱275 bawat pack. Kulang o sobra at magkano?", A = "₱700 kulang", B = "₱700 sobra", C = "₱300 kulang", D = "₱300 sobra", CorrectAnswer = "A" },
+                new Question { QuestionText = "Bumili ang barangay ng 4 play balls ₱420 bawat isa. Kung may donasyon na ₱2,000, magkano pang kailangan kolektahin?", A = "₱680", B = "₱720", C = "₱480", D = "₱560", CorrectAnswer = "A" },
                 
-                new Question { QuestionText = "Your household expenses total ₱45,000 a month. If this is 60% of your salary, what is your monthly income?", A = "₱70,000", B = "₱75,000", C = "₱80,000", D = "₱85,000", CorrectAnswer = "B" },
-                new Question { QuestionText = "If you invest ₱500,000 in a business and earn 10% profit monthly, how much is your profit after one year?", A = "₱600,000", B = "₱650,000", C = "₱700,000", D = "₱750,000", CorrectAnswer = "D" },
-                new Question { QuestionText = "A person budgets 35% of their ₱120,000 salary for rent. How much is that?", A = "₱35,000", B = "₱38,000", C = "₱40,000", D = "₱42,000", CorrectAnswer = "C" },
-                new Question { QuestionText = "You buy a car for ₱1,200,000 with a 10% down payment. How much do you need to loan?", A = "₱1,000,000", B = "₱1,050,000", C = "₱1,080,000", D = "₱1,100,000", CorrectAnswer = "A" },
-                new Question { QuestionText = "If your investments increase by 5% monthly, how much will ₱500,000 be worth in 6 months?", A = "₱600,000", B = "₱625,000", C = "₱650,000", D = "₱675,000", CorrectAnswer = "B" },
-                new Question { QuestionText = "A person has a salary of ₱85,000. They save 15%, spend 50% on expenses, and invest 20%. How much is left for miscellaneous expenses?", A = "₱8,500", B = "₱10,000", C = "₱12,750", D = "₱14,500", CorrectAnswer = "C" },
+                new Question { QuestionText = "Naglibot ang pamilya sa Intramuros at gumastos ng ₱1,250 para sa entrance at pagkain. Kung may ₱2,000 na inilaan, magkano ang natira?", A = "₱750", B = "₱650", C = "₱800", D = "₱700", CorrectAnswer = "A" },
+                new Question { QuestionText = "Isang estudyante bumili ng 3 notebooks ₱45 bawat isa at lapis set ₱60. Kung nagbayad siya ng ₱200, magkano ang sukli?", A = "₱5", B = "₱10", C = "₱20", D = "₱15", CorrectAnswer = "B" },
+                new Question { QuestionText = "Aling Nena kumita ng ₱900 selling puto sa isang araw. Kung 40% ilalaan bilang puhunan muli, magkano ang itatabi?", A = "₱360", B = "₱450", C = "₱300", D = "₱400", CorrectAnswer = "A" },
+                new Question { QuestionText = "May pondong ₱8,000 para sa cleanup. Ginamit ang 1/4 sa pagkain at 3/8 sa kagamitan. Magkano ang natitira?", A = "₱3,000", B = "₱3,500", C = "₱3,250", D = "₱4,000", CorrectAnswer = "C" },
+                new Question { QuestionText = "Sa palengke, nagbenta si Mang Tonyo ng 20 sako palay ₱1,850 bawat sako. Kung ginastos niya ₱6,000 sa pagdala at helpers, magkano ang kabuuang kita bago gastos?", A = "₱37,000", B = "₱36,000", C = "₱38,000", D = "₱35,000", CorrectAnswer = "A" },
                 
-                new Question { QuestionText = "You take a loan of ₱500,000 with a 12% annual interest. How much interest do you pay after one year?", A = "₱50,000", B = "₱55,000", C = "₱60,000", D = "₱65,000", CorrectAnswer = "C" },
-                new Question { QuestionText = "A family earns ₱150,000 per month and allots 30% for food, 20% for rent, and 10% for transportation. How much remains?", A = "₱60,000", B = "₱70,000", C = "₱75,000", D = "₱80,000", CorrectAnswer = "B" },
-                new Question { QuestionText = "You invest ₱250,000 in a business and gain a 15% return. How much profit do you earn?", A = "₱35,000", B = "₱37,500", C = "₱40,000", D = "₱42,500", CorrectAnswer = "B" },
-                new Question { QuestionText = "Your monthly expenses are ₱60,000, which is 75% of your income. What is your salary?", A = "₱75,000", B = "₱80,000", C = "₱85,000", D = "₱90,000", CorrectAnswer = "A" },
-                new Question { QuestionText = "A student has a budget of ₱12,000 per month. They spend ₱3,000 on rent, ₱4,000 on food, and ₱2,500 on transportation. How much is left?", A = "₱2,000", B = "₱2,500", C = "₱3,000", D = "₱3,500", CorrectAnswer = "B" },
+                new Question { QuestionText = "Si Maya nag-ipon ng ₱2,400 sa 6 buwan. Kung 1/3 ginamit sa school project, magkano ang natira?", A = "₱1,600", B = "₱1,800", C = "₱1,400", D = "₱1,200", CorrectAnswer = "A" },
+                new Question { QuestionText = "PTA may ₱12,000. Naglaan sila ng ₱4,500 sa cleaning supplies at ₱3,000 sa prizes. Magkano ang natira?", A = "₱4,500", B = "₱4,200", C = "₱3,500", D = "₱5,000", CorrectAnswer = "B" },
+                new Question { QuestionText = "May paninda sa palengke ₱2,350 at nagkaroon ng 20% diskwento. Magkano ang binayaran matapos ang diskwento?", A = "₱1,880", B = "₱1,900", C = "₱2,000", D = "₱1,750", CorrectAnswer = "A" },
+                new Question { QuestionText = "Si Rico bumili ng bagong uniforme ₱450 at sapatos ₱1,200. Kung may ₱2,000 na inilaan, magkano ang natira?", A = "₱350", B = "₱450", C = "₱200", D = "₱150", CorrectAnswer = "C" },
                 
-                new Question { QuestionText = "You buy a house for ₱4,000,000 with a 20% down payment. How much is your loan amount?", A = "₱2,800,000", B = "₱3,000,000", C = "₱3,200,000", D = "₱3,400,000", CorrectAnswer = "A" },
-                new Question { QuestionText = "A person saves ₱5,000 every month. How much will they have saved after 3 years?", A = "₱160,000", B = "₱170,000", C = "₱180,000", D = "₱190,000", CorrectAnswer = "C" },
-                new Question { QuestionText = "A company earns ₱500,000 per quarter. If expenses are ₱120,000, what is the net income for the year?", A = "₱1,480,000", B = "₱1,500,000", C = "₱1,520,000", D = "₱1,550,000", CorrectAnswer = "B" },
-                new Question { QuestionText = "You spend ₱3,500 per month on groceries. If food prices increase by 5%, how much will you spend next month?", A = "₱3,675", B = "₱3,700", C = "₱3,725", D = "₱3,750", CorrectAnswer = "A" },
-                new Question { QuestionText = "A person pays ₱15,000 in monthly rent, which is 25% of their income. What is their monthly salary?", A = "₱55,000", B = "₱58,000", C = "₱60,000", D = "₱62,000", CorrectAnswer = "C" },
-                new Question { QuestionText = "A couple earns ₱180,000 monthly and saves 20% of it. How much will they save in a year?", A = "₱400,000", B = "₱420,000", C = "₱432,000", D = "₱450,000", CorrectAnswer = "C" },
-
-                new Question { QuestionText = "Your savings account earns 4% interest annually. If you deposit ₱100,000, how much interest will you earn after one year?", A = "₱4,000", B = "₱4,500", C = "₱5,000", D = "₱5,500", CorrectAnswer = "A" },
-                new Question { QuestionText = "If a company's annual revenue is ₱5,000,000 and expenses are 60% of revenue, how much is the profit?", A = "₱1,800,000", B = "₱1,900,000", C = "₱2,000,000", D = "₱2,100,000", CorrectAnswer = "C" },
-                new Question { QuestionText = "You spend ₱1,200 daily. If you reduce spending by 10%, how much will you save in a month?", A = "₱3,200", B = "₱3,600", C = "₱3,800", D = "₱4,000", CorrectAnswer = "B" },
-                new Question { QuestionText = "A store sells an item for ₱500 and makes a 20% profit. What is the cost price?", A = "₱400", B = "₱420", C = "₱440", D = "₱460", CorrectAnswer = "A" },
-                new Question { QuestionText = "A business spends ₱2,000,000 annually, which is 70% of its total income. What is the total income?", A = "₱2,500,000", B = "₱2,750,000", C = "₱2,850,000", D = "₱3,000,000", CorrectAnswer = "D" },
+                new Question { QuestionText = "Ang mangga ay ibinebenta ng 3 para sa ₱100. Kung bibili ka ng 9 mangga, magkano ang babayaran?", A = "₱300", B = "₱330", C = "₱270", D = "₱250", CorrectAnswer = "A" },
+                new Question { QuestionText = "Sa noche buena, bumili ang pamilya ng hamon ₱850 at queso de bola ₱1,200. Kung may ₱3,000, magkano ang natira?", A = "₱950", B = "₱1,000", C = "₱850", D = "₱1,150", CorrectAnswer = "A" },
+                new Question { QuestionText = "Si Luis nagbayad ng ₱5,000 para sa 5 buwan ng tuition. Magkano ang bayad kada buwan?", A = "₱1,000", B = "₱900", C = "₱1,050", D = "₱1,200", CorrectAnswer = "A" },
+                new Question { QuestionText = "May kooperatiba na kumita ng ₱50,000 at nagbahagi ng 10% bonus sa miyembro. Kung 25 miyembro, magkano ang natanggap bawat isa (pantay)?", A = "₱200", B = "₱250", C = "₱180", D = "₱220", CorrectAnswer = "B" },
                 
-                new Question { QuestionText = "A person saves ₱10,000 each month. If they withdraw ₱5,000 per month, how much will they have after 1 year?", A = "₱50,000", B = "₱55,000", C = "₱60,000", D = "₱65,000", CorrectAnswer = "C" },
-                new Question { QuestionText = "If a company offers a 12% salary increase on a ₱50,000 salary, what is the new salary?", A = "₱54,000", B = "₱55,000", C = "₱56,000", D = "₱56,500", CorrectAnswer = "C" },
-                new Question { QuestionText = "A company reduces its budget by 15%. If the previous budget was ₱3,000,000, what is the new budget?", A = "₱2,500,000", B = "₱2,550,000", C = "₱2,600,000", D = "₱2,650,000", CorrectAnswer = "B" },
-            };
+                new Question { QuestionText = "Ang prutas sa palengke ay bumaba ng presyo mula ₱80 sa ₱64 (ilang porsyento bawas)?", A = "20%", B = "15%", C = "25%", D = "10%", CorrectAnswer = "A" },
+                new Question { QuestionText = "Bumili ng 2 trays itlog ₱180 bawat tray at 2 kg bigas ₱48/kg. Kung nagbayad ng ₱500, magkano ang sukli?", A = "₱44", B = "₱38", C = "₱50", D = "₱60", CorrectAnswer = "A" }
+    };
 
-            // Initialize answeredQuestions with false values (indicating that no question has been answered yet)
-            Random rand = new Random();
-            questions = questions.OrderBy(q => rand.Next()).Take(10).ToList();
+        // Initialize answeredQuestions with false values (indicating that no question has been answered yet)
+        Random rand = new Random();
+        questions = questions.OrderBy(q => rand.Next()).Take(10).ToList();
 
-            answeredQuestions = new List<bool>(new bool[questions.Count]);
-            answeredAnswers = new List<string>();
-            for (int i = 0; i < questions.Count; i++)
-            {
-                answeredAnswers.Add(""); // Default empty answers
-            }
-
-            success = new SoundPlayer(DCP.Properties.Resources.Success);
-            success.Load();
-
-            count = new SoundPlayer(DCP.Properties.Resources.Countdown);
-            count.Load();
-
-            fail = new SoundPlayer(DCP.Properties.Resources.Fail);
-            fail.Load();
-
-            click = new SoundPlayer(DCP.Properties.Resources.Click2);
-            click.Load();
-
-            soundPlayer = new SoundPlayer(DCP.Properties.Resources.Counting);
-            soundPlayer.Load();
-
-            click.Play();
-            soundPlayer.Play();
-            fail.Play();
-            count.Play();
-            success.Play();
-
-            System.Threading.Thread.Sleep(10);
-            soundPlayer.Stop();
-            click.Stop();
-            fail.Stop();
-            count.Stop();
-            success.Stop();
-
-            timer = new Timer();
-            timer.Interval = 1000; // 1 second intervals
-            timer.Tick += Timer_Tick;
-
-            // Initialize TextBox for time to "00:00:00"
-            textBox2.Text = "00:00:00";
-
-            button1.Enabled = true;  // "START" button is enabled initially
-            pictureBoxA.Enabled = false;
-            pictureBoxB.Enabled = false;
-            pictureBoxC.Enabled = false;
-            pictureBoxD.Enabled = false;
-            pictureBox2.Enabled = false;
-            pictureBox3.Enabled = false;
+        answeredQuestions = new List<bool>(new bool[questions.Count]);
+        answeredAnswers = new List<string>();
+        for (int i = 0; i < questions.Count; i++)
+        {
+            answeredAnswers.Add(""); // Default empty answers
         }
+
+        success = new SoundPlayer(DCP.Properties.Resources.Success);
+        success.Load();
+
+        count = new SoundPlayer(DCP.Properties.Resources.Countdown);
+        count.Load();
+
+        fail = new SoundPlayer(DCP.Properties.Resources.Fail);
+        fail.Load();
+
+        click = new SoundPlayer(DCP.Properties.Resources.Click2);
+        click.Load();
+
+        soundPlayer = new SoundPlayer(DCP.Properties.Resources.Counting);
+        soundPlayer.Load();
+
+        click.Play();
+        soundPlayer.Play();
+        fail.Play();
+        count.Play();
+        success.Play();
+
+        System.Threading.Thread.Sleep(10);
+        soundPlayer.Stop();
+        click.Stop();
+        fail.Stop();
+        count.Stop();
+        success.Stop();
+
+        timer = new Timer();
+        timer.Interval = 1000; // 1 second intervals
+        timer.Tick += Timer_Tick;
+
+        // Initialize TextBox for time to "00:00:00"
+        textBox2.Text = "00:00:00";
+
+        button1.Enabled = true;  // "START" button is enabled initially
+        pictureBoxA.Enabled = false;
+        pictureBoxB.Enabled = false;
+        pictureBoxC.Enabled = false;
+        pictureBoxD.Enabled = false;
+        pictureBox2.Enabled = false;
+        pictureBox3.Enabled = false;
+            }
         //Function Codes
 
         private void Timer_Tick(object sender, EventArgs e)
@@ -161,8 +156,6 @@ namespace DCP.Resources
                     progressBar1.Value = progressDuration - timeRemaining;
                 }
                 textBox2.Text = TimeSpan.FromSeconds(progressDuration - timeRemaining).ToString("hh\\:mm\\:ss");
-
-                count.Play();
 
                 timeRemaining--;
             }

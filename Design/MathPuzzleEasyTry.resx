@@ -117,6 +117,55 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="richTextBox2.Text" xml:space="preserve">
+    <value>Paghahanda
+
+• Humanap ng komportableng at tahimik na lugar kung saan makakapag-concentrate ka.
+
+• I-relax ang iyong katawan, lalo na ang mga kamay at balikat, bago magsimula.
+
+• Linisin ang isipan at iwasan ang anumang makakagambala habang nagso-solve.
+
+• Kapag handa ka na, pindutin ang START upang simulan ang challenge. Magkakaroon ng 4-segundong countdown bago magsimula.
+
+Habang Ginagawa ang Challenge
+
+• Basahing mabuti ang bawat puzzle bago sagutin.
+
+• Gamitin ang mental math at lohika sa pagsagot
+
+• Huwag magmadali, mas mahalaga ang tamang sagot kaysa sa bilis.
+
+• Pindutin ang DONE kapag tapos ka nang sagutan ang lahat ng tanong.
+
+• Basahing mabuti ang bawat tanong bago pumili ng sagot (A, B, C, o D).
+
+• Manatiling kalmado, mag-isip nang maayos, at enjoyin ang bawat puzzle!
+
+Pagkatapos ng Challenge
+
+• Pagkatapos mong sagutan ang lahat ng puzzles, ipapakita ang iyong score.
+
+• Maaari mong ulitin ang challenge o subukan ang ibang level ng kahirapan (Easy, Medium, Hard).
+
+Gabay
+
+• Manatiling kalmado ngunit nakapokus sa bawat tanong.
+
+• Kung hindi mo agad makuha ang sagot, huminga muna at isipin muli.
+
+• Ang mahalaga ay maunawaan mo ang proseso ng pagkuha ng tamang sagot.
+
+• Kung magkamali, huwag mawalan ng loob  bawat pagkakamali ay pagkakataong matuto.
+
+Tandaan 
+
+Ang challenge na ito ay dinisenyo upang hasaing ang iyong isipan sa pagsusuri, lohikal na pag-iisip, at bilis sa matematika.
+Habang paulit-ulit mong ginagawa ito, mas magiging mabilis at matalino ka sa pagsagot ng mga math problems.
+
+"Hasain ang iyong isip, lutasin ang mga puzzle, at tanggapin ang hamon!"
+</value>
+  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="pictureBox11.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>

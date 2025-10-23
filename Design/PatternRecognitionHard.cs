@@ -45,78 +45,54 @@ namespace DCP.Resources
         {
             InitializeComponent();
             questions = new List<Question>
-            {
-                new Question { QuestionText = "If the pattern follows: Apple, Banana, Cherry, Dragonfruit, ?, what comes next?", A = "Elderberry", B = "Fig", C = "Grape", D = "Guava", CorrectAnswer = "A" },
-                new Question { QuestionText = "Which name logically follows this sequence: Albert, Benjamin, Charles, Daniel, ?", A = "Edward", B = "Francis", C = "George", D = "Ethan", CorrectAnswer = "A" },
-                new Question { QuestionText = "Which place follows in this pattern: Manila, Bangkok, Tokyo, Beijing, ?", A = "Jakarta", B = "Seoul", C = "Hanoi", D = "Taipei", CorrectAnswer = "B" },
-                new Question { QuestionText = "If A = 1, B = 3, C = 6, D = 10, then what is F?", A = "15", B = "21", C = "28", D = "36", CorrectAnswer = "C" },
-                new Question { QuestionText = "In a pattern of professions: Doctor, Engineer, Lawyer, Teacher, ?, what comes next?", A = "Pilot", B = "Scientist", C = "Architect", D = "Nurse", CorrectAnswer = "B" },
+            { 
+            new Question { QuestionText = "Ano ang susunod na numero: 2, 6, 12, 20, 30, ?", A = "36", B = "40", C = "42", D = "44", CorrectAnswer = "C" },
+            new Question { QuestionText = "Ano ang susunod na numero: 1, 4, 9, 16, 25, ?", A = "30", B = "35", C = "36", D = "49", CorrectAnswer = "C" },
+            new Question { QuestionText = "Ano ang susunod na numero: 3, 8, 15, 24, 35, ?", A = "46", B = "48", C = "50", D = "52", CorrectAnswer = "B" },
+            new Question { QuestionText = "Ano ang susunod na numero: 5, 11, 23, 47, 95, ?", A = "149", B = "183", C = "191", D = "199", CorrectAnswer = "C" },
+            new Question { QuestionText = "Ano ang susunod na numero: 2, 3, 5, 7, 11, 13, ?", A = "15", B = "16", C = "18", D = "17", CorrectAnswer = "D" },
 
-                new Question { QuestionText = "Find the next in the sequence: Tesla, Edison, Newton, Einstein, ?", A = "Hawking", B = "Galileo", C = "Curie", D = "Faraday", CorrectAnswer = "B" },
-                new Question { QuestionText = "Which word logically follows this pattern: Hot, Warm, Cool, ?", A = "Boiling", B = "Freezing", C = "Cold", D = "Chilly", CorrectAnswer = "C" },
-                new Question { QuestionText = "Which number logically follows the pattern: 19, 37, 79, 163, ?", A = "247", B = "329", C = "303", D = "331", CorrectAnswer = "D" },
-                new Question { QuestionText = "What city follows in this pattern: Paris, Berlin, Madrid, Rome, ?", A = "Vienna", B = "Lisbon", C = "London", D = "Athens", CorrectAnswer = "C" },
-                new Question { QuestionText = "What is the next logical letter in the sequence: C, G, L, R, ?", A = "T", B = "W", C = "X", D = "Z", CorrectAnswer = "B" },
+            new Question { QuestionText = "Ano ang susunod na numero: 1, 1, 2, 3, 5, 8, 13, ?", A = "19", B = "20", C = "21", D = "22", CorrectAnswer = "C" },
+            new Question { QuestionText = "Ano ang susunod na numero: 2, 4, 8, 14, 22, 32, ?", A = "42", B = "44", C = "46", D = "48", CorrectAnswer = "B" },
+            new Question { QuestionText = "Ano ang susunod na numero: 1, 2, 6, 24, 120, ?", A = "360", B = "480", C = "600", D = "720", CorrectAnswer = "D" },
+            new Question { QuestionText = "Ano ang susunod na numero: 3, 5, 9, 17, 33, ?", A = "49", B = "57", C = "65", D = "73", CorrectAnswer = "C" },
+            new Question { QuestionText = "Ano ang susunod na numero: 4, 7, 13, 25, 49, ?", A = "81", B = "97", C = "99", D = "101", CorrectAnswer = "B" },
 
-                new Question { QuestionText = "If the sequence follows: Mercury, Venus, Earth, Mars, ?, what comes next?", A = "Jupiter", B = "Saturn", C = "Neptune", D = "Uranus", CorrectAnswer = "A" },
-                new Question { QuestionText = "If 2, 6, 12, 20, ?, what comes next?", A = "26", B = "30", C = "32", D = "36", CorrectAnswer = "C" },
-                new Question { QuestionText = "Which book logically follows: The Fellowship of the Ring, The Two Towers, ?", A = "The Hobbit", B = "The Return of the King", C = "The Silmarillion", D = "Harry Potter", CorrectAnswer = "B" },
-                new Question { QuestionText = "What country follows this pattern: USA, Canada, Mexico, Guatemala, ?", A = "Panama", B = "El Salvador", C = "Honduras", D = "Costa Rica", CorrectAnswer = "C" },
-                new Question { QuestionText = "What profession follows this pattern: Pilot, Captain, Commander, ?", A = "Lieutenant", B = "General", C = "Marshal", D = "Admiral", CorrectAnswer = "D" },
+            new Question { QuestionText = "Ano ang susunod na numero: 10, 9, 7, 4, 0, -5, ?", A = "-8", B = "-11", C = "-12", D = "-13", CorrectAnswer = "B" },
+            new Question { QuestionText = "Ano ang susunod na numero: 1, 3, 7, 15, 31, ?", A = "47", B = "55", C = "63", D = "79", CorrectAnswer = "C" },
+            new Question { QuestionText = "Ano ang susunod na numero: 2, 5, 10, 17, 26, ?", A = "35", B = "36", C = "37", D = "39", CorrectAnswer = "C" },
+            new Question { QuestionText = "Ano ang susunod na numero: 6, 10, 18, 34, 66, ?", A = "98", B = "130", C = "132", D = "134", CorrectAnswer = "B" },
+            new Question { QuestionText = "Ano ang susunod na numero: 7, 11, 19, 35, 67, ?", A = "99", B = "111", C = "131", D = "131", CorrectAnswer = "C" },
 
-                new Question { QuestionText = "Which Philippine historical figure follows: Rizal, Bonifacio, Del Pilar, Mabini, ?", A = "Aguinaldo", B = "Luna", C = "Quezon", D = "Osmeña", CorrectAnswer = "B" },
-                new Question { QuestionText = "Which historical event follows: American Revolution, French Revolution, Industrial Revolution, ?", A = "Renaissance", B = "Civil Rights Movement", C = "World War I", D = "Russian Revolution", CorrectAnswer = "D" },
-                new Question { QuestionText = "Which TV show follows: Breaking Bad, Game of Thrones, The Walking Dead, ?", A = "Stranger Things", B = "House of Cards", C = "Westworld", D = "Sherlock", CorrectAnswer = "C" },
-                new Question { QuestionText = "What is the next famous inventor in this pattern: Galileo, Newton, Edison, Tesla, ?", A = "Faraday", B = "Curie", C = "Einstein", D = "Hawking", CorrectAnswer = "C" },
-                new Question { QuestionText = "Which Disney movie follows: Snow White, Cinderella, Sleeping Beauty, The Little Mermaid, ?", A = "Beauty and the Beast", B = "Mulan", C = "Aladdin", D = "Frozen", CorrectAnswer = "A" },
+            new Question { QuestionText = "Ano ang susunod na numero: 8, 14, 26, 50, 98, ?", A = "146", B = "170", C = "194", D = "200", CorrectAnswer = "C" },
+            new Question { QuestionText = "Ano ang susunod na numero: 1, 4, 11, 26, 57, ?", A = "92", B = "120", C = "120", D = "122", CorrectAnswer = "B" },
+            new Question { QuestionText = "Ano ang susunod na numero: 2, 12, 30, 56, 90, ?", A = "120", B = "132", C = "150", D = "162", CorrectAnswer = "B" },
+            new Question { QuestionText = "Ano ang susunod na numero: 11, 14, 20, 29, 41, ?", A = "52", B = "56", C = "58", D = "62", CorrectAnswer = "B" },
+            new Question { QuestionText = "Ano ang susunod na numero: 3, 6, 11, 18, 27, 38, ?", A = "48", B = "49", C = "50", D = "51", CorrectAnswer = "D" },
 
-                new Question { QuestionText = "What game title follows: Super Mario Bros, The Legend of Zelda, Metroid, ?", A = "Kirby", B = "Donkey Kong", C = "Mega Man", D = "Final Fantasy", CorrectAnswer = "B" },
-                new Question { QuestionText = "Which mobile brand follows: Nokia, BlackBerry, Apple, Samsung, ?", A = "Sony", B = "Xiaomi", C = "Huawei", D = "Motorola", CorrectAnswer = "C" },
-                new Question { QuestionText = "What follows this sequence: January, March, May, July, ?", A = "September", B = "October", C = "November", D = "August", CorrectAnswer = "C" },
-                new Question { QuestionText = "Which fast-food chain follows: McDonald's, Burger King, Wendy's, KFC, ?", A = "Subway", B = "Pizza Hut", C = "Taco Bell", D = "Domino's", CorrectAnswer = "C" },
-                new Question { QuestionText = "Which Pokémon follows this evolution pattern: Charmander, Charmeleon, ?", A = "Charizard", B = "Dragonite", C = "Arcanine", D = "Gyarados", CorrectAnswer = "A" },
+            new Question { QuestionText = "Ano ang susunod na numero: 5, 12, 23, 38, 57, ?", A = "72", B = "78", C = "80", D = "82", CorrectAnswer = "B" },
+            new Question { QuestionText = "Ano ang susunod na numero: 13, 26, 52, 104, ?", A = "156", B = "200", C = "208", D = "216", CorrectAnswer = "C" },
+            new Question { QuestionText = "Ano ang susunod na numero: 9, 16, 25, 36, 49, ?", A = "56", B = "60", C = "63", D = "64", CorrectAnswer = "D" },
+            new Question { QuestionText = "Ano ang susunod na numero: 1, 8, 27, 64, 125, ?", A = "216", B = "243", C = "256", D = "343", CorrectAnswer = "A" },
+            new Question { QuestionText = "Ano ang susunod na numero: 144, 121, 100, 81, 64, ?", A = "49", B = "36", C = "25", D = "16", CorrectAnswer = "A" },
 
-                new Question { QuestionText = "Which number follows this sequence: 2, 5, 10, 17, ?", A = "25", B = "26", C = "28", D = "30", CorrectAnswer = "B" },
-                new Question { QuestionText = "Which planet follows: Jupiter, Saturn, Uranus, ?", A = "Earth", B = "Neptune", C = "Venus", D = "Mars", CorrectAnswer = "B" },
-                new Question { QuestionText = "Which singer follows: Michael Jackson, Elvis Presley, Madonna, ?", A = "Whitney Houston", B = "Beyoncé", C = "Freddie Mercury", D = "Adele", CorrectAnswer = "C" },
-                new Question { QuestionText = "Which sport follows: Football, Basketball, Baseball, Tennis, ?", A = "Soccer", B = "Golf", C = "Cricket", D = "Hockey", CorrectAnswer = "D" },
-                new Question { QuestionText = "If the pattern follows: Shakespeare, Dickens, Hemingway, Orwell, ?, who comes next?", A = "Austen", B = "Tolkien", C = "Fitzgerald", D = "Poe", CorrectAnswer = "C" },
+            new Question { QuestionText = "Ano ang susunod na numero: 2, 3, 6, 11, 18, 27, ?", A = "36", B = "38", C = "39", D = "40", CorrectAnswer = "B" },
+            new Question { QuestionText = "Ano ang susunod na numero: 4, 16, 36, 64, 100, ?", A = "144", B = "150", C = "196", D = "256", CorrectAnswer = "A" },
+            new Question { QuestionText = "Ano ang susunod na numero: 5, 25, 125, 625, ?", A = "1000", B = "3125", C = "2500", D = "15625", CorrectAnswer = "B" },
+            new Question { QuestionText = "Ano ang susunod na numero: 1, 4, 10, 22, 46, ?", A = "70", B = "78", C = "94", D = "94", CorrectAnswer = "C" },
+            new Question { QuestionText = "Ano ang susunod na numero: 2, 7, 26, 101, ?", A = "404", B = "405", C = "505", D = "502", CorrectAnswer = "A" },
 
-                new Question { QuestionText = "Which event follows: World War I, World War II, Cold War, ?", A = "Industrial Revolution", B = "Vietnam War", C = "Moon Landing", D = "9/11", CorrectAnswer = "B" },
-                new Question { QuestionText = "Which scientist follows: Galileo, Newton, Einstein, Hawking, ?", A = "Bohr", B = "Curie", C = "Tesla", D = "Darwin", CorrectAnswer = "A" },
-                new Question { QuestionText = "Which social media platform follows: Friendster, MySpace, Facebook, Instagram, ?", A = "Snapchat", B = "TikTok", C = "Twitter", D = "Reddit", CorrectAnswer = "B" },
-                new Question { QuestionText = "If the sequence follows: iPhone 4, iPhone 5, iPhone 6, iPhone 7, ?, what comes next?", A = "iPhone 8", B = "iPhone X", C = "iPhone SE", D = "iPhone XR", CorrectAnswer = "A" },
-                new Question { QuestionText = "If 5, 12, 24, 41, ?, what comes next?", A = "60", B = "63", C = "65", D = "70", CorrectAnswer = "B" },
+            new Question { QuestionText = "Ano ang susunod na numero: 1, 6, 15, 28, 45, ?", A = "66", B = "75", C = "78", D = "90", CorrectAnswer = "A" },
+            new Question { QuestionText = "Ano ang susunod na numero: 3, 12, 27, 48, 75, ?", A = "100", B = "108", C = "111", D = "120", CorrectAnswer = "B" },
+            new Question { QuestionText = "Ano ang susunod na numero: 7, 14, 29, 58, 117, ?", A = "234", B = "236", C = "238", D = "240", CorrectAnswer = "B" },
+            new Question { QuestionText = "Ano ang susunod na numero: 2, 5, 10, 17, 26, 37, ?", A = "50", B = "48", C = "43", D = "52", CorrectAnswer = "A" },
+            new Question { QuestionText = "Ano ang susunod na numero: 5, 11, 21, 41, 81, ?", A = "141", B = "161", C = "201", D = "241", CorrectAnswer = "C" },
 
-                new Question { QuestionText = "Which Olympic host city follows: Athens, Beijing, London, Rio, ?", A = "Tokyo", B = "Paris", C = "Los Angeles", D = "Berlin", CorrectAnswer = "A" },
-                new Question { QuestionText = "If the pattern follows: New York, Los Angeles, Chicago, Houston, ?, which city comes next?", A = "Philadelphia", B = "San Francisco", C = "Phoenix", D = "Dallas", CorrectAnswer = "C" },
-                new Question { QuestionText = "Which software company follows: Microsoft, Apple, Google, Amazon, ?", A = "Facebook", B = "IBM", C = "Netflix", D = "Adobe", CorrectAnswer = "A" },
-                new Question { QuestionText = "Which car brand follows: Toyota, Honda, Ford, BMW, ?", A = "Mercedes", B = "Nissan", C = "Chevrolet", D = "Tesla", CorrectAnswer = "D" },
-                new Question { QuestionText = "Which chess champion follows: Fischer, Kasparov, Kramnik, Carlsen, ?", A = "Nakamura", B = "Ding Liren", C = "Caruana", D = "Anand", CorrectAnswer = "B" },
-
-                new Question { QuestionText = "Which cryptocurrency follows: Bitcoin, Ethereum, Litecoin, Dogecoin, ?", A = "Cardano", B = "Solana", C = "Polkadot", D = "Ripple", CorrectAnswer = "B" },
-                new Question { QuestionText = "Which video game follows: Counter-Strike, Call of Duty, Battlefield, Halo, ?", A = "Valorant", B = "Overwatch", C = "Apex Legends", D = "Destiny", CorrectAnswer = "A" },
-                new Question { QuestionText = "If the pattern follows: Tiger, Elephant, Lion, Giraffe, ?, what comes next?", A = "Cheetah", B = "Zebra", C = "Rhino", D = "Bear", CorrectAnswer = "B" },
-                new Question { QuestionText = "Which YouTuber follows: PewDiePie, MrBeast, Markiplier, Jacksepticeye, ?", A = "Dream", B = "Ninja", C = "Logan Paul", D = "Corpse", CorrectAnswer = "A" },
-                new Question { QuestionText = "Which anime follows: Naruto, One Piece, Bleach, Dragon Ball, ?", A = "Demon Slayer", B = "Attack on Titan", C = "Fairy Tail", D = "Death Note", CorrectAnswer = "C" },
-
-                new Question { QuestionText = "If the sequence follows: Rock, Paper, Scissors, ?, what comes next?", A = "Lizard", B = "Spock", C = "Both A and B", D = "None", CorrectAnswer = "C" },
-                new Question { QuestionText = "Which mobile app follows: WhatsApp, Messenger, Telegram, Signal, ?", A = "Viber", B = "WeChat", C = "Snapchat", D = "Discord", CorrectAnswer = "B" },
-                new Question { QuestionText = "Which horror movie follows: The Exorcist, The Shining, A Nightmare on Elm Street, The Conjuring, ?", A = "Hereditary", B = "It", C = "Insidious", D = "Paranormal Activity", CorrectAnswer = "B" },
-                new Question { QuestionText = "If the sequence follows: 4, 8, 15, 16, 23, ?, what comes next?", A = "42", B = "50", C = "30", D = "33", CorrectAnswer = "A" },
-                new Question { QuestionText = "Which Marvel superhero follows: Iron Man, Captain America, Thor, Hulk, ?", A = "Black Widow", B = "Doctor Strange", C = "Spider-Man", D = "Hawkeye", CorrectAnswer = "C" },
-
-                new Question { QuestionText = "Which Game of Thrones house follows: Stark, Lannister, Baratheon, Targaryen, ?", A = "Tully", B = "Martell", C = "Greyjoy", D = "Bolton", CorrectAnswer = "C" },
-                new Question { QuestionText = "If the pattern follows: Red, Orange, Yellow, Green, Blue, ?, what comes next?", A = "Indigo", B = "Violet", C = "Pink", D = "Cyan", CorrectAnswer = "A" },
-                new Question { QuestionText = "Which programming language follows: C, Java, Python, JavaScript, ?", A = "Swift", B = "Kotlin", C = "Ruby", D = "C#", CorrectAnswer = "D" },
-                new Question { QuestionText = "Which fast food chain follows: Jollibee, McDonald’s, KFC, Burger King, ?", A = "Wendy’s", B = "Chowking", C = "Shakey’s", D = "Pizza Hut", CorrectAnswer = "A" },
-                new Question { QuestionText = "Which K-pop group follows: BTS, Blackpink, EXO, TWICE, ?", A = "ITZY", B = "Stray Kids", C = "Red Velvet", D = "SEVENTEEN", CorrectAnswer = "D" },
-
-                new Question { QuestionText = "Which NBA team follows: Lakers, Bulls, Celtics, Warriors, ?", A = "Heat", B = "Suns", C = "Mavericks", D = "Bucks", CorrectAnswer = "A" },
-                new Question { QuestionText = "Which game console follows: PlayStation 1, PlayStation 2, PlayStation 3, ?", A = "PlayStation 4", B = "PlayStation 5", C = "Xbox 360", D = "Nintendo Switch", CorrectAnswer = "A" },
-                new Question { QuestionText = "Which car model follows: Mustang, Camaro, Challenger, Corvette, ?", A = "Lamborghini", B = "Ferrari", C = "Dodge Charger", D = "Tesla Model S", CorrectAnswer = "C" },
-                new Question { QuestionText = "Which element follows: Hydrogen, Helium, Lithium, Beryllium, ?", A = "Carbon", B = "Nitrogen", C = "Boron", D = "Oxygen", CorrectAnswer = "C" },
-               };
+            new Question { QuestionText = "Ano ang susunod na numero: 4, 9, 19, 39, 79, ?", A = "119", B = "159", C = "159", D = "159", CorrectAnswer = "B" },
+            new Question { QuestionText = "Ano ang susunod na numero: 10, 100, 1000, 10000, ?", A = "100000", B = "50000", C = "200000", D = "100001", CorrectAnswer = "A" },
+            new Question { QuestionText = "Ano ang susunod na numero: 1, 3, 9, 27, 81, ?", A = "120", B = "153", C = "243", D = "300", CorrectAnswer = "C" },
+            new Question { QuestionText = "Ano ang susunod na numero: 2, 6, 24, 120, 720, ?", A = "3600", B = "5040", C = "7200", D = "72000", CorrectAnswer = "B" },
+            };
 
             // Initialize answeredQuestions with false values (indicating that no question has been answered yet)
             Random rand = new Random();
@@ -185,8 +161,6 @@ namespace DCP.Resources
                     progressBar1.Value = progressDuration - timeRemaining;
                 }
                 textBox2.Text = TimeSpan.FromSeconds(progressDuration - timeRemaining).ToString("hh\\:mm\\:ss");
-
-                count.Play();
 
                 timeRemaining--;
             }

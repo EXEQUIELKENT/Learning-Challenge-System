@@ -118,49 +118,52 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="richTextBox2.Text" xml:space="preserve">
-    <value>Preparation:
+    <value>Paghahanda
 
-• Find a quiet, comfortable space where you can concentrate without distractions.
+• Humanap ng tahimik at kumportableng lugar kung saan wala masyadong sagabal.
 
-• Sit or stand in a relaxed posture. Take a few deep breaths to calm your mind.
+• Umupo o tumayo nang relax at huminga nang malalim para malinaw ang isip.
 
-• Gather a pencil and paper or an electronic device to take notes.
+• Maghanda ng lapis at papel o electronic device para isulat ang mga kalkulasyon.
 
-• When ready, press START, and the challenge will begin with a 4-second countdown.
+• Kapag handa ka na, pindutin ang START, may 4 na segundong countdown bago magsimula ang hamon.
 
-During the Challenge:
+Habang Ginagawa ang Hamon
 
-• Read the math problem carefully and focus on understanding the key elements.
+• Basahin nang mabuti ang bawat matematikang problema at unawain ang mahalagang bahagi ng sitwasyon.
 
-• Work through the problem step by step, ensuring each calculation is clear.
+• Hatiin ang problema sa maliliit na hakbang at lutasin ito isa-isa.
 
-• Try to solve the problem without rushing, but avoid overthinking.
+• Gamitin ang lohika at simpleng kalkulasyon; huwag magmadali pero iwasan din ang sobra-sobrang pagdadalawang-isip.
 
-• Press DONE if you finish answering the questions.
+• Pindutin ang DONE kapag tapos mo nang sagutan ang lahat ng tanong.
 
-• Focus on maintaining mental clarity and calm while solving the problem.
+• Manatiling kalmado at malinaw ang pag-iisip habang nagsosolve.
 
-• Read each question carefully before selecting your answer (A, B, C and D).
+• Basahing mabuti ang tanong bago pumili ng sagot (A, B, C, o D).
 
-Finishing the Challenge:
+Pagkatapos ng Hamon
 
-• After the time runs out, you will automatically return to the homepage.
+• Kapag natapos na ang oras o lahat ng tanong ay nasagutan, awtomatikong babalik ka sa homepage.
 
-Guide:
+• Tignan ang iyong resulta at isipin kung saang bahagi maaari ka pang gumaling.
 
-• Make sure you are seated comfortably and prepared mentally for the challenge.
+Gabay
 
-• Take your time to read and comprehend the math problem before starting.
+• Siguraduhing kumportable ang iyong upuan at walang malalaking distraksyon.
 
-• Break down the problem into smaller, manageable steps.
+• Unahin ang pag-unawa sa problema bago gumawa ng kalkulasyon.
 
-• If needed, use a calculator or your notes for assistance, but aim to improve your mental math skills over time.
+• Hatiin ang mahahabang problema sa mas maliit na hakbang para mas madaling masagot.
 
-Note:
+• Pwede mong gumamit ng papel para sa scratch work; unahin pa rin ang mental math hangga’t maaari.
 
-This challenge aims to enhance problem-solving skills, improve mathematical thinking, and boost mental endurance. Stay focused, and remember that solving problems is as much about practice and perseverance as it is about speed.
+Paalala
 
-"Sharpen your mind, take your time, and embrace the math challenge!"</value>
+Ang hamong ito ay ginawa upang hasain ang kakayahang mag-apply ng matematika sa totoong buhay, palakasin ang problem-solving skills, at pataasin ang tiyaga sa pag-iisip. Tandaan na ang pag-practice at tiyaga ang susi sa pag-unlad — hindi lamang ang bilis.
+
+"Linangin ang isip, unawain ang problema, at gamitin ang natutunan sa tunay na buhay!"
+</value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="pictureBox11.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">

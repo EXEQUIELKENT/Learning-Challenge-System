@@ -120,7 +120,7 @@
             this.richTextBox2.ReadOnly = true;
             this.richTextBox2.Size = new System.Drawing.Size(466, 257);
             this.richTextBox2.TabIndex = 735;
-            this.richTextBox2.Text = "";
+            this.richTextBox2.Text = resources.GetString("richTextBox2.Text");
             // 
             // label5
             // 

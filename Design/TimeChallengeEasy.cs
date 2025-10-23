@@ -46,40 +46,46 @@ namespace DCP.Resources
             InitializeComponent();
             questions = new List<Question>
             {
-                new Question { QuestionText = "If the clock shows 2:00 PM now, what time will it be in 3 hours?", A = "4:00 PM", B = "5:00 PM", C = "6:00 PM", D = "7:00 PM", CorrectAnswer = "B" },
-                new Question { QuestionText = "It is currently 9:15 AM. What time was it 2 hours ago?", A = "6:15 AM", B = "7:15 AM", C = "8:15 AM", D = "10:15 AM", CorrectAnswer = "C" },
-                new Question { QuestionText = "How many minutes are in 2 hours?", A = "60 minutes", B = "90 minutes", C = "120 minutes", D = "150 minutes", CorrectAnswer = "C" },
-                new Question { QuestionText = "If a movie starts at 7:30 PM and lasts 2 hours, what time does it end?", A = "9:30 PM", B = "10:00 PM", C = "10:30 PM", D = "11:00 PM", CorrectAnswer = "A" },
-                new Question { QuestionText = "What time is 45 minutes after 3:15 PM?", A = "3:45 PM", B = "4:00 PM", C = "4:15 PM", D = "4:30 PM", CorrectAnswer = "C" },
-                
-                new Question { QuestionText = "A train departs at 10:45 AM and arrives at 12:30 PM. How long is the journey?", A = "1 hour", B = "1 hour 30 minutes", C = "1 hour 45 minutes", D = "2 hours", CorrectAnswer = "C" },
-                new Question { QuestionText = "What is the equivalent of 180 seconds in minutes?", A = "1 minute", B = "2 minutes", C = "3 minutes", D = "4 minutes", CorrectAnswer = "C" },
-                new Question { QuestionText = "How many hours are in a day?", A = "10", B = "12", C = "24", D = "30", CorrectAnswer = "C" },
-                new Question { QuestionText = "If it is 8:20 AM now, what time will it be in 40 minutes?", A = "8:50 AM", B = "9:00 AM", C = "9:10 AM", D = "9:20 AM", CorrectAnswer = "A" },
-                new Question { QuestionText = "How many minutes are there in half an hour?", A = "10", B = "15", C = "20", D = "30", CorrectAnswer = "D" },
-                
-                new Question { QuestionText = "It is currently 11:30 PM. What time will it be 2 hours later?", A = "12:30 AM", B = "1:30 AM", C = "2:30 AM", D = "3:30 AM", CorrectAnswer = "B" },
-                new Question { QuestionText = "How many seconds are in 5 minutes?", A = "120", B = "180", C = "240", D = "300", CorrectAnswer = "D" },
-                new Question { QuestionText = "If a TV show starts at 6:00 PM and lasts 45 minutes, what time does it end?", A = "6:30 PM", B = "6:45 PM", C = "7:00 PM", D = "7:15 PM", CorrectAnswer = "C" },
-                new Question { QuestionText = "What is 2 hours and 30 minutes in minutes?", A = "120", B = "130", C = "150", D = "180", CorrectAnswer = "C" },
-                new Question { QuestionText = "What time is 1 hour and 20 minutes after 9:40 AM?", A = "10:40 AM", B = "10:50 AM", C = "11:00 AM", D = "11:10 AM", CorrectAnswer = "D" },
-                
-                new Question { QuestionText = "How many hours are in a week?", A = "168", B = "172", C = "180", D = "192", CorrectAnswer = "A" },
-                new Question { QuestionText = "If a school starts at 7:30 AM and ends at 3:00 PM, how long is the school day?", A = "6 hours", B = "7 hours", C = "7 hours 30 minutes", D = "8 hours", CorrectAnswer = "C" },
-                new Question { QuestionText = "It is currently 4:55 PM. What time was it 30 minutes ago?", A = "4:15 PM", B = "4:25 PM", C = "4:35 PM", D = "4:45 PM", CorrectAnswer = "D" },
-                new Question { QuestionText = "How many minutes are in one and a half hours?", A = "60", B = "75", C = "90", D = "120", CorrectAnswer = "C" },
-                new Question { QuestionText = "If a bus leaves at 8:45 AM and arrives at 10:15 AM, how long is the trip?", A = "1 hour", B = "1 hour 15 minutes", C = "1 hour 30 minutes", D = "1 hour 45 minutes", CorrectAnswer = "C" },
-                
-                new Question { QuestionText = "How many hours are in 3 days?", A = "48", B = "60", C = "72", D = "96", CorrectAnswer = "C" },
-                new Question { QuestionText = "How many days are in a year (excluding leap years)?", A = "360", B = "365", C = "366", D = "400", CorrectAnswer = "B" },
-                new Question { QuestionText = "If it is 7:10 AM now, what time will it be in 50 minutes?", A = "7:50 AM", B = "8:00 AM", C = "8:10 AM", D = "8:20 AM", CorrectAnswer = "C" },
-                new Question { QuestionText = "If a movie is 2 hours and 15 minutes long, how many minutes is that?", A = "120", B = "125", C = "130", D = "135", CorrectAnswer = "D" },
-                new Question { QuestionText = "What time is it 1 hour and 45 minutes after 10:20 AM?", A = "11:55 AM", B = "12:00 PM", C = "12:05 PM", D = "12:15 PM", CorrectAnswer = "C" },
-                
-                new Question { QuestionText = "How many seconds are in 10 minutes?", A = "300", B = "500", C = "600", D = "700", CorrectAnswer = "C" },
-                new Question { QuestionText = "If it is 9:40 PM now, what time was it 35 minutes ago?", A = "9:00 PM", B = "9:05 PM", C = "9:10 PM", D = "9:15 PM", CorrectAnswer = "D" },
-                new Question { QuestionText = "If a plane takes off at 2:25 PM and lands at 4:50 PM, how long is the flight?", A = "2 hours 10 minutes", B = "2 hours 25 minutes", C = "2 hours 30 minutes", D = "2 hours 35 minutes", CorrectAnswer = "B" },
+                new Question { QuestionText = "Ngayon ay 2:00 PM. Anong oras ito makalipas ang 3 oras?", A = "4:00 PM", B = "5:00 PM", C = "6:00 PM", D = "7:00 PM", CorrectAnswer = "B" },
+                new Question { QuestionText = "Ngayon ay 9:15 AM. Anong oras ito dalawang oras ang nakalipas?", A = "6:15 AM", B = "7:15 AM", C = "8:15 AM", D = "10:15 AM", CorrectAnswer = "C" },
+                new Question { QuestionText = "Ilang minuto meron sa 2 oras?", A = "60 minuto", B = "90 minuto", C = "120 minuto", D = "150 minuto", CorrectAnswer = "C" },
+                new Question { QuestionText = "Nagsimula ang sine sa 7:30 PM at tumagal ng 2 oras. Anong oras ito natapos?", A = "9:30 PM", B = "10:00 PM", C = "10:30 PM", D = "11:00 PM", CorrectAnswer = "A" },
+                new Question { QuestionText = "Anong oras 45 minuto pagkatapos ng 3:15 PM?", A = "3:45 PM", B = "4:00 PM", C = "4:00 PM", D = "4:15 PM", CorrectAnswer = "D" },
 
+                new Question { QuestionText = "Bumyahe ang tren mula 10:45 AM hanggang 12:30 PM. Gaano katagal ang biyahe?", A = "1 oras", B = "1 oras 30 minuto", C = "1 oras 45 minuto", D = "2 oras", CorrectAnswer = "C" },
+                new Question { QuestionText = "Ilang minuto ang katumbas ng 180 segundo?", A = "1 minuto", B = "2 minuto", C = "3 minuto", D = "4 minuto", CorrectAnswer = "C" },
+                new Question { QuestionText = "Ilang oras mayroon sa isang araw?", A = "10", B = "12", C = "24", D = "30", CorrectAnswer = "C" },
+                new Question { QuestionText = "Ngayon ay 8:20 AM. Anong oras ito pagkalipas ng 40 minuto?", A = "8:50 AM", B = "9:00 AM", C = "9:10 AM", D = "9:20 AM", CorrectAnswer = "A" },
+                new Question { QuestionText = "Ilang minuto mayroon sa kalahating oras?", A = "10", B = "15", C = "20", D = "30", CorrectAnswer = "D" },
+
+                new Question { QuestionText = "Ngayon ay 11:30 PM. Anong oras ito pagkalipas ng 2 oras?", A = "12:30 AM", B = "1:30 AM", C = "2:30 AM", D = "3:30 AM", CorrectAnswer = "B" },
+                new Question { QuestionText = "Ilang segundo mayroon sa 5 minuto?", A = "120", B = "180", C = "240", D = "300", CorrectAnswer = "D" },
+                new Question { QuestionText = "Nagsimula ang TV program sa 6:00 PM at tumagal ng 45 minuto. Anong oras ito natapos?", A = "6:30 PM", B = "6:45 PM", C = "7:00 PM", D = "7:15 PM", CorrectAnswer = "C" },
+                new Question { QuestionText = "Ang 2 oras at 30 minuto ay ilang minuto?", A = "120", B = "130", C = "150", D = "180", CorrectAnswer = "C" },
+                new Question { QuestionText = "Anong oras 1 oras at 20 minuto pagkatapos ng 9:40 AM?", A = "10:40 AM", B = "10:50 AM", C = "11:00 AM", D = "11:10 AM", CorrectAnswer = "D" },
+
+                new Question { QuestionText = "Ilang oras mayroon sa isang linggo?", A = "168", B = "172", C = "180", D = "192", CorrectAnswer = "A" },
+                new Question { QuestionText = "Nagsisimula ang klase 7:30 AM at nagtatapos 3:00 PM. Gaano katagal ang school day?", A = "6 oras", B = "7 oras", C = "7 oras 30 minuto", D = "8 oras", CorrectAnswer = "C" },
+                new Question { QuestionText = "Ngayon ay 4:55 PM. Anong oras 30 minuto ang nakalipas?", A = "4:15 PM", B = "4:25 PM", C = "4:35 PM", D = "4:45 PM", CorrectAnswer = "D" },
+                new Question { QuestionText = "Ilang minuto ang isang oras at kalahati?", A = "60", B = "75", C = "90", D = "120", CorrectAnswer = "C" },
+                new Question { QuestionText = "Umalis ang bus 8:45 AM at dumating 10:15 AM. Gaano katagal ang byahe?", A = "1 oras", B = "1 oras 15 minuto", C = "1 oras 30 minuto", D = "1 oras 45 minuto", CorrectAnswer = "C" },
+
+                new Question { QuestionText = "Ilang oras mayroon sa 3 araw?", A = "48", B = "60", C = "72", D = "96", CorrectAnswer = "C" },
+                new Question { QuestionText = "Ilang araw mayroon sa isang taon (hindi leap year)?", A = "360", B = "365", C = "366", D = "400", CorrectAnswer = "B" },
+                new Question { QuestionText = "Ngayon ay 7:10 AM. Anong oras pagkalipas ng 50 minuto?", A = "7:50 AM", B = "8:00 AM", C = "8:00 AM", D = "8:20 AM", CorrectAnswer = "C" },
+                new Question { QuestionText = "Kung ang pelikula ay 2 oras at 15 minuto, ilang minuto iyon?", A = "120", B = "125", C = "130", D = "135", CorrectAnswer = "D" },
+                new Question { QuestionText = "Anong oras 1 oras at 45 minuto pagkatapos ng 10:20 AM?", A = "11:55 AM", B = "12:00 PM", C = "12:05 PM", D = "12:15 PM", CorrectAnswer = "C" },
+
+                new Question { QuestionText = "Ilang segundo mayroon sa 10 minuto?", A = "300", B = "500", C = "600", D = "700", CorrectAnswer = "C" },
+                new Question { QuestionText = "Ngayon ay 9:40 PM. Anong oras 35 minuto ang nakalipas?", A = "9:00 PM", B = "9:05 PM", C = "9:10 PM", D = "9:05 PM", CorrectAnswer = "B" },
+                new Question { QuestionText = "Tumayo ang eroplano 2:25 PM at dumapo 4:50 PM. Gaano katagal ang flight?", A = "2 oras 10 minuto", B = "2 oras 25 minuto", C = "2 oras 30 minuto", D = "2 oras 35 minuto", CorrectAnswer = "B" },
+
+                // Philippine-culture contextual questions for Grade 6
+                new Question { QuestionText = "Ang Simbang Gabi ay nagsisimula sa 4:30 AM at tumatagal ng 30 minuto. Anong oras ito matatapos?", A = "5:00 AM", B = "5:15 AM", C = "5:30 AM", D = "6:00 AM", CorrectAnswer = "A" },
+                new Question { QuestionText = "May sinulog na nagsimula 6:00 PM at natapos 8:15 PM. Gaano ito katagal?", A = "1 oras 45 minuto", B = "2 oras 15 minuto", C = "2 oras 30 minuto", D = "1 oras 30 minuto", CorrectAnswer = "B" },
+                new Question { QuestionText = "Ang jeepney pamasahe ay ₱9.00. Kung nagbayad ka ng ₱54 sa araw na iyon, ilang biyahe iyon?", A = "5", B = "6", C = "7", D = "8", CorrectAnswer = "B" },
+                new Question { QuestionText = "May parokya na may Misa sa Linggo alas-8:00 AM at alas-10:00 AM. Ilang oras pagitan ng dalawang misa?", A = "1 oras", B = "2 oras", C = "1 oras 30 minuto", D = "3 oras", CorrectAnswer = "B" },
+                new Question { QuestionText = "Ang pista sa barangay ay nagsimula 3:00 PM at natapos kinabukasan 1:00 AM. Gaano katagal ang pagdiriwang (hours)?", A = "10 oras", B = "11 oras", C = "12 oras", D = "13 oras", CorrectAnswer = "B" },
             };
             // Initialize answeredQuestions with false values (indicating that no question has been answered yet)
             Random rand = new Random();
@@ -148,8 +154,6 @@ namespace DCP.Resources
                     progressBar1.Value = progressDuration - timeRemaining;
                 }
                 textBox2.Text = TimeSpan.FromSeconds(progressDuration - timeRemaining).ToString("hh\\:mm\\:ss");
-
-                count.Play();
 
                 timeRemaining--;
             }

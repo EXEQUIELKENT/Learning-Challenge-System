@@ -161,6 +161,24 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdditionEasy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdditionEasy.Designer.cs">
+      <DependentUpon>AdditionEasy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdditionHard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdditionHard.Designer.cs">
+      <DependentUpon>AdditionHard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdditionMedium.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdditionMedium.Designer.cs">
+      <DependentUpon>AdditionMedium.cs</DependentUpon>
+    </Compile>
     <Compile Include="BearCrawlEasy.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -238,6 +256,24 @@
     </Compile>
     <Compile Include="ChangePassword.Designer.cs">
       <DependentUpon>ChangePassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DivisionEasy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DivisionEasy.Designer.cs">
+      <DependentUpon>DivisionEasy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DivisionHard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DivisionHard.Designer.cs">
+      <DependentUpon>DivisionHard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DivisionMedium.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DivisionMedium.Designer.cs">
+      <DependentUpon>DivisionMedium.cs</DependentUpon>
     </Compile>
     <Compile Include="FeedBack.cs">
       <SubType>Form</SubType>
@@ -459,6 +495,24 @@
     </Compile>
     <Compile Include="MountainClimbersMedium.Designer.cs">
       <DependentUpon>MountainClimbersMedium.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MultiplicationEasy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MultiplicationEasy.Designer.cs">
+      <DependentUpon>MultiplicationEasy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MultiplicationHard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MultiplicationHard.Designer.cs">
+      <DependentUpon>MultiplicationHard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MultiplicationMedium.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MultiplicationMedium.Designer.cs">
+      <DependentUpon>MultiplicationMedium.cs</DependentUpon>
     </Compile>
     <Compile Include="PatternRecognitionEasy.cs">
       <SubType>Form</SubType>
@@ -1182,6 +1236,24 @@
     <Compile Include="StoryRetellingMedium.Designer.cs">
       <DependentUpon>StoryRetellingMedium.cs</DependentUpon>
     </Compile>
+    <Compile Include="SubtractionEasy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubtractionEasy.Designer.cs">
+      <DependentUpon>SubtractionEasy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubtractionHard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubtractionHard.Designer.cs">
+      <DependentUpon>SubtractionHard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubtractionMedium.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubtractionMedium.Designer.cs">
+      <DependentUpon>SubtractionMedium.cs</DependentUpon>
+    </Compile>
     <Compile Include="TableOfRecords.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -1291,6 +1363,15 @@
     <Compile Include="WallSitMedium.Designer.cs">
       <DependentUpon>WallSitMedium.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AdditionEasy.resx">
+      <DependentUpon>AdditionEasy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdditionHard.resx">
+      <DependentUpon>AdditionHard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdditionMedium.resx">
+      <DependentUpon>AdditionMedium.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="BearCrawlEasy.resx">
       <DependentUpon>BearCrawlEasy.cs</DependentUpon>
     </EmbeddedResource>
@@ -1329,6 +1410,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ChangePassword.resx">
       <DependentUpon>ChangePassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DivisionEasy.resx">
+      <DependentUpon>DivisionEasy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DivisionHard.resx">
+      <DependentUpon>DivisionHard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DivisionMedium.resx">
+      <DependentUpon>DivisionMedium.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FeedBack.resx">
       <DependentUpon>FeedBack.cs</DependentUpon>
@@ -1434,6 +1524,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MountainClimbersMedium.resx">
       <DependentUpon>MountainClimbersMedium.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MultiplicationEasy.resx">
+      <DependentUpon>MultiplicationEasy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MultiplicationHard.resx">
+      <DependentUpon>MultiplicationHard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MultiplicationMedium.resx">
+      <DependentUpon>MultiplicationMedium.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PatternRecognitionEasy.resx">
       <DependentUpon>PatternRecognitionEasy.cs</DependentUpon>
@@ -1804,6 +1903,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="StoryRetellingMedium.resx">
       <DependentUpon>StoryRetellingMedium.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubtractionEasy.resx">
+      <DependentUpon>SubtractionEasy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubtractionHard.resx">
+      <DependentUpon>SubtractionHard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubtractionMedium.resx">
+      <DependentUpon>SubtractionMedium.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TableOfRecords.resx">
       <DependentUpon>TableOfRecords.cs</DependentUpon>
