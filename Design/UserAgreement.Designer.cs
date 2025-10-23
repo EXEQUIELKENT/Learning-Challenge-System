@@ -76,9 +76,9 @@
             this.label1.Font = new System.Drawing.Font("Verdana", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(301, 13);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(279, 28);
+            this.label1.Size = new System.Drawing.Size(275, 28);
             this.label1.TabIndex = 3;
-            this.label1.Text = "HCS User Agreement";
+            this.label1.Text = "LCS User Agreement";
             // 
             // buttonNext
             // 
