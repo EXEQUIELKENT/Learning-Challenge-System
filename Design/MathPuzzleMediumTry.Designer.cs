@@ -368,6 +368,7 @@
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MathPuzzleMediumTry";
             this.Text = "MathPuzzleMedium";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxD)).EndInit();

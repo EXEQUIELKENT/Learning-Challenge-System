@@ -585,7 +585,7 @@ namespace DCP
                         MessageBox.Show($"Quiz completed! Your score is: {score}/{questions.Count}", "Quiz Complete", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                         // Save challenge data (including score)
-                        if (score >= 3) // Check if the challenge is passed
+                        if (score >= 8) // Check if the challenge is passed
                         {
                             success.Play();
                             SaveChallengeDataSuccess(Login.CurrentUsername, "Completed", textBox2.Text, score);
